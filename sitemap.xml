@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://json9512.github.io/json9512.github.io/jekyll/update/welcome-to-jekyll/</loc>
+<loc>/json9512.github.io/jekyll/update/welcome-to-jekyll/</loc>
 <lastmod>2021-01-03T05:53:17+00:00</lastmod>
 </url>
 <url>
-<loc>https://json9512.github.io/json9512.github.io/about/</loc>
+<loc>/json9512.github.io/about/</loc>
 </url>
 <url>
-<loc>https://json9512.github.io/json9512.github.io/categories/</loc>
+<loc>/json9512.github.io/categories/</loc>
 </url>
 <url>
-<loc>https://json9512.github.io/json9512.github.io/</loc>
+<loc>/json9512.github.io/</loc>
 </url>
 <url>
-<loc>https://json9512.github.io/json9512.github.io/posts/</loc>
+<loc>/json9512.github.io/posts/</loc>
 </url>
 <url>
-<loc>https://json9512.github.io/json9512.github.io/tags/</loc>
+<loc>/json9512.github.io/tags/</loc>
 </url>
 </urlset>

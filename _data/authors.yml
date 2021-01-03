@@ -1,11 +1,19 @@
 # Sample Authors
 # Remove file or replace with your own
 
-Billy Rick:
-  name: Billy Rick
-#  picture: #/images/bio-photo-2.jpg
-#  twitter: #"@billyrick"
-#  links:
-#    - title: Twitter
-#      url: https://twitter.com/billyrick
-#      icon: fab fa-twitter-square
+Junghyun Son:
+  name: json9512
+  picture: /images/me.JPG
+  email: json9512@gmail.com
+  links:
+    - title: Github
+      url: https://github.com/json9512
+      icon: fab fa-github-square
+    
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/junghyun-son/
+      icon: fab fa-linkedin
+
+    - title: Instagram
+      url: https://www.instagram.com/sonj1219/
+      icon: fab fa-instagram

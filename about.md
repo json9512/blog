@@ -1,9 +1,11 @@
 ---
 layout: page
-title: About
+title: Junghyun Son
 permalink: /about/
 ---
 
-# Junghyun Son
+👋 Hi ! 
 
-Hi 
+I'm a junior developer ready to 🚀 my career !
+
+See you around 😄

@@ -5,4 +5,5 @@ sitemap: false
 
 @charset "utf-8";
 
+@import "so-simple/skins/{{ site.skin | default: 'default' }}";
 @import "so-simple";

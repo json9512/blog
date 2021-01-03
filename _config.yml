@@ -18,8 +18,8 @@ skin: "/assets/css/skins/dark.scss"
 locale: en-US
 title: "json9512's Blog"
 description: "👋 Hi"
-baseurl: "/json9512.github.io" # the subpath of your site, e.g. "/blog"
-url: "" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl: "/blog" # the subpath of your site, e.g. "/blog"
+url: "https://json9512.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: true # reading time estimates, e.g. true
@@ -95,7 +95,7 @@ author:
   email: "json9512@gmail.com"
   twitter:
   links:
-    - title:
+    - title: 
       url:
       icon:
 

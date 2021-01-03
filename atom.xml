@@ -1,3 +1,591 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-03T12:03:50+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">Hello there 👋</title><link href="https://json9512.github.io/blog/first-post/" rel="alternate" type="text/html" title="Hello there 👋" /><published>2021-01-03T05:53:17+00:00</published><updated>2021-01-03T05:53:17+00:00</updated><id>https://json9512.github.io/blog/first-post</id><content type="html" xml:base="https://json9512.github.io/blog/first-post/">&lt;p&gt;I’m not really sure if I’ll maintain this dev blog in Eng or Kor, but this is my first post.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-03T13:31:49+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">Python Advanced Topic</title><link href="https://json9512.github.io/blog/python-advanced/" rel="alternate" type="text/html" title="Python Advanced Topic" /><published>2021-01-03T05:59:17+00:00</published><updated>2021-01-03T05:59:17+00:00</updated><id>https://json9512.github.io/blog/python-advanced</id><content type="html" xml:base="https://json9512.github.io/blog/python-advanced/">&lt;p&gt;파이썬 개발자라면 알아야 할 고오급 정보들 !&lt;/p&gt;
+
+&lt;p&gt;아래 출처에서 부분적으로 의역한 포스트&lt;/p&gt;
+
+&lt;p&gt;출처:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://realpython.com/&quot;&gt;Real Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/3.9/faq/design.html&quot;&gt;Official Doc&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.&quot;&gt;Stackify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#memory-management&quot;&gt;Memory Management&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#global-interpreter-lock&quot;&gt;Global Interpreter Lock&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#&quot;&gt;더 업데이트 할 계획&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;memory-management&quot;&gt;Memory Management&lt;/h1&gt;
+
+&lt;p&gt;출처: &lt;a href=&quot;https://realpython.com/python-memory-management/&quot;&gt;Real Python&lt;/a&gt;, &lt;a href=&quot;https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.&quot;&gt;Stackify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;컴퓨터에서 프로그램이 실행될 때, OS에서 프로그램을 위해 할당하는 메모리는 fixed하다. 프로그램은 정해진 메모리 관리 알고리즘에 따라 주어진 메모리를 관리한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CPython&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;파이썬은 CPython이 베이스이다. CPython은 C로 만들어졌다.&lt;/p&gt;
+
+&lt;p&gt;CPython 외에도 다른 interpreter/compiler는 다음과 같다:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;IronPython - .NET&lt;/li&gt;
+  &lt;li&gt;Jython - JAVA&lt;/li&gt;
+  &lt;li&gt;MicroPython - 마이크로 컨트롤러&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;기본적으로 CPython이 하는 일은 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;.py에 적힌 코드를 bytecode로 compile 한다&lt;/li&gt;
+  &lt;li&gt;.pyc (컴파일 된 코드)를 파이썬 가상 환경에서 실행한다&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;파이썬의 object (int, list, etc)는 어떻게 관리가 될까?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;파이썬에서는 모든 object가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PyObject&lt;/code&gt;로 표현된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PyObject&lt;/code&gt;는 C struct 이고:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ob_refcnt: 이 object를 가르키고 있는 변수 갯수&lt;/li&gt;
+  &lt;li&gt;ob_type: 이 object의 type (int, list, etc)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;와 같은 특성을 가지고 있다&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PyObject&lt;/code&gt;의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ob_refcnt&lt;/code&gt; 특성이 0이 될 때, 가비지 콜렉터는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PyObject&lt;/code&gt;가 차지하고 있던 메모리를 다시 free 시킬 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;주의: 만약 object가 자기 자신을 reference 한다면?&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 'Foo' will be allocated in some place in the memory
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# ob_refcnt of Foo = 1
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# This will increment the ob_refcnt
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# ob_refcnt of Foo = 2
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Will not deallocate the memory occupied by 'a' 
+# because the ob_refcnt is never 0
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;del&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# ob_refcnt of Foo = 1
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# this is a 'reference cycle'
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위와 같이 reference cycle이 생길 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Foo&lt;/code&gt; 가 차지하고 있는 메모리는 절대 비워지지 않는다.&lt;/p&gt;
+
+&lt;p&gt;파이썬에서는 이것을 해결하고자 Generation garbage collection 도 같이 사용한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Generation Garbage Collection&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;2 가지 특징이 있다:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;가비지 콜렉터가 메모리 내에 모든 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;object&lt;/code&gt;를 track 한다. 이후 collection process에서 살아남은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;object&lt;/code&gt;들은 다음 generation으로 넘어간다. 파이썬의 garbage collection process의 generation은 총 3번이다.&lt;/li&gt;
+  &lt;li&gt;각 generation 마다 threshold 가 있다. 이 threshold는 가비지 콜렉터가 track하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;object&lt;/code&gt;의 최대 갯수이다. 만약이 threshold를 넘어서게 되면, collection process가 시작되고 살아남은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;object&lt;/code&gt;만 다음 세대로 넘어간다. 이 threshold는 개발자가 직접 바꿀 수 있다. &lt;em&gt;Instagram은 실제로 이 기능을 해제하여 서버를 10%가량 더 효율적으로 만들었다.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Global Interpreter Lock (GIL)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;메모리는 공유제이다. 메모리를 보호하는 알고리즘이 없다면 여러 프로세스가 같은 메모리 값을 읽고, 쓰고, 지우고 할 수 있다. 즉, race condition과 같은 문제점들이 발현한다.&lt;/p&gt;
+
+&lt;p&gt;이를 해결하는 방법은 여러가지인데 파이썬은 Global Interpreter Lock (GIL) 을 사용함으로써 메모리의 데이터를 보호한다.&lt;/p&gt;
+
+&lt;p&gt;파이썬의 GIL은 단일 Thread에게만 메모리 권한을 준다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CPython Memory Management&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://files.realpython.com/media/memory_management.92ad564ec680.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위 그림과 같이 OS가 할당한 메모리 중 Python은 메모리를 크게 Object를 위한 메모리와 그 외 메모리로 분할한다.&lt;/p&gt;
+
+&lt;p&gt;그리고 Object를 위한 메모리에 CPython의 object allocator가 할당된다.&lt;/p&gt;
+
+&lt;p&gt;이는 새 object 가 메모리에 할당되거나 삭제될 때마다 실행된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://files.realpython.com/media/memory_management_5.394b85976f34.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;CPython 메모리 관리에는 크게 3 가지가 존재한다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Arenas
+    &lt;ul&gt;
+      &lt;li&gt;가장 큰 메모리 덩어리&lt;/li&gt;
+      &lt;li&gt;OS가 메모리를 읽을 때 사용하는 블록과 연결된다&lt;/li&gt;
+      &lt;li&gt;Python은 Arena의 크기를 256 KB로 추정한다&lt;/li&gt;
+      &lt;li&gt;eg. 256KB - 256KB - 256KB 단위로 OS가 읽는다&lt;/li&gt;
+      &lt;li&gt;&lt;del&gt;사실 뭔 소린지 잘 모르겠다 하하&lt;/del&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pool
+    &lt;ul&gt;
+      &lt;li&gt;가상 메모리&lt;/li&gt;
+      &lt;li&gt;4 KB&lt;/li&gt;
+      &lt;li&gt;더 작은 메모리 블록으로 이루어져 있다&lt;/li&gt;
+      &lt;li&gt;Pool내에 모든 블록은 같은 “size class”다&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Blocks
+    &lt;ul&gt;
+      &lt;li&gt;8 bit 단위로 나뉘어진 “size class” 가 있다&lt;/li&gt;
+      &lt;li&gt;eg. 데이터가 7 bytes 면 “size class”는 8 (bytes) 이다, 데이터가 10 bytes 면 “size class”는 16 (bytes) 이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Pools&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;같은 size class의 블록들로 구성된다&lt;/li&gt;
+  &lt;li&gt;같은 size class를 담고 있는 pool들과 double-linked list를 형성한다&lt;/li&gt;
+  &lt;li&gt;3 가지의 상태를 가진다:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;used&lt;/code&gt; - 데이터를 저장할 블록을 가지고 있을 때&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;full&lt;/code&gt; - 모든 블록이 데이터로 가득 차 있을 때&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;empty&lt;/code&gt; - 데이터가 존재하지 않고 , 아무 size class로 구성된 블록들을 만들 수 있을 때&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;used&lt;/code&gt;pools 은 새로운 객체가 저장 될 수 있는 block이 있는 모든 pool 리스트다 (저장되는 객체의 size는 block의 size class가 수용 가능 해야한다). 수용 가능한 블록을 찾을때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;used&lt;/code&gt;pools 리스트에서 먼저 찾는다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt;pools 는 모든 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;empty&lt;/code&gt; 상태의 pool을 기록한 리스트다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;full&lt;/code&gt;에서 특정 블록을 free 할 경우, 그 pool의 상태는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;used&lt;/code&gt;로 바뀐다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://files.realpython.com/media/memory_management_3.52bffbf302d3.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blocks&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;3가지 상태가 있다:
+    &lt;ol&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;untouched&lt;/code&gt; - 할당되지 않은 메모리&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt; - 할당 됐으나 CPython이 free 한 메모리&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;allocated&lt;/code&gt; - 할당 된 메모리&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;위 그림과 같이, 각 pool 에는 자기 pool 내에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt; 블록을 가르키는 포인터가 있다&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt; 블록이 꼭 연속성을 가져야 하는 것은 아니다:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://files.realpython.com/media/memory_management_4.4a30dfa2d111.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt; 블록을 가르키는 포인터는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt; 블록들을 탐색할 수 있는 single linked list다&lt;/li&gt;
+  &lt;li&gt;만약 필요한 메모리의 사이즈가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt; 블록의 사이즈보다 클 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;untouched&lt;/code&gt; 블록들을 사용한다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Arena&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;여러 개의 pool로 구성되어 있다&lt;/li&gt;
+  &lt;li&gt;double-linked 리스트다&lt;/li&gt;
+  &lt;li&gt;Arena내에 할당 가능한 pool의 갯수를 기준으로 정렬이 되어있다 (오름차순)&lt;/li&gt;
+  &lt;li&gt;오름차순인 이유?
+    &lt;ul&gt;
+      &lt;li&gt;CPython이 특정 메모리를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt;한다는 것은 OS에게 그 메모리를 돌려준다는 뜻이 아니다. CPython은 메모리를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt;한 이후에도 그 메모리를 계속 사용한다.
+  &lt;br /&gt;즉 Arena를 더 적게 사용하는 것이 전체적인 프로그램의 메모리를 더 적게 사용하는 것이다.
+&lt;em&gt;**&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;global-interpreter-lock&quot;&gt;Global Interpreter Lock&lt;/h1&gt;
+&lt;p&gt;source: &lt;em&gt;&lt;a href=&quot;https://realpython.com/python-gil/#:~:text=The%20Python%20Global%20Interpreter%20Lock%20or%20GIL%2C%20in%20simple%20words,at%20any%20point%20in%20time.&quot;&gt;Real Python&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;간단히 말하면 mutex (lock) 이다. 단 하나의 thread만 Python Interpreter를 쓸 수 있게 하는 장치다&lt;/li&gt;
+  &lt;li&gt;CPU를 이용한 multi threaded 앱에서는 bottleneck이 될 수 있다&lt;/li&gt;
+  &lt;li&gt;아무리 내 코드가 multi threaded용으로 짜여졌다고 하더라도, 실제로는 single threaded 앱처럼 실행이 된다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;왜 도입 됐는가?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;일단 Python GIL은 thread라는 개념이 존재하기 전에 도입됐다&lt;/li&gt;
+  &lt;li&gt;파이썬 메모리 관리 특성 상 object에 대한 race condition이 생길 수 있는데, 이를 방지 하려면 일종의 lock이 필요했다&lt;/li&gt;
+  &lt;li&gt;object 단위로 lock을 도입하기에는 deadlock 문제가 생기고 성능이 저하 될 수 있어서 GIL을 도입했다.&lt;/li&gt;
+  &lt;li&gt;가장 간단하고 효과적이었기 때문이다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Parallel program은 파이썬으로 불가능한가?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Multi-threaded 말고 multi-process 방법으로 접근하면 앱을 parallel하게 짤 수 있다&lt;/li&gt;
+  &lt;li&gt;혹은 다른 python interpreter를 사용하면 된다. GIL은 CPython 에만 존재하기 때문이다 (CPython이 Python의 베이스다)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="python" /><summary type="html">파이썬 개발자라면 알아야 할 고오급 정보들 !</summary></entry><entry><title type="html">Python</title><link href="https://json9512.github.io/blog/python/" rel="alternate" type="text/html" title="Python" /><published>2021-01-03T05:53:17+00:00</published><updated>2021-01-03T05:53:17+00:00</updated><id>https://json9512.github.io/blog/python</id><content type="html" xml:base="https://json9512.github.io/blog/python/">&lt;h1 id=&quot;들어가며---&quot;&gt;들어가며 . . .&lt;/h1&gt;
+
+&lt;p&gt;애용하는 언어인 파이썬에 대해 좀 알아보고 복기하기 위한 포스트&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;파이썬은 원래 가독성이 좋은 프로그래밍 언어&lt;/li&gt;
+  &lt;li&gt;가독성을 살려서 코드를 작성하게끔 pythonic 한 가이드라인이 있음&lt;/li&gt;
+  &lt;li&gt;Python coding convention과 흔히 접하지 않는 것들에 대해 알아보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python-guide.org/writing/style/&quot;&gt;Python Code Styles&lt;/a&gt; 를 보며 내 마음대로 의역한 것&lt;/p&gt;
+
+&lt;h1 id=&quot;content&quot;&gt;Content&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#general-rules&quot;&gt;General Rules&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#idioms&quot;&gt;Idioms&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;general-rules&quot;&gt;General Rules&lt;/h1&gt;
+&lt;h2 id=&quot;1-explicit-code&quot;&gt;1. Explicit code&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Bad&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;make_complex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;locals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Good&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;make_complex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'x'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'y'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;딱 보면 무슨 코드인지 알 수 있도록 (self-explanatory)&lt;/p&gt;
+
+&lt;h2 id=&quot;2-one-statement-per-line&quot;&gt;2. One statement per line&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Bad&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'b'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;complex&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;complex&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# do some'in
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Good&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'b'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;condition1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;complex&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;condition2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;complex&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;condition1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;condition2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# do some'in
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-function-arguments&quot;&gt;3. Function arguments&lt;/h2&gt;
+&lt;p&gt;4 가지 방법이 있음&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;positional arguments - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;send(message, recipient) -&amp;gt; send(&quot;Hello&quot;, &quot;God&quot;)&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point(x, y) -&amp;gt; point(0, 35)&lt;/code&gt; &lt;br /&gt;function 구동에 무조건 필요한 arguments&lt;/li&gt;
+  &lt;li&gt;keyword arguments - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;send(message, to, cc=None) -&amp;gt; send(&quot;Hello&quot;, &quot;God&quot;, &quot;Mom&quot;) or send(&quot;Hello&quot;, &quot;God&quot;)&lt;/code&gt;&lt;br /&gt;기본값을 지정한 argument; function 구동에 필수적이지 않은 argument (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cc&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;arbitrary argument list - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;send(message, *args) -&amp;gt; send(&quot;Hello&quot;, &quot;God&quot;, &quot;Mom&quot;, &quot;Dad&quot;&lt;/code&gt; &lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;message&lt;/code&gt; argument 이후에 하나의 tuple로 입력 arguments를 저장함; tuple에 저장되는 값의 type이 다 다를 때 사용하는 것이 유용함&lt;/li&gt;
+  &lt;li&gt;arbitrary keyword argument dictionary - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;send(message, **kwargs) -&amp;gt; send(&quot;Hello&quot;, to=God, cc=Mom)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;개발자의 판단에 따라 가장 적합한 방식으로 코드를 짜면 됨&lt;/p&gt;
+
+&lt;h2 id=&quot;4-dont-use-the-magical-wand&quot;&gt;4. Don’t use the magical wand&lt;/h2&gt;
+&lt;p&gt;파이썬은 customizable하다. 하지만 기본적으로 작동되는 방식을 바꾸게 되면 가독성/효율이 떨어진다.&lt;/p&gt;
+
+&lt;p&gt;정말 필요할 때가 아니면 하지 말자&lt;/p&gt;
+
+&lt;h2 id=&quot;5-we-are-all-responsible-users&quot;&gt;5. We are all responsible users&lt;/h2&gt;
+&lt;p&gt;파이썬은 다른 언어에 있는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;private&lt;/code&gt; 변수나 클래스 같은 것들이 기본적으로 사용되지 않는다. 이는 Java와 같이 방어적(?)인 언어들과 다르다.&lt;/p&gt;
+
+&lt;p&gt;이유는 python 개발자는 모두 책임감이 있다고 믿기 때문이다. 개발자로서 자신이 사용하면 안되는 코드/특성은 사용을 하지 않는 것이 좋다.&lt;/p&gt;
+
+&lt;p&gt;하지만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;private&lt;/code&gt; 특성을 만들지 못하거나 encapsulation이 불가능 하다는 뜻이 아니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__&lt;/code&gt;를 특성/함수 앞에다가 붙이면 된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'''
+        __test = &quot;Ac&quot;
+    '''&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Ac&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__print_me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# outside
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__print_me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# no attribute error
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# no attribute error
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;6-returning-values&quot;&gt;6. Returning Values&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;함수가 복잡할수록 여러 곳에서 return 을 할 때가 종종 있다. 하지만 가독성을 중요시하고 코드가 더 직관적이고자 한다면, 여러 곳에서 return을 하는 것은 좋지 않다&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;보통 2가지의 경우에 함수에서 return을 한다
+    &lt;ol&gt;
+      &lt;li&gt;로직을 따라 정상처리가 됐을 때&lt;/li&gt;
+      &lt;li&gt;에러가 났을 때&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Refactoring을 위해 하나의 return 포인트를 유지 하는 것이 좋다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;complex_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# raising an exception might be better
+&lt;/span&gt;    
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; 
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# raising an exception might be better
+&lt;/span&gt;    
+    &lt;span class=&quot;c1&quot;&gt;# Some complex code to compute x from a, b
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# Resist temptation to return when compute succeeds
+&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# some code to compute x as plan-b
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# single exit point for maintainability
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;idioms&quot;&gt;Idioms&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;pythonic 한 코드를 작성하는 방법은 아래와 같다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-unpacking-values&quot;&gt;1. Unpacking values&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;리스트에서 아이템 추출 시 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enumerate()&lt;/code&gt; 함수 사용
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# do some'in with index and item
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;변수끼리 swap 할 때
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;# common 
+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;
+
+ &lt;span class=&quot;c1&quot;&gt;# pythonic
+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Nested unpacking
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+ &lt;span class=&quot;c1&quot;&gt;# python 3 (new feature)
+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;# a = 1, rest = [2, 3, 4]
+&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;# a = 1, mid = [2, 3], c = 4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;2-creating-an-ignored-variable&quot;&gt;2. Creating an ignored variable&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;awesomefile.txt&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;basename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ext&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rpartition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# basename = awesomefile, __ = ., ext = txt
+# use __ to ignore vals
+# using _ might conflict since it's an alias for 
+# gettext(), and _ is used to store the last operation 
+# at the interactive prompt
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-creating-lists&quot;&gt;3. Creating lists&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;A list of length - N&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr_four&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;A list of length - N of lists&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr_four_nested&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a string from list&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;some_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;stringified&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;4-searching-items-in-iterables&quot;&gt;4. Searching items in iterables&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;some_set&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;i&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;t&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;e&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;m&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;some_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;i&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;t&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;e&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;m&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;cond1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;t&quot;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_set&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cond2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;i&quot;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_set&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Set/Dict is a hash table
+# Much faster than lists/tuples when searching a large dataset
+# Sometimes using lists is better because creating the hash table requires more memory 
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;5-zen-of-python&quot;&gt;5. Zen of Python&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;this&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'''
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+'''&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/hblanks/zen-of-python-by-example/blob/master/pep20_by_example.pdf&quot;&gt;With example on github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;6-pep-8&quot;&gt;6. PEP 8&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;defacto code style for python. Available &lt;a href=&quot;https://pep8.org/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;7-some-conventions&quot;&gt;7. Some Conventions&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1. Check if variable equals constant&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;True!&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;None!&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Good
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;True&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;False&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;None&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Access a dictionary element&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;there&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Don't use dict.has_key()
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;has_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;default_value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Good
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;there&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'default_value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# prints 'there'
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'somein'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'default_value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# prints 'default_value'
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Or:
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'hello'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Short ways to manipulate lists&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Bad - needlessly allocates a list of all (gpa, name) entries in memory
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valedictorian&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;student&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gpa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;student&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;student&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graduates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Good
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valedictorian&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;student&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gpa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;student&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;student&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graduates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Good
+# Generator functions for more complex tasks
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;make_batches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'''
+    &amp;gt;&amp;gt;&amp;gt; list(make_batches([1, 2, 3, 4, 5], batch_size=3))
+    [[1, 2, 3], [4, 5]]
+
+    &amp;gt;&amp;gt;&amp;gt; generator = make_batches([1, 2, 3, 4, 5], batch_size=3)
+    &amp;gt;&amp;gt;&amp;gt; next(generator)
+    [1, 2, 3]
+    '''&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;current_batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;current_batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_batch&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;current_batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_batch&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Bad - never use list comprehension for its side effects
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Good
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Filtering a List&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Bad - Don't delete items when iterating through the list
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Don't make multiple passes through the list
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Good
+# comprehensions create a new list object
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filtered_values&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_list&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# generators don't create another list 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filtered_values&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_list&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Modifying the values in a list&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# a,b refer to same list object
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# changing a will also change b
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Good - create a new list object
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# does not change b
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;6. Read from a file&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Good - with open automatically closes the file
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;7. Line Continuations&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Bad - using &quot;\&quot; might break if there is space afterwards&quot;\ &quot;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;    aaaaaaaaaaaaaaaaaaaa&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Good - open (, [, { will indicate the python interpreter to read until ), ], } closes
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;aaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;aaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="python" /><summary type="html">들어가며 . . .</summary></entry><entry><title type="html">Hello there 👋</title><link href="https://json9512.github.io/blog/first-post/" rel="alternate" type="text/html" title="Hello there 👋" /><published>2021-01-03T02:53:17+00:00</published><updated>2021-01-03T02:53:17+00:00</updated><id>https://json9512.github.io/blog/first-post</id><content type="html" xml:base="https://json9512.github.io/blog/first-post/">&lt;p&gt;I’m not really sure if I’ll maintain this dev blog in Eng or Kor, but this is my first post.&lt;/p&gt;
 
 &lt;p&gt;Just to keep track of dev stuff I do.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="devblog" /><summary type="html">I’m not really sure if I’ll maintain this dev blog in Eng or Kor, but this is my first post.</summary></entry></feed>

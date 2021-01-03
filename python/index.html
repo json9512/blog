@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Python | json9512’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Python" />
+<meta name="author" content="json9512" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="들어가며 . . ." />
+<meta property="og:description" content="들어가며 . . ." />
+<link rel="canonical" href="https://json9512.github.io/blog/python/" />
+<meta property="og:url" content="https://json9512.github.io/blog/python/" />
+<meta property="og:site_name" content="json9512’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-03T05:53:17+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"Python","dateModified":"2021-01-03T05:53:17+00:00","datePublished":"2021-01-03T05:53:17+00:00","description":"들어가며 . . .","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/python/"},"url":"https://json9512.github.io/blog/python/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="stylesheet" href="/blog/assets/css/skins/dark.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="json9512&#39;s Blog" href="/blog/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://json9512.github.io/blog/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://json9512.github.io/blog/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://json9512.github.io/blog/images/favicon-16x16.png">
+<link rel="manifest" href="https://json9512.github.io/blog/images/site.webmanifest">
+<link rel="shortcut icon" href="https://json9512.github.io/blog/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://json9512.github.io/blog/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  python">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/blog/about/">About</a></li><li><a href="/blog/posts/">Posts</a></li><li><a href="/blog/tags/">Tags</a></li><li><a href="/blog/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/blog/" class="site-logo" rel="home" title="json9512's Blog">
+        <img src="/blog/images/logo.png" class="site-logo-img animated fadeInDown" alt="json9512's Blog">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/blog/">json9512's Blog</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description"></p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Python
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4" class="author-avatar u-photo" alt="json9512"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">json9512</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
+          </li></ul>
+
+<span class="read-time">6 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-01-03T05:53:17+00:00"><a class="u-url" href="">January 3, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/blog/tags/#python" title="Pages tagged python" rel="tag">python</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <h1 id="들어가며---">들어가며 . . .</h1>
+
+<p>애용하는 언어인 파이썬에 대해 좀 알아보고 복기하기 위한 포스트</p>
+<ul>
+  <li>파이썬은 원래 가독성이 좋은 프로그래밍 언어</li>
+  <li>가독성을 살려서 코드를 작성하게끔 pythonic 한 가이드라인이 있음</li>
+  <li>Python coding convention과 흔히 접하지 않는 것들에 대해 알아보자</li>
+</ul>
+
+<p><a href="https://docs.python-guide.org/writing/style/">Python Code Styles</a> 를 보며 내 마음대로 의역한 것</p>
+
+<h1 id="content">Content</h1>
+<ol>
+  <li><a href="#general-rules">General Rules</a></li>
+  <li><a href="#idioms">Idioms</a></li>
+</ol>
+
+<hr />
+
+<h1 id="general-rules">General Rules</h1>
+<h2 id="1-explicit-code">1. Explicit code</h2>
+
+<p><strong>Bad</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">make_complex</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">args</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="o">**</span><span class="nb">locals</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p><strong>Good</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">make_complex</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s">'x'</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s">'y'</span><span class="p">:</span> <span class="n">y</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>딱 보면 무슨 코드인지 알 수 있도록 (self-explanatory)</p>
+
+<h2 id="2-one-statement-per-line">2. One statement per line</h2>
+
+<p><strong>Bad</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span> <span class="s">'a'</span><span class="p">;</span> <span class="k">print</span> <span class="s">'b'</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="k">print</span> <span class="s">'a'</span>
+
+<span class="k">if</span> <span class="o">&lt;</span><span class="nb">complex</span> <span class="n">comparison</span><span class="o">&gt;</span> <span class="ow">and</span> <span class="o">&lt;</span><span class="nb">complex</span> <span class="n">comparison</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="c1"># do some'in
+</span></code></pre></div></div>
+
+<p><strong>Good</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span> <span class="s">'a'</span>
+<span class="k">print</span> <span class="s">'b'</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> 
+    <span class="k">print</span> <span class="s">'a'</span>
+
+<span class="n">condition1</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nb">complex</span> <span class="n">comparison</span><span class="o">&gt;</span>
+<span class="n">condition2</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nb">complex</span> <span class="n">comparison</span><span class="o">&gt;</span>
+
+<span class="k">if</span> <span class="n">condition1</span> <span class="ow">and</span> <span class="n">condition2</span><span class="p">:</span>
+    <span class="c1"># do some'in
+</span></code></pre></div></div>
+
+<h2 id="3-function-arguments">3. Function arguments</h2>
+<p>4 가지 방법이 있음</p>
+<ol>
+  <li>positional arguments - <code class="language-plaintext highlighter-rouge">send(message, recipient) -&gt; send("Hello", "God")</code>, <code class="language-plaintext highlighter-rouge">point(x, y) -&gt; point(0, 35)</code> <br />function 구동에 무조건 필요한 arguments</li>
+  <li>keyword arguments - <code class="language-plaintext highlighter-rouge">send(message, to, cc=None) -&gt; send("Hello", "God", "Mom") or send("Hello", "God")</code><br />기본값을 지정한 argument; function 구동에 필수적이지 않은 argument (<code class="language-plaintext highlighter-rouge">cc</code>)</li>
+  <li>arbitrary argument list - <code class="language-plaintext highlighter-rouge">send(message, *args) -&gt; send("Hello", "God", "Mom", "Dad"</code> <br /><code class="language-plaintext highlighter-rouge">message</code> argument 이후에 하나의 tuple로 입력 arguments를 저장함; tuple에 저장되는 값의 type이 다 다를 때 사용하는 것이 유용함</li>
+  <li>arbitrary keyword argument dictionary - <code class="language-plaintext highlighter-rouge">send(message, **kwargs) -&gt; send("Hello", to=God, cc=Mom)</code></li>
+</ol>
+
+<p>개발자의 판단에 따라 가장 적합한 방식으로 코드를 짜면 됨</p>
+
+<h2 id="4-dont-use-the-magical-wand">4. Don’t use the magical wand</h2>
+<p>파이썬은 customizable하다. 하지만 기본적으로 작동되는 방식을 바꾸게 되면 가독성/효율이 떨어진다.</p>
+
+<p>정말 필요할 때가 아니면 하지 말자</p>
+
+<h2 id="5-we-are-all-responsible-users">5. We are all responsible users</h2>
+<p>파이썬은 다른 언어에 있는 <code class="language-plaintext highlighter-rouge">private</code> 변수나 클래스 같은 것들이 기본적으로 사용되지 않는다. 이는 Java와 같이 방어적(?)인 언어들과 다르다.</p>
+
+<p>이유는 python 개발자는 모두 책임감이 있다고 믿기 때문이다. 개발자로서 자신이 사용하면 안되는 코드/특성은 사용을 하지 않는 것이 좋다.</p>
+
+<p>하지만 <code class="language-plaintext highlighter-rouge">private</code> 특성을 만들지 못하거나 encapsulation이 불가능 하다는 뜻이 아니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">__</code>를 특성/함수 앞에다가 붙이면 된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+    <span class="s">'''
+        __test = "Ac"
+    '''</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">__test</span> <span class="o">=</span> <span class="s">"Ac"</span>
+
+    <span class="k">def</span> <span class="nf">__print_me</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">__test</span><span class="p">)</span>
+
+<span class="c1"># outside
+</span><span class="n">b</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+<span class="n">b</span><span class="p">.</span><span class="n">__print_me</span><span class="p">()</span> <span class="c1"># no attribute error
+</span><span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">__test</span><span class="p">)</span> <span class="c1"># no attribute error
+</span></code></pre></div></div>
+<h2 id="6-returning-values">6. Returning Values</h2>
+<ul>
+  <li>
+    <p>함수가 복잡할수록 여러 곳에서 return 을 할 때가 종종 있다. 하지만 가독성을 중요시하고 코드가 더 직관적이고자 한다면, 여러 곳에서 return을 하는 것은 좋지 않다</p>
+  </li>
+  <li>보통 2가지의 경우에 함수에서 return을 한다
+    <ol>
+      <li>로직을 따라 정상처리가 됐을 때</li>
+      <li>에러가 났을 때</li>
+    </ol>
+  </li>
+  <li>Refactoring을 위해 하나의 return 포인트를 유지 하는 것이 좋다</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">complex_function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span> <span class="c1"># raising an exception might be better
+</span>    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">b</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="bp">None</span> <span class="c1"># raising an exception might be better
+</span>    
+    <span class="c1"># Some complex code to compute x from a, b
+</span>    <span class="c1"># Resist temptation to return when compute succeeds
+</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">x</span><span class="p">:</span>
+        <span class="c1"># some code to compute x as plan-b
+</span>    <span class="k">return</span> <span class="n">x</span> <span class="c1"># single exit point for maintainability
+</span>
+</code></pre></div></div>
+<hr />
+
+<h1 id="idioms">Idioms</h1>
+<ul>
+  <li>pythonic 한 코드를 작성하는 방법은 아래와 같다</li>
+</ul>
+
+<h2 id="1-unpacking-values">1. Unpacking values</h2>
+
+<ol>
+  <li>리스트에서 아이템 추출 시 <code class="language-plaintext highlighter-rouge">enumerate()</code> 함수 사용
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">some_list</span><span class="p">):</span>
+     <span class="c1"># do some'in with index and item
+</span></code></pre></div>    </div>
+  </li>
+  <li>변수끼리 swap 할 때
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># common 
+</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">b</span>
+ <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+ <span class="n">a</span> <span class="o">=</span> <span class="n">temp</span>
+
+ <span class="c1"># pythonic
+</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Nested unpacking
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+ <span class="c1"># python 3 (new feature)
+</span> <span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">rest</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+ <span class="c1"># a = 1, rest = [2, 3, 4]
+</span>
+ <span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">mid</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+ <span class="c1"># a = 1, mid = [2, 3], c = 4
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="2-creating-an-ignored-variable">2. Creating an ignored variable</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">filename</span> <span class="o">=</span> <span class="s">"awesomefile.txt"</span>
+<span class="n">basename</span><span class="p">,</span> <span class="n">__</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">filename</span><span class="p">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
+
+<span class="c1"># basename = awesomefile, __ = ., ext = txt
+# use __ to ignore vals
+# using _ might conflict since it's an alias for 
+# gettext(), and _ is used to store the last operation 
+# at the interactive prompt
+</span></code></pre></div></div>
+
+<h2 id="3-creating-lists">3. Creating lists</h2>
+<p><strong>A list of length - N</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arr_four</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span>
+</code></pre></div></div>
+
+<p><strong>A list of length - N of lists</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arr_four_nested</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">__</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<p><strong>Create a string from list</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">some_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">]</span>
+<span class="n">stringified</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">some_list</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="4-searching-items-in-iterables">4. Searching items in iterables</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">some_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">"i"</span><span class="p">,</span> <span class="s">"t"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"m"</span><span class="p">])</span>
+<span class="n">some_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">"i"</span><span class="p">,</span> <span class="s">"t"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"m"</span><span class="p">]</span>
+
+<span class="n">cond1</span> <span class="o">=</span> <span class="s">"t"</span> <span class="ow">in</span> <span class="n">some_set</span>
+<span class="n">cond2</span> <span class="o">=</span> <span class="s">"i"</span> <span class="ow">in</span> <span class="n">some_set</span>
+
+<span class="c1"># Set/Dict is a hash table
+# Much faster than lists/tuples when searching a large dataset
+# Sometimes using lists is better because creating the hash table requires more memory 
+</span></code></pre></div></div>
+
+<h2 id="5-zen-of-python">5. Zen of Python</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">this</span>
+<span class="s">'''
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+'''</span>
+</code></pre></div></div>
+<p><a href="https://github.com/hblanks/zen-of-python-by-example/blob/master/pep20_by_example.pdf">With example on github</a></p>
+
+<h2 id="6-pep-8">6. PEP 8</h2>
+<ul>
+  <li>defacto code style for python. Available <a href="https://pep8.org/">here</a></li>
+</ul>
+
+<h2 id="7-some-conventions">7. Some Conventions</h2>
+<p><strong>1. Check if variable equals constant</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Bad
+</span><span class="k">if</span> <span class="n">attr</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s">"True!"</span>
+
+<span class="k">if</span> <span class="n">attr</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s">"None!"</span>
+
+<span class="c1"># Good
+</span><span class="k">if</span> <span class="n">attr</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s">"True"</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">attr</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s">"False"</span>
+
+<span class="k">if</span> <span class="n">attr</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s">"None"</span>
+</code></pre></div></div>
+
+<p><strong>2. Access a dictionary element</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Bad
+</span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">"hello"</span><span class="p">:</span> <span class="s">"there"</span><span class="p">}</span>
+
+<span class="c1"># Don't use dict.has_key()
+</span><span class="k">if</span> <span class="n">d</span><span class="p">.</span><span class="n">has_key</span><span class="p">(</span><span class="s">"hello"</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s">"hello"</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"default_value"</span><span class="p">)</span>
+
+<span class="c1"># Good
+</span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">"hello"</span><span class="p">:</span> <span class="s">"there"</span><span class="p">}</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'hello'</span><span class="p">,</span> <span class="s">'default_value'</span><span class="p">))</span> <span class="c1"># prints 'there'
+</span><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'somein'</span><span class="p">,</span> <span class="s">'default_value'</span><span class="p">))</span> <span class="c1"># prints 'default_value'
+</span>
+<span class="c1"># Or:
+</span><span class="k">if</span> <span class="s">'hello'</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s">'hello'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p><strong>3. Short ways to manipulate lists</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Bad - needlessly allocates a list of all (gpa, name) entries in memory
+</span><span class="n">valedictorian</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([(</span><span class="n">student</span><span class="p">.</span><span class="n">gpa</span><span class="p">,</span> <span class="n">student</span><span class="p">.</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">graduates</span><span class="p">])</span>
+
+<span class="c1"># Good
+</span><span class="n">valedictorian</span> <span class="o">=</span> <span class="nb">max</span><span class="p">((</span><span class="n">student</span><span class="p">.</span><span class="n">gpa</span><span class="p">,</span> <span class="n">student</span><span class="p">.</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">graduates</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Good
+# Generator functions for more complex tasks
+</span><span class="k">def</span> <span class="nf">make_batches</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+    <span class="s">'''
+    &gt;&gt;&gt; list(make_batches([1, 2, 3, 4, 5], batch_size=3))
+    [[1, 2, 3], [4, 5]]
+
+    &gt;&gt;&gt; generator = make_batches([1, 2, 3, 4, 5], batch_size=3)
+    &gt;&gt;&gt; next(generator)
+    [1, 2, 3]
+    '''</span>
+
+    <span class="n">current_batch</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">current_batch</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_batch</span><span class="p">)</span> <span class="o">==</span> <span class="n">batch_size</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">current_batch</span>
+            <span class="n">current_batch</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">yield</span> <span class="n">current_batch</span> 
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Bad - never use list comprehension for its side effects
+</span><span class="p">[</span><span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">some_list</span><span class="p">]</span>
+
+<span class="c1"># Good
+</span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">some_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>4. Filtering a List</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Bad - Don't delete items when iterating through the list
+</span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">a</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1"># Don't make multiple passes through the list
+</span><span class="k">while</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="n">a</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1"># Good
+# comprehensions create a new list object
+</span><span class="n">filtered_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">some_list</span> <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># generators don't create another list 
+</span><span class="n">filtered_values</span> <span class="o">=</span> <span class="p">(</span><span class="n">value</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">some_list</span> <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>5. Modifying the values in a list</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Bad
+</span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># a,b refer to same list object
+</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">3</span> <span class="c1"># changing a will also change b
+</span>
+<span class="c1"># Good - create a new list object
+</span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span> <span class="c1"># does not change b
+</span></code></pre></div></div>
+
+<p><strong>6. Read from a file</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Bad
+</span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Good - with open automatically closes the file
+</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>7. Line Continuations</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Bad - using "\" might break if there is space afterwards"\ "
+</span><span class="n">some_string</span> <span class="o">=</span> <span class="s">"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa </span><span class="se">\
+</span><span class="s">    aaaaaaaaaaaaaaaaaaaa"</span>
+
+<span class="c1"># Good - open (, [, { will indicate the python interpreter to read until ), ], } closes
+</span><span class="n">some_string</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">"aaaaaaaaaaaaaaaaaaaaaaaaaaa"</span>
+    <span class="s">"aaaaaaaaaaaaaaaaaaaaaaaaaaaa"</span>
+    <span class="s">"aaaaaaaaaaaaaaaaaaaaaaaaaaa"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+<hr />
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2Fpython%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Python%20https%3A%2F%2Fjson9512.github.io%2Fblog%2Fpython%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2Fpython%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=Python&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2Fpython%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+  <div class="page-comments">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://json9512.github.io/blog/python/';
+        this.page.identifier = 'https://json9512.github.io/blog/python/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://json9512-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/first-post/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> Hello there 👋
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/python-advanced/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        Python Advanced Topic
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+
+<script>
+// http://docs.mathjax.org/en/latest/upgrading/v2.html
+MathJax = {
+  tex: {
+      tags: "ams"    // eq numbering options: none, ams, all
+  },
+  options: {
+    renderActions: {
+      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
+      find: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </body>
+
+</html>

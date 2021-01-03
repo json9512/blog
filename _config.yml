@@ -20,7 +20,7 @@ title: "json9512's Blog"
 description: ""
 baseurl: "/blog" # the subpath of your site, e.g. "/blog"
 url: "https://json9512.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: "/images/logo.JPG" # path of site logo, e.g. "/images/logo.png"
+logo: "/images/logo.png" # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: true # reading time estimates, e.g. true
 words_per_minute: 200 # 200
@@ -90,7 +90,7 @@ defaults:
 # Site Author
 author:
   name: json9512
-  picture: /images/me.JPG
+  picture: https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4
   email: json9512@gmail.com
   links:
     - title: Github

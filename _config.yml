@@ -118,3 +118,7 @@ footer_links:
   - title: Instagram
     url: https://www.instagram.com/sonj1219/
     icon: fab fa-instagram
+
+  - title: Gmail
+    url: mailto:json9512@gmail.com
+    icon: fab fa-google

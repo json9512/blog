@@ -1,1 +1,1 @@
-Sitemap: /json9512.github.io/sitemap.xml
+Sitemap: https://json9512.github.io/blog/sitemap.xml

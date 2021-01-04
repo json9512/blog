@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>[알고리즘] Dijkstra’s Shortest Path | json9512’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="[알고리즘] Dijkstra’s Shortest Path" />
+<meta name="author" content="json9512" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="출처: GeeksforGeeks, Baeldung, cppsecrets" />
+<meta property="og:description" content="출처: GeeksforGeeks, Baeldung, cppsecrets" />
+<link rel="canonical" href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/" />
+<meta property="og:url" content="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/" />
+<meta property="og:site_name" content="json9512’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[알고리즘] Dijkstra’s Shortest Path" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[알고리즘] Dijkstra’s Shortest Path","dateModified":"2021-01-04T00:00:00+00:00","datePublished":"2021-01-04T00:00:00+00:00","description":"출처: GeeksforGeeks, Baeldung, cppsecrets","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/"},"url":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="stylesheet" href="/blog/assets/css/skins/dark.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="json9512&#39;s Blog" href="/blog/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://json9512.github.io/blog/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://json9512.github.io/blog/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://json9512.github.io/blog/images/favicon-16x16.png">
+<link rel="manifest" href="https://json9512.github.io/blog/images/site.webmanifest">
+<link rel="shortcut icon" href="https://json9512.github.io/blog/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://json9512.github.io/blog/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  알고리즘-dijkstra-s-shortest-path">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/blog/about/">About</a></li><li><a href="/blog/posts/">Posts</a></li><li><a href="/blog/tags/">Tags</a></li><li><a href="/blog/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/blog/" class="site-logo" rel="home" title="json9512's Blog">
+        <img src="/blog/images/logo.png" class="site-logo-img animated fadeInDown" alt="json9512's Blog">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/blog/">json9512's Blog</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description"></p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">[알고리즘] Dijkstra’s Shortest Path
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4" class="author-avatar u-photo" alt="json9512"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">json9512</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
+          </li></ul>
+
+<span class="read-time">5 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-01-04T00:00:00+00:00"><a class="u-url" href="">January 4, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/blog/tags/#algorithm" title="Pages tagged algorithm" rel="tag">algorithm</a></li><li class="page-taxonomy"><a href="/blog/tags/#dijkstra" title="Pages tagged dijkstra" rel="tag">dijkstra</a></li><li class="page-taxonomy"><a href="/blog/tags/#python" title="Pages tagged python" rel="tag">python</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>출처: <a href="https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/">GeeksforGeeks</a>, <a href="https://www.baeldung.com/cs/prim-dijkstra-difference#:~:text=In%20the%20computation%20aspect%2C%20Prim's,only%20works%20on%20undirected%20graphs">Baeldung</a>, <a href="https://cppsecrets.com/users/1032115979910410511011497115116111103105505149484957575564103109971051084699111109/Python-implementation-of-Dijkastras-Shortest-Path-Algorithm.php">cppsecrets</a></p>
+
+<p>유명한 다익스트라의 최단 거리 찾기 알고리즘</p>
+
+<p>Prim’s Minimum Spanning Tree 알고리즘과 유사하다.</p>
+
+<p>그리디 알고리즘이다.</p>
+
+<p>다른점:</p>
+<ul>
+  <li>다익스트라 알고리즘은 <strong>최단거리</strong>를, 프림의 알고리즘은 <strong>Minimum Spanning Tree</strong>를 찾는 알고리즘이다</li>
+  <li>다익스트라 알고리즘은 undirected, directed graph 모두 적용이 되지만 프림의 알고리즘은 undirected graph에만 적용된다</li>
+  <li>다익스트라 알고리즘은 edge의 weight가 단 하나라도 음수(negative)면 최단 거리를 찾지 못 할수도 있다</li>
+</ul>
+
+<p>간단한 예를 들자면, 다익스트라 알고리즘은 가장 적은 시간/연료로 A 포인트에서 B 포인트까지 길을 찾는 것이고 프림의 알고리즘은 가장 적은 시간/재료로 여러개의 포인트가 서로 연결 되도록 (사이클 없이) 도로를 까는 것이다.</p>
+
+<h1 id="방법">방법</h1>
+<ol>
+  <li>최단 거리 경로를 저장하는 set를 만든다. (empty set)</li>
+  <li>모든 vertices 간의 거리 값을 지정한다. 시작점을 제외한 모든 vertices 거리 값은 무한대가 된다. 시작점은 0으로 만든다</li>
+  <li>모든 vertices가 최단 거리 경로를 저장하는 set에 들어올때까지 이하 반복 한다:
+    <ol>
+      <li>set에 포함되지 않는 vertices 중 최단 거리를 가지고 있는 vertex u를 고른다</li>
+      <li>set에 포함 시킨다</li>
+      <li>vertex u 와 인접한 모든 vertices의 거리 값을 갱신한다.</li>
+    </ol>
+  </li>
+</ol>
+
+<h1 id="python">Python</h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">create_graph</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">'A'</span><span class="p">:</span> <span class="p">{</span><span class="s">'B'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span><span class="mi">2</span><span class="p">},</span>
+        <span class="s">'B'</span><span class="p">:</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="s">'E'</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span>
+        <span class="s">'C'</span><span class="p">:</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s">'F'</span><span class="p">:</span><span class="mi">15</span><span class="p">},</span>
+        <span class="s">'D'</span><span class="p">:</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s">'F'</span><span class="p">:</span><span class="mi">7</span><span class="p">},</span>
+        <span class="s">'E'</span><span class="p">:</span> <span class="p">{</span><span class="s">'B'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s">'J'</span><span class="p">:</span><span class="mi">7</span><span class="p">},</span>
+        <span class="s">'F'</span><span class="p">:</span> <span class="p">{</span><span class="s">'C'</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="s">'K'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s">'G'</span><span class="p">:</span><span class="mi">9</span><span class="p">},</span>
+        <span class="s">'G'</span><span class="p">:</span> <span class="p">{</span><span class="s">'F'</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="s">'I'</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
+        <span class="s">'H'</span><span class="p">:</span> <span class="p">{</span><span class="s">'J'</span><span class="p">:</span><span class="mi">13</span><span class="p">},</span>
+        <span class="s">'I'</span><span class="p">:</span> <span class="p">{</span><span class="s">'G'</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s">'J'</span><span class="p">:</span><span class="mi">7</span><span class="p">},</span>
+        <span class="s">'J'</span><span class="p">:</span> <span class="p">{</span><span class="s">'H'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s">'I'</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
+        <span class="s">'K'</span><span class="p">:</span> <span class="p">{</span><span class="s">'F'</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
+
+<span class="c1"># set starting point
+</span><span class="n">initial</span> <span class="o">=</span> <span class="s">'D'</span>
+
+<span class="c1"># keeps track of paths
+</span><span class="n">path</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">adj_node</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># keeps track of nodes yet to visit
+</span><span class="n">queue</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># create adjacency graph with distance values 
+# intialized as infinity 
+# except the initial (starting) node 
+</span><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">:</span>
+    <span class="n">path</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s">'inf'</span><span class="p">)</span>
+    <span class="n">adj_node</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">queue</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+<span class="n">path</span><span class="p">[</span><span class="n">initial</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># while queue
+</span><span class="k">while</span> <span class="n">queue</span><span class="p">:</span>
+
+    <span class="c1"># for visualization
+</span>    <span class="s">'''
+    print("Graph: </span><span class="se">\n</span><span class="s">", graph)
+    print("Path: </span><span class="se">\n</span><span class="s">", path)
+    print("Adj_nodes: </span><span class="se">\n</span><span class="s">", adj_node)
+    print("Queue (nodes to visit): </span><span class="se">\n</span><span class="s">", queue)
+    '''</span>
+
+    <span class="c1"># find the node with the 
+</span>    <span class="c1"># minimum distance value
+</span>    <span class="n">min_key</span> <span class="o">=</span> <span class="n">queue</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">min_val</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">min_key</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">queue</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">path</span><span class="p">[</span><span class="n">queue</span><span class="p">[</span><span class="n">n</span><span class="p">]]</span> <span class="o">&lt;</span> <span class="n">min_val</span><span class="p">:</span>
+            <span class="n">min_key</span> <span class="o">=</span> <span class="n">queue</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+            <span class="n">min_val</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">min_key</span><span class="p">]</span>
+
+    <span class="c1"># update the current node as the node with the
+</span>    <span class="c1"># minimum distance
+</span>    <span class="n">current</span> <span class="o">=</span> <span class="n">min_key</span>
+
+    <span class="c1"># remove the node from 'to visit' queue
+</span>    <span class="n">queue</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">min_key</span><span class="p">)</span>
+
+    <span class="c1"># iterate through the nodes
+</span>    <span class="c1"># Update the distance value using the current node
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">current</span><span class="p">]:</span>
+        <span class="n">alternate</span> <span class="o">=</span> <span class="n">graph</span><span class="p">[</span><span class="n">current</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">path</span><span class="p">[</span><span class="n">current</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">alternate</span><span class="p">:</span>
+            <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">alternate</span>
+            <span class="n">adj_node</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">current</span>
+
+<span class="n">destination</span> <span class="o">=</span> <span class="s">'H'</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Path between {} to {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">initial</span><span class="p">,</span> <span class="n">destination</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">destination</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' &lt;- '</span><span class="p">)</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">destination</span> <span class="o">=</span> <span class="n">adj_node</span><span class="p">[</span><span class="n">destination</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">destination</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">""</span><span class="p">)</span>
+        <span class="k">break</span>
+    
+    <span class="k">print</span><span class="p">(</span><span class="n">destination</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' &lt;- '</span><span class="p">)</span>
+
+<span class="c1"># prints:
+# H &lt;- J &lt;- E &lt;- B &lt;- A &lt;- D &lt;-
+</span></code></pre></div></div>
+
+<h1 id="자세히">자세히</h1>
+
+<p>위의 코드를 조금 더 자세히 살펴보자</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">create_graph</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">'A'</span><span class="p">:</span> <span class="p">{</span><span class="s">'B'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span><span class="mi">2</span><span class="p">},</span>
+        <span class="s">'B'</span><span class="p">:</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="s">'E'</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span>
+        <span class="s">'C'</span><span class="p">:</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s">'F'</span><span class="p">:</span><span class="mi">15</span><span class="p">},</span>
+        <span class="s">'D'</span><span class="p">:</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s">'F'</span><span class="p">:</span><span class="mi">7</span><span class="p">},</span>
+        <span class="s">'E'</span><span class="p">:</span> <span class="p">{</span><span class="s">'B'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s">'J'</span><span class="p">:</span><span class="mi">7</span><span class="p">},</span>
+        <span class="s">'F'</span><span class="p">:</span> <span class="p">{</span><span class="s">'C'</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="s">'K'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s">'G'</span><span class="p">:</span><span class="mi">9</span><span class="p">},</span>
+        <span class="s">'G'</span><span class="p">:</span> <span class="p">{</span><span class="s">'F'</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="s">'I'</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
+        <span class="s">'H'</span><span class="p">:</span> <span class="p">{</span><span class="s">'J'</span><span class="p">:</span><span class="mi">13</span><span class="p">},</span>
+        <span class="s">'I'</span><span class="p">:</span> <span class="p">{</span><span class="s">'G'</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s">'J'</span><span class="p">:</span><span class="mi">7</span><span class="p">},</span>
+        <span class="s">'J'</span><span class="p">:</span> <span class="p">{</span><span class="s">'H'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s">'I'</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
+        <span class="s">'K'</span><span class="p">:</span> <span class="p">{</span><span class="s">'F'</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>이 코드를 실행 하면 아래와 같은 그래프가 형성된다</p>
+
+<p><img src="/blog/images/dijkstra-mp-1.png" class="align-center" alt="" /></p>
+
+<p>우리의 목적은 ‘D’ 에서 ‘H’ 까지 최단 거리를 찾는 것 이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># set starting point
+</span><span class="n">initial</span> <span class="o">=</span> <span class="s">'D'</span>
+
+<span class="c1"># keeps track of paths
+</span><span class="n">path</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">adj_node</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># keeps track of nodes yet to visit
+</span><span class="n">queue</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># create adjacency graph with distance values 
+# intialized as infinity 
+# except the initial (starting) node 
+</span><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">:</span>
+    <span class="n">path</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s">'inf'</span><span class="p">)</span>
+    <span class="n">adj_node</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">queue</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+<span class="n">path</span><span class="p">[</span><span class="n">initial</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+<p>시작 노드 <code class="language-plaintext highlighter-rouge">initial</code>을 지정 해주고 추후에 사용할 <code class="language-plaintext highlighter-rouge">path</code> 와 <code class="language-plaintext highlighter-rouge">adj_node</code>를 선언해준다</p>
+
+<p><code class="language-plaintext highlighter-rouge">path</code>는 시작 노드에서 특정 노드까지 최단 거리 값을 저장 시키기 위한 것이고</p>
+
+<p><code class="language-plaintext highlighter-rouge">adj_node</code>는 특정 노드의 최단 거리 값을 계산했을때 사용한 인접한 노드를 저장해 주는 것이다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">queue</code>는 현재 최단 거리 값을 계산 해야 할 노드들을 저장한 리스트다.</p>
+
+<p>이후 <code class="language-plaintext highlighter-rouge">for</code> 문에서 그래프 속 각 노드들의 최단 거리 값을 <code class="language-plaintext highlighter-rouge">inf</code>로 선언해주고 <code class="language-plaintext highlighter-rouge">adj_node</code> 값도 초기화 시켜준 뒤 <code class="language-plaintext highlighter-rouge">queue</code>에 저장한다</p>
+
+<p><code class="language-plaintext highlighter-rouge">path[initial] = 0</code> 로 시작 노드를 지정해준다</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># while queue
+</span><span class="k">while</span> <span class="n">queue</span><span class="p">:</span>
+    <span class="c1"># find the node with the 
+</span>    <span class="c1"># minimum distance value
+</span>    <span class="n">min_key</span> <span class="o">=</span> <span class="n">queue</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">min_val</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">min_key</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">queue</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">path</span><span class="p">[</span><span class="n">queue</span><span class="p">[</span><span class="n">n</span><span class="p">]]</span> <span class="o">&lt;</span> <span class="n">min_val</span><span class="p">:</span>
+            <span class="n">min_key</span> <span class="o">=</span> <span class="n">queue</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+            <span class="n">min_val</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">min_key</span><span class="p">]</span>
+
+    <span class="c1"># update the current node as the node with the
+</span>    <span class="c1"># minimum distance
+</span>    <span class="n">current</span> <span class="o">=</span> <span class="n">min_key</span>
+
+    <span class="c1"># remove the node from 'to visit' queue
+</span>    <span class="n">queue</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">min_key</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>이후 <code class="language-plaintext highlighter-rouge">queue</code>에 노드가 없어질때가지 <code class="language-plaintext highlighter-rouge">while</code>문을 돌린다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">min_key</code> - 최단 거리 값을 가지고 있는 노드</p>
+
+<p><code class="language-plaintext highlighter-rouge">min_val</code> - 최단 거리 값</p>
+
+<p><code class="language-plaintext highlighter-rouge">min_key</code> 와 <code class="language-plaintext highlighter-rouge">min_val</code>을 <code class="language-plaintext highlighter-rouge">queue</code>의 첫 번째 노드로 선언해준 뒤 <code class="language-plaintext highlighter-rouge">queue</code>에 남아 있는 나머지 노드들과 비교를 하며 가장 거리 값이 낮은 노드를 찾는다</p>
+
+<p>이후 찾은 노드를 <code class="language-plaintext highlighter-rouge">current</code>에 저장해주고 <code class="language-plaintext highlighter-rouge">queue</code>에서 해당 노드를 지운다</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># iterate through the nodes
+</span>    <span class="c1"># Update the distance value using the current node
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">current</span><span class="p">]:</span>
+        <span class="n">alternate</span> <span class="o">=</span> <span class="n">graph</span><span class="p">[</span><span class="n">current</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">path</span><span class="p">[</span><span class="n">current</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">alternate</span><span class="p">:</span>
+            <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">alternate</span>
+            <span class="n">adj_node</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">current</span>
+</code></pre></div></div>
+
+<p>이후 현 노드 (최단 거리 값을 가진)의 인접 노드들을 <code class="language-plaintext highlighter-rouge">for</code>문을 돌린다</p>
+
+<p><code class="language-plaintext highlighter-rouge">alternate</code> - 현재 노드와 인접한 노드의 거리 값 + 현재 노드까지의 최단 거리</p>
+
+<p><em>예를 들자면, <code class="language-plaintext highlighter-rouge">current</code>가 <code class="language-plaintext highlighter-rouge">A</code>면 인접 노드는 <code class="language-plaintext highlighter-rouge">B</code>, <code class="language-plaintext highlighter-rouge">C</code>, <code class="language-plaintext highlighter-rouge">D</code> 가 되고, 위에 <code class="language-plaintext highlighter-rouge">for</code>문이 각각의 인접 노드의 거리 값을 현재 노드 <code class="language-plaintext highlighter-rouge">A</code>의 최단 거리 값과 더 한다 (<code class="language-plaintext highlighter-rouge">alternate</code>). 즉 <code class="language-plaintext highlighter-rouge">A</code>를 이용해서 각 인접 노드로 가는 거리 값이다</em></p>
+
+<p>이 <code class="language-plaintext highlighter-rouge">alternate</code> 값과 현재 인접 노드의 거리값 <code class="language-plaintext highlighter-rouge">path[i]</code>를 비교해서 <code class="language-plaintext highlighter-rouge">alternate</code>가 더 작을 경우,</p>
+
+<p>인접노드의 최단 거리 값(<code class="language-plaintext highlighter-rouge">path[i]</code>)을 <code class="language-plaintext highlighter-rouge">alternate</code>로 바꾸고 <code class="language-plaintext highlighter-rouge">adj_node</code>에 현재 노드 (<code class="language-plaintext highlighter-rouge">current</code>)를 저장해 준다.</p>
+
+<p><em>예를 들면 <code class="language-plaintext highlighter-rouge">A</code>의 인접노드 <code class="language-plaintext highlighter-rouge">B</code>를 <code class="language-plaintext highlighter-rouge">A</code>를 통해서 가게 됐을때 그 값이 현재 <code class="language-plaintext highlighter-rouge">B</code>의 최단 거리 값 보다 작으면, <code class="language-plaintext highlighter-rouge">B</code>의 값을 바꿔주고 <code class="language-plaintext highlighter-rouge">A</code>를 사용했다고 <code class="language-plaintext highlighter-rouge">adj_node</code>에 명시해 준다</em></p>
+
+<p>여기까지만 코드를 실행 시키면 다익스트라 알고리즘을 이용해 시작 노드 <code class="language-plaintext highlighter-rouge">D</code>에서 나머지 노드들까지 가는 최단 거리가 계산된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">destination</span> <span class="o">=</span> <span class="s">'H'</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Path between {} to {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">initial</span><span class="p">,</span> <span class="n">destination</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">destination</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' &lt;- '</span><span class="p">)</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">destination</span> <span class="o">=</span> <span class="n">adj_node</span><span class="p">[</span><span class="n">destination</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">destination</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">""</span><span class="p">)</span>
+        <span class="k">break</span>
+    
+    <span class="k">print</span><span class="p">(</span><span class="n">destination</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' &lt;- '</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>위의 코드를 실행 시키면 <code class="language-plaintext highlighter-rouge">destination</code>에 저장된 목적지 노드까지의 경로가 나온다.</p>
+
+<p>위 코드는 <code class="language-plaintext highlighter-rouge">while</code> 문만 간단히 설명하자면</p>
+
+<p><code class="language-plaintext highlighter-rouge">destination = adj_node[destination]</code> 로 <code class="language-plaintext highlighter-rouge">while</code>문이 돌때마다 현재 노드(<code class="language-plaintext highlighter-rouge">destination</code>)를 현재 노드의 최단 거리 값을 계산 할 때 사용했던 인접 노드(<code class="language-plaintext highlighter-rouge">adj_node[destination]</code>)로 바꿔준다</p>
+
+<p>이후 <code class="language-plaintext highlighter-rouge">if</code>문으로 <code class="language-plaintext highlighter-rouge">destination</code> 이 <code class="language-plaintext highlighter-rouge">None</code>일때 <code class="language-plaintext highlighter-rouge">while</code>문을 종료시키면 시작 노드 <code class="language-plaintext highlighter-rouge">initial</code>에서 목적지 노드 <code class="language-plaintext highlighter-rouge">destination</code>까지의 최단 경로를 알 수 있다.</p>
+
+<p>실제로 확인을 해보면 <code class="language-plaintext highlighter-rouge">D</code>에서 <code class="language-plaintext highlighter-rouge">A</code>를 통해 <code class="language-plaintext highlighter-rouge">H</code>를 가는 경로와 <code class="language-plaintext highlighter-rouge">F</code>를 통해 <code class="language-plaintext highlighter-rouge">H</code>로 가는 경로 값을 비교해보면 <code class="language-plaintext highlighter-rouge">A</code>가는 경로가 최단 경로인 것을 알 수 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">A</code>를 통할 경우: 10 + 1 + 5 + 7 + 2 = 25</p>
+
+<p><code class="language-plaintext highlighter-rouge">F</code>를 통할 경우: 7 + 9 + 4 + 7 + 2 = 29</p>
+
+<p>위 알고리즘의 Time Complexity는 <code class="language-plaintext highlighter-rouge">O(V^2)</code>이다.</p>
+
+<p>하지만 인풋 그래프가 adjacency list로 주어진다면 binary heap을 이용해 시간 복잡도를 <code class="language-plaintext highlighter-rouge">O(E log V)</code> 까지 줄일 수 있다</p>
+
+<h1 id="dijkstra-최단-경로-알고리즘을-사용한-문제">Dijkstra 최단 경로 알고리즘을 사용한 문제</h1>
+<p><a href="https://www.acmicpc.net/problemset?sort=ac_desc&amp;algo=22">백준 다익스트라로 분류된 문제</a></p>
+
+<p><a href="https://programmers.co.kr/learn/courses/30/lessons/12978">[프로그래머스] 배달</a></p>
+
+<p><a href="https://programmers.co.kr/learn/courses/30/lessons/49189">[프로그래머스] 가장 먼 노드</a></p>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Dijkstra-shortest-path%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+Dijkstra%27s+Shortest+Path%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Dijkstra-shortest-path%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Dijkstra-shortest-path%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+Dijkstra%27s+Shortest+Path&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Dijkstra-shortest-path%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+  <div class="page-comments">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/';
+        this.page.identifier = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://json9512-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/%EC%BA%A1%EC%8A%A4%ED%86%A4/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> 호주 스타트업 캡스톤 후기
+
+      </span>
+    </a>
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+
+<script>
+// http://docs.mathjax.org/en/latest/upgrading/v2.html
+MathJax = {
+  tex: {
+      tags: "ams"    // eq numbering options: none, ams, all
+  },
+  options: {
+    renderActions: {
+      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
+      find: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </body>
+
+</html>

@@ -178,7 +178,7 @@
 </ol>
 
 <h1 id="python">Python</h1>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">create_graph</span><span class="p">():</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">createGraph</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s">'A'</span><span class="p">:</span> <span class="p">{</span><span class="s">'B'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span><span class="mi">2</span><span class="p">},</span>
         <span class="s">'B'</span><span class="p">:</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="s">'E'</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span>
@@ -193,7 +193,7 @@
         <span class="s">'K'</span><span class="p">:</span> <span class="p">{</span><span class="s">'F'</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
     <span class="p">}</span>
 
-<span class="n">graph</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">createGraph</span><span class="p">()</span>
 
 <span class="c1"># set starting point
 </span><span class="n">initial</span> <span class="o">=</span> <span class="s">'D'</span>
@@ -411,7 +411,7 @@
 
 <p>위 알고리즘의 Time Complexity는 <code class="language-plaintext highlighter-rouge">O(V^2)</code>이다.</p>
 
-<p>하지만 인풋 그래프가 adjacency list로 주어진다면 binary heap을 이용해 시간 복잡도를 <code class="language-plaintext highlighter-rouge">O(E log V)</code> 까지 줄일 수 있다</p>
+<p>하지만 우선 순위 큐를 사용하면 시간 복잡도를 <code class="language-plaintext highlighter-rouge">O(V + E log V)</code> 까지 줄일 수 있다. 관련 <a href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path-2/">포스트</a></p>
 
 <h1 id="dijkstra-최단-경로-알고리즘을-사용한-문제">Dijkstra 최단 경로 알고리즘을 사용한 문제</h1>
 <p><a href="https://www.acmicpc.net/problemset?sort=ac_desc&amp;algo=22">백준 다익스트라로 분류된 문제</a></p>
@@ -419,6 +419,8 @@
 <p><a href="https://programmers.co.kr/learn/courses/30/lessons/12978">[프로그래머스] 배달</a></p>
 
 <p><a href="https://programmers.co.kr/learn/courses/30/lessons/49189">[프로그래머스] 가장 먼 노드</a></p>
+
+<p>요런 문제들을 풀려면 <code class="language-plaintext highlighter-rouge">O(V^2)</code>의 시간 복잡도로는 풀 수가 없다.</p>
 
         </div>
 
@@ -466,6 +468,14 @@
     </a>
   
 
+  
+    <a class="page-next" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path-2/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        [알고리즘] Dijkstra’s Shortest Path 2
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
   
 </nav>
 

@@ -1,4 +1,316 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-04T10:45:52+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[알고리즘] Dijkstra’s Shortest Path</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/" rel="alternate" type="text/html" title="[알고리즘] Dijkstra’s Shortest Path" /><published>2021-01-04T00:00:00+00:00</published><updated>2021-01-04T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Dijkstra%20shortest%20path</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/&quot;&gt;GeeksforGeeks&lt;/a&gt;, &lt;a href=&quot;https://www.baeldung.com/cs/prim-dijkstra-difference#:~:text=In%20the%20computation%20aspect%2C%20Prim's,only%20works%20on%20undirected%20graphs&quot;&gt;Baeldung&lt;/a&gt;, &lt;a href=&quot;https://cppsecrets.com/users/1032115979910410511011497115116111103105505149484957575564103109971051084699111109/Python-implementation-of-Dijkastras-Shortest-Path-Algorithm.php&quot;&gt;cppsecrets&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-05T11:02:13+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[알고리즘] Dijkstra’s Shortest Path 2</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path-2/" rel="alternate" type="text/html" title="[알고리즘] Dijkstra’s Shortest Path 2" /><published>2021-01-05T00:00:00+00:00</published><updated>2021-01-05T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Dijkstra%20shortest%20path%202</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path-2/">&lt;p&gt;출처: &lt;a href=&quot;https://greenhelix.tistory.com/130&quot;&gt;greenhelix 푸푸릇님의 post&lt;/a&gt;, &lt;a href=&quot;https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/&quot;&gt;HackerEarth&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;전 &lt;a href=&quot;/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/&quot;&gt;포스트&lt;/a&gt;에서 시간 복잡도 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(V^2)&lt;/code&gt;의 알고리즘을 살펴보았다.&lt;/p&gt;
+
+&lt;p&gt;이번 포스트에서는 시간 복잡도 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(V + E log V)&lt;/code&gt;를 가진 다익스트라 최단 거리 알고리즘을 살펴보자&lt;/p&gt;
+
+&lt;h1 id=&quot;방법&quot;&gt;방법&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;모든 거리 값을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INF&lt;/code&gt;로 지정 해주고 시작 노드의 거리 값만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;으로 지정해준다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(거리, 노드)&lt;/code&gt; 형식으로 노드들을 min-우선 순위 큐에 저장한다. 우선 순위 큐는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;거리&lt;/code&gt;를 기준으로 한다&lt;/li&gt;
+  &lt;li&gt;가장 적은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;거리&lt;/code&gt; 값을 가진 노드를 우선 순위 큐에서 꺼낸다.&lt;/li&gt;
+  &lt;li&gt;꺼낸 노드와 연결 된 노드들의 거리 값을 계산 한다. 계산 방식은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;현재 노드까지 거리값 + 현재 노드에서 다음 노드까지 거리값 &amp;lt; 다음 노드의 현재 거리 값&lt;/code&gt;을 사용한다. 거리 값이 갱신된 새로운 노드를 우선 순위 큐에 저장한다&lt;/li&gt;
+  &lt;li&gt;만약 꺼낸 노드가 이전에 사용한 노드라면, 무시하고 다음 노드를 꺼낸다&lt;/li&gt;
+  &lt;li&gt;우선 순위 큐가 비워질때가지 반복한다&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
+&lt;p&gt;부분적으로 먼저 살펴 본 후, 마지막에 전체 코드를 보도록 하자&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'E'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'E'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'J'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'K'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'G'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'G'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'I'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'H'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'J'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'I'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'G'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'J'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'J'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'H'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'I'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'K'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;전과 같이 이걸 실행하면 아래와 같은 그래프가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt;에 저장된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/dijkstra-mp-1.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dijkstra&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# set adj_node 
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# set all distance to INF
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'inf'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# starting position is 0
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# create min-priority-queue
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# add the starting point to priority queue
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;heapq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heappush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 코드는 다익스트라 알고리즘에 쓸 변수들을 만들고 초기화 시켜주는 코드다&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adj_node&lt;/code&gt; - 노드들이 최단 거리 값을 계산 할 때 사용했던 인접 노드 정보를 담고 있다&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance_matrix&lt;/code&gt; - 노드의 최단 거리 값을 가지고 있다&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;heap&lt;/code&gt; - 최단 거리 값을 기준으로 만들어진 우선 순위 큐&lt;/p&gt;
+
+&lt;p&gt;초기화 작업 시 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adj_node&lt;/code&gt;는 다 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;None&lt;/code&gt;으로 해주고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance_matrix&lt;/code&gt;도 모든 노드들이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inf&lt;/code&gt; 값을 가지게 선언 해준다.&lt;/p&gt;
+
+&lt;p&gt;시작 노드만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance_matrix&lt;/code&gt;에서 거리값을 0으로 선언하고 시작 노드를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;heap&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[거리값, 노드]&lt;/code&gt; 형식으로 넣어준다&lt;/p&gt;
+
+&lt;p&gt;이후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;while&lt;/code&gt;문으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;heap&lt;/code&gt;에 노드들이 다 없어질때까지 아래의 작업을 반복한다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;우선순위 큐에서 노드를 꺼낸 뒤 거리값을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance&lt;/code&gt;, 노드 이름을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node&lt;/code&gt;에 저장한다
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;# Take out an item from the priority queue
+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;heapq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heappop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance_matrix&lt;/code&gt;에서 현 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node&lt;/code&gt;의 거리 값이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance&lt;/code&gt;보다 낮으면, 다음 iteration으로 넘어간다
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;# If this node was used before and has lesser
+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# distance value than the new distance
+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# skip this node
+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;현 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node&lt;/code&gt;와 연결된 모든 노드들을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; 문을 돌린다
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;# Iterate through all the next nodes connected to 
+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# the current node
+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_node_distance&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; 문에서 이하 반복한다
+    &lt;ol&gt;
+      &lt;li&gt;현재 노드의 최단 거리 값이랑 다음 노드로 가는 거리 값을 더한다
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;# Calculate the new distance using current node
+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# to get to the next node
+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_node_distance&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next_node&lt;/code&gt;를 위해 갱신된 거리 값 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;new_distance&lt;/code&gt;가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance_matrix&lt;/code&gt;에 저장 된 거리 값 보다 적으면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance_matrix&lt;/code&gt; 값을 갱신해준다.
+ &lt;br /&gt;
+ &lt;br /&gt;
+ 이후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[갱신된 거리값, 다음 노드]&lt;/code&gt; 를 우선 순위 큐 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;heap&lt;/code&gt;에 넣어준다
+ &lt;br /&gt;
+ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adj_node&lt;/code&gt;에도 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node&lt;/code&gt;를 사용 했다고 저장해준다
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;# change the distance if new_distance is lesser
+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_distance&lt;/span&gt;
+
+     &lt;span class=&quot;c1&quot;&gt;# add the updated node to the priority queue
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;heapq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heappush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+            
+     &lt;span class=&quot;c1&quot;&gt;# update adj_node that next_node used current node
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;전체-코드&quot;&gt;전체 코드&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;heapq&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'E'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'E'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'J'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'K'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'G'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'G'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'I'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'H'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'J'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'I'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'G'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'J'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'J'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'H'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'I'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'K'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dijkstra&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# set adj_node 
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# set all distance to INF
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'inf'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# starting position is 0
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# create min-priority-queue
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# add the starting point to priority queue
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;heapq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heappush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# if there are nodes in heap
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# Take out an item from the priority queue
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;heapq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heappop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;# If this node was used before and has lesser
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# distance value than the new distance
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# skip this node
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
+        
+        &lt;span class=&quot;c1&quot;&gt;# Iterate through all the next nodes connected to 
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# the current node
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_node_distance&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+            
+            &lt;span class=&quot;c1&quot;&gt;# Calculate the new distance using current node
+&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# to get to the next node
+&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;new_distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_node_distance&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;# change the distance if new_distance is lesser
+&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_distance&lt;/span&gt;
+
+                &lt;span class=&quot;c1&quot;&gt;# add the updated node to the priority queue
+&lt;/span&gt;                &lt;span class=&quot;n&quot;&gt;heapq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heappush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+                
+                &lt;span class=&quot;c1&quot;&gt;# update adj_node that next_node used current node
+&lt;/span&gt;                &lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;initial&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dijkstra&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;initial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;distance_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Show shortest path from 'D' to 'H'
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;destination&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'H'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Path between {} to {}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' &amp;lt;- '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;destination&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;adj_node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;destination&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' &amp;lt;- '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# prints: H &amp;lt;- J &amp;lt;- E &amp;lt;- B &amp;lt;- A &amp;lt;- D &amp;lt;-
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dijkstra&lt;/code&gt; 함수는 거리 값 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance_matrix&lt;/code&gt;랑 사용한 인접 노드 정보 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adj_node&lt;/code&gt;만 주고 실질적으로 최단거리를 계산하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adj_node&lt;/code&gt; 사용해야 한다&lt;/p&gt;
+
+&lt;p&gt;코딩 테스트에서는 대부분 위와 같이 우선 순위 큐로 구현하지 않으면 효율성 테스트에서 실패 할 수도 있다&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="python" /><category term="algorithm" /><category term="dijkstra" /><summary type="html">출처: greenhelix 푸푸릇님의 post, HackerEarth</summary></entry><entry><title type="html">Sonar to Image 연구 프로젝트 후기</title><link href="https://json9512.github.io/blog/Sonar-to-Image-%EC%97%B0%EA%B5%AC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9B%84%EA%B8%B0/" rel="alternate" type="text/html" title="Sonar to Image 연구 프로젝트 후기" /><published>2021-01-05T00:00:00+00:00</published><updated>2021-01-05T00:00:00+00:00</updated><id>https://json9512.github.io/blog/Sonar%20to%20Image%20%EC%97%B0%EA%B5%AC%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%ED%9B%84%EA%B8%B0</id><content type="html" xml:base="https://json9512.github.io/blog/Sonar-to-Image-%EC%97%B0%EA%B5%AC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9B%84%EA%B8%B0/">&lt;p&gt;2019년 11월부터 2020년 2월까지 호주 QUT 대학교에서 진행한 10주 연구 프로젝트 ‘Sonar to Image’에 관한 후기다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/json9512/sonarToimage&quot;&gt;깃허브&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;대학교 2학년 마치고 여름 방학 동안 10주 연구 프로젝트를 한 적이 있다.&lt;/p&gt;
+
+&lt;p&gt;연구 팀은 지도 교수 2명 학생 2명 이렇게 4인이었고 사실상 연구 경험을 ‘맛 보기’ 하는 프로젝트였다.&lt;/p&gt;
+
+&lt;h1 id=&quot;연구-내용&quot;&gt;연구 내용&lt;/h1&gt;
+&lt;p&gt;연구의 핵심은 가상 공간 (VR)에 해저 환경을 딥러닝을 이용해 구현하는 것이었다. 임의의 환경을 만드는 것이 아닌 실존하는 해저 지형을 딥러닝이 만들어내는 것이었다.&lt;/p&gt;
+
+&lt;p&gt;궁극적인 목표는 잠수함이 해저를 탐험 할 때 sonar로 지형 지물의 존재여부를 알게 되는데, 이때 가상의 스크린에 바로 지형이 펄쳐지도록 하는 것이 이 연구의 마지막 단계라고 했다.&lt;/p&gt;
+
+&lt;p&gt;이 부분은 크게 2가지로 나뉘어졌었다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;수집된 sonar와 제한적인 image를 가지고 딥러닝 모델을 구현하는 것&lt;/li&gt;
+  &lt;li&gt;딥러닝이 생성한 데이터를 (Unity나 Unreal) VR 환경에 구축하는 것&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;여기서 나는 1번을 하게 되었다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;지도 교수님의 도움으로 어떤 모델을 만들어야 할지 알아보다가 &lt;strong&gt;GAN&lt;/strong&gt; 모델로 정하게 되었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;GAN&lt;/strong&gt; 이란 Generative Adversarial Network의 약자인데, 쉽게 말하면 두 개의 딥러닝 네트워크가 서로 상호작용하며 주어진 학습 데이터를 바탕으로 새로운 데이터를 만들어 낼 수 있는 모델이다.&lt;/p&gt;
+
+&lt;p&gt;구체적인 내용은 &lt;a href=&quot;###모델-학습&quot;&gt;모델 학습&lt;/a&gt;에서 설명하겠다.&lt;/p&gt;
+
+&lt;h1 id=&quot;연구-일지&quot;&gt;연구 일지&lt;/h1&gt;
+&lt;p&gt;딥러닝, 머신러닝으로 모델을 만들 때 크게 3 가지가 중요하다고 볼 수 있는데:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Data preprocessing 데이터 전처리&lt;/li&gt;
+  &lt;li&gt;Model training 모델 학습&lt;/li&gt;
+  &lt;li&gt;Model evaluation 모델 평가&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이 중 데이터 전처리 과정이 모델의 능력을 결정한다고 볼 수 있다. 아무리 모델이 뛰어나도 쓰레기 데이터가 들어가면 쓰레기 데이터가 나온다.&lt;/p&gt;
+
+&lt;h3 id=&quot;데이터-전처리-과정&quot;&gt;데이터 전처리 과정&lt;/h3&gt;
+
+&lt;p&gt;일단 데이터는 ROS 형식으로 저장이 되어 있었고, 거기서 유용한 데이터를 찾고 엑셀화 시키는 것에만 1주~2주 정도 소모됐다.&lt;/p&gt;
+
+&lt;p&gt;내게 주어진 데이터는:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;기계가 전 방위 1~2초 단위로 수집한 sonar 데이터와&lt;/li&gt;
+  &lt;li&gt;기계 하단부 카메라에서 수집한 해저 땅? 사진들 300백 장 정도가 다였다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;일단 사진 데이터가 하단부 밖에 촬영을 못했기 때문에 실제로 모델을 학습 시킬 때 사용할 수 있었던 데이터는 sonar가 하단부 카메라 각 안에 들어올때 밖에 없었다.&lt;/p&gt;
+
+&lt;p&gt;이후 카메라 각 안에 들어오는 sonar 수치를 binary map으로 찍어서 이미지화 시켰다.&lt;/p&gt;
+
+&lt;p&gt;그리고 기존 사진 300백 장도 살펴보니 Spotlight effect (사진 중앙만 밝은 현상)이 심해서 이걸 없애는 알고리즘을 찾느라 또 시간을 많이 보냈다.&lt;/p&gt;
+
+&lt;p&gt;CLAHE라는 알고리즘으로 Spotlight effect를 지운 후 마침내 모델 학습을 위한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[sonar binary map, 카메라가 수집한 사진]&lt;/code&gt; 을 만들었다.&lt;/p&gt;
+
+&lt;h3 id=&quot;모델-학습&quot;&gt;모델 학습&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;GAN&lt;/strong&gt; 은 Generator, Discriminator라는 2개의 네트워크가 서로 상호작용한다. 간단히 설명하면 Generator는 주어진 X 정보를 활용해 Y 정보를 제작한다, 이후 Discriminator는 제작된 Y가 실제 Y인지 분별하는 역할을 한다.&lt;/p&gt;
+
+&lt;p&gt;Generator는 궁극적으로 Discriminator를 속일 수 있을 만한 데이터를 만들게 되고, Generator가 만든 Y 데이터가 모델이 만들어낸 데이터라고 보면 된다.&lt;/p&gt;
+
+&lt;p&gt;즉 이 연구에서는 Generator 에게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sonar binary map&lt;/code&gt;을 주고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;카메라가 수집한 사진&lt;/code&gt; 같은 데이터를 만들어내라고 하는 것이다. 그러면 Discriminator는 실제 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;카메라가 수집한 사진&lt;/code&gt;과 Generator가 만든 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;카메라가 수집한 사진&lt;/code&gt;을 비교하며 유사도 점수를 준다.&lt;/p&gt;
+
+&lt;p&gt;모델 자체는 &lt;a href=&quot;https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/pix2pix/pix2pix.py&quot;&gt;pix2pix 모델&lt;/a&gt;을 조금 더 경량화 시켜서 사용했고 완성도는 딥러닝에 대한 지식이 없을 때 만든거라 뛰어나지 않다.&lt;/p&gt;
+
+&lt;h3 id=&quot;모델-평가&quot;&gt;모델 평가&lt;/h3&gt;
+
+&lt;p&gt;확실히 처음 딥러닝을 접할 때여서 Overfitting이 뭔지 어떻게 해결하는지 잘 몰랐다.&lt;/p&gt;
+
+&lt;p&gt;즉, 모델 자체의 완성도는 좋지 않다. 그냥 이런 모델을 시도해 봤다 정도로 보면 되겠다.&lt;/p&gt;
+
+&lt;h1 id=&quot;결과&quot;&gt;결과&lt;/h1&gt;
+
+&lt;p&gt;사진 한장을 보고 어떤 사진이 모델이 만들어낸 것인지 분별을 해보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/gan-result-test.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;실제 사진과 모델이 만든 사진에 차이가 보이긴 보인다.
+처음 모델이 사진을 만들어 냈을 때 상당히 신기했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/gan-result.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;주어진 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sonar binary map&lt;/code&gt; 이 제일 윗 줄&lt;/p&gt;
+
+&lt;p&gt;Generator가 만들어낸 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;카메라가 수집한 사진&lt;/code&gt;이 중간 줄&lt;/p&gt;
+
+&lt;p&gt;실제 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;카메라가 수집한 사진&lt;/code&gt;이 마지막 줄이다.&lt;/p&gt;
+
+&lt;p&gt;위 사진은 대조할 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;카메라가 수집한 사진&lt;/code&gt;이 있는 sonar 각에 대한 학습 결과고 실제로 저 모델을 사용해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;카메라가 수집한 사진&lt;/code&gt;이 없는 sonar 각 까지 모델로 만들어서 이어보면 상당히 흥미로운 결과를 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;궁금하면 &lt;a href=&quot;https://github.com/json9512/sonarToimage/blob/master/sample/imgs/image.png&quot;&gt;여기&lt;/a&gt; 에 있다&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;처음 도전한 딥러닝이었고 데이터 전처리, 모델 학습 및 평가 과정이 상당히 부족한 프로젝트였지만 이 계기를 통해 나는 인공지능에 대해 좀 더 관심을 가지게 되었다. 그리고 이후 머신러닝/딥러닝 과목을 이수하게 되었다.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="호주" /><category term="DL" /><category term="GAN" /><category term="연구" /><category term="research" /><summary type="html">2019년 11월부터 2020년 2월까지 호주 QUT 대학교에서 진행한 10주 연구 프로젝트 ‘Sonar to Image’에 관한 후기다.</summary></entry><entry><title type="html">[알고리즘] Dijkstra’s Shortest Path</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/" rel="alternate" type="text/html" title="[알고리즘] Dijkstra’s Shortest Path" /><published>2021-01-04T00:00:00+00:00</published><updated>2021-01-04T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Dijkstra%20shortest%20path</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/&quot;&gt;GeeksforGeeks&lt;/a&gt;, &lt;a href=&quot;https://www.baeldung.com/cs/prim-dijkstra-difference#:~:text=In%20the%20computation%20aspect%2C%20Prim's,only%20works%20on%20undirected%20graphs&quot;&gt;Baeldung&lt;/a&gt;, &lt;a href=&quot;https://cppsecrets.com/users/1032115979910410511011497115116111103105505149484957575564103109971051084699111109/Python-implementation-of-Dijkastras-Shortest-Path-Algorithm.php&quot;&gt;cppsecrets&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;유명한 다익스트라의 최단 거리 찾기 알고리즘&lt;/p&gt;
 
@@ -29,7 +341,7 @@
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;create_graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
         &lt;span class=&quot;s&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'E'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
@@ -44,7 +356,7 @@
         &lt;span class=&quot;s&quot;&gt;'K'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'F'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# set starting point
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initial&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;
@@ -262,32 +574,16 @@
 
 &lt;p&gt;위 알고리즘의 Time Complexity는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(V^2)&lt;/code&gt;이다.&lt;/p&gt;
 
-&lt;p&gt;하지만 인풋 그래프가 adjacency list로 주어진다면 binary heap을 이용해 시간 복잡도를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(E log V)&lt;/code&gt; 까지 줄일 수 있다&lt;/p&gt;
+&lt;p&gt;하지만 우선 순위 큐를 사용하면 시간 복잡도를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(V + E log V)&lt;/code&gt; 까지 줄일 수 있다. 관련 &lt;a href=&quot;/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path-2/&quot;&gt;포스트&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;dijkstra-최단-경로-알고리즘을-사용한-문제&quot;&gt;Dijkstra 최단 경로 알고리즘을 사용한 문제&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problemset?sort=ac_desc&amp;amp;algo=22&quot;&gt;백준 다익스트라로 분류된 문제&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/12978&quot;&gt;[프로그래머스] 배달&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/49189&quot;&gt;[프로그래머스] 가장 먼 노드&lt;/a&gt;&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="python" /><category term="algorithm" /><category term="dijkstra" /><summary type="html">출처: GeeksforGeeks, Baeldung, cppsecrets</summary></entry><entry><title type="html">취준 로그 - 1</title><link href="https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-1/" rel="alternate" type="text/html" title="취준 로그 - 1" /><published>2021-01-03T06:00:17+00:00</published><updated>2021-01-03T06:00:17+00:00</updated><id>https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-1</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-1/">&lt;p&gt;취준은 어렵다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/49189&quot;&gt;[프로그래머스] 가장 먼 노드&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;너무 심심하기도 하고 할 것도 많기도 해서 어렵다.&lt;/p&gt;
-
-&lt;p&gt;대학교 다닐 때 분명 열심히 했는데 왜 알고리즘만 제대로 공부를 안 했을까 . . .&lt;/p&gt;
-
-&lt;p&gt;현재까지 대략 6번 지원한거 같다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;호주 구글 인턴: 이땐 코테가 뭔지도 몰라서 코테 문제 입출력 받는 것만 짜는데 30분 걸렸다&lt;/li&gt;
-  &lt;li&gt;카카오 공채, 쿠팡 공채, 토스 공채, 네이버 공채: 막 학기 중에 한국은 어떻게 나오나 하고 지원했다. 물론 다 코테 탈락&lt;/li&gt;
-  &lt;li&gt;네이버 상시: 요건 진행형&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;앞으로&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;아직은 객관적으로 난 실력이 부족해서 공부를 좀 더 해야한다.&lt;/p&gt;
-
-&lt;p&gt;도전하는 기업마다 포스트를 작성해 보려고 한다.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="취준" /><summary type="html">취준은 어렵다.</summary></entry><entry><title type="html">호주 스타트업 캡스톤 후기</title><link href="https://json9512.github.io/blog/%EC%BA%A1%EC%8A%A4%ED%86%A4/" rel="alternate" type="text/html" title="호주 스타트업 캡스톤 후기" /><published>2021-01-03T06:00:17+00:00</published><updated>2021-01-03T06:00:17+00:00</updated><id>https://json9512.github.io/blog/%EC%BA%A1%EC%8A%A4%ED%86%A4</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%BA%A1%EC%8A%A4%ED%86%A4/">&lt;p&gt;이 글은 학과 마지막 1년 동안 호주 스타트업 &lt;a href=&quot;https://bidhive.com/&quot;&gt;Bidhive&lt;/a&gt; 와 CV builder 프로젝트를 한 후기다.&lt;/p&gt;
+&lt;p&gt;요런 문제들을 풀려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(V^2)&lt;/code&gt;의 시간 복잡도로는 풀 수가 없다.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="python" /><category term="algorithm" /><category term="dijkstra" /><summary type="html">출처: GeeksforGeeks, Baeldung, cppsecrets</summary></entry><entry><title type="html">호주 스타트업 캡스톤 후기</title><link href="https://json9512.github.io/blog/%EC%BA%A1%EC%8A%A4%ED%86%A4/" rel="alternate" type="text/html" title="호주 스타트업 캡스톤 후기" /><published>2021-01-03T06:00:17+00:00</published><updated>2021-01-03T06:00:17+00:00</updated><id>https://json9512.github.io/blog/%EC%BA%A1%EC%8A%A4%ED%86%A4</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%BA%A1%EC%8A%A4%ED%86%A4/">&lt;p&gt;이 글은 학과 마지막 1년 동안 호주 스타트업 &lt;a href=&quot;https://bidhive.com/&quot;&gt;Bidhive&lt;/a&gt; 와 CV builder 프로젝트를 한 후기다.&lt;/p&gt;
 
 &lt;p&gt;Bidhive는 호주 B2B 시장에서 기업들의 입찰 매니지먼트 서비스를 제공하는 기업이다. 
 기업들이 입찰하는 과정을 좀 더 효율적으로 관리할 수 있게 도와주는 플랫폼을 서비스하고 있고 실제로 호주를 비롯해 유럽권과 미국권에서 펀딩을 추진하고 있다.
@@ -393,7 +689,25 @@
   &lt;li&gt;원격 근무, 개발, 미팅 만으로 이런 프로젝트가 가능하다.&lt;/li&gt;
   &lt;li&gt;스타트업은 아무나 하는 것이 아니다&lt;/li&gt;
   &lt;li&gt;방학기간 동안 만든 추천 모델은 NLP를 기반으로 search keyword를 통해 유저의 이력서를 추천해 주는 시스템이다. 기능적으로는 특정 입찰에서 추진하는 프로젝트에 알맞는 인원을 찾고자 할 때, 가장 잘 어울리는 인원의 이력서를 결과 창 가장 먼저 배치하기 위함이었다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="캡스톤" /><category term="호주" /><category term="스타트업" /><category term="막학기" /><summary type="html">이 글은 학과 마지막 1년 동안 호주 스타트업 Bidhive 와 CV builder 프로젝트를 한 후기다.</summary></entry><entry><title type="html">Python Advanced Topic</title><link href="https://json9512.github.io/blog/python-advanced/" rel="alternate" type="text/html" title="Python Advanced Topic" /><published>2021-01-03T05:59:17+00:00</published><updated>2021-01-03T05:59:17+00:00</updated><id>https://json9512.github.io/blog/python-advanced</id><content type="html" xml:base="https://json9512.github.io/blog/python-advanced/">&lt;p&gt;파이썬 개발자라면 알아야 할 고오급 정보들 !&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="캡스톤" /><category term="호주" /><category term="스타트업" /><category term="막학기" /><summary type="html">이 글은 학과 마지막 1년 동안 호주 스타트업 Bidhive 와 CV builder 프로젝트를 한 후기다.</summary></entry><entry><title type="html">취준 로그 - 1</title><link href="https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-1/" rel="alternate" type="text/html" title="취준 로그 - 1" /><published>2021-01-03T06:00:17+00:00</published><updated>2021-01-03T06:00:17+00:00</updated><id>https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-1</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-1/">&lt;p&gt;취준은 어렵다.&lt;/p&gt;
+
+&lt;p&gt;너무 심심하기도 하고 할 것도 많기도 해서 어렵다.&lt;/p&gt;
+
+&lt;p&gt;대학교 다닐 때 분명 열심히 했는데 왜 알고리즘만 제대로 공부를 안 했을까 . . .&lt;/p&gt;
+
+&lt;p&gt;현재까지 대략 6번 지원한거 같다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;호주 구글 인턴: 이땐 코테가 뭔지도 몰라서 코테 문제 입출력 받는 것만 짜는데 30분 걸렸다&lt;/li&gt;
+  &lt;li&gt;카카오 공채, 쿠팡 공채, 토스 공채, 네이버 공채: 막 학기 중에 한국은 어떻게 나오나 하고 지원했다. 물론 다 코테 탈락&lt;/li&gt;
+  &lt;li&gt;네이버 상시: 요건 진행형&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;앞으로&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;아직은 객관적으로 난 실력이 부족해서 공부를 좀 더 해야한다.&lt;/p&gt;
+
+&lt;p&gt;도전하는 기업마다 포스트를 작성해 보려고 한다.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="취준" /><summary type="html">취준은 어렵다.</summary></entry><entry><title type="html">Python Advanced Topic</title><link href="https://json9512.github.io/blog/python-advanced/" rel="alternate" type="text/html" title="Python Advanced Topic" /><published>2021-01-03T05:59:17+00:00</published><updated>2021-01-03T05:59:17+00:00</updated><id>https://json9512.github.io/blog/python-advanced</id><content type="html" xml:base="https://json9512.github.io/blog/python-advanced/">&lt;p&gt;파이썬 개발자라면 알아야 할 고오급 정보들 !&lt;/p&gt;
 
 &lt;p&gt;아래 출처에서 부분적으로 의역한 포스트&lt;/p&gt;
 

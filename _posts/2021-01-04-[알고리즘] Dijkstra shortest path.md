@@ -31,7 +31,7 @@ Prim's Minimum Spanning Tree 알고리즘과 유사하다.
 
 # Python
 ```python
-def create_graph():
+def createGraph():
     return {
         'A': {'B':1, 'C':4, 'D':2},
         'B': {'A':9, 'E':5},
@@ -46,7 +46,7 @@ def create_graph():
         'K': {'F':6}
     }
 
-graph = create_graph()
+graph = createGraph()
 
 # set starting point
 initial = 'D'
@@ -269,7 +269,7 @@ while True:
 
 위 알고리즘의 Time Complexity는 `O(V^2)`이다.
 
-하지만 인풋 그래프가 adjacency list로 주어진다면 binary heap을 이용해 시간 복잡도를 `O(E log V)` 까지 줄일 수 있다
+하지만 우선 순위 큐를 사용하면 시간 복잡도를 `O(V + E log V)` 까지 줄일 수 있다. 관련 [포스트]({{site.baseurl}}/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path-2/)
 
 # Dijkstra 최단 경로 알고리즘을 사용한 문제
 [백준 다익스트라로 분류된 문제](https://www.acmicpc.net/problemset?sort=ac_desc&algo=22)
@@ -277,3 +277,5 @@ while True:
 [[프로그래머스] 배달](https://programmers.co.kr/learn/courses/30/lessons/12978)
 
 [[프로그래머스] 가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/49189)
+
+요런 문제들을 풀려면 `O(V^2)`의 시간 복잡도로는 풀 수가 없다.

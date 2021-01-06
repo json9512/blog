@@ -126,7 +126,7 @@
             <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
           </li></ul>
 
-<span class="read-time">4 min read</span>
+<span class="read-time">6 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-03T05:59:17+00:00"><a class="u-url" href="">January 3, 2021</a>
 </time>
@@ -156,6 +156,7 @@
   <li><a href="https://realpython.com/">Real Python</a></li>
   <li><a href="https://docs.python.org/3.9/faq/design.html">Official Doc</a></li>
   <li><a href="https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.">Stackify</a></li>
+  <li><a href="https://www.programiz.com/python-programming/closure">Programiz</a></li>
 </ul>
 
 <p><strong>목차</strong></p>
@@ -163,7 +164,7 @@
 <ol>
   <li><strong><a href="#memory-management">Memory Management</a></strong></li>
   <li><strong><a href="#global-interpreter-lock">Global Interpreter Lock</a></strong></li>
-  <li><strong><a href="#">더 업데이트 할 계획</a></strong></li>
+  <li><strong><a href="#all-is-one-one-is-all">All is One, One is all</a></strong></li>
 </ol>
 
 <hr />
@@ -359,6 +360,125 @@
 <ul>
   <li>Multi-threaded 말고 multi-process 방법으로 접근하면 앱을 parallel하게 짤 수 있다</li>
   <li>혹은 다른 python interpreter를 사용하면 된다. GIL은 CPython 에만 존재하기 때문이다 (CPython이 Python의 베이스다)</li>
+</ul>
+
+<h1 id="all-is-one-one-is-all">All is One, One is all</h1>
+<blockquote>
+  <p>전체는 하나, 하나는 전체</p>
+</blockquote>
+
+<p>뜻하지 않게 생각난 불교의 무진연기다. 파이썬에서 모든 것은 객체다. 변수, 함수, 클래스 등등 다 객체다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">PyObject</code>라는 객체로 모든 것이 관리되기 때문에 이것을 이해하면 신기한 방법으로 코드를 짤 수 있다.</p>
+
+<p>몇 가지만 알아보자면:</p>
+<ol>
+  <li>First class function: 파이썬은 변수, 클래스뿐만 아니라 함수를 다른 함수의 리턴 값 혹은 인자 (parameter) 로 쓸 수 있다. 이는 함수가 객체이기 때문.</li>
+  <li>Closure function: 함수(A) 내의 함수(B)가 함수(A)가 가진 변수를 저장하고 사용하는 함수(B)</li>
+</ol>
+
+<p>말로 표현하기 어렵다. 코드로 보자.</p>
+
+<h4 id="first-class-function"><strong>First class function</strong></h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">inputs</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span>
+<span class="n">K</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>위 코드를 살펴보면 함수 <code class="language-plaintext highlighter-rouge">sys.stdin.readline</code>을 변수 <code class="language-plaintext highlighter-rouge">inputs</code>에 저장한 뒤, <code class="language-plaintext highlighter-rouge">map</code> 함수에서 <code class="language-plaintext highlighter-rouge">inputs()</code>로 실행 시키는 것을 볼 수 있다. 이런 방식으로 변수에 함수를 저장하는 것이 first class function의 특징이라고 볼 수 있다.</p>
+
+<p>또 다른 예를 들면, <code class="language-plaintext highlighter-rouge">map</code> 함수에 인자로 <code class="language-plaintext highlighter-rouge">int, input().split(' ')</code> 이 있는 것을 볼 수 있다. 여기서 <code class="language-plaintext highlighter-rouge">int</code> 인자는 사실 함수다.</p>
+
+<p>즉, 위의 코드를 실행하면 <code class="language-plaintext highlighter-rouge">sys.stdin.readline</code> 함수로 읽은 유저의 입력 값을 <code class="language-plaintext highlighter-rouge">' '</code>로 나누어서 array화 시킨 뒤 <code class="language-plaintext highlighter-rouge">map</code> 함수를 이용해 array안에 모든 element를 <code class="language-plaintext highlighter-rouge">int()</code> 화 시켜주는 코드다.</p>
+
+<p>이런식으로 함수를 변수처럼 인자로도 주고, 변수에도 저장하고, 다른 함수에서 리턴 값으로도 주고 할 수 있는 것이 바로 first class function인 것이다.</p>
+
+<p>이 모든 것이 가능한 이유는?</p>
+
+<p>파이썬에서 모든 것은 객체기 때문이다.</p>
+
+<h4 id="closure-function"><strong>Closure function</strong></h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">multiply_by</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
+    
+    <span class="k">return</span> <span class="n">multiplier</span>
+
+<span class="n">times3</span> <span class="o">=</span> <span class="n">multiply_by</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">times3</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span> <span class="c1"># 27
+</span></code></pre></div></div>
+<p>위 코드를 잘 보면 방금전에 배운 First class function의 특징을 잘 이용하고 있다.</p>
+
+<p>일단 <code class="language-plaintext highlighter-rouge">multiplier()</code> 함수를 먼저 확인해 보자, 이 함수는 <code class="language-plaintext highlighter-rouge">x</code> 와 <code class="language-plaintext highlighter-rouge">n</code>을 곱한 값을 리턴해 주는 함수다. <code class="language-plaintext highlighter-rouge">x</code>는 이 함수의 인자 (parameter)로 받는다. 그럼 <code class="language-plaintext highlighter-rouge">n</code>은?</p>
+
+<p><code class="language-plaintext highlighter-rouge">n</code>은 보다시피 <code class="language-plaintext highlighter-rouge">multiplier</code> 함수를 감싸고 있는 <code class="language-plaintext highlighter-rouge">multiply_by</code> 함수의 인자다.</p>
+
+<p>즉, <code class="language-plaintext highlighter-rouge">multiplier</code> 함수는 본 함수의 인자 <code class="language-plaintext highlighter-rouge">x</code> 와 <code class="language-plaintext highlighter-rouge">multiply_by</code> 함수의 인자 <code class="language-plaintext highlighter-rouge">n</code>을 사용하는 함수다.</p>
+
+<p>그리고 <code class="language-plaintext highlighter-rouge">multiply_by</code> 함수는 <code class="language-plaintext highlighter-rouge">multiplier</code> 함수를 리턴한다. first class function 특징이다.</p>
+
+<p>밑에 코드를 보자.</p>
+
+<p><code class="language-plaintext highlighter-rouge">times3 = multiply_by(3)</code> 이 코드가 실행이 되면 <code class="language-plaintext highlighter-rouge">3</code> 은 누구의 인자로 가게 될까?</p>
+
+<p><code class="language-plaintext highlighter-rouge">multiply_by</code>의 인자가 <code class="language-plaintext highlighter-rouge">3</code>이 된다. 곧 <code class="language-plaintext highlighter-rouge">n</code> 은 <code class="language-plaintext highlighter-rouge">3</code>이 된다.</p>
+
+<p>이후 <code class="language-plaintext highlighter-rouge">times3(9)</code> 이라는 코드가 있다.</p>
+
+<p>이걸 풀어보면 <code class="language-plaintext highlighter-rouge">multiplier(x=9)</code>이라는 코드가 되는 것이다.</p>
+
+<p>그러면 당연히 값은 <code class="language-plaintext highlighter-rouge">n</code> * <code class="language-plaintext highlighter-rouge">x</code>니까 <code class="language-plaintext highlighter-rouge">3</code> * <code class="language-plaintext highlighter-rouge">9</code> = <code class="language-plaintext highlighter-rouge">27</code> 가 된다.</p>
+
+<p>Closure 함수의 특징은 주어진 것을 기억할 수 있는 것이다.</p>
+
+<p>심지어 <code class="language-plaintext highlighter-rouge">multiply_by</code> 함수를 지워도 <code class="language-plaintext highlighter-rouge">times3</code> 함수는 주어진 <code class="language-plaintext highlighter-rouge">3</code>의 값을 기억하고 쓸 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">multiply_by</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
+    
+    <span class="k">return</span> <span class="n">multiplier</span>
+
+<span class="n">times3</span> <span class="o">=</span> <span class="n">multiply_by</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">multiply_by</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">times3</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span> <span class="c1"># 27
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">multiply_by</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># NameError: name 'multiply_by' is not defined
+</span></code></pre></div></div>
+
+<p><strong>정리</strong></p>
+<ul>
+  <li>Closure 함수는 아래와 같은 특징이 있다:
+    <ol>
+      <li>함수(A)안에 함수(B)가 있고</li>
+      <li>함수(B)는 함수(A)가 쓸 수 있는 변수, 객체, 클라스를 사용하고</li>
+      <li>함수(A)가 함수(B)를 리턴해야한다</li>
+    </ol>
+  </li>
+  <li>언제 쓰는 것 일까?
+    <ul>
+      <li>OOP를 구현하기 위해 사용하기도 하고</li>
+      <li>특정 함수의 구조를 숨기기 위해서도 사용하며</li>
+      <li>Python Decorator 함수에서도 사용된다</li>
+    </ul>
+  </li>
+  <li>무조건적으로 함수(A)에 주어진 값을 숨길 수 있나?
+    <ul>
+      <li>아니다</li>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="o">&gt;&gt;&gt;</span> <span class="n">times3</span><span class="p">.</span><span class="n">__closure__</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">cell_contents</span>
+  <span class="mi">3</span>
+</code></pre></div>        </div>
+      </li>
+      <li>위와 같이 보고자 하면 closure 함수가 무엇을 기억하고 있는지 볼 수는 있다.</li>
+    </ul>
+  </li>
 </ul>
 
         </div>

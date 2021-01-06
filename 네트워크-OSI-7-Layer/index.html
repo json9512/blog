@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>[네트워크] OSI 7 Layers | json9512’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="[네트워크] OSI 7 Layers" />
+<meta name="author" content="json9512" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="출처: 위키피디아, 양햄찌님의 블로그" />
+<meta property="og:description" content="출처: 위키피디아, 양햄찌님의 블로그" />
+<link rel="canonical" href="https://json9512.github.io/blog/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-OSI-7-Layer/" />
+<meta property="og:url" content="https://json9512.github.io/blog/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-OSI-7-Layer/" />
+<meta property="og:site_name" content="json9512’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[네트워크] OSI 7 Layers" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[네트워크] OSI 7 Layers","dateModified":"2021-01-05T00:00:00+00:00","datePublished":"2021-01-05T00:00:00+00:00","description":"출처: 위키피디아, 양햄찌님의 블로그","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-OSI-7-Layer/"},"url":"https://json9512.github.io/blog/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-OSI-7-Layer/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="stylesheet" href="/blog/assets/css/skins/dark.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="json9512&#39;s Blog" href="/blog/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://json9512.github.io/blog/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://json9512.github.io/blog/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://json9512.github.io/blog/images/favicon-16x16.png">
+<link rel="manifest" href="https://json9512.github.io/blog/images/site.webmanifest">
+<link rel="shortcut icon" href="https://json9512.github.io/blog/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://json9512.github.io/blog/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  네트워크-osi-7-layers">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/blog/about/">About</a></li><li><a href="/blog/posts/">Posts</a></li><li><a href="/blog/tags/">Tags</a></li><li><a href="/blog/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/blog/" class="site-logo" rel="home" title="json9512's Blog">
+        <img src="/blog/images/logo.png" class="site-logo-img animated fadeInDown" alt="json9512's Blog">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/blog/">json9512's Blog</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description"></p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">[네트워크] OSI 7 Layers
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4" class="author-avatar u-photo" alt="json9512"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">json9512</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
+          </li></ul>
+
+<span class="read-time">2 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-01-05T00:00:00+00:00"><a class="u-url" href="">January 5, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/blog/tags/#network" title="Pages tagged Network" rel="tag">Network</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>출처: <a href="https://en.wikipedia.org/wiki/OSI_model">위키피디아</a>, <a href="https://jhnyang.tistory.com/194">양햄찌님의 블로그</a></p>
+
+<p>Open Systems Interconnection model (OSI) 7 계층에 대해 알아보자</p>
+
+<ul>
+  <li>
+    <p>OSI 7 계층은 <strong>참조 모델</strong>이다. 컴퓨터 또는 전자 통신 장비끼리의 통신 과정을 위한 모델이다.</p>
+  </li>
+  <li>
+    <p>OSI 7 계층이 만들어진 이유는 장비에 상관없이 모든 컴퓨터/전자기기 간 통신 과정에 기준을 세우기 위함이다.</p>
+  </li>
+  <li>
+    <p>국제표준화 기구 (ISO) 에서 1984년에 만들었다.</p>
+  </li>
+  <li>
+    <p>통신이 일어나는 과정을 단계 별로 볼 수 있다.</p>
+  </li>
+  <li>
+    <p>각 Layer는 독립적이다. 즉 Physical Layer에서 문제가 생기면 Physical Layer와 연관 있는 장비만 손보면 된다.</p>
+  </li>
+  <li>
+    <p>상하구조를 가지고 있다. Layer 7 이 작동하려면 Layer 1 ~ 6 까지 문제가 없어야 한다.</p>
+  </li>
+  <li>
+    <p>유지관리가 수월하고, 범용적이다</p>
+  </li>
+</ul>
+
+<p>7 Layer (밑에서부터 위로):</p>
+<ol>
+  <li>Physical Layer</li>
+  <li>Data Link Layer</li>
+  <li>Network Layer</li>
+  <li>Transport Layer</li>
+  <li>Session Layer</li>
+  <li>Presentation Layer</li>
+  <li>Application Layer</li>
+</ol>
+
+<p>앞 글자만 따면 P - D - N - T - S - P - A</p>
+
+<blockquote>
+  <p>People Don’t Spa</p>
+</blockquote>
+
+<p>로 외웠다</p>
+
+<h1 id="physical-layer">Physical Layer</h1>
+
+<ul>
+  <li>하위층</li>
+  <li>Protocol Data Unit = bit</li>
+  <li>물리적 매체 (Wire)등을 통해 bit를 전송한다</li>
+  <li>물리적 장치와 인터페이스가 전송을 위해 필요한 기능과 처리절차를 규정하고 있다</li>
+</ul>
+
+<p>출처: <a href="https://www.studytonight.com/computer-networks/osi-model-physical-layer">studytonight</a></p>
+
+<h4 id="하는-것">하는 것</h4>
+<ol>
+  <li>Representation of Bits - 0 과 1로 이루어진 비트가 어떻게 encoding (시그널로 변환) 될 건지를 정함</li>
+  <li>Data rate - 보내는 데이터 레이트를 정함. 보통 bits per second 단위</li>
+  <li>Synchronization - 비트 단위로 transmitter (보내는 쪽)와 receiver (받는 쪽)의 동기화 시킴</li>
+  <li>Interface - 기기와 전송 매체간 전송 인터페이스를 정함. (Ethernet, Radio waves)</li>
+  <li>Line configuration - 기기와 전송매체를 연결 시킴: point-to-point configuration, multi point configuration</li>
+  <li>Topologies - 기기는 다음과 같은 구성으로 연결이 돼야한다: Mesh, Star, ring, bus</li>
+  <li>Transmission Modes - 기기간 전송 방향성을 정함: Simplex(one signal is transmitted in one direction), Half-Duplex (data is transmitted in both direction, not at the same time), Full-Duplex (data is transmitted both direction simultaneously)</li>
+  <li>Broadband, Baseband 전송을 담당함</li>
+</ol>
+
+<h1 id="data-link-layer">Data Link Layer</h1>
+
+<ul>
+  <li>하위층</li>
+  <li>PDU = Frame</li>
+  <li>노드와 노드 사이의 데이터 전달</li>
+  <li>단순히 bit를 전하는 물리 계층에 신뢰성을 더하기 위한 흐름제어 및 오류제어 기능</li>
+  <li>LLC, MAC 두 개의 sub layer로 구성</li>
+</ul>
+
+<h1 id="network-layer">Network Layer</h1>
+
+<ul>
+  <li>하위층</li>
+  <li>PDU = Packet</li>
+  <li>송신 측에서 최종 목적지까지 packet 전달</li>
+  <li>송수신 측의 논리주소 지정 및 패킷이 최종 목적지에 도달하도록 경로를 배정하는 라우팅 기능</li>
+  <li>데이터 링크의 물리주소는 패킷이 시스템으로 이동할 때마다 변경하지만, 네트워크 주소는 목적지까지 변하지 않음</li>
+</ul>
+
+<h1 id="transport-layer">Transport Layer</h1>
+
+<ul>
+  <li>하위층</li>
+  <li>PDU = Segment</li>
+  <li>네트워크 계층에서 패킷을 종단까지 전달한다면 (네트워크 주소), Transport Layer는 종단 내에서 최종 수신 프로세스로의 전달 (포트 주소)을 담당</li>
+  <li>분할/재조립, 연결/흐름제어, 오류제어</li>
+</ul>
+
+<h1 id="session-layer">Session Layer</h1>
+
+<ul>
+  <li>상위층</li>
+  <li>PDU = message</li>
+  <li>통신하는 프로세스 사이의 대화제어 및 동기화를 담당</li>
+</ul>
+
+<h1 id="presentation-layer">Presentation Layer</h1>
+
+<ul>
+  <li>상위층</li>
+  <li>PDU = message</li>
+  <li>데이터의 변환, 압축, 암호화를 담당</li>
+</ul>
+
+<h1 id="application-layer">Application Layer</h1>
+
+<ul>
+  <li>상위층</li>
+  <li>PDU = message</li>
+  <li>사용자에게 서비스 제공 역할. SMTP, FTP, HTTP등 사용자가 원하는 최종 목표에 해당</li>
+</ul>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EB%2584%25A4%25ED%258A%25B8%25EC%259B%258C%25ED%2581%25AC-OSI-7-Layer%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D+OSI+7+Layers%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EB%2584%25A4%25ED%258A%25B8%25EC%259B%258C%25ED%2581%25AC-OSI-7-Layer%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EB%2584%25A4%25ED%258A%25B8%25EC%259B%258C%25ED%2581%25AC-OSI-7-Layer%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D+OSI+7+Layers&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EB%2584%25A4%25ED%258A%25B8%25EC%259B%258C%25ED%2581%25AC-OSI-7-Layer%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+  <div class="page-comments">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://json9512.github.io/blog/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-OSI-7-Layer/';
+        this.page.identifier = 'https://json9512.github.io/blog/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-OSI-7-Layer/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://json9512-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/Sonar-to-Image-%EC%97%B0%EA%B5%AC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9B%84%EA%B8%B0/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> Sonar to Image 연구 프로젝트 후기
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dijkstra-shortest-path-2/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        [알고리즘] Dijkstra’s Shortest Path 2
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+
+<script>
+// http://docs.mathjax.org/en/latest/upgrading/v2.html
+MathJax = {
+  tex: {
+      tags: "ams"    // eq numbering options: none, ams, all
+  },
+  options: {
+    renderActions: {
+      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
+      find: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </body>
+
+</html>

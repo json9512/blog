@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[알고리즘] Dijkstra's Shortest Path"
-tags: python algorithm dijkstra
+tags: algorithm
 comments: true
 ---
 

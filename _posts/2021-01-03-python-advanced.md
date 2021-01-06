@@ -13,13 +13,14 @@ comments: true
 - [Real Python](https://realpython.com/)
 - [Official Doc](https://docs.python.org/3.9/faq/design.html)
 - [Stackify](https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.)
+- [Programiz](https://www.programiz.com/python-programming/closure)
 
 
 **목차**
 
 1. **[Memory Management](#memory-management)**
 2. **[Global Interpreter Lock](#global-interpreter-lock)**
-3. **[더 업데이트 할 계획](#)**
+3. **[All is One, One is all](#all-is-one-one-is-all)**
 
 ****
 
@@ -177,3 +178,111 @@ source: *[Real Python](https://realpython.com/python-gil/#:~:text=The%20Python%2
 
 - Multi-threaded 말고 multi-process 방법으로 접근하면 앱을 parallel하게 짤 수 있다
 - 혹은 다른 python interpreter를 사용하면 된다. GIL은 CPython 에만 존재하기 때문이다 (CPython이 Python의 베이스다)
+
+# All is One, One is all
+> 전체는 하나, 하나는 전체
+
+뜻하지 않게 생각난 불교의 무진연기다. 파이썬에서 모든 것은 객체다. 변수, 함수, 클래스 등등 다 객체다. 
+
+`PyObject`라는 객체로 모든 것이 관리되기 때문에 이것을 이해하면 신기한 방법으로 코드를 짤 수 있다. 
+
+몇 가지만 알아보자면:
+1. First class function: 파이썬은 변수, 클래스뿐만 아니라 함수를 다른 함수의 리턴 값 혹은 인자 (parameter) 로 쓸 수 있다. 이는 함수가 객체이기 때문.
+2. Closure function: 함수(A) 내의 함수(B)가 함수(A)가 가진 변수를 저장하고 사용하는 함수(B)
+
+말로 표현하기 어렵다. 코드로 보자. 
+
+#### **First class function**
+```python
+import sys
+
+inputs = sys.stdin.readline
+K, V = map(int, input().split(' '))
+```
+
+위 코드를 살펴보면 함수 `sys.stdin.readline`을 변수 `inputs`에 저장한 뒤, `map` 함수에서 `inputs()`로 실행 시키는 것을 볼 수 있다. 이런 방식으로 변수에 함수를 저장하는 것이 first class function의 특징이라고 볼 수 있다. 
+
+또 다른 예를 들면, `map` 함수에 인자로 `int, input().split(' ')` 이 있는 것을 볼 수 있다. 여기서 `int` 인자는 사실 함수다. 
+
+즉, 위의 코드를 실행하면 `sys.stdin.readline` 함수로 읽은 유저의 입력 값을 `' '`로 나누어서 array화 시킨 뒤 `map` 함수를 이용해 array안에 모든 element를 `int()` 화 시켜주는 코드다.
+
+이런식으로 함수를 변수처럼 인자로도 주고, 변수에도 저장하고, 다른 함수에서 리턴 값으로도 주고 할 수 있는 것이 바로 first class function인 것이다.
+
+이 모든 것이 가능한 이유는? 
+
+파이썬에서 모든 것은 객체기 때문이다. 
+
+#### **Closure function**
+```python
+def multiply_by(n):
+
+    def multiplier(x):
+        return x * n
+    
+    return multiplier
+
+times3 = multiply_by(3)
+
+print(times3(9)) # 27
+```
+위 코드를 잘 보면 방금전에 배운 First class function의 특징을 잘 이용하고 있다. 
+
+일단 `multiplier()` 함수를 먼저 확인해 보자, 이 함수는 `x` 와 `n`을 곱한 값을 리턴해 주는 함수다. `x`는 이 함수의 인자 (parameter)로 받는다. 그럼 `n`은?
+
+`n`은 보다시피 `multiplier` 함수를 감싸고 있는 `multiply_by` 함수의 인자다. 
+
+즉, `multiplier` 함수는 본 함수의 인자 `x` 와 `multiply_by` 함수의 인자 `n`을 사용하는 함수다. 
+
+그리고 `multiply_by` 함수는 `multiplier` 함수를 리턴한다. first class function 특징이다.
+
+밑에 코드를 보자.
+
+`times3 = multiply_by(3)` 이 코드가 실행이 되면 `3` 은 누구의 인자로 가게 될까?
+
+`multiply_by`의 인자가 `3`이 된다. 곧 `n` 은 `3`이 된다.
+
+이후 `times3(9)` 이라는 코드가 있다.
+
+이걸 풀어보면 `multiplier(x=9)`이라는 코드가 되는 것이다.
+
+그러면 당연히 값은 `n` * `x`니까 `3` * `9` = `27` 가 된다.
+
+Closure 함수의 특징은 주어진 것을 기억할 수 있는 것이다. 
+
+심지어 `multiply_by` 함수를 지워도 `times3` 함수는 주어진 `3`의 값을 기억하고 쓸 수 있다.
+
+```python
+def multiply_by(n):
+
+    def multiplier(x):
+        return x * n
+    
+    return multiplier
+
+times3 = multiply_by(3)
+
+del multiply_by
+
+print(times3(9)) # 27
+
+print(multiply_by(3)) # NameError: name 'multiply_by' is not defined
+```
+
+**정리**
+- Closure 함수는 아래와 같은 특징이 있다:
+    1. 함수(A)안에 함수(B)가 있고
+    2. 함수(B)는 함수(A)가 쓸 수 있는 변수, 객체, 클라스를 사용하고
+    3. 함수(A)가 함수(B)를 리턴해야한다
+
+- 언제 쓰는 것 일까? 
+    - OOP를 구현하기 위해 사용하기도 하고
+    - 특정 함수의 구조를 숨기기 위해서도 사용하며
+    - Python Decorator 함수에서도 사용된다
+
+- 무조건적으로 함수(A)에 주어진 값을 숨길 수 있나?
+    - 아니다
+    - ```python
+        >>> times3.__closure__[0].cell_contents
+        3
+        ```
+    - 위와 같이 보고자 하면 closure 함수가 무엇을 기억하고 있는지 볼 수는 있다.

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-07T12:57:39+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -4장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-4%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -4장" /><published>2021-01-07T00:00:00+00:00</published><updated>2021-01-07T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%204%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-4%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-07T13:08:41+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -4장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-4%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -4장" /><published>2021-01-07T00:00:00+00:00</published><updated>2021-01-07T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%204%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-4%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
@@ -49,7 +49,7 @@
 
 &lt;p&gt;0년차인데 이런 것들을 알아야 하나 싶겠지만, 세상이 새로운 개발자에게 요구하는 지식은 갈 수록 늘어날 수 밖에 없다. 없는 것은 몰라도 되지만 있는 것은 알아야 한다.&lt;/p&gt;
 
-&lt;p&gt;아무튼, 이 프로젝트의 앱 설계를 위의 9번끼지 기준으로 작성을 해보자면 :&lt;/p&gt;
+&lt;p&gt;아무튼, 이 프로젝트의 앱 설계를 위의 9번까지 기준으로 작성을 해보자면 :&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;이 앱은 웹을 위한 것이다.&lt;/li&gt;
@@ -750,15 +750,15 @@
       &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/customers/{customer_id}&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;customer_id&lt;/code&gt;가 document&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collection&lt;/code&gt; - 서버가 관리하는 리소스의 집합체다. 클라이언트는 새로운 리소르를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collection&lt;/code&gt;에 추가하도록 요구 할 수 있지만, 결정권은 서버에 있다. 복수명을 사용하도록 하자
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collection&lt;/code&gt; - 서버가 관리하는 리소스의 집합체다. 클라이언트는 새로운 리소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collection&lt;/code&gt;에 추가하도록 요구 할 수 있지만, 결정권은 서버에 있다. 복수명을 사용하도록 하자
     &lt;ul&gt;
       &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/user-management/users&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;store&lt;/code&gt; - 클라이언트가 관리하는 리소스의 집합체다. 클라이언트는 새로운 URI를 생성하지는 않지만, 리소를 더하거나 빼거나 지우거나 자유롭게 할 수 있다. 복수명을 사용하도록 하자
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;store&lt;/code&gt; - 클라이언트가 관리하는 리소스의 집합체다. 클라이언트는 새로운 URI를 생성하지는 않지만, 리소스를 더하거나 빼거나 지우거나 자유롭게 할 수 있다. 복수명을 사용하도록 하자
     &lt;ul&gt;
       &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/song-management/users/{id}/playlists&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;클라이언트가 관리한다고 해서 헷갈리지 말자. 다 서버에서 구현하는 것이다. 명칭만 store일 뿐&lt;/li&gt;
+      &lt;li&gt;클라이언트가 관리한다고 해서 헷갈리지 말자. 다 서버에서 구현하는 것이다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;controller&lt;/code&gt; - 리소스의 행위를 뜻한다. 인자와 리턴 값이 있는 함수명이라고 생각하면 된다. 동사를 쓰도록하자
@@ -859,6 +859,7 @@
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts/{id}&lt;/code&gt; - 하나의 포스트를 id로 찾아서 준다&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts/{id}/like&lt;/code&gt; - 하나의 포스트를 id로 찾아서 like만 준다&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts?userid=xxx&lt;/code&gt; - 유저가 작성한 모든 포스트를 찾아준다&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts?tags=xxx&lt;/code&gt; - 포스트를 주어진 tags를 기준으로 필터링해서 준다&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/users&lt;/code&gt; - 모든 유저들을 나열한다&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/users/{id}&lt;/code&gt; - 유저를 id로 찾아서 준다&lt;/li&gt;
 &lt;/ul&gt;

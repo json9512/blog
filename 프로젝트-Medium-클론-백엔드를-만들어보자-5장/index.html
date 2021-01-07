@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>[프로젝트] Medium 클론 백엔드를 만들어보자 -5장 | json9512’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="[프로젝트] Medium 클론 백엔드를 만들어보자 -5장" />
+<meta name="author" content="json9512" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈" />
+<meta property="og:description" content="Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈" />
+<link rel="canonical" href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-5%EC%9E%A5/" />
+<meta property="og:url" content="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-5%EC%9E%A5/" />
+<meta property="og:site_name" content="json9512’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[프로젝트] Medium 클론 백엔드를 만들어보자 -5장" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[프로젝트] Medium 클론 백엔드를 만들어보자 -5장","dateModified":"2021-01-07T00:00:00+00:00","datePublished":"2021-01-07T00:00:00+00:00","description":"Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-5%EC%9E%A5/"},"url":"https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-5%EC%9E%A5/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="stylesheet" href="/blog/assets/css/skins/dark.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="json9512&#39;s Blog" href="/blog/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://json9512.github.io/blog/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://json9512.github.io/blog/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://json9512.github.io/blog/images/favicon-16x16.png">
+<link rel="manifest" href="https://json9512.github.io/blog/images/site.webmanifest">
+<link rel="shortcut icon" href="https://json9512.github.io/blog/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://json9512.github.io/blog/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  프로젝트-medium-클론-백엔드를-만들어보자-5장">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/blog/about/">About</a></li><li><a href="/blog/posts/">Posts</a></li><li><a href="/blog/tags/">Tags</a></li><li><a href="/blog/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/blog/" class="site-logo" rel="home" title="json9512's Blog">
+        <img src="/blog/images/logo.png" class="site-logo-img animated fadeInDown" alt="json9512's Blog">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/blog/">json9512's Blog</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description"></p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">[프로젝트] Medium 클론 백엔드를 만들어보자 -5장
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4" class="author-avatar u-photo" alt="json9512"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">json9512</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
+          </li></ul>
+
+<span class="read-time">3 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-01-07T00:00:00+00:00"><a class="u-url" href="">January 7, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/blog/tags/#project" title="Pages tagged project" rel="tag">project</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p><strong>목차</strong></p>
+<ol>
+  <li><a href="/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/">Medium 클론 백엔드를 만들어보자 -1장</a></li>
+  <li><a href="/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/">Medium 클론 백엔드를 만들어보자 -2장</a></li>
+  <li><a href="/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3장/">Medium 클론 백엔드를 만들어보자 -3장</a></li>
+  <li><a href="/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4장/">Medium 클론 백엔드를 만들어보자 -4장</a></li>
+  <li>Medium 클론 백엔드를 만들어보자 -5장</li>
+</ol>
+
+<h1 id="이전-포스트에서---">이전 포스트에서 . . .</h1>
+<ul>
+  <li>앱 설계를 어떻게 할 것인지</li>
+  <li>데이터베이스 어떤 것을 쓸건지</li>
+</ul>
+
+<h1 id="이-포스트는---">이 포스트는 . . .</h1>
+<ul>
+  <li>백엔드 endpoint 설계</li>
+</ul>
+
+<h1 id="백엔드-endpoint-설계">백엔드 Endpoint 설계</h1>
+
+<p>우선 설계에 앞서 기억을 해야 할 것이 있다.</p>
+
+<ul>
+  <li>REST에 최대한 준하는 HTTP API</li>
+</ul>
+
+<p>이제 Endpoint들을 하나씩 뜯어보자.</p>
+
+<p>일단 이전 프로젝트에서 서버가 지니고 있던 endpoint들을 살펴보면:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/</code> GET - 홈페이지</li>
+  <li><code class="language-plaintext highlighter-rouge">/login</code> GET - Auth0랑 passport.js 위한 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/callback</code> GET - Auth0랑 passport.js 위한 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/logout</code> GET - Auth0랑 passport.js 위한 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/editor</code> GET - 에디터를 보여주는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/editor</code> POST - 에디터를 데이터베이스에 추가하는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/editor/update</code> PUT - 에디터를 업데이트 하는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/editor/delete</code> DELETE - 에디터를 지우는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/like</code> PATCH - 포스트에 라이크를 더 하는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/list</code> GET - 모든 포스트를 나열하는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/list/tags</code> GET - 모든 포스트를 태그로 나열하는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/list/author</code> GET - 모든 포스트를 작성자로 나열하는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">/myposts</code> GET - 유저가 작성한 포스트를 나열하는 페이지</li>
+  <li><code class="language-plaintext highlighter-rouge">/post</code> GET - 포스트 정보를 보여주는 페이지</li>
+  <li><code class="language-plaintext highlighter-rouge">/post/id</code> POST - 포스트를 아이디로 가져와서 보여주는 페이지</li>
+  <li><code class="language-plaintext highlighter-rouge">/post/tag</code> POST - 포스트들을 태그로 가져와서 보여주는 페이지</li>
+  <li><code class="language-plaintext highlighter-rouge">/post/list</code> POST - 포스트들을 가져오는 페이지</li>
+  <li><code class="language-plaintext highlighter-rouge">/users</code> GET - 유저 정보를 가져오는 페이지</li>
+</ul>
+
+<p>정도가 있다.</p>
+
+<p>보다시피 전혀 RESTful하지 않고 endpoint와 같이 적힌 설명문을 봤을 때 “응?”하는 것들이 많다. 예를 들면 <code class="language-plaintext highlighter-rouge">/like</code>.</p>
+
+<p>중복되는 것도 있고 여러모로 정리가 되어있지 않다. 실제로 정리를 하지 않고 개발했기 때문이다.</p>
+
+<p>이것들을 RESTful하게 정리를 해보자.</p>
+
+<h1 id="restful-하게-바꾸자-">RESTful 하게 바꾸자 !</h1>
+
+<p>일단 바꾸기에 앞서서 RESTful한 endpoint가 뭔지 알아야 한다.</p>
+
+<p>RESTful 시스템이 뭔지는 다른 포스트에서 보도록하자. <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">위키피디아</a>.</p>
+
+<p>REST API의 URI 디자인 가이드만 간략히 나열해보면 <a href="https://restfulapi.net/resource-naming/">출처: resfulapi</a>:</p>
+<ol>
+  <li>REST에서 primary 데이터는 resource라고 한다.</li>
+  <li>resource는 단일 (singleton) 혹은 컬렉션 (collection)이 될 수 있다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">/customers</code> - collection</li>
+      <li><code class="language-plaintext highlighter-rouge">/customer</code> - singleton</li>
+    </ul>
+  </li>
+  <li>resource는 다른 resource의 sub-collection을 포함할 수 있다
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">/customers/{customer_id}/accounts</code> - <code class="language-plaintext highlighter-rouge">accounts</code> sub-collection을 <code class="language-plaintext highlighter-rouge">customer_id</code>로 찾을 수 있다.</li>
+      <li><code class="language-plaintext highlighter-rouge">/customers/{cuustomer_id}/accounts/{account_id}</code> - 마찬가지로 <code class="language-plaintext highlighter-rouge">{account_id}</code>를 이용해 <code class="language-plaintext highlighter-rouge">accounts</code> 컬렉션에서 단일 데이터를 가져올 수 있다.</li>
+    </ul>
+  </li>
+  <li>resource를 표현 할 때 noun (명사)를 써라</li>
+  <li>resource를 좀 더 세분화하면 document, collection, store, controller 로 나눌 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">document</code>는 데이터베이스에 저장되거나 하나의 객체를 뜻하는 단일 데이터다. REST에선 컬렉션안을 구성하는 것이 document라고 생각하면 된다
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">/customers/{customer_id}</code> - <code class="language-plaintext highlighter-rouge">customer_id</code>가 document</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">collection</code> - 서버가 관리하는 리소스의 집합체다. 클라이언트는 새로운 리소르를 <code class="language-plaintext highlighter-rouge">collection</code>에 추가하도록 요구 할 수 있지만, 결정권은 서버에 있다. 복수명을 사용하도록 하자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/user-management/users</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">store</code> - 클라이언트가 관리하는 리소스의 집합체다. 클라이언트는 새로운 URI를 생성하지는 않지만, 리소를 더하거나 빼거나 지우거나 자유롭게 할 수 있다. 복수명을 사용하도록 하자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/song-management/users/{id}/playlists</code></li>
+      <li>클라이언트가 관리한다고 해서 헷갈리지 말자. 다 서버에서 구현하는 것이다. 명칭만 store일 뿐</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">controller</code> - 리소스의 행위를 뜻한다. 인자와 리턴 값이 있는 함수명이라고 생각하면 된다. 동사를 쓰도록하자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/song-management/users/{id}/playlist/play</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">/</code>를 사용해 리소스간 연관성을 표현하자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">/electronics</code></li>
+      <li><code class="language-plaintext highlighter-rouge">/electronics/computers</code></li>
+      <li><code class="language-plaintext highlighter-rouge">/electronics/computers/cpus</code></li>
+      <li><code class="language-plaintext highlighter-rouge">/electronics/computers/cpus/{model_id}</code></li>
+    </ul>
+  </li>
+  <li>마지막에 <code class="language-plaintext highlighter-rouge">/</code>는 생략하자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/electronics/</code> X</li>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/electronics</code> O</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">-</code> 를 이용해 가독성을 챙기자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/electronics/micro-controllers/</code> O</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">_</code> 는 사용하지 말자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/electronics/micro_controllers/</code> X</li>
+    </ul>
+  </li>
+  <li>소문자를 쓰자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/electronics/CPUS/</code> X</li>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/electronics/cpus/</code> O</li>
+    </ul>
+  </li>
+  <li>파일 확장명은 쓰지 말자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/some-file.xml</code> X</li>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/some-file</code> O</li>
+    </ul>
+  </li>
+  <li>CRUD 동사를 URI에 쓰지 말자. HTTP Method로 설명은 충분하다
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/electronics/get/CPUS/</code> X</li>
+    </ul>
+  </li>
+  <li>URI collection은 query component를 활용하자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">http://api.example.com/device-management/managed-devices?region=USA&amp;brand=XYZ&amp;sort=installation-date</code> O</li>
+    </ul>
+  </li>
+</ol>
+
+<p>자 이 목록을 기준으로 다시 endpoint들을 작성해보자.</p>
+
+<p>여기서 중요한 것은 <code class="language-plaintext highlighter-rouge">editor</code> 와 <code class="language-plaintext highlighter-rouge">post</code> 리소스에 있다.</p>
+
+<p>잠시 샘플을 보자.</p>
+
+<p>아래가 <code class="language-plaintext highlighter-rouge">/editor</code>를 이용해 페이지를 렌더 했을 때고</p>
+
+<p><img src="/blog/images/editor.png" class="align-center" alt="" /></p>
+
+<p>다음 이미지는 <code class="language-plaintext highlighter-rouge">/post/id</code>를 이용해 페이지를 렌더 했을 때다.
+<img src="/blog/images/post.png" class="align-center" alt="" /></p>
+
+<p>얼핏 보기에 다른 것이 없지 않나?</p>
+
+<p>나도 그렇게 생각한다. 만약 이 두개의 endpoint를 합칠 수 있으면 이상적이다. 그러기 위해서 코드를 좀 살펴보자.</p>
+
+<p>일단 <code class="language-plaintext highlighter-rouge">/post/id</code>에 핵심이 되는 코드다.</p>
+
+<p><img src="/blog/images/post-code.png" class="align-center" alt="" /></p>
+
+<p>간단히 설명하면, HTTP POST 방식의 Body에서 <code class="language-plaintext highlighter-rouge">id</code>를 이용해 데이터베이스의 <code class="language-plaintext highlighter-rouge">post</code> 데이터를 추출 후 결과값을 주는 코드다.</p>
+
+<p>전혀 RESTful 하지 않다.</p>
+
+<p>자 그러면 <code class="language-plaintext highlighter-rouge">/editor</code> 를 살펴보자.</p>
+
+<p><img src="/blog/images/editor-code.png" class="align-center" alt="" /></p>
+
+<p><strong>??????</strong></p>
+
+<p>당황스럽네.</p>
+
+<p>백엔드 코드에서는 연관성을 찾을 수 없어서 프론트엔드 코드를 찾아봤더니 <code class="language-plaintext highlighter-rouge">/editor</code> 페이지에서 <code class="language-plaintext highlighter-rouge">/post/id</code>를 호출한 뒤 페이지의 나머지 구성 요소를 채우는 방식이었다. 이렇게 의미 없는 endpoint가 많아서 불필요한 것은 없애는 것이 좋다.</p>
+
+<p>자 그러면 새로운 API의 endpoint들을 만들어 보자</p>
+
+<h4 id="http-get">HTTP GET</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/</code> - API 홈페이지 (보통 가능한 api endpoint들을 나열한다)</li>
+  <li><code class="language-plaintext highlighter-rouge">/posts</code> - 모든 post들을 나열한다</li>
+  <li><code class="language-plaintext highlighter-rouge">/posts/{id}</code> - 하나의 포스트를 id로 찾아서 준다</li>
+  <li><code class="language-plaintext highlighter-rouge">/posts/{id}/like</code> - 하나의 포스트를 id로 찾아서 like만 준다</li>
+  <li><code class="language-plaintext highlighter-rouge">/posts?userid=xxx</code> - 유저가 작성한 모든 포스트를 찾아준다</li>
+  <li><code class="language-plaintext highlighter-rouge">/users</code> - 모든 유저들을 나열한다</li>
+  <li><code class="language-plaintext highlighter-rouge">/users/{id}</code> - 유저를 id로 찾아서 준다</li>
+</ul>
+
+<h4 id="http-post">HTTP POST</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/posts</code> - 새로운 post를 만든다, body에는 id와 payload가 있을 예정</li>
+  <li><code class="language-plaintext highlighter-rouge">/users</code> - 새로운 user를, body에는 유저 정보가 있을 예정</li>
+</ul>
+
+<h4 id="http-put">HTTP PUT</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/posts/{id}</code> - 기존의 post를 업데이트 한다, body에는 payload가 있을 예정</li>
+  <li><code class="language-plaintext highlighter-rouge">/users/{id}</code> - 기존의 user를 업데이트 한다, body에는 payload가 있을 예정</li>
+</ul>
+
+<h4 id="http-delete">HTTP DELETE</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/posts/{id}</code> - 기존의 post를 삭제한다</li>
+  <li><code class="language-plaintext highlighter-rouge">/users/{id}</code> - 기존의 user를 삭제한다</li>
+</ul>
+
+<p>정리하고 보니까 깔끔해졌다. 이제 이것을 개발할 때 참고하면 된다.</p>
+
+<p>유저 인증관련 endpoint는 잠시 보류해뒀다. 어떤 인증/인가 방식을 쓸 것인지 생각을 해야하기 때문이다.</p>
+
+<h1 id="마무리">마무리</h1>
+
+<p>정리하면:</p>
+<ul>
+  <li>백엔드의 endpoint를 RESTful하게 작성했다.</li>
+</ul>
+
+<p>다음 포스트에서는 인증/인가 방식을 정한 뒤 개발 환경을 셋업하는 것에 대해 알아보자</p>
+
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25ED%2594%2584%25EB%25A1%259C%25EC%25A0%259D%25ED%258A%25B8-Medium-%25ED%2581%25B4%25EB%25A1%25A0-%25EB%25B0%25B1%25EC%2597%2594%25EB%2593%259C%25EB%25A5%25BC-%25EB%25A7%258C%25EB%2593%25A4%25EC%2596%25B4%25EB%25B3%25B4%25EC%259E%2590-5%25EC%259E%25A5%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D+Medium+%ED%81%B4%EB%A1%A0+%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC+%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90+-5%EC%9E%A5%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25ED%2594%2584%25EB%25A1%259C%25EC%25A0%259D%25ED%258A%25B8-Medium-%25ED%2581%25B4%25EB%25A1%25A0-%25EB%25B0%25B1%25EC%2597%2594%25EB%2593%259C%25EB%25A5%25BC-%25EB%25A7%258C%25EB%2593%25A4%25EC%2596%25B4%25EB%25B3%25B4%25EC%259E%2590-5%25EC%259E%25A5%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25ED%2594%2584%25EB%25A1%259C%25EC%25A0%259D%25ED%258A%25B8-Medium-%25ED%2581%25B4%25EB%25A1%25A0-%25EB%25B0%25B1%25EC%2597%2594%25EB%2593%259C%25EB%25A5%25BC-%25EB%25A7%258C%25EB%2593%25A4%25EC%2596%25B4%25EB%25B3%25B4%25EC%259E%2590-5%25EC%259E%25A5%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D+Medium+%ED%81%B4%EB%A1%A0+%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC+%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90+-5%EC%9E%A5&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25ED%2594%2584%25EB%25A1%259C%25EC%25A0%259D%25ED%258A%25B8-Medium-%25ED%2581%25B4%25EB%25A1%25A0-%25EB%25B0%25B1%25EC%2597%2594%25EB%2593%259C%25EB%25A5%25BC-%25EB%25A7%258C%25EB%2593%25A4%25EC%2596%25B4%25EB%25B3%25B4%25EC%259E%2590-5%25EC%259E%25A5%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+  <div class="page-comments">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-5%EC%9E%A5/';
+        this.page.identifier = 'https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-5%EC%9E%A5/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://json9512-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-4%EC%9E%A5/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> [프로젝트] Medium 클론 백엔드를 만들어보자 -4장
+
+      </span>
+    </a>
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+
+<script>
+// http://docs.mathjax.org/en/latest/upgrading/v2.html
+MathJax = {
+  tex: {
+      tags: "ams"    // eq numbering options: none, ams, all
+  },
+  options: {
+    renderActions: {
+      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
+      find: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </body>
+
+</html>

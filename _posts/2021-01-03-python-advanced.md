@@ -21,6 +21,8 @@ comments: true
 1. **[Memory Management](#memory-management)**
 2. **[Global Interpreter Lock](#global-interpreter-lock)**
 3. **[All is One, One is all](#all-is-one-one-is-all)**
+4. **[Decorators](#decorators)**
+5. **[Decorators 2](#decorators-2)**
 
 ****
 
@@ -158,6 +160,7 @@ CPython 메모리 관리에는 크게 3 가지가 존재한다.
 - 오름차순인 이유?
     - CPython이 특정 메모리를 `free`한다는 것은 OS에게 그 메모리를 돌려준다는 뜻이 아니다. CPython은 메모리를 `free`한 이후에도 그 메모리를 계속 사용한다.
     <br>즉 Arena를 더 적게 사용하는 것이 전체적인 프로그램의 메모리를 더 적게 사용하는 것이다.
+
 ****
 
 # Global Interpreter Lock
@@ -178,6 +181,8 @@ source: *[Real Python](https://realpython.com/python-gil/#:~:text=The%20Python%2
 
 - Multi-threaded 말고 multi-process 방법으로 접근하면 앱을 parallel하게 짤 수 있다
 - 혹은 다른 python interpreter를 사용하면 된다. GIL은 CPython 에만 존재하기 때문이다 (CPython이 Python의 베이스다)
+
+****
 
 # All is One, One is all
 > 전체는 하나, 하나는 전체
@@ -286,3 +291,304 @@ print(multiply_by(3)) # NameError: name 'multiply_by' is not defined
         3
         ```
     - 위와 같이 보고자 하면 closure 함수가 무엇을 기억하고 있는지 볼 수는 있다.
+
+****
+
+# Decorators
+
+고오오급 정보까지는 아니지만 파이썬으로 개발하다가 보면 가끔식 이런 함수를 볼 때가 있다. 
+
+```python
+@whatsthis
+def someFunc():
+    print("이게 뭐야")
+
+someFunc()
+# 출력:
+# This is the decorator,
+# 이게 뭐야
+# Decorator ended
+```
+
+이런 함수를 Decorator를 사용한 함수라고 표현하는데 위에서 Decorator는 `whatsthis`에 속한다. 
+
+**Decorator란 Closure 함수를 사용해서 특정 함수의 앞, 뒤로 간단하게 기능을 추가해주는 것이다.**
+
+자 `whatsthis` 함수를 한번 보자.
+
+```python
+def whatsthis(func):
+
+    def wrapper():
+        print("This is the decorator, ")
+        func()
+        print("Decorator ended")
+
+    return wrapper
+```
+
+잘 살펴보면 Closure 함수인 것을 알 수 있다. 
+`wrapper`는 `whatsthis` 함수의 `func` 인자를 사용하는 함수고 `whatsthis` 함수는 리턴 값으로 `wrapper` 함수를 준다.
+
+`wrapper` 함수의 `func()` 함수는 우리가 인자로 주는 함수인 것을 알 수 있다. 
+이 `func()` 함수가 `@whatsthis` 아래에 작성이 되는 함수인 것이다. 
+
+다시 원문 코드를 한 번 보자.
+
+```python
+@whatsthis
+def someFunc():
+    print("이게 뭐야")
+
+someFunc()
+# 출력:
+# This is the decorator,
+# 이게 뭐야
+# Decorator ended
+```
+
+`@` 부호를 사용하고 Closure 함수명을 적어준 뒤, 아래 해당 Closure 함수에 사용할 함수를 적어 주게되면 해당 함수는 인자 함수로 사용된다. 
+
+현재 위의 코드를 풀어서 보면, `someFunc()`는 사실 `whatsthis` 함수의 `wrapper` 함수인 것이다. 그리고 `wrapper` 함수 안에 `func()`는 `someFunc` 함수 인 것이다.
+
+이렇게 설명하면 헷갈리니까 `someFunc()`를 변수명에 저장하자
+
+```python
+def whatsthis(func):
+
+    def wrapper():
+        print("This is the decorator, ")
+        func()
+        print("Decorator ended")
+
+    return wrapper
+
+
+@whatsthis
+def someFunc():
+    print("이게 뭐야")
+
+x = someFunc
+x()
+# 출력:
+# This is the decorator,
+# 이게 뭐야
+# Decorator ended
+```
+
+자, `x`는 `someFunc` 함수다. `someFunc`는 `wrapper` 함수다. `wrapper` 함수는 `whatsthis` 함수의 인자 `func`를 사용한다. `func`는 `someFunc`다.
+
+고로, `x`는 `someFunc` 함수를 사용하는 `wrapper` 함수다.
+
+이번에는 인자를 받을 수 있는 Decorator를 만들어보자 
+
+```python
+def whatsthis(func):
+
+    def wrapper(myname):
+        print("This is the decorator,", myname)
+        func()
+        print("Decorator ended")
+
+    return wrapper
+
+@whatsthis
+def someFunc():
+    print("이게 뭐야")
+
+x = someFunc
+x("마이클")
+
+# This is the decorator, 마이클
+# 이게 뭐야
+# Decorator ended
+```
+
+위를 보면 `myname`이라는 변수가 인자로 주어진다. 이 인자를 주는 곳은 함수를 호출 할 때다. `x('마이클')`을 호출하면 마이클이라는 이름이 잘 표현되는 것을 알 수 있다. 
+
+만약 `someFunc()` 함수에서 인자를 받고 싶다면? 
+
+```python
+def whatsthis(func):
+
+    def wrapper(myname):
+        print("This is the decorator,")
+        func(myname)
+        print("Decorator ended")
+
+    return wrapper
+
+@whatsthis
+def someFunc(name):
+    print("이게 뭐야, ", name)
+
+x = someFunc
+x("마이클")
+
+# This is the decorator,
+# 이게 뭐야, 마이클
+# Decorator ended
+```
+
+이런식으로 활용하면 된다. `wrapper` 함수의 `myname` 인자가 그대로 `func(myname)`에 인자 값으로 주어진다. `someFunc(name)` 함수의 `name`은 `myname`이 되는 것이다.
+
+`x`는 `wrapper` 함수인 것을 인지하면 이해하기가 쉬워진다.
+
+자 이제 Decorator를 알아보았다. 하지만 Decorator는 중첩이 가능하다. 
+
+```python
+@whatisthis
+@whatisthis2
+def someFunc():
+    print("살려줘")
+
+someFunc()
+# 출력 :
+# This is the decorator,
+# Hello There,
+# 살려줘
+# Bye
+# Decorator ended
+```
+
+전체 코드를 살펴보자.
+
+```python
+def whatisthis2(func):
+    def wrapper():
+        print("Hello There, ")
+        func()
+        print("Bye")
+    
+    return wrapper
+
+def whatsthis(func):
+
+    def wrapper():
+        print("This is the decorator,")
+        func()
+        print("Decorator ended")
+
+    return wrapper
+
+@whatsthis
+@whatisthis2
+def someFunc():
+    print("살려줘")
+
+someFunc()
+```
+
+간략히 설명하자면 `@whatsthis` Decorator의 인자 함수는 `whatisthis2` 함수가 된다. 그리고 `@whatisthis2`의 인자 함수는 `someFunc` 함수가 된다. 
+
+그리고 `whatsthis` 의 리턴 함수는 `wrapper` 함수인데, 이 `wrapper` 함수는 `whatisthis2` 의 `wrapper` 함수를 사용하는 것이다. 
+
+즉, `someFunc` 함수를 실행 시키면 사실 아래 코드가 실행되는 것이다
+
+```python
+print("This is the decorator,") # whatsthis의 wrapper 함수
+print("Hello There")            # whatisthis2의 wrapper 함수
+print("살려줘")                 # someFunc 함수
+print("Bye")                    # whatisthis2의 wrapper 함수
+print("Decorator Ended")        # whatsthis의 wrapper 함수
+```
+
+머리가 쿠크다스 마냥 뽀개질거 같은데 왜 쓰는 것일까. 보면 알겠지만 한 번 이해만 한다면 가독성이 뛰어난 방법으로 코드를 짤 수 있기 때문이다. 
+
+예를 들면
+
+```python
+@logger
+def someFunc():
+    pass
+```
+
+위와 같이 Decorator 이름만 잘 지어준다면 가독성이 매우 뛰어나다. `@logger`가 내부적으로 정확히 어떻게 돌아가는지 알 필요도 없고 사용법만 알면 되니까 개발자 입장에서는 상당히 편리한 기능이라고 볼 수 있다. 
+
+****
+
+# Decorators 2
+
+Decorator는 함수를 꾸며주는 것이라고 배웠을 것이다. 맞는 말이다. 사실 함수뿐만 아니라 Class도 가능하다. 
+
+```python
+def Foo(obj):
+    def wrapper():
+        print("Creating object")
+        print(obj().name)
+        print("Object created")
+
+    return wrapper
+
+@Foo
+class Bar:
+    def __init__(self):
+        self.name = "test"
+    
+Bar()
+# 출력 :
+# Creating object
+# test
+# Object created
+```
+
+이런식으로 `Bar` 클라스를 `Foo` closure 함수에서 사용을 하는 것이다.
+
+혹은 `Foo` Decorator 자체를 `class` 객체로도 만들수있다. 
+
+```python
+class Foo:
+    def __init__(self, cls):
+        self.x = cls
+    
+    def __call__(self):
+        print("testing")
+        self.x().run()
+        print("test done")
+
+@Foo
+class Bar:
+    def __init__(self):
+        self.name = "test"
+    
+    def run(self):
+        print(self.name)
+    
+Bar()
+# 출력 :
+# testing
+# test
+# test done
+```
+
+이런 경우 Decorator 객체인 `Foo`의 `__call__` 내장 함수를 `wrapper` 함수라고 생각하면 된다. 그리고 `Foo`의 `__init__` 함수의 인자로 `Bar` 가 주어진다고 보면 된다.
+
+이런식으로 Decorator를 쓰는 경우는 드문 것 같다.
+
+마찬가지로, 이런 방식도 가능하다
+
+```python
+class Foo:
+    def __init__(self, func):
+        self.x = func
+    
+    def __call__(self):
+        print("testing")
+        self.x()
+        print("test done")
+
+@Foo
+def someFunc():
+    print("Yo")
+    
+someFunc()
+# 출력 :
+# testing
+# Yo
+# test done
+```
+
+일반적으로 Decorator를 많이 볼 일이 없을수도 있다. 하지만 개발자라면 언어가 제공하는 개발 방법을 잘 알고 있고 그 방법들을 적재적소에 활용하는 것이 중요하다고 생각해서 포스트를 남겨 보았다. 
+
+****
+

@@ -225,13 +225,16 @@
 
 <p>Postgresql도 마찬가지다. <a href="https://www.postgresql.org/download/">설치 가이드</a>를 따라서 설치를 해보자.</p>
 
-<p>이후 새로운 폴더(<code class="language-plaintext highlighter-rouge">mediumclone-go</code>)를 생성하고, 백엔드 프레임워크 <code class="language-plaintext highlighter-rouge">Gin</code>을 설치하자</p>
+<p>고는 지정된 <code class="language-plaintext highlighter-rouge">GOPATH</code> 밖에서 새로운 고 코드를 실행하고 싶으면 <code class="language-plaintext highlighter-rouge">go mod</code>를 활용해야 한다.
+새로운 폴더(<code class="language-plaintext highlighter-rouge">mediumclone-go</code>)를 생성하고, <code class="language-plaintext highlighter-rouge">go mod init 아무이름/mediumclone-go</code> 로 프로젝트 관리를 하자.</p>
+
+<p>이제 고 백엔드 프레임워크 <code class="language-plaintext highlighter-rouge">Gin</code>을 설치하자.</p>
 
 <p>고가 설치 되어 있다면, 터미널에서</p>
 
 <p><code class="language-plaintext highlighter-rouge">go get -u github.com/gin-gonic/gin</code></p>
 
-<p>으로 다운 받을 수 있다.</p>
+<p>으로 설치할 수 있다. 설치가 되면 <code class="language-plaintext highlighter-rouge">go.mod</code> 에 업데이트가 되야하고 <code class="language-plaintext highlighter-rouge">go.sum</code>도 만들어져야 한다.</p>
 
 <p><code class="language-plaintext highlighter-rouge">mediumclone-go</code>에 <code class="language-plaintext highlighter-rouge">main.go</code> 파일을 만들어서 간단한 서버를 구현해보자.</p>
 

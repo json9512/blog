@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-09T13:20:39+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[CS 기초] 비트 연산</title><link href="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/" rel="alternate" type="text/html" title="[CS 기초] 비트 연산" /><published>2021-01-09T00:00:00+00:00</published><updated>2021-01-09T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5BCS%20%EA%B8%B0%EC%B4%88%5D%20%EB%B9%84%ED%8A%B8%20%EC%97%B0%EC%82%B0</id><content type="html" xml:base="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/">&lt;p&gt;출처: &lt;a href=&quot;https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/&quot;&gt;HackerEarth&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-09T13:36:03+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[CS 기초] 비트 연산</title><link href="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/" rel="alternate" type="text/html" title="[CS 기초] 비트 연산" /><published>2021-01-09T00:00:00+00:00</published><updated>2021-01-09T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5BCS%20%EA%B8%B0%EC%B4%88%5D%20%EB%B9%84%ED%8A%B8%20%EC%97%B0%EC%82%B0</id><content type="html" xml:base="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/">&lt;p&gt;출처: &lt;a href=&quot;https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/&quot;&gt;HackerEarth&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;1학년 때 배우고 쓰지 않아서 다시 복기 할 겸 비트 연산에 대해 알아보자.&lt;/p&gt;
 
@@ -348,11 +348,11 @@ mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;docker-image화&quot;&gt;Docker Image화&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; 는 쉽게 설명하면 특정 앱(지금 만드는 Go server같은 앱)을 가상의 환경에 구동할 수 있도록 해주는 앱이다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; 는 쉽게 설명하면 PaaS이고 OS-level 가상화를 이용해 앱을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;container&lt;/code&gt;로 패키지화 해준다.&lt;/p&gt;
 
 &lt;p&gt;Docker에 대해 설명하는 포스트는 추후에 작성하도록 하겠다.&lt;/p&gt;
 
-&lt;p&gt;Docker Image화는 그 가상의 구동 환경을 저장시키는 것이다. 이론 상으로 다른 컴퓨터에서 Docker Image 만 Container로 띄우면 Image속에 저장된 Go server는 정상 작동된다.&lt;/p&gt;
+&lt;p&gt;Docker Image화는 가상화된 환경에 특정 앱을 저장시키고 행동양식을 설정해주는 것이다. Image는 Docker Container에 배포되게 되면 설정된 행동양식에 따라 일렬의 코드를 실행시킨다. 이론상으로는 아무 컴퓨터에서 Docker Image 만 Container로 띄우면 Image속에 저장된 Go server는 정상 작동된다. 또한 만든 Docker Image를 Docker Hub에 올릴 수 있다. (Docker Hub는 Github 같은 저장소다)&lt;/p&gt;
 
 &lt;p&gt;이 Go Server를 Docker Image로 만들려면 일단 Docker를 설치해야 한다.&lt;/p&gt;
 

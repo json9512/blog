@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "Python"
+title:  "[파이썬] Python Code style"
 date: 2021-01-03 14:53:17 +0900
 tags: python
 comments: true
 ---
-# 들어가며 . . .
-
 애용하는 언어인 파이썬에 대해 좀 알아보고 복기하기 위한 포스트 
+
 - 파이썬은 원래 가독성이 좋은 프로그래밍 언어
 - 가독성을 살려서 코드를 작성하게끔 pythonic 한 가이드라인이 있음
 - Python coding convention과 흔히 접하지 않는 것들에 대해 알아보자
@@ -80,7 +79,7 @@ if condition1 and condition2:
 정말 필요할 때가 아니면 하지 말자
 
 ## 5. We are all responsible users
-파이썬은 다른 언어에 있는 `private` 변수나 클래스 같은 것들이 기본적으로 사용되지 않는다. 이는 Java와 같이 방어적(?)인 언어들과 다르다. 
+파이썬은 다른 언어에 있는 `private` 변수나 클래스 같은 것들이 기본적으로 사용되지 않는다. 이는 Java와 같이 보호적인 언어들과 다르다. 
 
 이유는 python 개발자는 모두 책임감이 있다고 믿기 때문이다. 개발자로서 자신이 사용하면 안되는 코드/특성은 사용을 하지 않는 것이 좋다.
 

@@ -1,4 +1,486 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-09T13:36:03+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[CS 기초] 비트 연산</title><link href="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/" rel="alternate" type="text/html" title="[CS 기초] 비트 연산" /><published>2021-01-09T00:00:00+00:00</published><updated>2021-01-09T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5BCS%20%EA%B8%B0%EC%B4%88%5D%20%EB%B9%84%ED%8A%B8%20%EC%97%B0%EC%82%B0</id><content type="html" xml:base="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/">&lt;p&gt;출처: &lt;a href=&quot;https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/&quot;&gt;HackerEarth&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-10T15:56:42+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -8장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-8%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -8장" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%208%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-8%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -3장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -4장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -8장&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Docker 이미지화&lt;/li&gt;
+  &lt;li&gt;Github Actions로 테스트/Docker Hub 자동화&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;서버 배포 할 곳 정하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;서버-배포-할-곳-정하기&quot;&gt;서버 배포 할 곳 정하기&lt;/h1&gt;
+&lt;p&gt;AWS, GCP, Microsoft Azure가 대세지만 다른 몇 가지를 알아보고 가장 최적의 조합을 찾자.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;내 컴퓨터, 기기 (라즈베리 파이)등을 상시 켜놓고 서버를 실행한 후 NAT설정으로 외부에서 연결 가능하게 하는 방법&lt;/li&gt;
+  &lt;li&gt;PaaS를 사용하는 방법 (Heroku, Netlify)&lt;/li&gt;
+  &lt;li&gt;IaaS를 사용하는 방법 (AWS, GCP, Azure)&lt;/li&gt;
+  &lt;li&gt;서버를 구매 후 사용하는 방법&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;정하는 기준은 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;요금&lt;/li&gt;
+  &lt;li&gt;자동화가 가능한지&lt;/li&gt;
+  &lt;li&gt;현재 앱 아키텍쳐가 가능한지&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1번의 경우 가능은 하지만 내가 컴퓨터를 직접적으로 사용하는데 불편함이 있으니까 패스하겠다.&lt;/p&gt;
+
+&lt;p&gt;2번의 경우는 상당히 간편한 방법이다. 요금도 무료인 곳이 많다. 단점은 서버가 한국에 없어서 느리다는 것 정도다.&lt;/p&gt;
+
+&lt;p&gt;3번. 확장성, 기능면에서 내가 원하는대로 할 수 있는게 가장 큰 장점이다. 역시 대세는 거스를 수 없나보다.&lt;/p&gt;
+
+&lt;p&gt;4번은 돈이 남아 돌면 하자. &lt;del&gt;서버 한 대가 얼만데..&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;2번과 3번 중에서 정하면 된다. 조금 더 자세히 알아보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2번. PaaS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;요금: 무료&lt;/li&gt;
+  &lt;li&gt;자동화가 가능한지: 가능하다&lt;/li&gt;
+  &lt;li&gt;아키텍쳐 호환성: 가능하다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;일단 사용한다면 Heroku를 사용할 것이다. 좋은 점은 앱을 만드는 것만 신경쓰고 나머지는 Heroku가 알아서 다 해준다. 즉 Infrastructure를 신경 쓸 필요가 없다. 그리고 PSQL 호환성 또한 좋다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3번. IaaS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;요금: 무료/유료&lt;/li&gt;
+  &lt;li&gt;자동화가 가능한지: 가능하다&lt;/li&gt;
+  &lt;li&gt;아키텍쳐 호환성: 가능하다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;IaaS는 AWS를 사용하겠다. 이유는 기능도 많고 커뮤니티도 커서 제일 정보를 구하기가 쉽다. 일단 Free Tier가 적용이되서 무료로 
+사용가능하다. Docker Image를 배포 할 ECR과 Fargate를 사용하거나 EC2를 사용할 것 같다. 무엇보다 다른 Micro service들을 더하는 것이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;단점은 처음 설정하는 것이 어려울 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3번&lt;/strong&gt; 으로 결정하겠다.&lt;/p&gt;
+
+&lt;h1 id=&quot;aws&quot;&gt;AWS&lt;/h1&gt;
+
+&lt;p&gt;이제 컴퓨팅 리소스를 정해 볼 차례다. 그전에 AWS에는 어떤 것들이 있는지 알아보자. 주로 사용 할 것들만 모아봤다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;EC2 - 컴퓨터라고 보면된다, OS 설치 후 쓰고 싶은 용도로 사용하면 된다. 단 OS의 GUI는 기본적으로 없다.&lt;/li&gt;
+  &lt;li&gt;Fargate - 특정 Container를 실행 시키는 기기라고 생각하면 된다. 서버를 띄울수도 있고, 함수를 돌려도 되고 개발자 마음이다.&lt;/li&gt;
+  &lt;li&gt;ECS - Container 관리 툴이다. 보통 이거랑 Fargate/EC2 조합으로 컨테이너 관리를 할 수 있다. 새로운 서비스 배포 시 블루/그린&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; 방식으로 배포한다.&lt;/li&gt;
+  &lt;li&gt;ECR - 이미지 Registry다. Docker Hub과 같다고 생각하면 된다.&lt;/li&gt;
+  &lt;li&gt;S3 - 데이터 저장소다, 간단하게 Key/value 형식을 가지고 있다.&lt;/li&gt;
+  &lt;li&gt;RDS - 관계형 데이터 저장소다, PSQL, MySQL등이 구동 가능하다.&lt;/li&gt;
+  &lt;li&gt;AWS API Gateway - API 관리를 쉽게 해주는 Gateway다. 외부에서는 API Gateway의 주소로 접속을 하게 되고 API Gateway는 접속하는 경로에 따라 다른 URI로 돌려줄 수도 있고, 연결된 AWS lambda를 실행 시킬 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;현재 AWS Free tier로 12개월 동안은 EC2, Lambda, RDS, API Gateway등 다 무료다. Free tier를 지원 안하는 것은 Fargate 밖에 없다.&lt;/p&gt;
+
+&lt;p&gt;이제 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mediumclone-go&lt;/code&gt;를 어떤 조합으로 배포 가능한지 알아보자.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;아 몰라 EC2 조합:
+    &lt;ol&gt;
+      &lt;li&gt;데이터베이스: EC2에 PSQL 구동&lt;/li&gt;
+      &lt;li&gt;Go 서버: 다른 EC2에 Docker 설치 후 Container 구동&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;요즘 핫한 serverless 조합:
+    &lt;ol&gt;
+      &lt;li&gt;데이터베이스: RDS 구동&lt;/li&gt;
+      &lt;li&gt;Go 서버: Endpoint 별로 AWS Lambda로 작성&lt;/li&gt;
+      &lt;li&gt;추가요소: AWS API Gateway&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;든든한 국밥 조합:
+    &lt;ol&gt;
+      &lt;li&gt;데이터베이스: RDS 구동&lt;/li&gt;
+      &lt;li&gt;Go 서버: EC2 구동&lt;/li&gt;
+      &lt;li&gt;추가요소: ECR에 Docker 이미지 저장 후 ECS로 컨테이너 관리&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;아-몰라-ec2-조합&quot;&gt;아 몰라 EC2 조합&lt;/h3&gt;
+
+&lt;p&gt;가장 쉽다. 그냥 EC2 두 개만 띄워서 하나는 PSQL을 구동 시키고 다른 하나는 Go 서버를 구동 시키면 된다.&lt;/p&gt;
+
+&lt;p&gt;문제는 자동화가 불가능 할 수도 있다. EC2는 특성상 새로 생성이 되면 임의의 ip, dns가 생성이 되는데 Go 서버와 PSQL을 서로 
+연결 시키려면 상당히 삽질을 많이 해야 할 수도 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;요즘-핫한-serverless-조합&quot;&gt;요즘 핫한 serverless 조합&lt;/h3&gt;
+
+&lt;p&gt;데이터베이스는 제공되는 AWS RDS를 사용한고 Go 서버를 함수 단위로 나눠서 AWS Lambda로 돌리는 방식이다.&lt;/p&gt;
+
+&lt;p&gt;구조를 간략히 설명하자면:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/serverless.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이런 식으로 AWS API Gateway의 ip로 외부에서 접속을 하게되면, Gateway가 각 경로에 맞게 AWS Lambda를 실행 시키는 방법이다.&lt;/p&gt;
+
+&lt;p&gt;장점은 서버가 필요 없다는 점이고 단점은 처음 Go로 RESTful한 API를 만들려고한 목적이 살짝 애매해 질 수 있다. 원래는 하나의 서버를 생각했었기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;이 조합은 Lambda가 설정만 돼있으면 API Gateway만 자동화 시키면 되기 때문에 쉬울 것 같다. (Lambda 변경 시 자동으로 반영 되는지는 아직 모른다)&lt;/p&gt;
+
+&lt;h3 id=&quot;든든한-국밥-조합&quot;&gt;든든한 국밥 조합&lt;/h3&gt;
+
+&lt;p&gt;위와 비슷한 방법으로는 ECS + ECR + Fargate/EC2가 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/fargate.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이런 식으로 AWS ECR에서 이미지를 불러와서 ECS가 알아서 Fargate나 EC2 인스턴스를 구동시키는 것이다.&lt;/p&gt;
+
+&lt;p&gt;데이터베이스는 AWS RDS로 구동한다.&lt;/p&gt;
+
+&lt;p&gt;이 조합은 Github Actions로 자동화가 가능할 것 같다.&lt;/p&gt;
+
+&lt;h3 id=&quot;결정&quot;&gt;결정&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;요즘 핫한 serverless&lt;/strong&gt; 조합이 끌리기는 하지만 이번에는 &lt;strong&gt;든든한 국밥 조합&lt;/strong&gt;으로 가도록 하겠다.&lt;/p&gt;
+
+&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
+
+&lt;p&gt;정리를 하자면:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;서버 배포 방법을 AWS ECS + ECR + EC2 + RDS 조합으로 결정했다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;다음 포스트는 이것을 자동화 하는 방법에 대해 알아보자.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;이전 포스트에서 “Monolithic” 한 아키텍쳐를 사용한다고 했다. 하지만 인증/인가를 Oauth2로 정함과 동시에 “Monolithic”한 아키텍쳐는 아니라고 볼 수 있다. 이렇게 된 김에 데이터베이스도 따로 만들려고 한다. 이유는 하나의 인스턴스에 Go server와 Postgresql을 같이 만들게 되면 인스턴스가 “stateful” 하게 된다. 즉, 이 인스턴스가 꺼지면 Postgresql에 저장된 정보도 날아간다. &lt;br /&gt;현재 아키텍쳐를 다시 나열 하자면 아래와 같다:&lt;br /&gt;1. Go 서버&lt;br /&gt;2. 인증/인가 서버 (외부: 아마도 구글)&lt;br /&gt;3. Database (이것도 PSQL을 쓸지 딴 것을 쓸지 고민을 해야한다)&lt;br /&gt;4. 나중에 만들 Frontend &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;새로 서비스가 추가 될 때 기존 서비스의 트래픽을 서서히 새 서비스로 향하게 하고, 기존 서비스를 종료시키는 배포 방식. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Comb Sort</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Comb-Sort/" rel="alternate" type="text/html" title="[알고리즘] Comb Sort" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Comb%20Sort</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Comb-Sort/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/comb-sort/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Comb 정렬에 대해 알아보자&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bubble Sort를 살짝 바꾼 알고리즘&lt;/li&gt;
+  &lt;li&gt;Gap을 이용해서 정렬을 한다.&lt;/li&gt;
+  &lt;li&gt;Gap은 decrease factor 1.3씩 줄어든다&lt;/li&gt;
+  &lt;li&gt;Stable 하지 않다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Time complexity&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Worst Case: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n^2)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Space complexity&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(1)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;comb-sort-visualization&quot;&gt;Comb sort visualization&lt;/h1&gt;
+&lt;!-- 16:9 aspect ratio --&gt;
+&lt;div class=&quot;responsive-embed responsive-embed-16by9&quot;&gt;
+  &lt;iframe class=&quot;responsive-embed-item&quot; src=&quot;https://www.youtube-nocookie.com/embed/n51GFZHXlYY&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;comb_sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_next_gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'''Helper function to get next gap using the decrease factor'''&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# get length
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;swapped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swapped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# find next gap
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_next_gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;swapped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;swapped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt; 
+
+    &lt;span class=&quot;c1&quot;&gt;# O(n^2), O(1), not stable
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;comb_sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# [1, 2, 3, 4, 5, 7, 16]
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[알고리즘] Activity Selection</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Activity-Selection/" rel="alternate" type="text/html" title="[알고리즘] Activity Selection" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Activity%20Selection</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Activity-Selection/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Activity Selection에 대해 알아보자&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;그리디 알고리즘&lt;/li&gt;
+  &lt;li&gt;N개의 activity의 시작 시간과 끝나는 시간이 있을때, 한 사람이 activity를 수행 할 수 있는 최대 횟수를 구하는 것&lt;/li&gt;
+  &lt;li&gt;단, 사람은 같은 시간에 딱 하나의 activity만 수행 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;알고리즘&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;주어진 N개의 activity를 끝나는 시간을 기준으로 오름차순 정렬한다&lt;/li&gt;
+  &lt;li&gt;제일 첫 번째 activity를 결과 값에 저장한다&lt;/li&gt;
+  &lt;li&gt;나머지 activity는:
+    &lt;ul&gt;
+      &lt;li&gt;현재 activity의 시작 시간이 전의 activity의 끝나는 시간과 같거나 크다면, 현재 activity를 결과 값에 저장한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;acitivty_selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'''Returns number of activities in list'''&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# sort the items by finish time
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# add the first item to the answer
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;prev_item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# compare the current item's start time with
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# the previous item's end time
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;curr_item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr_item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev_item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curr_item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;prev_item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curr_item&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;
+
+
+&lt;span class=&quot;c1&quot;&gt;# create activity array
+# (start time, finish time)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activities&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acitivty_selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# [(1, 2), (3, 4), (5, 7), (8, 9)]
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;activity-selection을-사용한-문제&quot;&gt;Activity Selection을 사용한 문제&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1931&quot;&gt;백준 1931번 회의실 배정&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/&quot;&gt;Leetcode 452번  Minimum Number of Arrows to Burst Balloons&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/&quot;&gt;Leetcode 1326번 Minimum Number of Taps to Open to Water a Garden&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/non-overlapping-intervals/&quot;&gt;Leetcode 435번 Non-overlapping Intervals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[파이썬] PEP 8</title><link href="https://json9512.github.io/blog/%ED%8C%8C%EC%9D%B4%EC%8D%AC-PEP-8/" rel="alternate" type="text/html" title="[파이썬] PEP 8" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%8C%8C%EC%9D%B4%EC%8D%AC%5D-PEP%208</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%8C%8C%EC%9D%B4%EC%8D%AC-PEP-8/">&lt;p&gt;파이썬 개발자라면 알아야 할 PEP 8 코드 가이드&lt;/p&gt;
+
+&lt;p&gt;사실 파이썬을 주로 쓰지만 PEP 8에 맞춰서 코드를 짠 적이 없다&lt;/p&gt;
+
+&lt;p&gt;이번 기회에 알아보자&lt;/p&gt;
+
+&lt;p&gt;출처: &lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/&quot;&gt;PEP 8&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;코드의-일관성은-중요하다&quot;&gt;코드의 일관성은 중요하다&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;PEP 8은 기본적으로 사용되는 파이썬 코드 스타일 가이드다&lt;/li&gt;
+  &lt;li&gt;이유가 있다면 꼭 PEP 8을 고수할 필요는 없다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;code-layout&quot;&gt;Code Layout&lt;/h1&gt;
+&lt;h2 id=&quot;indentation&quot;&gt;Indentation&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;4 번의 스페이스로 Indentation을 표시하자&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(), {}, []&lt;/code&gt; 사용 시 줄 바꿈을 해야 한다면, 표현식은 다음과 같다.
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;# GOOD
+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 여는 부호 (, {, [ 줄에 맞춰서 element를 적고 
+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (), {}, [] 안에 element를 수직 정렬 시킨다
+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;long_function_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var_two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                          &lt;span class=&quot;n&quot;&gt;var_three&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var_four&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        
+ &lt;span class=&quot;c1&quot;&gt;# BAD
+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 수직 정렬을 사용하지 않으면
+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 여는 부호 (, {, [ 와 함께 변수명을 적으면 안된다
+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;long_function_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var_two&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;va_three&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var_four&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;# GOOD
+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4번의 스페이스를 넣어서 인자와 나머지를 구분한다.
+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;long_function_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;var_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var_two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var_three&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;var_four&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        
+ &lt;span class=&quot;c1&quot;&gt;# BAD
+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;long_function_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;var_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var_two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var_three&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;var_four&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; 문과 관련해서는 다음과 같이 사용할 수 있다.
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c1&quot;&gt;# GOOD
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 여백 없이 사용 (수직 정렬은 맞춰야한다.)
+&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;condition_a&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;condition_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;do_something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        
+  &lt;span class=&quot;c1&quot;&gt;# Comment를 작성해서 시각적으로 구분
+&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;condition_a&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;condition_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;# 컨디션이 둘 다 True 하니, 다음을 실행
+&lt;/span&gt;      &lt;span class=&quot;n&quot;&gt;do_something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        
+  &lt;span class=&quot;c1&quot;&gt;# condition에 여백을 넣어준다
+&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;condition_a&lt;/span&gt;
+          &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;condition_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;do_something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;multiline construct에서 닫는 부호 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;], }, )&lt;/code&gt;의 위치는 다음과 같다.
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c1&quot;&gt;# 부호 안에 있는 첫 번째 변수에 수직 정렬한다
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;my_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;'d'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'e'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'f'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        
+  &lt;span class=&quot;c1&quot;&gt;# 혹은 multiline construct의 시작 부분에 맞춰서 정렬한다 
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;my_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;'d'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'e'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'f'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tabspace&quot;&gt;TAB/SPACE?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;이미 기존 코드가 TAB을 사용하고 있다면 TAB으로 코드를 작성한다&lt;/li&gt;
+  &lt;li&gt;TAB 대신에 4번의 스페이스 공백을 기본으로 한다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;최대-라인-길이&quot;&gt;최대 라인 길이&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;모든 라인은 최대 79자로 한다&lt;/li&gt;
+  &lt;li&gt;Flowing long blocks of comments나 docstring은 72자로 한다&lt;/li&gt;
+  &lt;li&gt;최대 라인 길이를 준수하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\&lt;/code&gt;도 다음과 같은 상황에서는 사용 가능하다
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c1&quot;&gt;# 바뀐 줄은 수직 정렬을 맞춰야한다
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# \ 이후에 공백은 안된다
+&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/path/to/some/file/you/want/to/read'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; \
+       &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/path/to/some/file/being/written'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'w'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;file_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;줄-바꿈은-이항연산-binary-operator자-전후&quot;&gt;줄 바꿈은 이항연산 (binary operator)자 전/후?&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# GOOD
+# 연산자 전 줄 바꿈
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;income&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gross_wages&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;taxable_interest&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dividends&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qualified_dividends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ira_deduction&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;student_loan_interest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# BAD
+# 연산자 후 줄 바꿈 (연산자가 정렬이 되지 않음)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;income&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gross_wages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;taxable_interest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dividends&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qualified_dividends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;ira_deduction&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;student_loan_interest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;blank-lines&quot;&gt;Blank lines&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Some code written here
+&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Top level 함수와 class는 앞/뒤로 2줄
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;top_level_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# Class 안에 함수는 앞/뒤로 1줄
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;class_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;another_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+
+&lt;span class=&quot;c1&quot;&gt;# 함수 내에 logical section을 나눌 때 공백 사용
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;some_task_a&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;some_task_b&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;some_task_c&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;source-file-encoding&quot;&gt;Source file encoding&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Python 2는 (ASCII), Python 3은 UTF-8을 기본으로 한다&lt;/li&gt;
+  &lt;li&gt;예외는
+    &lt;ol&gt;
+      &lt;li&gt;Non-ASCII 기능을 test하는 test case&lt;/li&gt;
+      &lt;li&gt;코드 작성자의 이름&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;추가하자&quot;&gt;추가하자&lt;/h2&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="python" /><summary type="html">파이썬 개발자라면 알아야 할 PEP 8 코드 가이드</summary></entry><entry><title type="html">[CS 기초] 비트 연산</title><link href="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/" rel="alternate" type="text/html" title="[CS 기초] 비트 연산" /><published>2021-01-09T00:00:00+00:00</published><updated>2021-01-09T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5BCS%20%EA%B8%B0%EC%B4%88%5D%20%EB%B9%84%ED%8A%B8%20%EC%97%B0%EC%82%B0</id><content type="html" xml:base="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/">&lt;p&gt;출처: &lt;a href=&quot;https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/&quot;&gt;HackerEarth&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;1학년 때 배우고 쓰지 않아서 다시 복기 할 겸 비트 연산에 대해 알아보자.&lt;/p&gt;
 
@@ -201,130 +683,7 @@
 &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;shellSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# [1, 2, 3, 4, 5, 7, 16]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[알고리즘] Kruskal’s Minimum Spanning Tree</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Kruskal's-Minimum-Spanning-Tree/" rel="alternate" type="text/html" title="[알고리즘] Kruskal’s Minimum Spanning Tree" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Kruskal's%20Minimum%20Spanning%20Tree</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Kruskal's-Minimum-Spanning-Tree/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Kruskal’s MST에 대해 알아보자&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;그리디 알고리즘이다&lt;/li&gt;
-  &lt;li&gt;시간 복잡도: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(E log V)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;방법&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;edges를 가중치를 기준으로 오름차순 정렬을 한다&lt;/li&gt;
-  &lt;li&gt;가장 작은 가중치를 지닌 edge를 정한 뒤, 현재 MST에 저장된 edge와 연결 했을 시 Cycle이 되는지 확인한다.
-여기서 사용하는 알고리즘은 Union-Find 알고리즘이다&lt;/li&gt;
-  &lt;li&gt;Cycle이 형셩되지 않으면 선택된 edge를 MST에 더해준다, 반면 Cycle이 형성되면 무시한다.&lt;/li&gt;
-  &lt;li&gt;MST에 V-1 edge가 생성될 때까지 반복한다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;algorithm-visualization&quot;&gt;Algorithm visualization&lt;/h1&gt;
-&lt;!-- 16:9 aspect ratio --&gt;
-&lt;div class=&quot;responsive-embed responsive-embed-16by9&quot;&gt;
-  &lt;iframe class=&quot;responsive-embed-item&quot; src=&quot;https://www.youtube-nocookie.com/embed/71UQH7Pr9kU&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 코드 출처: https://it-garden.tistory.com/411
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;kruskal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_of_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# disjointSet 에서 
-&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# vertex u를 재귀적으로 찾는 함수다
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# vertex u 와 v 를 union시키는 함수다
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;root_a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;root_b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root_a&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# 그래프의 형태는 [[from, to, weight]] 형식이라고 가정한다
-&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# 그래프를 가중치를 기준으로 오름차순 정렬한다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# MST를 기록할 list를 만들어준다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# Disjoint Set 도 기록해준다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 0은 쓰지 않는 vertex다
-&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# 각 vertex를 disjointSet에 만들어준다
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_of_nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# edges counter
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# weight counter
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; 
-
-    &lt;span class=&quot;c1&quot;&gt;# 크루스칼 알고리즘
-&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# edges가 V-1이 아니면 반복
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_of_nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;# vertex u와 v가 다른 집합이면 Cycle이 아니라는 뜻
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; 
-            &lt;span class=&quot;n&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# 그래프는 Prim 알고리즘 포스트에서 썼던 A,B,C 그래프를 숫자로 치환한 값이다
-# A: 1, B: 2, C:3 ----- H:7
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (A, B, 2)
-&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (A, C, 3)
-&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (G, F, 1)
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# node의 개수는 1-6
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kruskal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'''
-Prim 알고리즘 포스트의 우선 순위 큐 MST와 비교하면 
-Kruskal 알고리즘 MST도 잘 구해진 것을 알 수 있다.
-
-mst: 
-    1 (A) -&amp;gt; 2 (B) -&amp;gt; 4 (E) -&amp;gt; 5 (F) -&amp;gt; 6 (G) -&amp;gt; 7 (H) 
-                |
-                v
-             3 (C)
-
-mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
-'''&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;kruskal-알고리즘을-사용할-수-있는-문제&quot;&gt;Kruskal 알고리즘을 사용할 수 있는 문제&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;acmicpc.net/problem/9372&quot;&gt;백준 9372번 상근이의 여행&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2887&quot;&gt;백준 2887번 행성터널&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/62050&quot;&gt;프로그래머스 지형이동&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/&quot;&gt;LeetCode 1489번 어려운 문제&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -7장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-7%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -7장" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%207%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-7%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -7장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-7%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -7장" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%207%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-7%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
@@ -333,6 +692,7 @@ mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -8장&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
@@ -576,7 +936,7 @@ mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
         &lt;span class=&quot;na&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./Dockerfile&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;json9512/mediumclone-go:latest&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;json9512/mediumclone-go:latest&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# docker repo&lt;/span&gt;
     &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Push&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker push json9512/mediumclone-go:latest&lt;/span&gt;
     
@@ -596,7 +956,7 @@ mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
   &lt;li&gt;테스트/Docker image를 Hub에 push하는 Github Actions workflow를 만들었다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;다음 포스트에서는 어떤 방식으로 서버를 배포할 것인지를 정한 뒤 배포까지 자동화하는 것을 알아보자.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -6장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-6%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -6장" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%206%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-6%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 어떤 방식으로 서버를 배포할 것인지를 정하자.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -6장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-6%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -6장" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%206%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-6%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
@@ -605,6 +965,7 @@ mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -8장&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
@@ -802,7 +1163,130 @@ mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
   &lt;li&gt;기본적인 개발 환경, 서버 구축, 테스트 코드까지 작성했다&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 Docker로 컨테이너화를 한 뒤에 모든 과정을 Github Actions로 자동화하는 방법을 알아보자.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Bucket Sort</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Bucket-Sort/" rel="alternate" type="text/html" title="[알고리즘] Bucket Sort" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Bucket%20Sort</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Bucket-Sort/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/bucket-sort-2/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 Docker로 컨테이너화를 한 뒤에 모든 과정을 Github Actions로 자동화하는 방법을 알아보자.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Kruskal’s Minimum Spanning Tree</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Kruskal's-Minimum-Spanning-Tree/" rel="alternate" type="text/html" title="[알고리즘] Kruskal’s Minimum Spanning Tree" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Kruskal's%20Minimum%20Spanning%20Tree</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Kruskal's-Minimum-Spanning-Tree/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kruskal’s MST에 대해 알아보자&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;그리디 알고리즘이다&lt;/li&gt;
+  &lt;li&gt;시간 복잡도: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(E log V)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;방법&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;edges를 가중치를 기준으로 오름차순 정렬을 한다&lt;/li&gt;
+  &lt;li&gt;가장 작은 가중치를 지닌 edge를 정한 뒤, 현재 MST에 저장된 edge와 연결 했을 시 Cycle이 되는지 확인한다.
+여기서 사용하는 알고리즘은 Union-Find 알고리즘이다&lt;/li&gt;
+  &lt;li&gt;Cycle이 형셩되지 않으면 선택된 edge를 MST에 더해준다, 반면 Cycle이 형성되면 무시한다.&lt;/li&gt;
+  &lt;li&gt;MST에 V-1 edge가 생성될 때까지 반복한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;algorithm-visualization&quot;&gt;Algorithm visualization&lt;/h1&gt;
+&lt;!-- 16:9 aspect ratio --&gt;
+&lt;div class=&quot;responsive-embed responsive-embed-16by9&quot;&gt;
+  &lt;iframe class=&quot;responsive-embed-item&quot; src=&quot;https://www.youtube-nocookie.com/embed/71UQH7Pr9kU&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 코드 출처: https://it-garden.tistory.com/411
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;kruskal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_of_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# disjointSet 에서 
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# vertex u를 재귀적으로 찾는 함수다
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# vertex u 와 v 를 union시키는 함수다
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;root_a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;root_b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root_a&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# 그래프의 형태는 [[from, to, weight]] 형식이라고 가정한다
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# 그래프를 가중치를 기준으로 오름차순 정렬한다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# MST를 기록할 list를 만들어준다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# Disjoint Set 도 기록해준다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 0은 쓰지 않는 vertex다
+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# 각 vertex를 disjointSet에 만들어준다
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_of_nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# edges counter
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# weight counter
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; 
+
+    &lt;span class=&quot;c1&quot;&gt;# 크루스칼 알고리즘
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# edges가 V-1이 아니면 반복
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_of_nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;# vertex u와 v가 다른 집합이면 Cycle이 아니라는 뜻
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; 
+            &lt;span class=&quot;n&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 그래프는 Prim 알고리즘 포스트에서 썼던 A,B,C 그래프를 숫자로 치환한 값이다
+# A: 1, B: 2, C:3 ----- H:7
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (A, B, 2)
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (A, C, 3)
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (G, F, 1)
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# node의 개수는 1-6
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kruskal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'''
+Prim 알고리즘 포스트의 우선 순위 큐 MST와 비교하면 
+Kruskal 알고리즘 MST도 잘 구해진 것을 알 수 있다.
+
+mst: 
+    1 (A) -&amp;gt; 2 (B) -&amp;gt; 4 (E) -&amp;gt; 5 (F) -&amp;gt; 6 (G) -&amp;gt; 7 (H) 
+                |
+                v
+             3 (C)
+
+mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
+'''&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;kruskal-알고리즘을-사용할-수-있는-문제&quot;&gt;Kruskal 알고리즘을 사용할 수 있는 문제&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;acmicpc.net/problem/9372&quot;&gt;백준 9372번 상근이의 여행&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2887&quot;&gt;백준 2887번 행성터널&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/62050&quot;&gt;프로그래머스 지형이동&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/&quot;&gt;LeetCode 1489번 어려운 문제&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[알고리즘] Bucket Sort</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Bucket-Sort/" rel="alternate" type="text/html" title="[알고리즘] Bucket Sort" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Bucket%20Sort</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Bucket-Sort/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/bucket-sort-2/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;버켓 정렬에 대해 알아보자&lt;/p&gt;
 
@@ -873,559 +1357,4 @@ mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
 &lt;span class=&quot;n&quot;&gt;bucketSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# [0.1, 0.21, 0.22, 0.4, 0.5, 0.8, 0.99]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -4장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-4%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -4장" /><published>2021-01-07T00:00:00+00:00</published><updated>2021-01-07T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%204%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-4%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -3장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -4장&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;어떤 CI/CD 툴을 사용할 지&lt;/li&gt;
-  &lt;li&gt;어떤 프로젝트 관리 툴을 사용할 지&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;앱 설계&lt;/li&gt;
-  &lt;li&gt;어떤 데이터베이스를 사용할지&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;앱-설계&quot;&gt;앱 설계&lt;/h1&gt;
-
-&lt;p&gt;사실 이 “앱 설계”만 적어도 10 포스트는 넘게 작성 할 수 있다. 그만큼 고려해야하는 것이 많기 때문이다. 여태까지 해 왔던 것들도 나름 앱 설계에 들어간다고 볼 수 있다.&lt;/p&gt;
-
-&lt;p&gt;0년차 개발자로서 개발지식은 많지 않다.&lt;/p&gt;
-
-&lt;p&gt;하지만 새로운 앱을 만들 때 고려해야 하는 것들을 좀 나열해 본다면:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;앱은 웹을 위한 앱인지, 안드로이드/iOS를 위한 앱인지, 아니면 둘 다를 위한 앱인지&lt;/li&gt;
-  &lt;li&gt;설계 방식은 Monolithic 인지, SOA인지, MSA 인지&lt;/li&gt;
-  &lt;li&gt;유저 인증/인가는 어디서, 어떻게 할건지, 따로 서버를 둘 건지&lt;/li&gt;
-  &lt;li&gt;Scale이 가능한 앱인지, 어느 부분에서 어떤 metric을 기준으로 Scale out할 건지&lt;/li&gt;
-  &lt;li&gt;백엔드는 stateful 한지 stateless한지&lt;/li&gt;
-  &lt;li&gt;저장소는 어떻게 운영할 건지, 캐시는 활용 할 것인지&lt;/li&gt;
-  &lt;li&gt;어떤 디자인 원칙을 준수할 것인지&lt;/li&gt;
-  &lt;li&gt;버전 관리는 어떻게 할 것인지&lt;/li&gt;
-  &lt;li&gt;테스트는 어떻게 할 것인지, 배포는 어떻게 할 것인지&lt;/li&gt;
-  &lt;li&gt;load balancing은 어떻게 할 것인지&lt;/li&gt;
-  &lt;li&gt;분산된 아키텍쳐면 로그는 어떻게 관리할 것인지&lt;/li&gt;
-  &lt;li&gt;데이터베이스는 scale 할 것인지&lt;/li&gt;
-  &lt;li&gt;방화벽은 어디에 어떻게 적용이 될 것인지&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;등등 끝도 없다.&lt;/p&gt;
-
-&lt;p&gt;이 것외에도 엄청 많겠지만 현재 나의 지식으로는 이정도 밖에 생각을 못하겠다. ㅠㅠ&lt;/p&gt;
-
-&lt;p&gt;0년차인데 이런 것들을 알아야 하나 싶겠지만, 세상이 새로운 개발자에게 요구하는 지식은 갈 수록 늘어날 수 밖에 없다. 없는 것은 몰라도 되지만 있는 것은 알아야 한다.&lt;/p&gt;
-
-&lt;p&gt;아무튼, 이 프로젝트의 앱 설계를 위의 9번까지 기준으로 작성을 해보자면 :&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;이 앱은 웹을 위한 것이다.&lt;/li&gt;
-  &lt;li&gt;설계 방식은 Monolithic 한 방식을 쓰겠다. 이유는 기능별로 서버를 나눌 필요가 없기 때문이다&lt;/li&gt;
-  &lt;li&gt;유저 인증/인가는 다른 포스트에서 다루도록 하겠다&lt;/li&gt;
-  &lt;li&gt;scale은 가능하게끔 만들겠지만 scale 하지는 않을 것 같다&lt;/li&gt;
-  &lt;li&gt;stateless한 서버를 만들겠다 RESTful 하기 위해&lt;/li&gt;
-  &lt;li&gt;캐시는 없고, 데이터베이스는 추후에 서술하겠다&lt;/li&gt;
-  &lt;li&gt;디자인 원칙은 백엔드는 REST에 최대한 준수한 HTTP API&lt;/li&gt;
-  &lt;li&gt;버전 관리는 gvm, go.mod을 통해서 하겠다&lt;/li&gt;
-  &lt;li&gt;테스트는 전 포스트에서 언급한 것 처럼 BDD를 준수하며 테스트 케이스를 만들고 Github Actions로 자동화 시키겠다&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;자, high-level 이지만 대략적인 앱 설계는 끝났다.&lt;/p&gt;
-
-&lt;p&gt;설계한 대로 코드를 짤 수 있도록 잘 기억하도록 하자.&lt;/p&gt;
-
-&lt;h1 id=&quot;데이터베이스&quot;&gt;데이터베이스&lt;/h1&gt;
-
-&lt;p&gt;이제 데이터베이스를 정해보자.&lt;/p&gt;
-
-&lt;p&gt;이것 또한 여러가지 방법이 있고 상황에 따라 적절한 데이터베이스를 정하는 것이 중요하다.&lt;/p&gt;
-
-&lt;p&gt;일단 제일 큰 축인, 관계형을 쓸 것인지 NoSql을 쓸 것인지부터 정하도록 하겠다.&lt;/p&gt;
-
-&lt;p&gt;저번 프로젝트에서는 관계형 데이터베이스인 Postgresql을 사용했다. 이번 프로젝트도 기능을 생각해 봤을 때 유저가 있고, 유저마다 포스트를 작성할 수 있고, 포스트에 좋아요를 표시할 수 있고, 코멘트 역시 달 수 있다는 점에서 관계형 RDBMS가 좋은 것 같다.&lt;/p&gt;
-
-&lt;p&gt;그러면 RDBMS 중에 사용 할 만한 툴을 찾아보자:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Postgresql&lt;/li&gt;
-  &lt;li&gt;MySQL&lt;/li&gt;
-  &lt;li&gt;SQLite&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;등이 있다.&lt;/p&gt;
-
-&lt;p&gt;이번 프로젝트도 Postgresql을 사용하도록 하겠다. 이유는 현재 컴퓨터에 설치되어 있고 바로 구동 가능하기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;프로젝트의 목표는 새 언어를 배우고 백엔드를 설계/자동화 하는 것이기 때문에 새로운 데이터베이스를 설치하고 설정하는 것에 시간을 투자하는 것은 비효율적이라고 판단했기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;SQL은 하나만 쓸 줄 알면 나머지도 언어 자체는 똑같기 때문에 사용하는데 무리가 없다.&lt;/p&gt;
-
-&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
-
-&lt;p&gt;정리를 하자면:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;앱 설계를 Monolithic, stateless, scale 가능하게 했고&lt;/li&gt;
-  &lt;li&gt;데이터베이스는 Postgresql이고 캐시는 없다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 백엔드 API를 endpoint들을 설계해보자&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -3장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-3%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -3장" /><published>2021-01-07T00:00:00+00:00</published><updated>2021-01-07T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%203%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-3%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -3장&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -4장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;어떤 개발 방식, 프레임워크, 테스트 라이브러리를 사용 할 건지&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;어떤 CI/CD 툴을 사용할 건지&lt;/li&gt;
-  &lt;li&gt;어떤 project 관리 툴을 사용할 건지 알아보자&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;cicd-툴&quot;&gt;CI/CD 툴&lt;/h1&gt;
-&lt;p&gt;CI/CD도 테스트 방식 만큼이나 학교에서 듣기만 했지 써본 적은 없는 미지의 기술이었다.&lt;/p&gt;
-
-&lt;p&gt;처음 써 본게 역시나 2주 미디엄 클론 코딩을 하면서 Travis CI랑 Appveyor를 썼을 때다.&lt;/p&gt;
-
-&lt;p&gt;CI/CD를 간략히 설명하자면, Continuous Integration / Continuous Delivery의 약자다.&lt;/p&gt;
-
-&lt;p&gt;CI 는 여러 사람들이 작성한 코드를 &lt;strong&gt;지속적으로&lt;/strong&gt; 하나의 코드로 통합시키고 검증하는 방식이다. 기본적으로는:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;로컬 환경에서 테스트 코드로 코드를 검증한다&lt;/li&gt;
-  &lt;li&gt;CI 환경에서 코드를 컴파일 한다&lt;/li&gt;
-  &lt;li&gt;CI 환경에서 코드를 테스트해서 검증한다&lt;/li&gt;
-  &lt;li&gt;CI 에서 서비스가 배포 될 수 있도록 한다 (Continuous Delivery)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;마지막 4번이 자동화가 되어있다면 continuous deployment라고 볼 수 있다.&lt;/p&gt;
-
-&lt;p&gt;이 모든 과정이 자동화가 되어 있어야 개발자들이 이상한 곳에서 시간을 낭비하지 않는다.&lt;/p&gt;
-
-&lt;p&gt;백엔드 엔지니어도 처음 만드는 서비스의 서버 환경을 구성해야되는 상황이면 CI/CD pipepline을 구축할 줄 알아야한다. DevOps가 구축하기도 한다.&lt;/p&gt;
-
-&lt;p&gt;이번에는 어떤 CI/CD 툴이 있고, 이 프로젝트에서 어떤 것을 쓸 것인지 알아보자.&lt;/p&gt;
-
-&lt;p&gt;출처는 &lt;a href=&quot;https://medium.com/devops-dudes/top-7-best-ci-cd-tools-you-should-get-your-hands-on-in-2020-832c29db936a&quot;&gt;2020년 당신이 알아야 할 탑 7 CI/CD 툴 (미디엄 영문)&lt;/a&gt;이다&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Travis CI - 이미 사용했으니까 제외&lt;/li&gt;
-  &lt;li&gt;Appveyor - 이미 사용했으니까 제외&lt;/li&gt;
-  &lt;li&gt;Jenkins - 오픈소스 CI/CD 툴, 많은 개발자들이 애용한다&lt;/li&gt;
-  &lt;li&gt;CircleCI - 유료지만 무료 플랜이 나쁘지 않은 서비스&lt;/li&gt;
-  &lt;li&gt;Bamboo - 유료 Atlassian 제품, Bitbucket, Jira 만든 곳&lt;/li&gt;
-  &lt;li&gt;TeamCity - Jetbrains에서 만든 CI 툴&lt;/li&gt;
-  &lt;li&gt;Github Actions - 깃허브 지원 CI/CD 툴&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;외에도 많지만 요정도에서 정해보겠다&lt;/p&gt;
-
-&lt;p&gt;일단 Travis CI 와 Appveyor는 사용한 경험이 있어서 패스하고 Bamboo와 CircleCi는 유료라서 제외하겠다.&lt;/p&gt;
-
-&lt;p&gt;TeamCity는 여러 기능들이 좀 매력적이지만 이 프로젝트에 적용 시키기에는 너무 오버스펙 같아서 패스하겠다.&lt;/p&gt;
-
-&lt;p&gt;결국 Jenkins와 Github Actions가 남는데, 개인적으로 Git repository를 이미 Github로 사용하고 있으니 Github Actions로 일관성을 유지하겠다.&lt;/p&gt;
-
-&lt;p&gt;물론 위에 나열한 CI/CD 툴은 다 훌륭하다고 생각한다. 사용 방식도 하나만 알면 나머지도 비슷한 느낌이라 쉽게 배울 수 있다고 생각한다.&lt;/p&gt;
-
-&lt;h1 id=&quot;프로젝트-관리-툴&quot;&gt;프로젝트 관리 툴&lt;/h1&gt;
-
-&lt;p&gt;CI/CD 툴을 정했으니 프로젝트 관리 툴도 정해보자.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Jira&lt;/li&gt;
-  &lt;li&gt;Trello&lt;/li&gt;
-  &lt;li&gt;Asana&lt;/li&gt;
-  &lt;li&gt;Github Projects&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이미 짐작했겠지만 Github Projects를 사용할 것이다.&lt;/p&gt;
-
-&lt;p&gt;이유는 일관성있게 모든 것을 Github내에서 볼 수 있도록 하기 위함이다. 새삼 Github가 정말 개발자 친화적이라고 느낀다. 역시 MS의 힘이란.&lt;/p&gt;
-
-&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
-
-&lt;p&gt;정리를 하자면:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;CI/CD 툴 - Github Actions&lt;/li&gt;
-  &lt;li&gt;프로젝트 관리 툴 - Github Projects&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 앱 설계와 데이터베이스를 정해보자&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -2장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-2%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -2장" /><published>2021-01-07T00:00:00+00:00</published><updated>2021-01-07T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%202%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-2%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -3장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -4장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;왜 다시 이 프로젝트를 하는지&lt;/li&gt;
-  &lt;li&gt;어떤 언어를 사용할 것인지&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;어떤 프레임워크/툴들을 사용 할 것인지에 대해 알아보자.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;백엔드-설계&quot;&gt;백엔드 설계&lt;/h1&gt;
-
-&lt;p&gt;일단 저번 포스트에서도 언급했듯이 언어는 Go로 정해졌다. 이유는 내가 Go 언어를 공부해보고 싶기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;그리고 디자인 방식도 REST에 최대한 준수하는 API를 만들어 보겠다고 했다.&lt;/p&gt;
-
-&lt;p&gt;그러면 현재 언어와 설계 방식은 정해져있다. 그러면 이에 맞는 &lt;strong&gt;프레임워크&lt;/strong&gt;와 &lt;strong&gt;개발 방식&lt;/strong&gt; 그리고 개발 방식에 따른 &lt;strong&gt;테스트 라이브러리&lt;/strong&gt;을 정해보자.&lt;/p&gt;
-
-&lt;h1 id=&quot;프레임워크&quot;&gt;프레임워크&lt;/h1&gt;
-
-&lt;p&gt;Go에서 REST한 API를 만들때 쓰는 프레임워크 중 대략 7가지를 보고 하나를 정하려고 한다.&lt;/p&gt;
-
-&lt;p&gt;7개의 프레임워크는 이 &lt;a href=&quot;https://nordicapis.com/7-frameworks-to-build-a-rest-api-in-go/&quot;&gt;영문 포스트&lt;/a&gt;에 있다&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Revel - “out of the box” 프레임워크&lt;/li&gt;
-  &lt;li&gt;Gin - “lean”, 미니멀리스틱한 프레임워크&lt;/li&gt;
-  &lt;li&gt;Martini - Gin의 베이스가 되는 라이브러리&lt;/li&gt;
-  &lt;li&gt;Web.go - 트리 라우팅을 사용하는 미니멀한 라이브러리&lt;/li&gt;
-  &lt;li&gt;Gorilla - package관리가 쉬운 프레임워크&lt;/li&gt;
-  &lt;li&gt;Goji - 정말 최소한의 기능만 구현된 프레임워크&lt;/li&gt;
-  &lt;li&gt;Beego - Revel 같은 out of the box 프레임워크&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;일단 Revel, Beego 같은 경우는 너무 많은 것들이 이미 구현이 돼있어서 배우는게 없을 것 같아서 제외시키겠다.&lt;/p&gt;
-
-&lt;p&gt;Web.go, Goji 같은 경우는 너무 미니멀한 것들이라 제외시키겠다. 너무 미니멀하면 구현을 해야하는 것들이 너무 많아져서 시간이 또 오래걸린다.&lt;/p&gt;
-
-&lt;p&gt;Gorilla 같은 경우는 package 단위로 더하고 빼고 할 수 있어서 좋지만, 설정이 까다롭다는 점에서 Go를 처음 접하는 내가 효율적으로 사용할 수 있을까라는 의문이 있을뿐더러 package 설정에 쏟는 시간을 차라리 테스트나 자동화에 쏟는게 더 바람직하다고 생각하니까 빼도록 하겠다.&lt;/p&gt;
-
-&lt;p&gt;그러면 Gin과 Martini가 남게 되는데, 사용사례도 Gin이 더 많은 것 같고 Gin이 Martini보다 40배 빠르다고 하니까 이번 프로젝트는 Gin으로 백엔드를 개발 할 것이다.&lt;/p&gt;
-
-&lt;h1 id=&quot;개발-방식&quot;&gt;개발 방식&lt;/h1&gt;
-
-&lt;p&gt;개발 프레임워크를 정했으니 어떤 식으로 개발을 할지 정해보자.&lt;/p&gt;
-
-&lt;p&gt;기본적으로 개발은 그냥 해도 된다. 하지만 그냥 개발하면 서비스도 그냥 나온다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;쓰레기 input -&amp;gt; Computer -&amp;gt; 쓰레기 output&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;즉, 제대로 된 코드를 짜려면 개발 방식도 고려를 해야한다. 하지만 내가 대학교에서 배운, 아니 배우지도 않았다, 듣기만한 TDD (Test driven development)뿐 이다.&lt;/p&gt;
-
-&lt;p&gt;3년 가량 학교에서 개발을 배웠지만, 실제로 TDD를 적용한건 2주 미디엄클론을 했을 때 뿐이다.&lt;/p&gt;
-
-&lt;p&gt;어떤 개발 방식이 있는지 알아보자&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;TDD - 최소한의 개발 -&amp;gt; 테스트 케이스를 먼저 작성 -&amp;gt; 기능구현을 하면서 테스트를 통과하는지 검증&lt;/li&gt;
-  &lt;li&gt;BDD - TDD와 비슷하게, 최소한의 개발 -&amp;gt; 유저 시나리오에 맞는 테스트 케이스 작성 -&amp;gt; 기능구현을 하면서 테스트를 통과하는지 검증&lt;/li&gt;
-  &lt;li&gt;DDD - 도메인을 중점으로 개발을 함. Business logic에 맞게 변수/클래스 명을 작성하는 등, 비개발자도 개발자와 코드를 보면서 협업할 수 있도록 하는 것이 포인트.&lt;/li&gt;
-  &lt;li&gt;ATDD - TDD의 업그레이드 버전, 기존 TDD는 코드가 잘 작동하는냐가 중점이라면 ATDD는 Acceptance 기준이 있어서 이 코드가 왜 필요한가? 도 따지게 되는 것&lt;/li&gt;
-  &lt;li&gt;FDD - 기능 중점 개발&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;여기서 알아야 할 것은 개발 방식은 &lt;strong&gt;하나&lt;/strong&gt;를 정해서 하는 것이 아니라 &lt;strong&gt;여러 개&lt;/strong&gt;가 얽혀있는 방식이다. 가령 BDD 같은 경우 TDD 와 DDD를 섞은 방식이라고 볼 수 있다.&lt;/p&gt;
-
-&lt;p&gt;아무튼, 나는 BDD 방식으로 접근을 할 것이다.&lt;/p&gt;
-
-&lt;p&gt;TDD 방식으로 테스트케이스 -&amp;gt; 개발 -&amp;gt; 검증 으로 코드의 안정성을 유지하고 DDD 방식으로 비개발자가 테스트 코드를 보아도 의도된 행동양식을 통과한다는 것을 알 수 있게끔 API endpoint나 변수/클래스 같은 것들을 알기 쉽게 작성할 계획이다.&lt;/p&gt;
-
-&lt;h1 id=&quot;테스트-라이브러리&quot;&gt;테스트 라이브러리&lt;/h1&gt;
-
-&lt;p&gt;자, 이제 테스트 라이브러리만 정하면 된다.&lt;/p&gt;
-
-&lt;p&gt;Go는 기본 Testing 라이브러리가 잘 되어 있어서 굳이 다른 라이브러리를 사용할 필요가 없지만, 개발자 편의를 위해 만들어 놓은 제 3 라이브러리를 사용 안 할 이유 또한 없다.&lt;/p&gt;
-
-&lt;p&gt;BDD에 걸맞는 라이브러리가 어떤 것들이 있는지 알아보자.&lt;/p&gt;
-
-&lt;p&gt;출처는 이 &lt;a href=&quot;https://bmuschko.com/blog/go-testing-frameworks/&quot;&gt;영문 포스트&lt;/a&gt;다&lt;/p&gt;
-
-&lt;p&gt;포스트에는 여러 가지 테스트 라이브러리가 있는데 BDD에 특화된 라이브러리를 나열하면:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Ginkgo and Gomega&lt;/li&gt;
-  &lt;li&gt;Goblin&lt;/li&gt;
-  &lt;li&gt;GoConvey&lt;/li&gt;
-  &lt;li&gt;기본 Go Testing 라이브러리&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;가 있다.&lt;/p&gt;
-
-&lt;p&gt;일단 Ginkgo 와 Gomega 조합은 사용자도 많고 BDD에 최적화 되어 있고 기능들도 많다. 하지만 기능이 많다는 것은 내가 직접 구현해야 할 것들이 줄어들어서 배움의 장이 좁아진 다는 것이기 때문에 패스하도록 하겠다.&lt;/p&gt;
-
-&lt;p&gt;GoConvey 같은 경우 UI로 볼 수 있는 서버가 띄워지고 쓰기 편해보이지만 개인적으로 web에 띄워지는 UI로 테스트 코드 결과를 보는 것보다 terminal에 바로 보여지는 것을 선호하기 때문에 패스하겠다.&lt;/p&gt;
-
-&lt;p&gt;기본 Go testing 라이브러리는 BDD 로 테스트 케이스를 작성하면 코드 자체가 상당히 지저분해 질 것 같아서 패스하도록 하겠다.&lt;/p&gt;
-
-&lt;p&gt;결론은 Ginkgo보다 기능들이 더 적게 구현되어 있지만 있을 건 다 있는 Goblin으로 하곘다.&lt;/p&gt;
-
-&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
-
-&lt;p&gt;정리 하자면 이번 포스트에서 정한 것은&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;개발 프레임워크 - Gin&lt;/li&gt;
-  &lt;li&gt;개발 방식 - BDD&lt;/li&gt;
-  &lt;li&gt;테스트 라이브러리 - Goblin&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이 되겠다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 프로젝트 관리는 무엇으로 할 것인지와 어떤 CI/CD 툴을 사용할 것 인지에 대해 알아보자.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -5장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-5%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -5장" /><published>2021-01-07T00:00:00+00:00</published><updated>2021-01-07T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%205%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-5%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -3장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -4장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -5장&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;앱 설계를 어떻게 할 것인지&lt;/li&gt;
-  &lt;li&gt;데이터베이스 어떤 것을 쓸건지&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;백엔드 endpoint 설계&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;백엔드-endpoint-설계&quot;&gt;백엔드 Endpoint 설계&lt;/h1&gt;
-
-&lt;p&gt;우선 설계에 앞서 기억을 해야 할 것이 있다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;REST에 최대한 준하는 HTTP API&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이제 Endpoint들을 하나씩 뜯어보자.&lt;/p&gt;
-
-&lt;p&gt;일단 이전 프로젝트에서 서버가 지니고 있던 endpoint들을 살펴보면:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt; GET - 홈페이지&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/login&lt;/code&gt; GET - Auth0랑 passport.js 위한 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/callback&lt;/code&gt; GET - Auth0랑 passport.js 위한 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/logout&lt;/code&gt; GET - Auth0랑 passport.js 위한 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/editor&lt;/code&gt; GET - 에디터를 보여주는 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/editor&lt;/code&gt; POST - 에디터를 데이터베이스에 추가하는 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/editor/update&lt;/code&gt; PUT - 에디터를 업데이트 하는 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/editor/delete&lt;/code&gt; DELETE - 에디터를 지우는 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/like&lt;/code&gt; PATCH - 포스트에 라이크를 더 하는 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/list&lt;/code&gt; GET - 모든 포스트를 나열하는 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/list/tags&lt;/code&gt; GET - 모든 포스트를 태그로 나열하는 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/list/author&lt;/code&gt; GET - 모든 포스트를 작성자로 나열하는 것&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/myposts&lt;/code&gt; GET - 유저가 작성한 포스트를 나열하는 페이지&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/post&lt;/code&gt; GET - 포스트 정보를 보여주는 페이지&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/post/id&lt;/code&gt; POST - 포스트를 아이디로 가져와서 보여주는 페이지&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/post/tag&lt;/code&gt; POST - 포스트들을 태그로 가져와서 보여주는 페이지&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/post/list&lt;/code&gt; POST - 포스트들을 가져오는 페이지&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/users&lt;/code&gt; GET - 유저 정보를 가져오는 페이지&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;정도가 있다.&lt;/p&gt;
-
-&lt;p&gt;보다시피 전혀 RESTful하지 않고 endpoint와 같이 적힌 설명문을 봤을 때 “응?”하는 것들이 많다. 예를 들면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/like&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;중복되는 것도 있고 여러모로 정리가 되어있지 않다. 실제로 정리를 하지 않고 개발했기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;이것들을 RESTful하게 정리를 해보자.&lt;/p&gt;
-
-&lt;h1 id=&quot;restful-하게-바꾸자-&quot;&gt;RESTful 하게 바꾸자 !&lt;/h1&gt;
-
-&lt;p&gt;일단 바꾸기에 앞서서 RESTful한 endpoint가 뭔지 알아야 한다.&lt;/p&gt;
-
-&lt;p&gt;RESTful 시스템이 뭔지는 다른 포스트에서 보도록하자. &lt;a href=&quot;https://en.wikipedia.org/wiki/Representational_state_transfer&quot;&gt;위키피디아&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;REST API의 URI 디자인 가이드만 간략히 나열해보면 &lt;a href=&quot;https://restfulapi.net/resource-naming/&quot;&gt;출처: resfulapi&lt;/a&gt;:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;REST에서 primary 데이터는 resource라고 한다.&lt;/li&gt;
-  &lt;li&gt;resource는 단일 (singleton) 혹은 컬렉션 (collection)이 될 수 있다.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/customers&lt;/code&gt; - collection&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/customer&lt;/code&gt; - singleton&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;resource는 다른 resource의 sub-collection을 포함할 수 있다
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/customers/{customer_id}/accounts&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;accounts&lt;/code&gt; sub-collection을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;customer_id&lt;/code&gt;로 찾을 수 있다.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/customers/{cuustomer_id}/accounts/{account_id}&lt;/code&gt; - 마찬가지로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{account_id}&lt;/code&gt;를 이용해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;accounts&lt;/code&gt; 컬렉션에서 단일 데이터를 가져올 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;resource를 표현 할 때 noun (명사)를 써라&lt;/li&gt;
-  &lt;li&gt;resource를 좀 더 세분화하면 document, collection, store, controller 로 나눌 수 있다.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;document&lt;/code&gt;는 데이터베이스에 저장되거나 하나의 객체를 뜻하는 단일 데이터다. REST에선 컬렉션안을 구성하는 것이 document라고 생각하면 된다
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/customers/{customer_id}&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;customer_id&lt;/code&gt;가 document&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collection&lt;/code&gt; - 서버가 관리하는 리소스의 집합체다. 클라이언트는 새로운 리소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collection&lt;/code&gt;에 추가하도록 요구 할 수 있지만, 결정권은 서버에 있다. 복수명을 사용하도록 하자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/user-management/users&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;store&lt;/code&gt; - 클라이언트가 관리하는 리소스의 집합체다. 클라이언트는 새로운 URI를 생성하지는 않지만, 리소스를 더하거나 빼거나 지우거나 자유롭게 할 수 있다. 복수명을 사용하도록 하자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/song-management/users/{id}/playlists&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;클라이언트가 관리한다고 해서 헷갈리지 말자. 다 서버에서 구현하는 것이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;controller&lt;/code&gt; - 리소스의 행위를 뜻한다. 인자와 리턴 값이 있는 함수명이라고 생각하면 된다. 동사를 쓰도록하자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/song-management/users/{id}/playlist/play&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;를 사용해 리소스간 연관성을 표현하자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/electronics&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/electronics/computers&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/electronics/computers/cpus&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/electronics/computers/cpus/{model_id}&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;마지막에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;는 생략하자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/electronics/&lt;/code&gt; X&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/electronics&lt;/code&gt; O&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt; 를 이용해 가독성을 챙기자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/electronics/micro-controllers/&lt;/code&gt; O&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_&lt;/code&gt; 는 사용하지 말자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/electronics/micro_controllers/&lt;/code&gt; X&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;소문자를 쓰자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/electronics/CPUS/&lt;/code&gt; X&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/electronics/cpus/&lt;/code&gt; O&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;파일 확장명은 쓰지 말자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/some-file.xml&lt;/code&gt; X&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/some-file&lt;/code&gt; O&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CRUD 동사를 URI에 쓰지 말자. HTTP Method로 설명은 충분하다
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/electronics/get/CPUS/&lt;/code&gt; X&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;URI collection은 query component를 활용하자
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://api.example.com/device-management/managed-devices?region=USA&amp;amp;brand=XYZ&amp;amp;sort=installation-date&lt;/code&gt; O&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;자 이 목록을 기준으로 다시 endpoint들을 작성해보자.&lt;/p&gt;
-
-&lt;p&gt;여기서 중요한 것은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editor&lt;/code&gt; 와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt; 리소스에 있다.&lt;/p&gt;
-
-&lt;p&gt;잠시 샘플을 보자.&lt;/p&gt;
-
-&lt;p&gt;아래가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/editor&lt;/code&gt;를 이용해 페이지를 렌더 했을 때고&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/editor.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;다음 이미지는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/post/id&lt;/code&gt;를 이용해 페이지를 렌더 했을 때다.
-&lt;img src=&quot;/blog/images/post.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;얼핏 보기에 다른 것이 없지 않나?&lt;/p&gt;
-
-&lt;p&gt;나도 그렇게 생각한다. 만약 이 두개의 endpoint를 합칠 수 있으면 이상적이다. 그러기 위해서 코드를 좀 살펴보자.&lt;/p&gt;
-
-&lt;p&gt;일단 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/post/id&lt;/code&gt;에 핵심이 되는 코드다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/post-code.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;간단히 설명하면, HTTP POST 방식의 Body에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt;를 이용해 데이터베이스의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt; 데이터를 추출 후 결과값을 주는 코드다.&lt;/p&gt;
-
-&lt;p&gt;전혀 RESTful 하지 않다.&lt;/p&gt;
-
-&lt;p&gt;자 그러면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/editor&lt;/code&gt; 를 살펴보자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/editor-code.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;??????&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;당황스럽네.&lt;/p&gt;
-
-&lt;p&gt;백엔드 코드에서는 연관성을 찾을 수 없어서 프론트엔드 코드를 찾아봤더니 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/editor&lt;/code&gt; 페이지에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/post/id&lt;/code&gt;를 호출한 뒤 페이지의 나머지 구성 요소를 채우는 방식이었다. 이렇게 의미 없는 endpoint가 많아서 불필요한 것은 없애는 것이 좋다.&lt;/p&gt;
-
-&lt;p&gt;자 그러면 새로운 API의 endpoint들을 만들어 보자&lt;/p&gt;
-
-&lt;h4 id=&quot;http-get&quot;&gt;HTTP GET&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt; - API 홈페이지 (보통 가능한 api endpoint들을 나열한다)&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts&lt;/code&gt; - 모든 post들을 나열한다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts/{id}&lt;/code&gt; - 하나의 포스트를 id로 찾아서 준다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts/{id}/like&lt;/code&gt; - 하나의 포스트를 id로 찾아서 like만 준다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts?userid=xxx&lt;/code&gt; - 유저가 작성한 모든 포스트를 찾아준다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts?tags=xxx&lt;/code&gt; - 포스트를 주어진 tags를 기준으로 필터링해서 준다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/users&lt;/code&gt; - 모든 유저들을 나열한다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/users/{id}&lt;/code&gt; - 유저를 id로 찾아서 준다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;http-post&quot;&gt;HTTP POST&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts&lt;/code&gt; - 새로운 post를 만든다, body에는 id와 payload가 있을 예정&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/users&lt;/code&gt; - 새로운 user를 만든다, body에는 유저 정보가 있을 예정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;http-put&quot;&gt;HTTP PUT&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts/{id}&lt;/code&gt; - 기존의 post를 업데이트 한다, body에는 payload가 있을 예정&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/users/{id}&lt;/code&gt; - 기존의 user를 업데이트 한다, body에는 payload가 있을 예정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;http-delete&quot;&gt;HTTP DELETE&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/posts/{id}&lt;/code&gt; - 기존의 post를 삭제한다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/users/{id}&lt;/code&gt; - 기존의 user를 삭제한다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;정리하고 보니까 깔끔해졌다. 이제 이것을 개발할 때 참고하면 된다.&lt;/p&gt;
-
-&lt;p&gt;유저 인증관련 endpoint는 잠시 보류해뒀다. 어떤 인증/인가 방식을 쓸 것인지 생각을 해야하기 때문이다.&lt;/p&gt;
-
-&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
-
-&lt;p&gt;정리하면:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;백엔드의 endpoint를 RESTful하게 작성했다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 인증/인가 방식을 정한 뒤 개발 환경을 셋업하는 것에 대해 알아보자&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry></feed>
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry></feed>

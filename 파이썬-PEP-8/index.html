@@ -126,7 +126,7 @@
             <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
           </li></ul>
 
-<span class="read-time">2 min read</span>
+<span class="read-time">5 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-10T00:00:00+00:00"><a class="u-url" href="">January 10, 2021</a>
 </time>
@@ -333,7 +333,195 @@
   </li>
 </ul>
 
-<h2 id="추가하자">추가하자</h2>
+<h2 id="import">Import</h2>
+<ul>
+  <li>하나의 import는 한 줄에
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="c1"># GOOD
+</span>      <span class="kn">import</span> <span class="nn">os</span>
+      <span class="kn">import</span> <span class="nn">sys</span>
+
+      <span class="c1"># BAD
+</span>      <span class="kn">import</span> <span class="nn">os</span><span class="p">,</span><span class="n">sys</span>
+
+      <span class="c1"># GOOD
+</span>      <span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">import</code> 항상 파일의 가장 위에 위치한다.</li>
+  <li>기본 라이브러리, 연관된 제 3 라이브러리, 로컬 라이브러리 순으로 나열한다</li>
+  <li><code class="language-plaintext highlighter-rouge">from &lt;something&gt; import *</code>는 사용하지 말자</li>
+  <li>Absolute import를 권장한다.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="c1"># Good
+</span>      <span class="kn">import</span> <span class="nn">mypkg.sibling</span>
+      <span class="kn">from</span> <span class="nn">mypkg</span> <span class="kn">import</span> <span class="n">sibling</span>
+      <span class="kn">from</span> <span class="nn">mypkg.sibling</span> <span class="kn">import</span> <span class="n">exmple</span>
+</code></pre></div>    </div>
+  </li>
+  <li>하지만 Absolute import 를 쓰는 것이 복잡함을 초래하거나 패키지 자체가 Absolute import을 사용하기에 너무 복잡하면 relative import을 사용해도 된다
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="c1"># Example
+</span>      <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">sibling</span>
+      <span class="kn">from</span> <span class="nn">.sibling</span> <span class="kn">import</span> <span class="n">example</span>
+</code></pre></div>    </div>
+  </li>
+  <li>패키지에서 <code class="language-plaintext highlighter-rouge">class</code>를 import할 때 아래와 같이 사용할 수 있다
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="c1"># Good
+</span>      <span class="kn">from</span> <span class="nn">myclass</span> <span class="kn">import</span> <span class="n">MyClass</span>
+      <span class="kn">from</span> <span class="nn">foo.bar.yourclass</span> <span class="kn">import</span> <span class="n">YourClass</span>
+</code></pre></div>    </div>
+  </li>
+  <li>만약 위의 방법이 local class와 Naming 에러를 초래하면 다음과 같이 사용할 수 있다.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="kn">import</span> <span class="nn">myclass</span>
+      <span class="kn">import</span> <span class="nn">foo.bar.yourclass</span>
+
+      <span class="c1"># use myclass.Myclass or foo.bar.yourclass.YourClass
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="module-level-dunder-names">Module level Dunder names</h2>
+<ul>
+  <li>모듈의 Dunder (‘<strong>something</strong>‘로 같은 것들) 이름들은 <code class="language-plaintext highlighter-rouge">Docstring</code> 과 <code class="language-plaintext highlighter-rouge">__future__</code> 패키지 <code class="language-plaintext highlighter-rouge">import</code> 문 바로 다음에 와야 한다
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="s">"""This is a module level docstring
+
+  This module does something
+  """</span>
+
+  <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">barry_as_FLUFL</span>
+
+  <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]</span>
+  <span class="n">__version__</span> <span class="o">=</span> <span class="s">'0.1'</span>
+  <span class="n">__author__</span> <span class="o">=</span> <span class="s">'someone'</span>
+
+  <span class="kn">import</span> <span class="nn">os</span>
+  <span class="kn">import</span> <span class="nn">sys</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="string-quotes">String Quotes</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">""</code>, <code class="language-plaintext highlighter-rouge">''</code> 중 하나를 정해서 사용</li>
+  <li><code class="language-plaintext highlighter-rouge">"' '"</code>, <code class="language-plaintext highlighter-rouge">'" "'</code> 같은 것도 방식을 정해서 사용</li>
+  <li>단 3중 quoted string(<code class="language-plaintext highlighter-rouge">""", '''</code>)은 <code class="language-plaintext highlighter-rouge">"""</code>를 쓸것</li>
+</ul>
+
+<h2 id="whitespace-in-expressions-and-statements">Whitespace in Expressions and Statements</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 잉여 whitespace를 만들지 말 것
+# Good
+</span><span class="n">spam</span><span class="p">(</span><span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">{</span><span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+
+<span class="c1"># Bad
+</span><span class="n">span</span><span class="p">(</span> <span class="n">ham</span><span class="p">[</span> <span class="mi">1</span> <span class="p">],</span> <span class="p">{</span> <span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span> <span class="p">)</span>
+
+<span class="c1"># trailing comma
+# Good
+</span><span class="n">foo</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,)</span>
+
+<span class="c1"># Bad
+</span><span class="n">bar</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">)</span>
+
+<span class="c1"># , ; : 전은 공백없이
+# Good
+</span><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span> <span class="k">print</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+
+<span class="c1"># Bad
+</span><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">:</span> <span class="k">print</span> <span class="n">x</span> <span class="p">,</span> <span class="n">y</span> <span class="p">;</span> <span class="n">x</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="p">,</span> <span class="n">x</span>
+
+<span class="c1"># Slice의 :는 binary operator처럼
+# 양쪽 공백은 같아야함
+# Good
+</span><span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">],</span> <span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="n">ham</span><span class="p">[:</span><span class="mi">9</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">3</span><span class="p">],</span> <span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">:]</span>
+<span class="n">ham</span><span class="p">[</span><span class="n">lower</span><span class="p">:</span><span class="n">upper</span><span class="p">],</span> <span class="n">ham</span><span class="p">[</span><span class="n">lower</span><span class="p">:</span><span class="n">upper</span><span class="p">:],</span> <span class="n">ham</span><span class="p">[</span><span class="n">lower</span><span class="p">::</span><span class="n">step</span><span class="p">]</span>
+<span class="n">ham</span><span class="p">[</span><span class="n">lower</span><span class="o">+</span><span class="n">offset</span> <span class="p">:</span> <span class="n">upper</span><span class="o">+</span><span class="n">offset</span><span class="p">]</span>
+<span class="n">ham</span><span class="p">[:</span> <span class="n">upper_fn</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span> <span class="n">step_fn</span><span class="p">(</span><span class="n">x</span><span class="p">)],</span> <span class="n">ham</span><span class="p">[::</span> <span class="n">step_fn</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+<span class="n">ham</span><span class="p">[</span><span class="n">lower</span> <span class="o">+</span> <span class="n">offset</span> <span class="p">:</span> <span class="n">upper</span> <span class="o">+</span> <span class="n">offset</span><span class="p">]</span>
+
+<span class="c1"># Bad
+</span><span class="n">ham</span><span class="p">[</span><span class="n">lower</span> <span class="o">+</span> <span class="n">offset</span><span class="p">:</span><span class="n">upper</span> <span class="o">+</span> <span class="n">offset</span><span class="p">]</span>
+<span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span> <span class="mi">9</span><span class="p">],</span> <span class="n">ham</span><span class="p">[</span><span class="mi">1</span> <span class="p">:</span><span class="mi">9</span><span class="p">],</span> <span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">ham</span><span class="p">[</span><span class="n">lower</span> <span class="p">:</span> <span class="p">:</span> <span class="n">upper</span><span class="p">]</span>
+<span class="n">ham</span><span class="p">[</span> <span class="p">:</span> <span class="n">upper</span><span class="p">]</span>
+
+<span class="c1"># Function Call 전에는 공백이 없어야 함
+# 마찬가지로 indexing, slicing전에도 없어야함
+# Good
+</span><span class="n">spam</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dct</span><span class="p">[</span><span class="s">"key"</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+<span class="c1"># Bad
+</span><span class="n">spam</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dct</span> <span class="p">[</span><span class="s">"key"</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span> <span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+<span class="c1"># 이런 것도 안됨
+# Good 
+</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">long_variable</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># Bad
+</span><span class="n">x</span>             <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span>             <span class="o">=</span> <span class="mi">2</span>
+<span class="n">long_variable</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># 다음과 같은 연산자 양 옆은 한 칸씩 띄우자
+# assignment =, +=, -=, *=, **=, /=, //=
+# comparison ==, &lt;, &gt;, &lt;=, &gt;=, in, not in, is, is not
+# boolean and, or, not
+# binary operator가 여러 개면, 가장 낮은 우선 순위를 가진 것을 공백 처리하자
+</span>
+<span class="c1"># Good
+</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">submitted</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">hypo2</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># Bad
+</span><span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">submitted</span> <span class="o">+=</span><span class="mi">1</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">hypot2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># Function Annotation은 기본 : 의 룰을 따르고
+# -&gt; 가 있다면 앞 뒤로 한 칸씩 띄우자
+# Good
+</span><span class="k">def</span> <span class="nf">something</span><span class="p">(</span><span class="nb">input</span><span class="p">:</span> <span class="n">AnyStr</span><span class="p">):</span> <span class="p">...</span>
+<span class="k">def</span> <span class="nf">something</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">PosInt</span><span class="p">:</span> <span class="p">...</span>
+
+<span class="c1"># Bad
+</span><span class="k">def</span> <span class="nf">something</span><span class="p">(</span><span class="nb">input</span><span class="p">:</span><span class="n">AnyStr</span><span class="p">):</span> <span class="p">...</span>
+<span class="k">def</span> <span class="nf">something</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">PosInt</span><span class="p">:</span> <span class="p">...</span>
+
+<span class="c1"># Keyword argument나 unannotated parameter의 값을 정해주는 =는 띄우지 말자
+# Good
+</span><span class="k">def</span> <span class="nf">complex</span><span class="p">(</span><span class="n">real</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">magic</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="n">real</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
+
+<span class="c1"># Bad
+</span><span class="k">def</span> <span class="nf">complex</span><span class="p">(</span><span class="n">real</span><span class="p">,</span> <span class="n">image</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">magic</span><span class="p">(</span><span class="n">r</span> <span class="o">=</span> <span class="n">real</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">image</span><span class="p">)</span>
+
+<span class="c1"># Annotated parameter에 default값을 정해주는 경우 =는 한 칸씩 띄우자
+# Good
+</span><span class="k">def</span> <span class="nf">complex</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">Image</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span> <span class="p">...</span>
+
+<span class="c1"># Bad
+</span><span class="k">def</span> <span class="nf">complex</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">Image</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span> <span class="p">...</span>
+
+<span class="c1"># 한 줄에 여러 개의 statement는 쓰지 말자
+# Good
+</span><span class="k">if</span> <span class="n">foo</span> <span class="o">==</span> <span class="s">'blah'</span><span class="p">:</span>
+    <span class="n">do_blah_thing</span><span class="p">()</span>
+<span class="n">do_one</span><span class="p">()</span>
+<span class="n">do_two</span><span class="p">()</span>
+
+<span class="c1"># Bad
+</span><span class="k">if</span> <span class="n">foo</span> <span class="o">==</span> <span class="s">'blah'</span><span class="p">:</span> <span class="n">do_blah_thing</span><span class="p">()</span>
+<span class="n">do_one</span><span class="p">();</span> <span class="n">do_two</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="when-to-use-trailing-commas">When to use trailing commas</h2>
 
         </div>
 

@@ -1,4 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-10T15:56:42+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -8장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-8%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -8장" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%208%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-8%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-11T12:15:21+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -9장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-9%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -9장" /><published>2021-01-11T00:00:00+00:00</published><updated>2021-01-11T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%209%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-9%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -3장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -4장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -8장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -9장&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;서버 배포 방법을 정함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS로 서버 배포를 해보기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;aws로-서버-배포를-해보기&quot;&gt;AWS로 서버 배포를 해보기&lt;/h1&gt;
+&lt;p&gt;AWS에서 사용할 서비스는 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;AWS RDS - Postgresql 배포&lt;/li&gt;
+  &lt;li&gt;AWS ECR - Docker Image를 배포&lt;/li&gt;
+  &lt;li&gt;AWS ECS - 컨테이너를 관리&lt;/li&gt;
+  &lt;li&gt;AWS EC2 - 컴퓨팅 엔진 (컨테이너가 돌아가는 컴퓨터)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;각 서비스의 요금표는 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;AWS RDS - db.t2.micro 인스턴스 구동시 월 750시간 무료 (24/7 무료)&lt;/li&gt;
+  &lt;li&gt;AWS ECR - 월별 500MB 스토리지&lt;/li&gt;
+  &lt;li&gt;AWS ECS - 따로 청구되는 비용은 없음, EC2 요금&lt;/li&gt;
+  &lt;li&gt;AWS EC2 - t2.micro 인스턴스 구동시 월 750시간 무료 (24/7 무료)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;정리를 하면, 프리티어가 끝날때까지 24/7 구동 가능한 것은 EC2 하나와 RDS 하나다. 이번 프로젝트를 위해서는 충분하다.&lt;/p&gt;
+
+&lt;h1 id=&quot;aws-rds-with-postgresql&quot;&gt;AWS RDS with Postgresql&lt;/h1&gt;
+&lt;p&gt;데이터베이스부터 구동을 해보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/ko/rds/&quot;&gt;AWS RDS&lt;/a&gt; 에서 천천히 가이드를 따라서 생성을 해보자.&lt;/p&gt;
+
+&lt;p&gt;중요한건 프리티어를 적용하고 만들고나서 Master와 비밀번호를 메모하자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/awsrds.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;aws-ecr&quot;&gt;AWS ECR&lt;/h1&gt;
+&lt;p&gt;이번에는 이미지 레지스트리 헙을 구동 시켜보자.&lt;/p&gt;
+
+&lt;p&gt;레지스트리 이름을 정하고 기본 값으로 구동시켰다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html&quot;&gt;AWS CLI&lt;/a&gt;를 설치를 해주자.&lt;/p&gt;
+
+&lt;p&gt;이후 AWS CLI에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aws configure&lt;/code&gt;로 AWS 계정 정보를 입력한 뒤 ECR 푸시 명령에 따라서 푸시를 하면&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/awsecr.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;푸시가 잘 된걸 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;문제는 용량이 월 500MB 제한인데, 지금 아무것도 없는 서버가 355MB정도 하니까 제대로 서버를 만들고 올리면 걍 용량 초과할 것 같다. 일단 나중에 생각하기로 하자.&lt;/p&gt;
+
+&lt;h1 id=&quot;aws-ecs&quot;&gt;AWS ECS&lt;/h1&gt;
+&lt;p&gt;이미지도 ECR에 성공적으로 올렸으니 ECS로 컨테이너를 구동해보자.&lt;/p&gt;
+
+&lt;p&gt;ECS에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cluster&lt;/code&gt;를 먼저 만들어야한다.&lt;/p&gt;
+
+&lt;p&gt;Linux + EC2로 t2.micro를 사용하여 클러스터를 생성하자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/ecs1.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/ecs2.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/ecs3.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/ecs4.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/ecs5.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위에 8000번 포트를 80옆에 같이 적어준다. 8000번 포트에다가 도커 컨테이너 포트 매핑을 할 것이기 때문이다. 나는 이걸 까먹어서 EC2를 열어서 인바운드 규칙을 더해줬다. 클러스터는 이렇게 만들면 된다.&lt;/p&gt;
+
+&lt;p&gt;이후 새 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;작업정의&lt;/code&gt;를 EC2로 만들자. 기본 설정을 쭉 따라가다가 보면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;컨테이너 추가&lt;/code&gt;란이 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/ecs6.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/ecs7.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;컨테이너 추가&lt;/code&gt;를 누른 뒤 튀어나오는 설정을 다 해주고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이미지&lt;/code&gt;란에 ECR 레퍼지토리에 있는 이미지의 URI를 복붙해주자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/ecs8.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/ecs9.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;포트 매핑도 해주자 8000번 포트 (EC2)에 8080번 포트(도커 컨테이너)를 매핑하자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/ecs10.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이제 아까 만든 클러스터로 돌아가서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;서비스&lt;/code&gt;를 만들어 보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/ecs11.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;자동으로 방금 만든 작업이 기본값으로 설정돼있다. 작업 개수만 정하고 배포로 넘어가자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/ecs12.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;전 포스트에서 배포 방식을 블루/그린으로 한다고 했던 거 같은데, 블루/그린 방식으로 배포를 하려면
+IAM Role이 필요하다.&lt;/p&gt;
+
+&lt;p&gt;아직은 IAM Role에 대해서 잘 모르니까 일단 롤링 업데이트&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 형식으로 하자.&lt;/p&gt;
+
+&lt;p&gt;이후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Auto Scaling Group&lt;/code&gt; 설정이 나오지만 현재는 로드 밸런서가 필요가 없으니까 없음으로 하자.&lt;/p&gt;
+
+&lt;p&gt;로드 밸런싱 설정도 다 없음으로 하자.&lt;/p&gt;
+
+&lt;p&gt;이후 서비스를 생성하면 실행이 되는 것을 볼 수 있는데 도커 컨테이너가 담긴 EC2를 실행하기까지 시간이 좀 걸린다.&lt;/p&gt;
+
+&lt;p&gt;모든것을 다 정상적으로 처리를 하면 클러스터 서비스란에 다음과 같이 방금 만든 서비스가 RUNNING 상태로 변하는 것을 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/ecs13.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이후 제공되는 DNS나 IPv4 주소로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/ping&lt;/code&gt; endpoint로 가보면:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/ecs14.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위와 같이 잘 작동하는 것을 볼 수 있다.&lt;/p&gt;
+
+&lt;h1 id=&quot;마무리---&quot;&gt;마무리 . . .&lt;/h1&gt;
+&lt;p&gt;정리를 하면:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;전 포스트에서 설계한 배포 방식으로 AWS로 배포하는 것을 해봤다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;다음 포스트에서는 배포 자동화 방법에 대해 알아보자.&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;한 대씩 서버를 재시작 하는 방식이다. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Job sequencing algorithm</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Job-Sequencing-algorithm/" rel="alternate" type="text/html" title="[알고리즘] Job sequencing algorithm" /><published>2021-01-11T00:00:00+00:00</published><updated>2021-01-11T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Job%20Sequencing%20algorithm</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Job-Sequencing-algorithm/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/job-sequencing-problem/&quot;&gt;GeeksForGeeks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Job sequencing, deadline scheduling 알고리즘에 대해 알아보자&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;N 개의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[일 ID, 마감일, 이윤]&lt;/code&gt;가 주어 질 때, 최대 마감일이 되었을 때 최대 이윤을 구하는 알고리즘.&lt;/li&gt;
+  &lt;li&gt;마감일은 1 이상이고 마감일 전에 일을 끝내야 이익을 얻을 수 있다.&lt;/li&gt;
+  &lt;li&gt;시간은 unit time이다. (eg. 1 = 1일)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;방법&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;모든 데이터를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이윤&lt;/code&gt;을 기준으로 내림차순 정렬을 한다&lt;/li&gt;
+  &lt;li&gt;데이터를 iterate하면서 다음을 반복한다:
+    &lt;ol&gt;
+      &lt;li&gt;빈 시간 i를 찾는다. 찾는 기준은 i &amp;lt; deadline이면서 데이터 중에서 i가 가장 커야한다.&lt;/li&gt;
+      &lt;li&gt;i를 빈 자리에 넣고 표시를 한다&lt;/li&gt;
+      &lt;li&gt;조건에 맞는 i가 없으면 넘어간다&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;jobsequencing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# 이윤을 기준으로 내림차순으로 정렬 
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# 데이터는 [job_id, deadline, profit]으로 됐다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# 빈 자리를 표시하는 리스트
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;free_slots&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# 결과 값을 저장하는 리스트
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# 주어진 jobs를 iterate한다
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+        
+        &lt;span class=&quot;c1&quot;&gt;# 이 일을 위한 다음 빈 자리를 찾는다
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# 가능한 자리에서부터 시작한다
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;# 빈자리 발견 시
+&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;free_slots&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;free_slots&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# job ID를 넣는다
+&lt;/span&gt;                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;jobs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# [job, deadline, profit]
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'d'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'e'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# lambda function denotes the max function to find
+# the maximum value for deadline
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;job_max_deadline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jobsequencing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job_max_deadline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# ['c', 'a', 'e']
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;job-sequencing을-사용하는-문제&quot;&gt;Job sequencing을 사용하는 문제&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/maximum-profit-in-job-scheduling/&quot;&gt;Leetcode 1234번 Maximum profit in job scheduling&lt;/a&gt;&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksForGeeks</summary></entry><entry><title type="html">[알고리즘] Pigeonhole Sort</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Pigeonhole-Sort/" rel="alternate" type="text/html" title="[알고리즘] Pigeonhole Sort" /><published>2021-01-11T00:00:00+00:00</published><updated>2021-01-11T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Pigeonhole%20Sort</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Pigeonhole-Sort/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/pigeonhole-sort/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pigeonhole 정렬에 대해 알아보자&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;특정 Range에 있는 아이템들을 정렬할 때 사용한다&lt;/li&gt;
+  &lt;li&gt;Counting sort와 비슷하다&lt;/li&gt;
+  &lt;li&gt;다른점은 Counting Sort는 아이템의 frequency를 저장한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter&lt;/code&gt;로 정렬된 리스트에 아이템을 놓지만, Pigeonhole sort는 아이템 자체를 bucket에 복사한 후 다시 정렬된 리스트로 복사하는 방법이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Time complexity&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Worst Case: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n+k) k가 인풋의 range, n이 인풋의 개수&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Space complexity&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n+k)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pigeonhole-sort-visualization&quot;&gt;Pigeonhole sort visualization&lt;/h1&gt;
+&lt;!-- 16:9 aspect ratio --&gt;
+&lt;div class=&quot;responsive-embed responsive-embed-16by9&quot;&gt;
+  &lt;iframe class=&quot;responsive-embed-item&quot; src=&quot;https://www.youtube-nocookie.com/embed/nVQz0kZNC64&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pigeonhole_sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Find the range of the items
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;min_val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;max_val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;range_of_val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min_val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# create holes(buckets) to store the items
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;holes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range_of_val&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# populate the pigeonholes
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;holes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# place the items back to the array in order
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;range_of_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;holes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;holes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min_val&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# Time comp: O(n + k)
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# Space comp: O(n + k)
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# Stable
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pigeonhole_sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# [1, 2, 3, 4, 5, 7, 16]
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -8장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-8%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -8장" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%208%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-8%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
@@ -8,6 +266,7 @@
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Medium 클론 백엔드를 만들어보자 -8장&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-9장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -9장&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
@@ -66,7 +325,7 @@
   &lt;li&gt;아키텍쳐 호환성: 가능하다&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;IaaS는 AWS를 사용하겠다. 이유는 기능도 많고 커뮤니티도 커서 제일 정보를 구하기가 쉽다. 일단 Free Tier가 적용이되서 무료로 
+&lt;p&gt;IaaS는 AWS를 사용하겠다. 이유는 기능도 많고 커뮤니티도 커서 제일 정보를 구하기가 쉽다. 일단 Free Tier가 적용돼서 무료로 
 사용가능하다. Docker Image를 배포 할 ECR과 Fargate를 사용하거나 EC2를 사용할 것 같다. 무엇보다 다른 Micro service들을 더하는 것이 가능하다.&lt;/p&gt;
 
 &lt;p&gt;단점은 처음 설정하는 것이 어려울 수 있다.&lt;/p&gt;
@@ -105,7 +364,7 @@
       &lt;li&gt;추가요소: AWS API Gateway&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-  &lt;li&gt;든든한 국밥 조합:
+  &lt;li&gt;무난무난한 조합:
     &lt;ol&gt;
       &lt;li&gt;데이터베이스: RDS 구동&lt;/li&gt;
       &lt;li&gt;Go 서버: EC2 구동&lt;/li&gt;
@@ -135,7 +394,7 @@
 
 &lt;p&gt;이 조합은 Lambda가 설정만 돼있으면 API Gateway만 자동화 시키면 되기 때문에 쉬울 것 같다. (Lambda 변경 시 자동으로 반영 되는지는 아직 모른다)&lt;/p&gt;
 
-&lt;h3 id=&quot;든든한-국밥-조합&quot;&gt;든든한 국밥 조합&lt;/h3&gt;
+&lt;h3 id=&quot;무난무난한-조합&quot;&gt;무난무난한 조합&lt;/h3&gt;
 
 &lt;p&gt;위와 비슷한 방법으로는 ECS + ECR + Fargate/EC2가 있다.&lt;/p&gt;
 
@@ -143,13 +402,15 @@
 
 &lt;p&gt;이런 식으로 AWS ECR에서 이미지를 불러와서 ECS가 알아서 Fargate나 EC2 인스턴스를 구동시키는 것이다.&lt;/p&gt;
 
+&lt;p&gt;EKS를 써도 되지만 컨테이너는 어차피 1개 ~ 2개 쓸거기 때문에 너무 과도한 것 같아서 ECS를 쓰겠다.&lt;/p&gt;
+
 &lt;p&gt;데이터베이스는 AWS RDS로 구동한다.&lt;/p&gt;
 
 &lt;p&gt;이 조합은 Github Actions로 자동화가 가능할 것 같다.&lt;/p&gt;
 
 &lt;h3 id=&quot;결정&quot;&gt;결정&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;요즘 핫한 serverless&lt;/strong&gt; 조합이 끌리기는 하지만 이번에는 &lt;strong&gt;든든한 국밥 조합&lt;/strong&gt;으로 가도록 하겠다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;요즘 핫한 serverless&lt;/strong&gt; 조합이 끌리기는 하지만 이번에는 &lt;strong&gt;무난무난한 조합&lt;/strong&gt;으로 가도록 하겠다.&lt;/p&gt;
 
 &lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
 
@@ -158,15 +419,15 @@
   &lt;li&gt;서버 배포 방법을 AWS ECS + ECR + EC2 + RDS 조합으로 결정했다&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;다음 포스트는 이것을 자동화 하는 방법에 대해 알아보자.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-9장/&quot;&gt;다음 포스트&lt;/a&gt;는 이것을 AWS를 이용해 구성하는 방법에 대해 알아보자.&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;이전 포스트에서 “Monolithic” 한 아키텍쳐를 사용한다고 했다. 하지만 인증/인가를 Oauth2로 정함과 동시에 “Monolithic”한 아키텍쳐는 아니라고 볼 수 있다. 이렇게 된 김에 데이터베이스도 따로 만들려고 한다. 이유는 하나의 인스턴스에 Go server와 Postgresql을 같이 만들게 되면 인스턴스가 “stateful” 하게 된다. 즉, 이 인스턴스가 꺼지면 Postgresql에 저장된 정보도 날아간다. &lt;br /&gt;현재 아키텍쳐를 다시 나열 하자면 아래와 같다:&lt;br /&gt;1. Go 서버&lt;br /&gt;2. 인증/인가 서버 (외부: 아마도 구글)&lt;br /&gt;3. Database (이것도 PSQL을 쓸지 딴 것을 쓸지 고민을 해야한다)&lt;br /&gt;4. 나중에 만들 Frontend &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;이전 포스트에서 “Monolithic” 한 아키텍쳐를 사용한다고 했다. 하지만 인증/인가를 Oauth2로 정함과 동시에 “Monolithic”한 아키텍쳐는 아니라고 볼 수 있다. 이렇게 된 거 데이터베이스도 따로 만들려고 한다. 이유는 하나의 인스턴스에 Go server와 Postgresql을 같이 만들게 되면 인스턴스가 “stateful” 하게 된다. 즉, 이 인스턴스가 꺼지면 Postgresql에 저장된 정보도 날아간다. &lt;br /&gt;현재 아키텍쳐를 다시 나열 하자면 아래와 같다:&lt;br /&gt;1. Go 서버&lt;br /&gt;2. 인증/인가 서버 (외부: 아마도 구글)&lt;br /&gt;3. Database (이것도 PSQL을 쓸지 딴 것을 쓸지 고민을 해야한다)&lt;br /&gt;4. 나중에 만들 Frontend &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;새로 서비스가 추가 될 때 기존 서비스의 트래픽을 서서히 새 서비스로 향하게 하고, 기존 서비스를 종료시키는 배포 방식. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;새로 서비스가 배포 될 때 기존 서비스의 트래픽을 새 서비스로 향하게 하고, 기존 서비스를 종료시키는 배포 방식. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Comb Sort</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Comb-Sort/" rel="alternate" type="text/html" title="[알고리즘] Comb Sort" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Comb%20Sort</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Comb-Sort/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/comb-sort/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
@@ -480,7 +741,195 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;추가하자&quot;&gt;추가하자&lt;/h2&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="python" /><summary type="html">파이썬 개발자라면 알아야 할 PEP 8 코드 가이드</summary></entry><entry><title type="html">[CS 기초] 비트 연산</title><link href="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/" rel="alternate" type="text/html" title="[CS 기초] 비트 연산" /><published>2021-01-09T00:00:00+00:00</published><updated>2021-01-09T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5BCS%20%EA%B8%B0%EC%B4%88%5D%20%EB%B9%84%ED%8A%B8%20%EC%97%B0%EC%82%B0</id><content type="html" xml:base="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/">&lt;p&gt;출처: &lt;a href=&quot;https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/&quot;&gt;HackerEarth&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;import&quot;&gt;Import&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;하나의 import는 한 줄에
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;c1&quot;&gt;# GOOD
+&lt;/span&gt;      &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+      &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+
+      &lt;span class=&quot;c1&quot;&gt;# BAD
+&lt;/span&gt;      &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;
+
+      &lt;span class=&quot;c1&quot;&gt;# GOOD
+&lt;/span&gt;      &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;subprocess&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Popen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PIPE&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; 항상 파일의 가장 위에 위치한다.&lt;/li&gt;
+  &lt;li&gt;기본 라이브러리, 연관된 제 3 라이브러리, 로컬 라이브러리 순으로 나열한다&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;from &amp;lt;something&amp;gt; import *&lt;/code&gt;는 사용하지 말자&lt;/li&gt;
+  &lt;li&gt;Absolute import를 권장한다.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;c1&quot;&gt;# Good
+&lt;/span&gt;      &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;mypkg.sibling&lt;/span&gt;
+      &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;mypkg&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sibling&lt;/span&gt;
+      &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;mypkg.sibling&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exmple&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;하지만 Absolute import 를 쓰는 것이 복잡함을 초래하거나 패키지 자체가 Absolute import을 사용하기에 너무 복잡하면 relative import을 사용해도 된다
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;c1&quot;&gt;# Example
+&lt;/span&gt;      &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sibling&lt;/span&gt;
+      &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.sibling&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;example&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;패키지에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt;를 import할 때 아래와 같이 사용할 수 있다
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;c1&quot;&gt;# Good
+&lt;/span&gt;      &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;myclass&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyClass&lt;/span&gt;
+      &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;foo.bar.yourclass&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;YourClass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;만약 위의 방법이 local class와 Naming 에러를 초래하면 다음과 같이 사용할 수 있다.
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;myclass&lt;/span&gt;
+      &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;foo.bar.yourclass&lt;/span&gt;
+
+      &lt;span class=&quot;c1&quot;&gt;# use myclass.Myclass or foo.bar.yourclass.YourClass
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;module-level-dunder-names&quot;&gt;Module level Dunder names&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;모듈의 Dunder (‘&lt;strong&gt;something&lt;/strong&gt;‘로 같은 것들) 이름들은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Docstring&lt;/code&gt; 과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__future__&lt;/code&gt; 패키지 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; 문 바로 다음에 와야 한다
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;This is a module level docstring
+
+  This module does something
+  &quot;&quot;&quot;&lt;/span&gt;
+
+  &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;__future__&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;barry_as_FLUFL&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;__all__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;__version__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'0.1'&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;__author__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'someone'&lt;/span&gt;
+
+  &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;string-quotes&quot;&gt;String Quotes&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;''&lt;/code&gt; 중 하나를 정해서 사용&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;' '&quot;&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'&quot; &quot;'&lt;/code&gt; 같은 것도 방식을 정해서 사용&lt;/li&gt;
+  &lt;li&gt;단 3중 quoted string(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&quot;, '''&lt;/code&gt;)은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&quot;&lt;/code&gt;를 쓸것&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;whitespace-in-expressions-and-statements&quot;&gt;Whitespace in Expressions and Statements&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 잉여 whitespace를 만들지 말 것
+# Good
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eggs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eggs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# trailing comma
+# Good
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# , ; : 전은 공백없이
+# Good
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Slice의 :는 binary operator처럼
+# 양쪽 공백은 같아야함
+# Good
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upper_fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step_fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[::&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step_fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ham&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Function Call 전에는 공백이 없어야 함
+# 마찬가지로 indexing, slicing전에도 없어야함
+# Good
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;key&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spam&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dct&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;key&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lst&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 이런 것도 안됨
+# Good 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;long_variable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;             &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;             &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;long_variable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 다음과 같은 연산자 양 옆은 한 칸씩 띄우자
+# assignment =, +=, -=, *=, **=, /=, //=
+# comparison ==, &amp;lt;, &amp;gt;, &amp;lt;=, &amp;gt;=, in, not in, is, is not
+# boolean and, or, not
+# binary operator가 여러 개면, 가장 낮은 우선 순위를 가진 것을 공백 처리하자
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Good
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;submitted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hypo2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;submitted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hypot2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Function Annotation은 기본 : 의 룰을 따르고
+# -&amp;gt; 가 있다면 앞 뒤로 한 칸씩 띄우자
+# Good
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnyStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PosInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AnyStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PosInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Keyword argument나 unannotated parameter의 값을 정해주는 =는 띄우지 말자
+# Good
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;complex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;real&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;magic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;real&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;complex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;real&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;magic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;real&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Annotated parameter에 default값을 정해주는 경우 =는 한 칸씩 띄우자
+# Good
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;complex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;complex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 한 줄에 여러 개의 statement는 쓰지 말자
+# Good
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'blah'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;do_blah_thing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;do_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;do_two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Bad
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'blah'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;do_blah_thing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;do_one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;do_two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;when-to-use-trailing-commas&quot;&gt;When to use trailing commas&lt;/h2&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="python" /><summary type="html">파이썬 개발자라면 알아야 할 PEP 8 코드 가이드</summary></entry><entry><title type="html">[CS 기초] 비트 연산</title><link href="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/" rel="alternate" type="text/html" title="[CS 기초] 비트 연산" /><published>2021-01-09T00:00:00+00:00</published><updated>2021-01-09T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5BCS%20%EA%B8%B0%EC%B4%88%5D%20%EB%B9%84%ED%8A%B8%20%EC%97%B0%EC%82%B0</id><content type="html" xml:base="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-%EB%B9%84%ED%8A%B8-%EC%97%B0%EC%82%B0/">&lt;p&gt;출처: &lt;a href=&quot;https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/&quot;&gt;HackerEarth&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;1학년 때 배우고 쓰지 않아서 다시 복기 할 겸 비트 연산에 대해 알아보자.&lt;/p&gt;
 
@@ -693,6 +1142,7 @@
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -8장&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-9장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -9장&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
@@ -956,405 +1406,4 @@
   &lt;li&gt;테스트/Docker image를 Hub에 push하는 Github Actions workflow를 만들었다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 어떤 방식으로 서버를 배포할 것인지를 정하자.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -6장</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-6%EC%9E%A5/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -6장" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%206%EC%9E%A5</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-6%EC%9E%A5/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -3장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -4장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -6장&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7장&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8장/&quot;&gt;Medium 클론 백엔드를 만들어보자 -8장&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;백엔드 Endpoint를 RESTful하게 설계했다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;인증/인가 방식 정하기&lt;/li&gt;
-  &lt;li&gt;개발 환경 구축하기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;인증인가&quot;&gt;인증/인가&lt;/h1&gt;
-
-&lt;p&gt;인증/인가는 중요하다. 하지만 어떤 식으로 하느냐도 중요하다.&lt;/p&gt;
-
-&lt;p&gt;얼마 전 &lt;a href=&quot;https://www.bleepingcomputer.com/news/google/google-outage-caused-by-critical-system-running-out-of-storage/&quot;&gt;구글의 인증서버가 다운&lt;/a&gt; 되면서 전 세계 사람들이 구글 인증을 사용하는 서비스를 못 쓰게 된 사례가 있다.&lt;/p&gt;
-
-&lt;p&gt;구글처럼 여러 서비스를 제공하는 경우 인증서버를 따로 두고 각 각 서비스의 서버들이 인증서버와 통신하는 방식으로 유저를 인증한다.&lt;/p&gt;
-
-&lt;p&gt;하지만 이번 프로젝트의 경우, 유저 인증/인가 서버를 따로 만들 필요가 없다.&lt;/p&gt;
-
-&lt;p&gt;인증/인가 방식만 잘 정해서, 원치 않는 유저만 잘 차단하고 권한이 있는 유저만 Go 서버를 잘 사용할 수 있게만 하면 된다.&lt;/p&gt;
-
-&lt;p&gt;그럼 RESTful API를 인증/인가 하는 방식에는 어떤 것들이 있는지 알아보자 [출처: &lt;a href=&quot;https://blog.restcase.com/restful-api-authentication-basics/&quot;&gt;retcase&lt;/a&gt;]&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Basic Authentication&lt;/li&gt;
-  &lt;li&gt;HMAC&lt;/li&gt;
-  &lt;li&gt;OAuth2.0&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이것보다 더 있지만 여기서 고르려고 한다.&lt;/p&gt;
-
-&lt;p&gt;Basic Authentication은 username 과 password를 사용하는 방식이다. HTTP header에 username과 password를 API 서버로 전달하면, 서버는 데이터베이스에 있는 정보와 HTTP header에 저장된 정보를 대조한 뒤 유저를 인증하는 방식이다.&lt;/p&gt;
-
-&lt;p&gt;가장 쉽고 기본적이지만 그만큼 보안에 취약하다. 이번 프로젝트에서는 사용하지 않겠다.&lt;/p&gt;
-
-&lt;p&gt;HMAC은 서버와 클라이언트만 알고 있는 key를 사용해서 인증/인가를 진행하는 방식이다. Basic Authentication 보다 보안에 신경쓴 방법이다. 하지만 이번 프로젝트에서는 쓰지 않겠다.&lt;/p&gt;
-
-&lt;p&gt;OAuth2.0는 인증을 검증된 Provider를 통해서 유저를 인증하는 방식이다. 여러가지 Flow가 있는데 이번 프로젝트와 잘 맞을 것 같은 방식이 있어서 사용해보려고 한다.&lt;/p&gt;
-
-&lt;p&gt;Flow는 아래와 같다. (Three legged flow)&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;User가 내 웹앱(Client)에서 로그인을 누른다&lt;/li&gt;
-  &lt;li&gt;웹앱에서 인가 코드를 OAuth2 제공자에게 요청한다&lt;/li&gt;
-  &lt;li&gt;OAuth2 제공자는 User에게 인증/인가를 요청한다&lt;/li&gt;
-  &lt;li&gt;User가 인증/인가를 한다&lt;/li&gt;
-  &lt;li&gt;OAuth2 제공자가 인가 코드를 내 웹앱에 보내준다&lt;/li&gt;
-  &lt;li&gt;내 웹앱이 OAuth2 제공자에게 Client ID, Client Secret, 방금 받은 인가 코드를 보낸다&lt;/li&gt;
-  &lt;li&gt;OAuth2 제공자가 받은 정보를 인증/인가 후, Access Token을 내 웹앱에 보내준다&lt;/li&gt;
-  &lt;li&gt;Access Token으로 API에 정보를 요청한다&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;과정은 알고 있는게 좋다. Go는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;oauth2&lt;/code&gt;라는 패키지가 있어서 쉽게 인증/인가를 만들어 볼 수 있을 것 같다.&lt;/p&gt;
-
-&lt;h1 id=&quot;개발-환경-설정&quot;&gt;개발 환경 설정&lt;/h1&gt;
-
-&lt;p&gt;현재 나의 개발 OS는 Windows 10 Home 64bit 다.&lt;/p&gt;
-
-&lt;p&gt;이제부터 개발에 필요한 명령어를 적겠지만 OS가 다르거나 설치된 프로그램의 버전이 다르면 작동이 안 될수도 있다. 알아서 잘 찾아보도록 하자.&lt;/p&gt;
-
-&lt;p&gt;우선 제일 먼저 해야 할 것은 Go, Postgresql 설치다.&lt;/p&gt;
-
-&lt;p&gt;고는 기본 문서가 잘 되어 있어서 따라하기만 해도 된다.
-영어지만 &lt;a href=&quot;https://golang.org/doc/install&quot;&gt;설치 가이드&lt;/a&gt;를 보고 따라 한 뒤, &lt;a href=&quot;https://golang.org/doc/tutorial/getting-started&quot;&gt;튜토리얼&lt;/a&gt;을 보면서 Go를 내 컴퓨터에 설치 하도록 하자.&lt;/p&gt;
-
-&lt;p&gt;Postgresql도 마찬가지다. &lt;a href=&quot;https://www.postgresql.org/download/&quot;&gt;설치 가이드&lt;/a&gt;를 따라서 설치를 해보자.&lt;/p&gt;
-
-&lt;p&gt;고는 지정된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GOPATH&lt;/code&gt; 밖에서 새로운 고 코드를 실행하고 싶으면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go mod&lt;/code&gt;를 활용해야 한다.
-새로운 폴더(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mediumclone-go&lt;/code&gt;)를 생성하고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go mod init 아무이름/mediumclone-go&lt;/code&gt; 로 프로젝트 관리를 하자.&lt;/p&gt;
-
-&lt;p&gt;이제 고 백엔드 프레임워크 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gin&lt;/code&gt;을 설치하자.&lt;/p&gt;
-
-&lt;p&gt;고가 설치 되어 있다면, 터미널에서&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go get -u github.com/gin-gonic/gin&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;으로 설치할 수 있다. 설치가 되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go.mod&lt;/code&gt; 에 dependency 업데이트가 돼야하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go.sum&lt;/code&gt;도 만들어져야 한다. 이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go.mod&lt;/code&gt; 와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go.sum&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt;의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package-lock.json&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt;의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requirements.txt&lt;/code&gt; 정도로 생각하자.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mediumclone-go&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.go&lt;/code&gt; 파일을 만들어서 간단한 서버를 구현해보자.&lt;/p&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;// mediumclone-go/main.go&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;github.com/gin-gonic/gin&quot;&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;// SetupRouter ...&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;// returns a *gin.Engine&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SetupRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Engine&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;router&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;router&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/ping&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;pong&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;router&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SetupRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;// Port 8080&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go run main.go&lt;/code&gt;를 하고 웹 브라우저에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:8080/ping&lt;/code&gt; 을 요청하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ message: pong }&lt;/code&gt; 이 성공적으로 들어오는 것을 확인 할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;이참에 바로 테스트 코드를 작성해보자.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go get -u github.com/franela/goblin&lt;/code&gt; 로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;goblin&lt;/code&gt; 을 설치하자.&lt;/p&gt;
-
-&lt;p&gt;설치 후 Go 테스트 작성법에 준수하며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main_test.go&lt;/code&gt; 파일을 만들어서 테스트 코드를 작성하자.&lt;/p&gt;
-
-&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-	&lt;span class=&quot;s&quot;&gt;&quot;encoding/json&quot;&lt;/span&gt;
-	&lt;span class=&quot;s&quot;&gt;&quot;net/http&quot;&lt;/span&gt;
-	&lt;span class=&quot;s&quot;&gt;&quot;net/http/httptest&quot;&lt;/span&gt;
-	&lt;span class=&quot;s&quot;&gt;&quot;testing&quot;&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;github.com/franela/goblin&quot;&lt;/span&gt;
-	&lt;span class=&quot;s&quot;&gt;&quot;github.com/gin-gonic/gin&quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MakeRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;httptest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResponseRecorder&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;httptest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewRecorder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServeHTTP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;c&quot;&gt;// Setup router&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;router&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SetupRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-	&lt;span class=&quot;c&quot;&gt;// create goblin&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Goblin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Server Test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;c&quot;&gt;// Passing test&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;It&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;GET /ping should return JSON {message: pong}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;c&quot;&gt;// Build expected body&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-				&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;pong&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-			&lt;span class=&quot;c&quot;&gt;// Perform GET request with the handler&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MakeRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;router&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/ping&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-			&lt;span class=&quot;c&quot;&gt;// Assert we encoded correctly&lt;/span&gt;
-			&lt;span class=&quot;c&quot;&gt;// and the request gives 200&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StatusOK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-			&lt;span class=&quot;c&quot;&gt;// Convert JSON response to a map&lt;/span&gt;
-			&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
-
-			&lt;span class=&quot;n&quot;&gt;err&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Unmarshal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-			&lt;span class=&quot;c&quot;&gt;// grab the value&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exists&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-			&lt;span class=&quot;c&quot;&gt;// make some assertions&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IsNil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IsTrue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go test&lt;/code&gt;를 실행해보면&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/gotest.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;요런 테스트 결과가 나와야한다.&lt;/p&gt;
-
-&lt;p&gt;위 테스트 코드와 Gin 서버 작성법은 아래 포스트들에서 참고했다:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/@craigchilds94/testing-gin-json-responses-1f258ce3b0b1&quot;&gt;craigchilds94&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/franela/goblin&quot;&gt;goblin Github&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gin-gonic/gin&quot;&gt;Gin Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
-
-&lt;p&gt;정리를 하자면:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;인증/인가 방식을 결정했고&lt;/li&gt;
-  &lt;li&gt;기본적인 개발 환경, 서버 구축, 테스트 코드까지 작성했다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 Docker로 컨테이너화를 한 뒤에 모든 과정을 Github Actions로 자동화하는 방법을 알아보자.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Kruskal’s Minimum Spanning Tree</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Kruskal's-Minimum-Spanning-Tree/" rel="alternate" type="text/html" title="[알고리즘] Kruskal’s Minimum Spanning Tree" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Kruskal's%20Minimum%20Spanning%20Tree</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Kruskal's-Minimum-Spanning-Tree/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Kruskal’s MST에 대해 알아보자&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;그리디 알고리즘이다&lt;/li&gt;
-  &lt;li&gt;시간 복잡도: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(E log V)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;방법&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;edges를 가중치를 기준으로 오름차순 정렬을 한다&lt;/li&gt;
-  &lt;li&gt;가장 작은 가중치를 지닌 edge를 정한 뒤, 현재 MST에 저장된 edge와 연결 했을 시 Cycle이 되는지 확인한다.
-여기서 사용하는 알고리즘은 Union-Find 알고리즘이다&lt;/li&gt;
-  &lt;li&gt;Cycle이 형셩되지 않으면 선택된 edge를 MST에 더해준다, 반면 Cycle이 형성되면 무시한다.&lt;/li&gt;
-  &lt;li&gt;MST에 V-1 edge가 생성될 때까지 반복한다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;algorithm-visualization&quot;&gt;Algorithm visualization&lt;/h1&gt;
-&lt;!-- 16:9 aspect ratio --&gt;
-&lt;div class=&quot;responsive-embed responsive-embed-16by9&quot;&gt;
-  &lt;iframe class=&quot;responsive-embed-item&quot; src=&quot;https://www.youtube-nocookie.com/embed/71UQH7Pr9kU&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 코드 출처: https://it-garden.tistory.com/411
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;kruskal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_of_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# disjointSet 에서 
-&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# vertex u를 재귀적으로 찾는 함수다
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# vertex u 와 v 를 union시키는 함수다
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;root_a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;root_b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root_a&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# 그래프의 형태는 [[from, to, weight]] 형식이라고 가정한다
-&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# 그래프를 가중치를 기준으로 오름차순 정렬한다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# MST를 기록할 list를 만들어준다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# Disjoint Set 도 기록해준다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 0은 쓰지 않는 vertex다
-&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# 각 vertex를 disjointSet에 만들어준다
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_of_nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# edges counter
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# weight counter
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; 
-
-    &lt;span class=&quot;c1&quot;&gt;# 크루스칼 알고리즘
-&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# edges가 V-1이 아니면 반복
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_of_nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;# vertex u와 v가 다른 집합이면 Cycle이 아니라는 뜻
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; 
-            &lt;span class=&quot;n&quot;&gt;union&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disjointSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# 그래프는 Prim 알고리즘 포스트에서 썼던 A,B,C 그래프를 숫자로 치환한 값이다
-# A: 1, B: 2, C:3 ----- H:7
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (A, B, 2)
-&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (A, C, 3)
-&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (G, F, 1)
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# node의 개수는 1-6
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kruskal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mst_cost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'''
-Prim 알고리즘 포스트의 우선 순위 큐 MST와 비교하면 
-Kruskal 알고리즘 MST도 잘 구해진 것을 알 수 있다.
-
-mst: 
-    1 (A) -&amp;gt; 2 (B) -&amp;gt; 4 (E) -&amp;gt; 5 (F) -&amp;gt; 6 (G) -&amp;gt; 7 (H) 
-                |
-                v
-             3 (C)
-
-mst_cost: 2 + 1 + 1 + 1 + 1 + 1 = 7
-'''&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;kruskal-알고리즘을-사용할-수-있는-문제&quot;&gt;Kruskal 알고리즘을 사용할 수 있는 문제&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;acmicpc.net/problem/9372&quot;&gt;백준 9372번 상근이의 여행&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2887&quot;&gt;백준 2887번 행성터널&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/62050&quot;&gt;프로그래머스 지형이동&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/&quot;&gt;LeetCode 1489번 어려운 문제&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[알고리즘] Bucket Sort</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Bucket-Sort/" rel="alternate" type="text/html" title="[알고리즘] Bucket Sort" /><published>2021-01-08T00:00:00+00:00</published><updated>2021-01-08T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D%20Bucket%20Sort</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Bucket-Sort/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/bucket-sort-2/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;버켓 정렬에 대해 알아보자&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;인풋이 특정 range에 고르게 분포되어 있을 때 유용하다&lt;/li&gt;
-  &lt;li&gt;Counting Sort에서는 key가 항상 index인데, 만약 주어진 값들이 float이라면?&lt;/li&gt;
-  &lt;li&gt;Bucket Sort을 사용하면 된다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;방법&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;n 개의 빈 bucket을 만든다 (list)&lt;/li&gt;
-  &lt;li&gt;arr[i]에 대해 이하 반복한다:
-    &lt;ol&gt;
-      &lt;li&gt;arr[i]를 bucket[n*arr[i]]에 저장한다&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Insertion Sort을 사용해 bucket을 정렬한다&lt;/li&gt;
-  &lt;li&gt;정렬된 bucket을 다 이어준다&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Time complexity&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Best Case: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n * k)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Worst Case: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n ^ 2)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Space complexity&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(nk)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;bucket-sort-visualization&quot;&gt;Bucket sort visualization&lt;/h1&gt;
-&lt;!-- 16:9 aspect ratio --&gt;
-&lt;div class=&quot;responsive-embed responsive-embed-16by9&quot;&gt;
-  &lt;iframe class=&quot;responsive-embed-item&quot; src=&quot;https://www.youtube-nocookie.com/embed/VuXbEb5ywrU&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bucketSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# number of buckets to create
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;slots&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; 
-    
-    &lt;span class=&quot;c1&quot;&gt;# create 2d array for buckets
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;buckets&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slots&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;idx_b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slots&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;buckets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# sort individual buckets
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slots&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;insertionSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buckets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# concatenate all slots
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slots&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buckets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])):&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buckets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# Best: O(n + k) same as counting sort
-&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# worst: O(n^2) same as insertion
-&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# space: O(n * k)
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;bucketSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# [0.1, 0.21, 0.22, 0.4, 0.5, 0.8, 0.99]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8장/&quot;&gt;다음 포스트&lt;/a&gt;에서는 어떤 방식으로 서버를 배포할 것인지를 정하자.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry></feed>

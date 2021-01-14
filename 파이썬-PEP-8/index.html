@@ -126,7 +126,7 @@
             <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
           </li></ul>
 
-<span class="read-time">5 min read</span>
+<span class="read-time">7 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-10T00:00:00+00:00"><a class="u-url" href="">January 10, 2021</a>
 </time>
@@ -522,6 +522,168 @@
 </code></pre></div></div>
 
 <h2 id="when-to-use-trailing-commas">When to use trailing commas</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 1개의 아이템을 가진 tuple을 만들 때
+# good
+</span><span class="n">FILES</span> <span class="o">=</span> <span class="p">(</span><span class="s">"config.yml"</span><span class="p">,)</span>
+
+<span class="c1"># bad
+</span><span class="n">FILES</span> <span class="o">=</span> <span class="s">"config.yml"</span><span class="p">,</span>
+
+<span class="c1"># 아이템이 더 추가될 여지가 있을 때
+# 복수의 아이템이 들어있을 때는 
+# trailing comma 후 줄 바꿈 뒤 닫는 부호를 넣어야 한다
+# good
+</span><span class="n">FILES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">"config.yml"</span><span class="p">,</span>
+    <span class="s">"setup.py"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">initialize</span><span class="p">(</span><span class="n">FILES</span><span class="p">,</span>
+          <span class="n">error</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+          <span class="p">)</span>
+<span class="c1"># bad
+</span><span class="n">FILES</span> <span class="o">=</span> <span class="p">[</span><span class="s">"config.yml"</span><span class="p">,</span> <span class="s">"setup.py"</span><span class="p">,]</span>
+
+<span class="n">initialize</span><span class="p">(</span><span class="n">FILES</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="bp">True</span><span class="p">,)</span>
+</code></pre></div></div>
+
+<h2 id="comments">Comments</h2>
+<ul>
+  <li>코드와 일치하지 않는 comment는 있으나마나다. 코드가 바뀌면 Comment도 업데이트하자.</li>
+  <li>inline comment는 당연한 것을 적으면 의미가 없다.</li>
+  <li>모든 public module, function, class, method에는 Docstring comment를 작성해야 한다.
+```python
+def something():
+  “"”This is one liner”””
+  pass</li>
+</ul>
+
+<p>class Something():
+    “"”This is some public class</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>creates something
+"""
+pass ```
+</code></pre></div></div>
+
+<h2 id="naming-conventions">Naming conventions</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">b</code> = single lowercase letter</li>
+  <li><code class="language-plaintext highlighter-rouge">B</code> = single uppercase letter</li>
+  <li><code class="language-plaintext highlighter-rouge">lowercase</code>
+    <ul>
+      <li>Package</li>
+      <li>Module</li>
+      <li>Functions/Methods</li>
+      <li>variable names</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">lowercase_with_underscores</code>
+    <ul>
+      <li>Module 은 가독성을 높이면 사용</li>
+      <li>Functions/Methods</li>
+      <li>Module Global variable</li>
+      <li>variable names</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">UPPERCASE</code>
+    <ul>
+      <li>Constant</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">UPPERCASE_WITH_UNDERSCORES</code>
+    <ul>
+      <li>Constant</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">CapitalizedWords</code>
+    <ul>
+      <li>ClassName</li>
+      <li>Type Var</li>
+      <li>Exception Names, “Error”를 끝에 사용해야함</li>
+      <li>약어는 다 CAP으로 해주는 것이 좋음. eg: <code class="language-plaintext highlighter-rouge">HTTPStatus</code> O, <code class="language-plaintext highlighter-rouge">HttpStatus</code> X</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">mixedCase</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Capitalized_Words_With_Underscores</code></li>
+  <li><code class="language-plaintext highlighter-rouge">_single_leading_underscore</code>
+    <ul>
+      <li>“weak internal use”. eg: <code class="language-plaintext highlighter-rouge">from M import *</code> 는 underscore로 시작하는 것들은 import하지 않는다</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">single_trailing_underscore_</code>
+    <ul>
+      <li>파이썬 기존 명칭과 겹치지 않게하기 위해 사용. eg: <code class="language-plaintext highlighter-rouge">tkinter.Toplevel(master, class_='ClassName')</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">__double_leading_underscore</code>
+    <ul>
+      <li>class attribute를 만들 때 사용</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">__double_leading_and_trailing_underscore__</code>
+    <ul>
+      <li>user controlled space에 있는 “magic” 객체. 있는 것만 사용할 것 eg. <code class="language-plaintext highlighter-rouge">__init__, __import__</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">I (아이), O (오), l (엘)</code> 단일 letter로 쓰지 말자.</li>
+  <li>모든 instance 함수에는 <code class="language-plaintext highlighter-rouge">self</code>를 쓸 것</li>
+  <li>모든 classmethod 에는 <code class="language-plaintext highlighter-rouge">cls</code>를 쓸 것</li>
+  <li>인자명이 겹치면 <code class="language-plaintext highlighter-rouge">_</code>를 하나 붙이는 것이 나을 수 있음</li>
+  <li>non-public method와 instance는 앞에 <code class="language-plaintext highlighter-rouge">_</code>로 시작</li>
+</ul>
+
+<h2 id="inheritance를-생각하고-설계한다면">Inheritance를 생각하고 설계한다면:</h2>
+<ul>
+  <li>class의 함수와 변수가 public 한지 non-public 한지 결정. 모르겠다면 non-public하게 만들어라.</li>
+  <li><code class="language-plaintext highlighter-rouge">private</code>은 사용하지 않는다. Python에서는 <code class="language-plaintext highlighter-rouge">private</code>은 없다.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+      <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="bp">self</span><span class="p">.</span><span class="n">__bar</span> <span class="o">=</span> <span class="s">"hello"</span>
+    
+  <span class="k">print</span><span class="p">(</span><span class="n">Foo</span><span class="p">().</span><span class="n">__bar</span><span class="p">)</span> <span class="c1"># name error
+</span>  <span class="k">print</span><span class="p">(</span><span class="n">Foo</span><span class="p">().</span><span class="n">_Foo__bar</span><span class="p">)</span> <span class="c1"># hello
+</span></code></pre></div>    </div>
+  </li>
+  <li>Public attribute는 <code class="language-plaintext highlighter-rouge">_</code>로 시작하면 안된다</li>
+  <li>만약 public attribute가 다른 것과 이름이 같다면, 끝에 <code class="language-plaintext highlighter-rouge">_</code>를 붙이는 것이 약자로 만드는 것보다 낫다.</li>
+  <li>Public data attribute는 getter/setter를 만들지 않는 것이 낫다. 만약 기능적으로 무언가가 추가되어야 한다면, 외부에 노출되지 않게 <code class="language-plaintext highlighter-rouge">@property</code>를 사용해서 getter/setter를 만들어라. 단, 기능을 너무 많이 추가하지는 말자 (캐싱 같은 것은 괜춘).</li>
+  <li>만약 class 가 subclass (다른 class가 상속을 받음) 가능하면, 현재 class에서 subclass가 쓸 수 없는 변수, 함수는 <code class="language-plaintext highlighter-rouge">__</code> 를 붙이자.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+      <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="bp">self</span><span class="p">.</span><span class="n">price</span> <span class="o">=</span> <span class="mi">0</span>
+          <span class="bp">self</span><span class="p">.</span><span class="n">__profit</span> <span class="o">=</span> <span class="mi">12</span>
+
+      <span class="k">def</span> <span class="nf">show_my_profit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">__profit</span>
+
+
+  <span class="k">class</span> <span class="nc">Bar</span><span class="p">(</span><span class="n">Foo</span><span class="p">):</span>
+      <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="nb">super</span><span class="p">(</span><span class="n">Bar</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+
+      <span class="c1"># Override show_my_profit
+</span>      <span class="c1"># Otherwise, 
+</span>      <span class="c1"># Bar.show_my_profit() remembers
+</span>      <span class="c1"># Foo's __profit
+</span>      <span class="k">def</span> <span class="nf">show_my_profit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">__profit</span>
+
+
+  <span class="n">y</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">.</span><span class="n">show_my_profit</span><span class="p">())</span>  <span class="c1"># 12
+</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">()</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">price</span><span class="p">)</span>  <span class="c1"># 0
+</span>
+  <span class="c1"># AttributeError: 'Bar' object has no attribute '_Bar__profit'
+</span>  <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">show_my_profit</span><span class="p">())</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="public-and-internal-interfaces">Public and internal interfaces</h2>
+
 
         </div>
 

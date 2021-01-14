@@ -10,6 +10,7 @@ comments: true
 
 Job sequencing, deadline scheduling 알고리즘에 대해 알아보자
 
+- 그리디 알고리즘
 - N 개의 `[일 ID, 마감일, 이윤]`가 주어 질 때, 최대 마감일이 되었을 때 최대 이윤을 구하는 알고리즘.
 - 마감일은 1 이상이고 마감일 전에 일을 끝내야 이익을 얻을 수 있다.
 - 시간은 unit time이다. (eg. 1 = 1일)

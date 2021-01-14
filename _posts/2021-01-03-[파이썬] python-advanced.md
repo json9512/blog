@@ -185,9 +185,7 @@ source: *[Real Python](https://realpython.com/python-gil/#:~:text=The%20Python%2
 ****
 
 # All is One, One is all
-> 전체는 하나, 하나는 전체
-
-뜻하지 않게 생각난 불교의 무진연기다. 파이썬에서 모든 것은 객체다. 변수, 함수, 클래스 등등 다 객체다. 
+파이썬에서 모든 것은 객체다. 변수, 함수, 클래스 등등 다 객체다. 
 
 `PyObject`라는 객체로 모든 것이 관리되기 때문에 이것을 이해하면 신기한 방법으로 코드를 짤 수 있다. 
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-14T13:52:36+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -10</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -10" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%2010</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-15T14:39:03+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -10</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -10" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%2010</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2&lt;/a&gt;&lt;/li&gt;
@@ -22,14 +22,38 @@
   &lt;li&gt;배포 과정을 자동화 시도&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;github-actions-환경-변수-문제-해결하기&quot;&gt;Github Actions 환경 변수 문제 해결하기&lt;/h1&gt;
+&lt;h1 id=&quot;docker-이미지-배포-방법&quot;&gt;Docker 이미지 배포 방법&lt;/h1&gt;
+&lt;p&gt;현재까지는 Docker Hub에 이미지를 자동배포를 했었다. 하지만 전 포스트에서 AWS ECR로 이미지를 배포하는 방법을 알았으니 CI/CD에서도 AWS ECR로 자동 배포를 하려고 한다.&lt;/p&gt;
+
+&lt;p&gt;아마존 &lt;a href=&quot;https://aws.amazon.com/ko/blogs/containers/create-a-ci-cd-pipeline-for-amazon-ecs-with-github-actions-and-aws-codebuild-tests/&quot;&gt;블로그&lt;/a&gt; 글을 참고를 하자. 이미 잘 설명이 돼있다.&lt;/p&gt;
+
+&lt;p&gt;AWS 개인 정보를 secrets에 저장 시킨 뒤 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt;에서 AWS ECR로 이미지를 배포하도록 수정을 했다.&lt;/p&gt;
+
+&lt;h1 id=&quot;aws-배포-자동화&quot;&gt;AWS 배포 자동화&lt;/h1&gt;
+
+&lt;p&gt;하루 정도의 시간을 투자한 결과, Github Actions로 AWS에 서버 배포 자동화를 성공 시켰다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/awssetup.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/awssetup2.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;간략하게 하루 동안 삽질했던 문제점들을 나열하자면:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Github Actions workflow에서 Docker 이미지내로 환경변수 전달하기&lt;/li&gt;
+  &lt;li&gt;AWS RDS와 AWS EC2 연결하기&lt;/li&gt;
+  &lt;li&gt;AWS RDS와 AWS EC2내에 Docker 컨테이너와 연결하기&lt;/li&gt;
+  &lt;li&gt;새로운 commit push/pr 시, ECS에 기존 인스턴스가 남아 있어서 자동 배포 되지 않는 문제&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;해결-방법&quot;&gt;해결 방법&lt;/h3&gt;
+&lt;h4 id=&quot;1-github-actions-workflow에서-docker-이미지내로-환경변수-전달하기&quot;&gt;1. Github Actions workflow에서 Docker 이미지내로 환경변수 전달하기&lt;/h4&gt;
+
 &lt;p&gt;자동화를 많이 해본 적은 없지만 현재까지 자동화를 하면서 가장 문제를 많이 일으켰던 부분은 환경변수를 설정하는 일이다.&lt;/p&gt;
 
-&lt;p&gt;현재 이 포스트를 작성하는 시점, 고 코드는 AWS RDS에 연결하는 기능까지 구현하고 난 직후다. AWS에 연결을 하려면 여러 환경변수를 사용해서 중요한 정보들을 관리한다. 동시에 Github에 push될 때 중요한 정보가 노출이 되지 않게 해야한다.&lt;/p&gt;
+&lt;p&gt;현재 이 포스트를 작성하는 시점, 고 코드는 AWS RDS에 연결하는 기능까지 구현하고 난 직후다. 개발을하다가 보면 여러 환경변수를 사용해서 중요한 정보들을 관리한다. 동시에 Github에 push될 때 중요한 정보가 노출이 되지 않게 해야한다.&lt;/p&gt;
 
-&lt;p&gt;여기서 말하는 중요한 정보란, 외부에 노출이 되었을 시 서버에 막대한 피해를 끼칠 수 있는 정보를 뜻한다. 예를 들면 관리자 비밀번호, 개인정보, 기타등등 있겠다.&lt;/p&gt;
+&lt;p&gt;여기서 말하는 중요한 정보란, 외부에 노출이 되었을 때 서버에 막대한 피해를 끼칠 수 있는 정보를 뜻한다. 예를 들면 관리자 비밀번호, 개인정보, 기타등등 있겠다.&lt;/p&gt;
 
-&lt;p&gt;현재 중요한 정보를 취급하는 방식은 다음과 같다.&lt;/p&gt;
+&lt;p&gt;수정 전 중요한 정보를 취급하는 방식은 다음과 같았다.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 파일에 중요한 정보를 저장한다&lt;/li&gt;
   &lt;li&gt;고 서버 내에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper&lt;/code&gt;라는 패키지를 써서 저장된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;파일에서 환경변수를 읽는다&lt;/li&gt;
@@ -40,41 +64,91 @@
 
 &lt;p&gt;&lt;img src=&quot;/blog/images/testfail.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;이 문제를 해결하려면:&lt;/p&gt;
+&lt;p&gt;이 문제를 해결하려면 다음과 같은 방식들이 있다:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;파일을 Github에 올려서 Github Actions가 쓸 수 있게함&lt;/li&gt;
   &lt;li&gt;코드를 수정해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 의존성을 없애고, 환경변수를 Github secret에 저장함&lt;/li&gt;
   &lt;li&gt;Dockerfile이나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt; workflow 파일에서 환경 변수를 담은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 파일을 생성함&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;여러가지 시행착오 끝에 현재 해결안을 살펴보면 다음과 같다.&lt;/p&gt;
-&lt;ol&gt;
+&lt;p&gt;Github Actions workflow &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt;파일에서 환경변수를 Github에 노출하지 않고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;에 전달 하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; 내에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENV&lt;/code&gt;를 쓰면 된다. 하지만 나는 혹시 몰라서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt;로 필요한 변수들을 직접 다 생성해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;에 전달했다.&lt;/p&gt;
+
+&lt;p&gt;여러가지 시행착오 끝에 현재 해결안을 살펴보면 다음과 같다 (2번 방식을 택함).&lt;/p&gt;
+&lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper&lt;/code&gt; 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;godotenv&lt;/code&gt; 패키지를 활용해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 파일 의존성을 없앴다&lt;/li&gt;
-  &lt;li&gt;환경변수를 Github secrets로 저장시켰다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt; (github workflow)에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.XXX&lt;/code&gt;로 저장된 값을 호출 한 후 필요한 곳에 사용했다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; 도 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt; 로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.XXX&lt;/code&gt;를 받은 뒤 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENV&lt;/code&gt;로 선언할 수 있도록 코드를 수정했다&lt;/li&gt;
+  &lt;li&gt;Github Secrets에 환경변수 저장&lt;/li&gt;
+  &lt;li&gt;workflow yaml 파일에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.XXX&lt;/code&gt;로 호출&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; 을 빌드 할 때 환경변수를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt;로 주는 방식&lt;/li&gt;
   &lt;li&gt;유닛 테스트에 환경변수가 제대로 로드되는지 확인하는 테스트를 작성했다&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;위 수정사항을 반영하는 시작점이 되는 &lt;a href=&quot;https://github.com/json9512/mediumclone-backendwithgo/commit/8d14e0c57f47937d2ea0fd5113e5cc899961eb69&quot;&gt;commit&lt;/a&gt;이다. 그리고 테스트 결과를 보면 Workflow가 다시 잘 작동하는 것을 볼 수 있다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/images/testsuccess.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;어디까지나 위 수정사항은 CI/CD 파이프라인에서 코드만 테스트하는 것이다. 실제로 Docker 이미지가 생성된 후 컨테이너에서의 테스트는 하지 않았다. &lt;del&gt;지금은 하는 방법을 모른다&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;위 유닛테스트는 CI/CD 파이프라인에서 코드만 테스트하는 것이다. 실제로 Docker 이미지가 생성된 후 컨테이너에서의 테스트는 하지 않았다. &lt;del&gt;지금은 하는 방법을 모른다&lt;/del&gt;&lt;/p&gt;
 
-&lt;p&gt;이 방식의 문제점은 다음과 같다:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;생성된 Docker 이미지가 컨테이너로 띄웠을 때 AWS RDS와 연결이 잘 되는지는 알 수 없음&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;예시:&lt;/p&gt;
 
-&lt;h1 id=&quot;docker-이미지-배포-방법-바꾸기&quot;&gt;Docker 이미지 배포 방법 바꾸기&lt;/h1&gt;
-&lt;p&gt;현재까지는 Docker Hub에 이미지를 자동배포를 했었다. 하지만 전 포스트에서 Docker Hub 대신에 AWS ECR로 이미지를 사용하는 법을 알았으니 CI/CD에서도 Docker Hub 말고 ECR로 자동 배포를 하려고 한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Github Secrets에 환경변수 설정:
+&lt;img src=&quot;/blog/images/githubsecretsexample.png&quot; class=&quot;align-left&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Workflow yaml에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.XXX&lt;/code&gt;로 호출:
+&lt;img src=&quot;/blog/images/dockerargsexample.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Dockerfile &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENV&lt;/code&gt; 사용해서 환경변수 사용:
+&lt;img src=&quot;/blog/images/dockerfileexample.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;아마존 &lt;a href=&quot;https://aws.amazon.com/ko/blogs/containers/create-a-ci-cd-pipeline-for-amazon-ecs-with-github-actions-and-aws-codebuild-tests/&quot;&gt;블로그&lt;/a&gt; 글을 참고를 하니 이미 잘 설명이 돼있다.&lt;/p&gt;
+&lt;p&gt;물론 이보다 효율적인 방법이 있을 것이다. 가령 Github Actions &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;job&lt;/code&gt; 환경에 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;global&lt;/code&gt;하게 변수를 선언 하는 방법있다.&lt;/p&gt;
 
-&lt;p&gt;AWS 개인 정보를 secrets에 저장 시킨 뒤 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt;에서 AWS ECR로 이미지를 배포하도록 수정을 하자.&lt;/p&gt;
+&lt;h4 id=&quot;2-aws-rds와-aws-ec2-연결하기&quot;&gt;2. AWS RDS와 AWS EC2 연결하기&lt;/h4&gt;
+&lt;p&gt;AWS RDS와 AWS EC2간 연결이 자동으로 될 거라고 생각했지만 아니었다.&lt;/p&gt;
 
-&lt;p&gt;(추가 할 예정)&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Search algorithms</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Search-algorithms/" rel="alternate" type="text/html" title="[알고리즘] Search algorithms" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Search%20algorithms</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Search-algorithms/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/fundamentals-of-algorithms/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;기본적으로 AWS RDS를 만들 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Public Access&lt;/code&gt;가 가능하게 만들어야 외부에서 접속이 가능하다. 이 기능을 꺼 놓으면 같은 네트워크 안에 있는 instance들만 연결 할 수 있다고 한다.&lt;/p&gt;
+
+&lt;p&gt;그리고 포트 설정도 유심히 봐줘야한다. Postgresql 포트의 기본 값인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 사용했다.&lt;/p&gt;
+
+&lt;p&gt;이후 AWS RDS 와 AWS EC2의 보안 그룹에서 인바운드, 아웃바운드 규칙에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 통과 할 수 있게 설정을 해야한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;3-aws-rds와-aws-ec2내에-docker-컨테이너와-연결하기&quot;&gt;3. AWS RDS와 AWS EC2내에 Docker 컨테이너와 연결하기&lt;/h4&gt;
+&lt;p&gt;예상했던 것처럼 AWS RDS와 EC2내 Docker간 통신이 가장 큰 문제였다.&lt;/p&gt;
+
+&lt;p&gt;AWS RDS와 컨테이너가 성공적으로 연결이 되는 것을 확인하려면 사실 ec2 내에서 터미널로 확인해야한다.&lt;/p&gt;
+
+&lt;p&gt;다른 방법으로는 배포된 컨테이너가 잘 작동하는지 브라우저나 AWS 콘솔을 통해 확인하는 방법이 있다.&lt;/p&gt;
+
+&lt;p&gt;나는 브라우저와 콘솔을 주로 사용하다가 도저히 디버깅이 안돼서 EC2에 SSH로 연결 후 터미널로 디버깅을 했다.&lt;/p&gt;
+
+&lt;p&gt;알고봤더니 Dockerfile에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 열어 놓지 않아서 컨테이너 내에 Go 서버가 죽어있던 것이었다. (코드가 DB connection이 안되면 로그를 내뱉으면서 죽는 방식이기 때문이다)&lt;/p&gt;
+
+&lt;p&gt;Dockerfile에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 열어주고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;host&lt;/code&gt; EC2의 포트 역시 개방해주니 바로 해결됐다.&lt;/p&gt;
+
+&lt;p&gt;이 문제를 해결하는데 가장 오래 걸렸다.&lt;/p&gt;
+
+&lt;h4 id=&quot;4-새로운-commit-pushpr-시-ecs에-기존-인스턴스가-남아-있어서-자동-배포-되지-않는-문제&quot;&gt;4. 새로운 commit push/pr 시, ECS에 기존 인스턴스가 남아 있어서 자동 배포 되지 않는 문제&lt;/h4&gt;
+&lt;p&gt;Github에 새로운 PR을 진행을 해봤는데 ECS에 있던 기존 인스턴스에 새로운 작업이 실행되지 않는 문제를 발견했다.&lt;/p&gt;
+
+&lt;p&gt;무슨 말이냐면, CI/CD 파이프라인이 제대로 구축이 됐다면 Github에 PR을 하는 순간 AWS ECR에 새로운 이미지가 배포되고 그 배포된 이미지를 사용해서 새로운 컨테이너가 EC2안에 구축이 돼야한다.&lt;/p&gt;
+
+&lt;p&gt;유저 입장에서는 Go 서버를 브라우저로 방문했을 때, 업데이트 된 서버가 응답을 해야하는 것이었다.&lt;/p&gt;
+
+&lt;p&gt;하지만 위 과정이 되지 않았다.&lt;/p&gt;
+
+&lt;p&gt;이 부분도 몇번의 구글링 끝에 ECS의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minimum healthy percent&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maximum percent&lt;/code&gt; 설정을 손보면 되는 것이었다. 내가 원하는 것은 ECS가 1개의 인스턴스를 구동하며, 새 이미지가 배포되면 기존 컨테이너를 없애고 새 컨테이너를 만드는 것이었다.&lt;/p&gt;
+
+&lt;p&gt;이 &lt;a href=&quot;https://stackoverflow.com/questions/40731143/what-is-the-minimum-healthy-percent-and-maximum-percent-in-amazon-ecs&quot;&gt;스택오버플로우&lt;/a&gt; 글을 참고해서 1개의 인스턴스로 롤링 배포를 원활하게 작동하게끔 구축했다.&lt;/p&gt;
+
+&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
+&lt;p&gt;정리를 하자면:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS ECR로 이미지 배포, AWS ECS로 EC2 구동 후 컨테이너 배포까지 Github Actions로 자동화 시켰다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;물론 지금 설정한 Workflow는 추후에 바뀔 가능성이 높다. 하지만 당분간은 개발에 집중해도 될 것 같다.&lt;/p&gt;
+
+&lt;p&gt;다음 포스트부터는 RESTful API를 만드는 과정에 대해 알아보자.&lt;/p&gt;
+
+&lt;p&gt;여담으로 개발자 친구에게 코드리뷰를 부탁했다. &lt;a href=&quot;https://github.com/dojinkimm&quot;&gt;dojinkimm&lt;/a&gt; 👍👍&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Search algorithms</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Search-algorithms/" rel="alternate" type="text/html" title="[알고리즘] Search algorithms" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Search%20algorithms</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Search-algorithms/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/fundamentals-of-algorithms/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;여러가지 Search 알고리즘에 대해 알아보자&lt;/p&gt;
 &lt;ol&gt;

@@ -126,7 +126,7 @@
             <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
           </li></ul>
 
-<span class="read-time">7 min read</span>
+<span class="read-time">9 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-10T00:00:00+00:00"><a class="u-url" href="">January 10, 2021</a>
 </time>
@@ -683,7 +683,196 @@ pass ```
 </ul>
 
 <h2 id="public-and-internal-interfaces">Public and internal interfaces</h2>
+<ul>
+  <li>Backwards 호환성은 public interface에만 해당된다</li>
+  <li>public 과 internal interface를 쉽게 구분 할 수 있게 하는 것은 중요하다</li>
+  <li>보편적으로 <code class="language-plaintext highlighter-rouge">_</code> 로 시작하는 것들은 internal 하다고 볼 수 있다</li>
+  <li>모든 public interface에는 코멘트가 있어야한다</li>
+  <li><code class="language-plaintext highlighter-rouge">__all__</code>을 사용해 public API의 이름을 지정해야한다</li>
+</ul>
 
+<h2 id="programming-recommendations">Programming Recommendations</h2>
+<ul>
+  <li>다른 버전의 파이썬에 악영향이 없도록 코드를 짜야한다 (PyPy, Jython, IronPython, Cython, Psyco, etc)
+    <ul>
+      <li>예를 들면 CPython의 string concatenation 연산자 <code class="language-plaintext highlighter-rouge">a += b</code>에 의존하지 말고 <code class="language-plaintext highlighter-rouge">"".join()</code> 형식을 사용하자</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">None</code>과 같은 singleton과의 비교는 <code class="language-plaintext highlighter-rouge">==</code> 대신 <code class="language-plaintext highlighter-rouge">is</code>, <code class="language-plaintext highlighter-rouge">is not</code>을 사용하자
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Good
+</span>  <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+
+  <span class="c1"># Bad
+</span>  <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">x</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span> <span class="c1"># 이런 식도 헷갈리니 사용하지 말자
+</span></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>ordering operation을 수정 할 때는 6개 모두 수정하는 것이 좋다
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">__lt__</code>, <code class="language-plaintext highlighter-rouge">__le__</code>, <code class="language-plaintext highlighter-rouge">__gt__</code>, <code class="language-plaintext highlighter-rouge">__ge__</code>, <code class="language-plaintext highlighter-rouge">__eq__</code>, <code class="language-plaintext highlighter-rouge">__ne__</code></li>
+      <li><code class="language-plaintext highlighter-rouge">functools.total_ordering()</code> decorator를 사용해도 된다</li>
+    </ul>
+  </li>
+  <li>변수에 <code class="language-plaintext highlighter-rouge">lambda</code>를 사용해 함수를 만들지 말고 <code class="language-plaintext highlighter-rouge">def</code>로 선언하자
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Good
+</span>  <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+      <span class="k">return</span> <span class="n">x</span>
+        
+  <span class="c1"># Bad
+</span>  <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Exception</code>을 만들 때, <code class="language-plaintext highlighter-rouge">BaseException</code> 말고 <code class="language-plaintext highlighter-rouge">Exception</code>으로 부터 상속받자</li>
+  <li>Exception chaining은 적절한 이유가 있을 때만 사용하자. Python3 에서는 <code class="language-plaintext highlighter-rouge">raise X from Y</code>를 사용해서 기존 Exception에 대한 정보를 유지하자</li>
+  <li>Exception을 <code class="language-plaintext highlighter-rouge">catch</code> 할 때, 정확한 Exception 명을 잡도록 하자
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">try</span><span class="p">:</span>
+      <span class="kn">import</span> <span class="nn">platform_specific_module</span>
+  <span class="k">except</span> <span class="nb">ImportError</span><span class="p">:</span>
+      <span class="n">platform_specific_module</span> <span class="o">=</span> <span class="bp">None</span>
+</code></pre></div>        </div>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">except</code> 만 사용할 때는 logging이 제대로 될 때 사용하자</li>
+    </ul>
+  </li>
+  <li>잡은 Exception에 이름을 줄 때는 Python 2.6에서 도입된 syntax를 활용하자
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">try</span><span class="p">:</span>
+      <span class="n">process_data</span><span class="p">()</span>
+  <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+      <span class="k">raise</span> <span class="n">DataProcessingFailedError</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">try</code>, <code class="language-plaintext highlighter-rouge">except</code> 문을 사용할 때 <code class="language-plaintext highlighter-rouge">try</code> 구간 코드를 최대한 적게 작성하자</li>
+  <li><code class="language-plaintext highlighter-rouge">with</code>를 사용해 resource를 닫자. Resource에 대한 권한을 얻는 것 외에는 Context manager는 함수를 사용해야 한다
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Good
+</span>  <span class="k">with</span> <span class="n">conn</span><span class="p">.</span><span class="n">begin_transaction</span><span class="p">():</span>
+      <span class="n">do_somein</span><span class="p">()</span>
+        
+  <span class="c1"># Bad
+</span>  <span class="k">with</span> <span class="n">conn</span><span class="p">:</span>
+      <span class="n">do_somein</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>모든 경우 일관성있게 return 하도록 코드를 짜자
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Good
+</span>  <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="k">return</span> <span class="n">math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+          <span class="k">return</span> <span class="bp">None</span>
+        
+  <span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="k">return</span> <span class="bp">None</span>
+      <span class="k">return</span> <span class="n">math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+  <span class="c1"># Bad
+</span>  <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="k">return</span> <span class="n">math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+  <span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="k">return</span>
+      <span class="k">return</span> <span class="n">math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>string module 보다 string method를 사용하자</li>
+  <li>string slicing보다 <code class="language-plaintext highlighter-rouge">''.startswith(), ''.endswith()</code> 로 prefix와 suffix를 확인하자
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Good
+</span>  <span class="k">if</span> <span class="n">foo</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'bar'</span><span class="p">):</span>
+
+  <span class="c1"># Bad
+</span>  <span class="k">if</span> <span class="n">foo</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s">'bar'</span><span class="p">:</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>type comparison을 할 때는 <code class="language-plaintext highlighter-rouge">isinstance()</code>를 사용하자
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Good
+</span>  <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">foo</span><span class="p">):</span>
+
+  <span class="c1"># Bad
+</span>  <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>sequence (string, list, tuple)의 존재 여부를 확인 할 때는 아래와 같이 하자
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Good
+</span>  <span class="k">if</span> <span class="n">seq</span><span class="p">:</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">seq</span><span class="p">:</span>
+
+  <span class="c1"># Bad
+</span>  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>    
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>boolean 도 <code class="language-plaintext highlighter-rouge">True</code> 와 <code class="language-plaintext highlighter-rouge">False</code> 와 비교하지 말자
+    <ul>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Good
+</span>  <span class="k">if</span> <span class="n">boolean</span><span class="p">:</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">boolean</span><span class="p">:</span>
+
+  <span class="c1"># Bad
+</span>  <span class="k">if</span> <span class="n">boolean</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">boolean</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+
+  <span class="c1"># Worse
+</span>  <span class="k">if</span> <span class="n">boolean</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>flow control statement <code class="language-plaintext highlighter-rouge">continue, break, return</code> 등은 <code class="language-plaintext highlighter-rouge">try</code> … <code class="language-plaintext highlighter-rouge">finally</code> 문에 <code class="language-plaintext highlighter-rouge">finally</code> 블록에는 쓰지 말자
+    <ul>
+      <li>이유는 예외처리가 제대로 안되고 넘어가지기 때문이다.</li>
+      <li>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># Bad
+</span>  <span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+  <span class="k">try</span><span class="p">:</span>
+      <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
+  <span class="k">finally</span><span class="p">:</span>
+      <span class="k">return</span> <span class="mi">43</span>
+        
+  <span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">())</span> <span class="c1"># prints 43 without error
+</span></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>function annotation <code class="language-plaintext highlighter-rouge">def foo(abc: int) -&gt; int</code>, variable annotation <code class="language-plaintext highlighter-rouge">code: int</code> 등은 사용 가능하나 사용하지 않아도 무방하다</li>
+</ul>
 
         </div>
 

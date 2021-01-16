@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>[알고리즘] Min num of x required for y | json9512’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="[알고리즘] Min num of x required for y" />
+<meta name="author" content="json9512" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="출처: GeeksforGeeks" />
+<meta property="og:description" content="출처: GeeksforGeeks" />
+<link rel="canonical" href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/" />
+<meta property="og:url" content="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/" />
+<meta property="og:site_name" content="json9512’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[알고리즘] Min num of x required for y" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[알고리즘] Min num of x required for y","dateModified":"2021-01-16T00:00:00+00:00","datePublished":"2021-01-16T00:00:00+00:00","description":"출처: GeeksforGeeks","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/"},"url":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="stylesheet" href="/blog/assets/css/skins/dark.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="json9512&#39;s Blog" href="/blog/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://json9512.github.io/blog/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://json9512.github.io/blog/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://json9512.github.io/blog/images/favicon-16x16.png">
+<link rel="manifest" href="https://json9512.github.io/blog/images/site.webmanifest">
+<link rel="shortcut icon" href="https://json9512.github.io/blog/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://json9512.github.io/blog/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  알고리즘-min-num-of-x-required-for-y">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/blog/about/">About</a></li><li><a href="/blog/posts/">Posts</a></li><li><a href="/blog/tags/">Tags</a></li><li><a href="/blog/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/blog/" class="site-logo" rel="home" title="json9512's Blog">
+        <img src="/blog/images/logo.png" class="site-logo-img animated fadeInDown" alt="json9512's Blog">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/blog/">json9512's Blog</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description"></p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">[알고리즘] Min num of x required for y
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4" class="author-avatar u-photo" alt="json9512"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">json9512</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
+          </li></ul>
+
+<span class="read-time">2 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-01-16T00:00:00+00:00"><a class="u-url" href="">January 16, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/blog/tags/#algorithm" title="Pages tagged algorithm" rel="tag">algorithm</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>출처: <a href="https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/">GeeksforGeeks</a></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">y</code> 라는 변수가 <code class="language-plaintext highlighter-rouge">x</code>라는 변수에 의존할 때, <code class="language-plaintext highlighter-rouge">x</code>가 필요한 최소 개수를 구하는 알고리즘</li>
+  <li>그리디 알고리즘</li>
+</ul>
+
+<p>예를 들면, 기차가 <code class="language-plaintext highlighter-rouge">y</code> 이고 <code class="language-plaintext highlighter-rouge">x</code>가 기차가 정차를 하는 플랫폼이라고 가정하자.</p>
+
+<p>이때 기차가 플랫폼에 도착하는 시간 <code class="language-plaintext highlighter-rouge">n</code>과 플랫폼에서 기차가 출발하는 시간 <code class="language-plaintext highlighter-rouge">m</code>인 <code class="language-plaintext highlighter-rouge">n, m</code> 배열이 주어질 때, 최소한의 플랫폼 개수를 구하는 것이 목적이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 기차는 y, 플랫폼은 x
+# n은 기차들이 x에 들어오는 시간이 담긴 배열
+# m은 기차들이 x에서 출발하는 시간이 담긴 배열
+</span><span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="s">"9:00"</span><span class="p">,</span> <span class="s">"9:40"</span><span class="p">,</span> <span class="s">"9:50"</span><span class="p">,</span> <span class="s">"11:00"</span><span class="p">,</span> <span class="s">"15:00"</span><span class="p">,</span> <span class="s">"18:00"</span><span class="p">]</span>
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="s">"9:10"</span><span class="p">,</span> <span class="s">"12:00"</span><span class="p">,</span> <span class="s">"11:20"</span><span class="p">,</span> <span class="s">"11:30"</span><span class="p">,</span> <span class="s">"19:00"</span><span class="p">,</span> <span class="s">"20:00"</span><span class="p">]</span>
+
+<span class="c1"># 특정 시간에 최대 몇 대의 기차 y가 x에 들어와야 하는지를 계산하면
+# x가 최소한 몇 개가 필요한지가 나온다
+</span></code></pre></div></div>
+
+<h4 id="방법">방법</h4>
+<ol>
+  <li>주어진 <code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">m</code> 배열을 정렬한다</li>
+  <li>플랫폼 개수를 세는 <code class="language-plaintext highlighter-rouge">plat</code>을 선언한 뒤 포인터 <code class="language-plaintext highlighter-rouge">i</code>, <code class="language-plaintext highlighter-rouge">j</code>를 선언하고 <code class="language-plaintext highlighter-rouge">i&lt;n and j&lt;n</code> 일때 룹을 돈다</li>
+  <li><code class="language-plaintext highlighter-rouge">n[i]</code> 와 <code class="language-plaintext highlighter-rouge">m[j]</code>을 비교해서
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">n[i] &lt;= m[j]</code>라면 <code class="language-plaintext highlighter-rouge">plat</code>의 개수를 1 더하고 <code class="language-plaintext highlighter-rouge">i</code>를 1 더해준다</li>
+      <li>반대라면 <code class="language-plaintext highlighter-rouge">plat</code>을 1 빼주고 <code class="language-plaintext highlighter-rouge">j</code>를 1 더해준다</li>
+    </ul>
+  </li>
+  <li>룹이 종료되면 <code class="language-plaintext highlighter-rouge">plat</code>이 답이다</li>
+</ol>
+
+<h1 id="python">Python</h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_min_platform</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">dep</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+    <span class="c1"># 도착 시간 arr와 출발 시간 dep을 정렬한다
+</span>    <span class="n">arr</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">dep</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+
+    <span class="c1"># counter들을 선언한다
+</span>    <span class="n">plat</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">min_num_of_plat</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># Loop 을 돈다
+</span>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">:</span>
+        <span class="c1"># 도착 시간이 출발 시간보다 낮거나 같으면
+</span>        <span class="c1"># 출발 하는 기차와 도착한 기차가 정차할
+</span>        <span class="c1"># 플랫폼의 개수가 늘어난다
+</span>        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">dep</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">plat</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dep</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="c1"># 반대는 줄어든다
+</span>            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">plat</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="c1"># min_num_of_plat의 값을 갱신해준다
+</span>        <span class="k">if</span> <span class="n">plat</span> <span class="o">&gt;</span> <span class="n">min_num_of_plat</span><span class="p">:</span>
+            <span class="n">min_num_of_plat</span> <span class="o">=</span> <span class="n">plat</span>
+
+    <span class="k">return</span> <span class="n">min_num_of_plat</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">arrival</span> <span class="o">=</span> <span class="p">[</span><span class="mi">900</span><span class="p">,</span> <span class="mi">940</span><span class="p">,</span> <span class="mi">950</span><span class="p">,</span> <span class="mi">1100</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">1800</span><span class="p">]</span>
+    <span class="n">departure</span> <span class="o">=</span> <span class="p">[</span><span class="mi">910</span><span class="p">,</span> <span class="mi">1200</span><span class="p">,</span> <span class="mi">1120</span><span class="p">,</span> <span class="mi">1130</span><span class="p">,</span> <span class="mi">1900</span><span class="p">,</span> <span class="mi">2000</span><span class="p">]</span>
+
+    <span class="k">print</span><span class="p">(</span>
+        <span class="s">"Min number of platform required and any given time is:"</span><span class="p">,</span>
+        <span class="n">find_min_platform</span><span class="p">(</span><span class="n">arrival</span><span class="p">,</span> <span class="n">departure</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="c1"># Min number of platform required and any given time is: 3
+</span></code></pre></div></div>
+
+<p>기차와 플랫폼으로 예시를 들었지만 아무거나 가능하다. 렌터카 수, 식당 테이블 수, 최소 가동 돼야 할 기계/프로그램 등등</p>
+
+<p>시간 복잡도는:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">O(n)</code> 만큼 loop이 돌고, <code class="language-plaintext highlighter-rouge">O(n log n)</code>으로 Sort을 한다</li>
+  <li>전체 시간 복잡도는 <code class="language-plaintext highlighter-rouge">O(n log n)</code></li>
+</ul>
+
+<p>Space complexity는 <code class="language-plaintext highlighter-rouge">O(1)</code>이다</p>
+
+<p><strong>같은 문제를 <code class="language-plaintext highlighter-rouge">O(n)</code> 시간 복잡도와 <code class="language-plaintext highlighter-rouge">O(n)</code> 공간 복잡도로 풀 수 있다</strong></p>
+
+<h4 id="방법-1">방법</h4>
+<ol>
+  <li>출발과 도착시간의 일시가 같다면, <code class="language-plaintext highlighter-rouge">O(n)</code>으로 계산이 가능하다</li>
+  <li>각 분 마다 필요한 플랫폼의 개수를 계속 세면 된다</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_min_platform</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">dep</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+    <span class="n">arr</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">dep</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+
+    <span class="c1"># 각 분마다 platform의 개수를 세는 배열
+</span>    <span class="n">platforms</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2361</span> <span class="c1"># 2361은 시간:분 최대치다
+</span>    <span class="n">required_plat</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="c1"># 기차가 들어오면 플랫폼이 필요하니 1을 더 하자
+</span>        <span class="n">platforms</span><span class="p">[</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># 기차가 나가면 플랫폼에서 제외하자
+</span>        <span class="n">platforms</span><span class="p">[</span><span class="n">dep</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+    
+    <span class="c1"># 하루에 최대 플랫폼 개수가 몇 인지 세자
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">platforms</span><span class="p">)):</span>
+
+        <span class="c1"># 누적 합계를 계속 세자
+</span>        <span class="n">platforms</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">platforms</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">required_plat</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">required_plat</span><span class="p">,</span> <span class="n">platforms</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">required_plat</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">arrival</span> <span class="o">=</span> <span class="p">[</span><span class="mi">900</span><span class="p">,</span> <span class="mi">940</span><span class="p">,</span> <span class="mi">950</span><span class="p">,</span> <span class="mi">1100</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">1800</span><span class="p">]</span>
+    <span class="n">departure</span> <span class="o">=</span> <span class="p">[</span><span class="mi">910</span><span class="p">,</span> <span class="mi">1200</span><span class="p">,</span> <span class="mi">1120</span><span class="p">,</span> <span class="mi">1130</span><span class="p">,</span> <span class="mi">1900</span><span class="p">,</span> <span class="mi">2000</span><span class="p">]</span>
+
+    <span class="k">print</span><span class="p">(</span>
+        <span class="s">"Min number of platform required and any given time is:"</span><span class="p">,</span>
+        <span class="n">find_min_platform</span><span class="p">(</span><span class="n">arrival</span><span class="p">,</span> <span class="n">departure</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="c1"># Min number of platform required and any given time is: 3
+</span></code></pre></div></div>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Min-num-of-x-required-for-y%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+Min+num+of+x+required+for+y%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Min-num-of-x-required-for-y%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Min-num-of-x-required-for-y%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+Min+num+of+x+required+for+y&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Min-num-of-x-required-for-y%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+  <div class="page-comments">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/';
+        this.page.identifier = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://json9512-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> [프로젝트] Medium 클론 백엔드를 만들어보자 -10
+
+      </span>
+    </a>
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+
+<script>
+// http://docs.mathjax.org/en/latest/upgrading/v2.html
+MathJax = {
+  tex: {
+      tags: "ams"    // eq numbering options: none, ams, all
+  },
+  options: {
+    renderActions: {
+      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
+      find: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </body>
+
+</html>

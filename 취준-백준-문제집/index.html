@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>[취준] 백준 문제집 | json9512’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="[취준] 백준 문제집" />
+<meta name="author" content="json9512" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="2021 코딩테스트 준비 기초" />
+<meta property="og:description" content="2021 코딩테스트 준비 기초" />
+<link rel="canonical" href="https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C%EC%A7%91/" />
+<meta property="og:url" content="https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C%EC%A7%91/" />
+<meta property="og:site_name" content="json9512’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[취준] 백준 문제집" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[취준] 백준 문제집","dateModified":"2021-01-14T00:00:00+00:00","datePublished":"2021-01-14T00:00:00+00:00","description":"2021 코딩테스트 준비 기초","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C%EC%A7%91/"},"url":"https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C%EC%A7%91/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="stylesheet" href="/blog/assets/css/skins/dark.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="json9512&#39;s Blog" href="/blog/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://json9512.github.io/blog/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://json9512.github.io/blog/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://json9512.github.io/blog/images/favicon-16x16.png">
+<link rel="manifest" href="https://json9512.github.io/blog/images/site.webmanifest">
+<link rel="shortcut icon" href="https://json9512.github.io/blog/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://json9512.github.io/blog/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  취준-백준-문제집">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/blog/about/">About</a></li><li><a href="/blog/posts/">Posts</a></li><li><a href="/blog/tags/">Tags</a></li><li><a href="/blog/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/blog/" class="site-logo" rel="home" title="json9512's Blog">
+        <img src="/blog/images/logo.png" class="site-logo-img animated fadeInDown" alt="json9512's Blog">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/blog/">json9512's Blog</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description"></p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">[취준] 백준 문제집
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4" class="author-avatar u-photo" alt="json9512"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">json9512</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
+          </li></ul>
+
+<span class="read-time">8 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-01-14T00:00:00+00:00"><a class="u-url" href="">January 14, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/blog/tags/#%EB%B0%B1%EC%A4%80" title="Pages tagged 백준" rel="tag">백준</a></li><li class="page-taxonomy"><a href="/blog/tags/#%EC%B7%A8%EC%A4%80" title="Pages tagged 취준" rel="tag">취준</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p><a href="https://code.plus/course/51">2021 코딩테스트 준비 기초</a></p>
+
+<p><a href="https://code.plus/course/52">2021 코딩테스트 준비 연습</a></p>
+
+<p><a href="https://code.plus/course/53">2021 코딩테스트 준비 문제</a></p>
+
+<h1 id="2021-코딩테스트-준비-기초">2021 코딩테스트 준비 기초</h1>
+<h4 id="수학">수학</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10430">10430번 - 나머지</a></td>
+      <td style="text-align: center"><a href="/blog/알고리즘-백준-10430번/">풀이</a></td>
+      <td style="text-align: center">✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/4375">4375번 - 1</a></td>
+      <td style="text-align: center"><a href="/blog/알고리즘-백준-4375번/">풀이</a></td>
+      <td style="text-align: center">✔️</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1037">1037번 - 약수</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17427">17427번 - 약수의 합 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17425">17425번 - 약수의 합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2609">2609번 - 최대공약수와 최소공배수</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1978">1978번 - 소수 찾기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1929">1929번 - 소수 구하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/6588">6588번 - 골드바흐의 추측</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스">브루트 포스</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2309">2309번 - 일곱 난쟁이</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/3085">3085번 - 사탕 게임</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1476">1476번 - 날짜 계산</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1107">1107번 - 리모컨</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14500">14500번 - 테트로미노</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/6064">6064번 - 카잉 달력</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1748">1748번 - 수 이어 쓰기 1</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/9095">9095번 - 1, 2, 3 더하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스---n-과-m">브루트 포스 - N 과 M</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15649">15649번 - N과 M (1)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15650">15650번 - N과 M (2)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15651">15651번 - N과 M (3)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15652">15652번 - N과 M (4)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15654">15654번 - N과 M (5)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15655">15655번 - N과 M (6)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15656">15656번 - N과 M (7)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15657">15657번 - N과 M (8)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/18290">18290번 - NM과 K (1)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스---재귀">브루트 포스 - 재귀</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/9095">9095번 - 1, 2, 3 더하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1759">1759번 - 암호 만들기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14501">14501번 - 퇴사</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14889">14889번 - 스타트와 링크</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15661">15661번 - 링크와 스타트</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2529">2529번 - 부등호</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1248">1248번 - 맞춰봐</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스---순열">브루트 포스 - 순열</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10972">10972번 - 다음 순열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10973">10973번 - 이전 순열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10974">10974번 - 모든 순열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10819">10819번 - 차이를 최대로</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10971">10971번 - 외판원 순회 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/6603">6603번 - 로또</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스---비트-마스크">브루트 포스 - 비트 마스크</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11723">11723번 - 집합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1182">1182번 - 부분수열의 합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14889">14889번 - 스타트와 링크</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14391">14391번 - 종이 조각</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="다이나믹-프로그래밍-part-1">다이나믹 프로그래밍 part 1</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1463">1463번 - 1로 만들기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11726">11726번 - 2×n 타일링</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11727">11727번 - 2×n 타일링 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/9095">9095번 - 1, 2, 3 더하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11052">11052번 - 카드 구매하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16194">16194번 - 카드 구매하기 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15990">15990번 - 1, 2, 3 더하기 5</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10844">10844번 - 쉬운 계단 수</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2193">2193번 - 이친수</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11053">11053번 - 가장 긴 증가하는 부분 수열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14002">14002번 - 가장 긴 증가하는 부분 수열 4</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1912">1912번 - 연속합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1699">1699번 - 제곱수의 합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14501">14501번 - 퇴사</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2225">2225번 - 합분해</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="다이나믹-프로그래밍-part-2">다이나믹 프로그래밍 part 2</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15988">15988번 - 1, 2, 3 더하기 3</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1149">1149번 - RGB거리</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1309">1309번 - 동물원</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11057">11057번 - 오르막 수</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2156">2156번 - 포도주 시식</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1932">1932번 - 정수 삼각형</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11055">11055번 - 가장 큰 증가 부분 수열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11722">11722번 - 가장 긴 감소하는 부분 수열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11054">11054번 - 가장 긴 바이토닉 부분 수열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/13398">13398번 - 연속합 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2133">2133번 - 타일 채우기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="큐와-그래프">큐와 그래프</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10845">10845번 - 큐</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10866">10866번 - 덱</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/13023">13023번 - ABCDE</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1260">1260번 - DFS와 BFS</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11724">11724번 - 연결 요소의 개수</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1707">1707번 - 이분 그래프</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2667">2667번 - 단지번호붙이기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2178">2178번 - 미로 탐색</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/7576">7576번 - 토마토</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/7562">7562번 - 나이트의 이동</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="bfs">BFS</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1697">1697번 - 숨바꼭질</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/13913">13913번 - 숨바꼭질 4</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14226">14226번 - 이모티콘</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/13549">13549번 - 숨바꼭질 3</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1261">1261번 - 알고스팟</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="시뮬레이션과-구현">시뮬레이션과 구현</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16935">16935번 - 배열 돌리기 3</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16926">16926번 - 배열 돌리기 1</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16927">16927번 - 배열 돌리기 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14499">14499번 - 주사위 굴리기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14890">14890번 - 경사로</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15662">15662번 - 톱니바퀴 (2)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14503">14503번 - 로봇 청소기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15685">15685번 - 드래곤 커브</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2290">2290번 - LCD Test</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16931">16931번 - 겉넓이 구하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1917">1917번 - 정육면체 전개도</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16967">16967번 - 배열 복원하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/20327">20327번 - 배열 돌리기 6</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/20055">20055번 - 컨베이어 벨트 위의 로봇</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="2021-코딩테스트-준비-연습">2021 코딩테스트 준비 연습</h1>
+
+<h4 id="브루트-포스---재귀-1">브루트 포스 - 재귀</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/6603">6603번 - 로또</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1182">1182번 - 부분수열의 합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14225">14225번 - 부분수열의 합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14888">14888번 - 연산자 끼워넣기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15658">15658번 - 연산자 끼워넣기 (2)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14500">14500번 - 테트로미노</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16198">16198번 - 에너지 모으기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/9663">9663번 - N-Queen</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2580">2580번 - 스도쿠</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/4574">4574번 - 스도미노쿠</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스---순열-1">브루트 포스 - 순열</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2529">2529번 - 부등호</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1339">1339번 - 단어 수학</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14888">14888번 - 연산자 끼워넣기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14889">14889번 - 스타트와 링크</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스---비트마스크">브루트 포스 - 비트마스크</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14225">14225번 - 부분수열의 합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1062">1062번 - 가르침</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/13460">13460번 - 구슬 탈출 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12100">12100번 - 2048 (Easy)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스---기타">브루트 포스 - 기타</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2003">2003번 - 수들의 합 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1806">1806번 - 부분합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1644">1644번 - 소수의 연속합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1208">1208번 - 부분수열의 합 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2143">2143번 - 두 배열의 합</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="그래프-알고리즘">그래프 알고리즘</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16929">16929번 - Two Dots</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16947">16947번 - 서울 지하철 2호선</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12946">12946번 - 육각 보드</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16940">16940번 - BFS 스페셜 저지</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16964">16964번 - DFS 스페셜 저지</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="bfs-알고리즘">BFS 알고리즘</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16928">16928번 - 뱀과 사다리 게임</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16948">16948번 - 데스 나이트</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14502">14502번 - 연구소</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12886">12886번 - 돌 그룹</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2206">2206번 - 벽 부수고 이동하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16946">16946번 - 벽 부수고 이동하기 4</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14442">14442번 - 벽 부수고 이동하기 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16933">16933번 - 벽 부수고 이동하기 3</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16954">16954번 - 움직이는 미로 탈출</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16236">16236번 - 아기 상어</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/6087">6087번 - 레이저 통신</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1963">1963번 - 소수 경로</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10026">10026번 - 적록색약</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14395">14395번 - 4연산</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/5014">5014번 - 스타트링크</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/9376">9376번 - 탈옥</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1600">1600번 - 말이 되고픈 원숭이</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17086">17086번 - 아기 상어 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/4991">4991번 - 로봇 청소기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2234">2234번 - 성곽</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12906">12906번 - 새로운 하노이 탑</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17141">17141번 - 연구소 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17142">17142번 - 연구소 3</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="다이내믹-프로그래밍">다이내믹 프로그래밍</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11048">11048번 - 이동하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11060">11060번 - 점프 점프</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10942">10942번 - 팰린드롬?</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15989">15989번 - 1, 2, 3 더하기 4</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11066">11066번 - 파일 합치기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12865">12865번 - 평범한 배낭</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1495">1495번 - 기타리스트</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12869">12869번 - 뮤탈리스크</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10422">10422번 - 괄호</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2293">2293번 - 동전 1</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2294">2294번 - 동전 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11058">11058번 - 크리보드</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/9251">9251번 - LCS</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/9252">9252번 - LCS 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/5582">5582번 - 공통 부분 문자열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/5557">5557번 - 1학년</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="시뮬레이션과-구현-1">시뮬레이션과 구현</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16234">16234번 - 인구 이동</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16235">16235번 - 나무 재테크</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17144">17144번 - 미세먼지 안녕!</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17143">17143번 - 낚시왕</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17140">17140번 - 이차원 배열과 연산</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17780">17780번 - 새로운 게임</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17837">17837번 - 새로운 게임 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17822">17822번 - 원판 돌리기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16939">16939번 - 2×2×2 큐브</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16974">16974번 - 레벨 햄버거</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/20061">20061번 - 모노미노도미노 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/19236">19236번 - 청소년 상어</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/19237">19237번 - 어른 상어</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="2021-코딩테스트-준비-문제">2021 코딩테스트 준비 문제</h1>
+
+<h4 id="브루트-포스-파트-1">브루트 포스 파트 1</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16968">16968번 - 차량 번호판 1</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16917">16917번 - 양념 반 후라이드 반</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16922">16922번 - 로마 숫자 만들기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16924">16924번 - 십자가 찾기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16936">16936번 - 나3곱2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16937">16937번 - 두 스티커</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16938">16938번 - 캠프 준비</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16943">16943번 - 숫자 재배치</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16637">16637번 - 괄호 추가하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15683">15683번 - 감시</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17088">17088번 - 등차수열 변환</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15686">15686번 - 치킨 배달</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2210">2210번 - 숫자판 점프</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2422">2422번 - 한윤정이 이탈리아에 가서 아이스크림을 사먹는데</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/9944">9944번 - NxM 보드 완주하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17089">17089번 - 세 친구</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17406">17406번 - 배열 돌리기 4</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17135">17135번 - 캐슬 디펜스</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17281">17281번 - ⚾</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스-파트-2">브루트 포스 파트 2</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17779">17779번 - 게리맨더링 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17070">17070번 - 파이프 옮기기 1</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17069">17069번 - 파이프 옮기기 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16638">16638번 - 괄호 추가하기 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17085">17085번 - 십자가 2개 놓기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17825">17825번 - 주사위 윷놀이</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16987">16987번 - 계란으로 계란치기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16988">16988번 - Baaaaaaaaaduk2 (Easy)</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15684">15684번 - 사다리 조작</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/4902">4902번 - 삼각형의 값</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16945">16945번 - 매직 스퀘어로 변경하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16953">16953번 - A → B</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17136">17136번 - 색종이 붙이기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17471">17471번 - 게리맨더링</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="브루트-포스-파트-3">브루트 포스 파트 3</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16985">16985번 - Maaaaaaaaaze</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17090">17090번 - 미로 탈출하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12931">12931번 - 두 배 더하기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16958">16958번 - 텔레포트</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12908">12908번 - 텔레포트 3</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16957">16957번 - 체스판 위의 공</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16971">16971번 - 배열 B의 값</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17472">17472번 - 다리 만들기 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14056">14056번 - K번째 좋은 문자열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="그래프-알고리즘-1">그래프 알고리즘</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2252">2252번 - 줄 세우기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2056">2056번 - 작업</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14263">14263번 - 카드 놓기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="bfs-알고리즘-1">BFS 알고리즘</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/8111">8111번 - 0과 1</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/17071">17071번 - 숨바꼭질 5</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1525">1525번 - 퍼즐</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16973">16973번 - 직사각형 탈출</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1175">1175번 - 배달</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16959">16959번 - 체스판 여행 1</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16952">16952번 - 체스판 여행 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12851">12851번 - 숨바꼭질 2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/9328">9328번 - 열쇠</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/16920">16920번 - 확장 게임</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15653">15653번 - 구슬 탈출 4</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/15558">15558번 - 점프 게임</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1385">1385번 - 벌집</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="다이내믹-프로그래밍-1">다이내믹 프로그래밍</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1695">1695번 - 팰린드롬 만들기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/11049">11049번 - 행렬 곱셈 순서</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12969">12969번 - ABC</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/14238">14238번 - 출근 기록</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12026">12026번 - BOJ 거리</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12996">12996번 - Acka</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/3012">3012번 - 올바른 괄호 문자열</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2616">2616번 - 소형기관차</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1413">1413번 - 박스 안의 열쇠</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/10564">10564번 - 팔굽혀펴기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1970">1970번 - 건배</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2163">2163번 - 초콜릿 자르기</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/12872">12872번 - 플레이리스트</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="시뮬레이션과-구현-2">시뮬레이션과 구현</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">문제</th>
+      <th style="text-align: center">풀이</th>
+      <th style="text-align: center">완료</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1913">1913번 - 달팽이</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1952">1952번 - 달팽이2</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1959">1959번 - 달팽이3</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/4577">4577번 - 소코반</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2064">2064번 - IP 주소</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/3107">3107번 - IPv6</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/2571">2571번 - 색종이 - 3</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/1089">1089번 - 스타트링크 타워</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/20056">20056번 - 마법사 상어와 파이어볼</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/20057">20057번 - 마법사 상어와 토네이도</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/20058">20058번 - 마법사 상어와 파이어스톰</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/20184">20184번 - BOJ 대회 스코어보드</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.acmicpc.net/problem/5373">5373번 - 큐빙</a></td>
+      <td style="text-align: center"><a href="">풀이</a></td>
+      <td style="text-align: center">❌</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%25B7%25A8%25EC%25A4%2580-%25EB%25B0%25B1%25EC%25A4%2580-%25EB%25AC%25B8%25EC%25A0%259C%25EC%25A7%2591%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5B%EC%B7%A8%EC%A4%80%5D+%EB%B0%B1%EC%A4%80+%EB%AC%B8%EC%A0%9C%EC%A7%91%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%25B7%25A8%25EC%25A4%2580-%25EB%25B0%25B1%25EC%25A4%2580-%25EB%25AC%25B8%25EC%25A0%259C%25EC%25A7%2591%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%25B7%25A8%25EC%25A4%2580-%25EB%25B0%25B1%25EC%25A4%2580-%25EB%25AC%25B8%25EC%25A0%259C%25EC%25A7%2591%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%5B%EC%B7%A8%EC%A4%80%5D+%EB%B0%B1%EC%A4%80+%EB%AC%B8%EC%A0%9C%EC%A7%91&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%25B7%25A8%25EC%25A4%2580-%25EB%25B0%25B1%25EC%25A4%2580-%25EB%25AC%25B8%25EC%25A0%259C%25EC%25A7%2591%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+  <div class="page-comments">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C%EC%A7%91/';
+        this.page.identifier = 'https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C%EC%A7%91/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://json9512-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Search-algorithms/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> [알고리즘] Search algorithms
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        [프로젝트] Medium 클론 백엔드를 만들어보자 -10
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+
+<script>
+// http://docs.mathjax.org/en/latest/upgrading/v2.html
+MathJax = {
+  tex: {
+      tags: "ams"    // eq numbering options: none, ams, all
+  },
+  options: {
+    renderActions: {
+      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
+      find: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </body>
+
+</html>

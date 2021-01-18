@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>[알고리즘] Dynamic Programming | json9512’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="[알고리즘] Dynamic Programming" />
+<meta name="author" content="json9512" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="출처: GeeksforGeeks" />
+<meta property="og:description" content="출처: GeeksforGeeks" />
+<link rel="canonical" href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dynamic-Programming/" />
+<meta property="og:url" content="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dynamic-Programming/" />
+<meta property="og:site_name" content="json9512’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[알고리즘] Dynamic Programming" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[알고리즘] Dynamic Programming","dateModified":"2021-01-17T00:00:00+00:00","datePublished":"2021-01-17T00:00:00+00:00","description":"출처: GeeksforGeeks","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dynamic-Programming/"},"url":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dynamic-Programming/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="stylesheet" href="/blog/assets/css/skins/dark.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="json9512&#39;s Blog" href="/blog/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://json9512.github.io/blog/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://json9512.github.io/blog/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://json9512.github.io/blog/images/favicon-16x16.png">
+<link rel="manifest" href="https://json9512.github.io/blog/images/site.webmanifest">
+<link rel="shortcut icon" href="https://json9512.github.io/blog/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://json9512.github.io/blog/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  알고리즘-dynamic-programming">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/blog/about/">About</a></li><li><a href="/blog/posts/">Posts</a></li><li><a href="/blog/tags/">Tags</a></li><li><a href="/blog/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/blog/" class="site-logo" rel="home" title="json9512's Blog">
+        <img src="/blog/images/logo.png" class="site-logo-img animated fadeInDown" alt="json9512's Blog">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/blog/">json9512's Blog</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description"></p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">[알고리즘] Dynamic Programming
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4" class="author-avatar u-photo" alt="json9512"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">json9512</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
+          </li></ul>
+
+<span class="read-time">2 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-01-17T00:00:00+00:00"><a class="u-url" href="">January 17, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/blog/tags/#algorithm" title="Pages tagged algorithm" rel="tag">algorithm</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>출처: <a href="https://www.geeksforgeeks.org/overlapping-subproblems-property-in-dynamic-programming-dp-1/">GeeksforGeeks</a></p>
+
+<p>다이나믹 프로그래밍에 대해 알아보자</p>
+
+<p>다이나믹 프로그래밍이란 복잡한 문제를 더 작은 문제로 쪼개서 최적의 해를 구하는 방법이다. 작은 문제들의 답을 저장하여 재계산을 하지 않는 것이 중요하다.</p>
+
+<h4 id="그리디-알고리즘과-다이나믹-프로그래밍의-다른-점">그리디 알고리즘과 다이나믹 프로그래밍의 다른 점?</h4>
+<p>그리디 알고리즘은 <em>작은 문제</em>에서 최적의 답안을 찾아서 <em>복잡한 문제</em>를 다 풀 때까지 반복하는 것이다. 그래서 작은 문제에서 최적의 답을 찾았다면 다른 선택사항은 고려하지 않는다. 복잡한 문제를 전체적으로 봤을 때 최적의 답이 안 나올 수 있다.</p>
+
+<p>반면 다이나믹 프로그래밍은 <em>작은 문제</em>를 해결 할 때 이전에 풀었던 <em>작은 문제</em>의 답을 불러올 수 있기 때문에 다른 선택사항들도 고려한다. 즉 다이나믹 프로그래밍으로 문제를 풀게 되면 <em>복잡한 문제</em>를 전체적으로 보았을 때 가장 최적의 답안이 나온다.</p>
+
+<p>예를 들면, A에서 B로가는 가장 최단 거리를 계산하는 문제라고 가정해보자.</p>
+
+<p>그래프는 다음과 같은 형식이다</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># A --2- C ---
+# |           1
+# 1           |
+# |           v
+# D --- 5 --- B
+</span></code></pre></div></div>
+
+<p>여기서 그리디 알고리즘을 사용하면, 현재 위치에서 가장 작은 거리 값을 반복해서 고르기 때문에 최단 거리는 <code class="language-plaintext highlighter-rouge">A-&gt;D (1) + D-&gt;B (5) = 6</code>이 된다.</p>
+
+<p>하지만 다이나믹 프로그래밍을 사용하면 <code class="language-plaintext highlighter-rouge">A-&gt;C (2) + C-&gt;B (1) = 3</code>이 되면서 원했던 최단 거리를 구할 수 있게 된다.</p>
+
+<h1 id="언제-다이나믹-프로그래밍을-쓸-수-있나">언제 다이나믹 프로그래밍을 쓸 수 있나?</h1>
+<p>주어진 문제에 아래의 3가지 특징이 있다면 다이나믹 프로그래밍으로 풀 수 있다.</p>
+<ol>
+  <li>Overlapping sub-problems: 동일한 작은 문제를 지속적으로 풀어야 하는 상황이 있을 때</li>
+  <li>Optimal substructure: 문제의 최적의 해결법에 작은 문제의 최적의 해결법이 포함이 될 때</li>
+  <li>Simple sub problems: 주어진 복잡한 문제를 같은 형태의 더 작은 문제로 나눌 수 있어야 한다</li>
+</ol>
+
+<h1 id="memoization-과-tabulation">Memoization 과 Tabulation</h1>
+<p>Memoization을 사용하면 Top-down 방식으로 다이내믹 프로그래밍을 구현할 수 있다.</p>
+
+<p>방법은 다음과 같다.</p>
+
+<ol>
+  <li>작은 문제들의 해결안을 담을 lookup table을 만든다</li>
+  <li>작은 문제들을 해결 할 때 마다,
+    <ul>
+      <li>현재 작은 문제가 lookup table에 없으면
+        <ul>
+          <li>작은 문제를 해결한 뒤 lookup table에 저장한다</li>
+        </ul>
+      </li>
+      <li>있으면 해결 값을 불러와서 사용한다</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Fibonacci 수열을 Memoization을 활용해서 사용하면 다음과 같다</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lookup</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">lookup</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+    
+    <span class="c1"># lookup table에 계산된 값이 없으면, 현재 문제를 
+</span>    <span class="c1"># 계산해서 넣어 준다
+</span>    <span class="k">if</span> <span class="n">lookup</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">lookup</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">lookup</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">lookup</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">lookup</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">34</span>
+
+    <span class="c1"># lookup table 선언
+</span>    <span class="n">lookup</span> <span class="o">=</span> <span class="p">[</span><span class="bp">None</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lookup</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Tabulation 방식을 사용하면 Bottom-Up 방식으로 다이내믹 프로그래밍을 구현 할 수 있다.</p>
+
+<p>Memoization과 다른 점은, Tabulation 방식은 답에 도달 할 때까지 계속해서 sub-problem을 구하는 것이다.
+답에 도달 했다면, table에 마지막 값이 답이 되는 것이다.</p>
+
+<p>같은 Fibonacci 수열 문제를 Tabulation으로 구현하면 다음과 같다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># table 선언
+</span>    <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># 피보나치 수열의 base case 작성
+</span>    <span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># 답에 도달 할 때까지 계속해서 문제를 푼다
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+        
+    <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">34</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Memoization과 Tabulation중 어떤 것을 써야하나?</p>
+
+<ul>
+  <li>Memoization은 재귀적 호출을 기반으로 한다</li>
+  <li>Tabulation은 Iterative하게 문제를 푼다</li>
+  <li>Memoization은 굳이 모든 sub problem의 해결안을 구하지 않는다. 필요한 부분만 구하기 떄문이다</li>
+  <li>Tabulation은 모든 sub problem의 해결안을 구한다</li>
+  <li>Memoization의 재귀 호출은 컴퓨터가 실제로 스택내에 새로운 메모리 위치에 함수와 인자 값을 저장하기 때문에 같은 조건의 iterative 한 방식보다 더 느릴 수 있다</li>
+</ul>
+
+<p>알아서 상황에 맞게 쓰도록 하자.</p>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Dynamic-Programming%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+Dynamic+Programming%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Dynamic-Programming%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Dynamic-Programming%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+Dynamic+Programming&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-Dynamic-Programming%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+  <div class="page-comments">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dynamic-Programming/';
+        this.page.identifier = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dynamic-Programming/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://json9512-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-DFS,-BFS/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> [알고리즘] BFS, DFS
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-10430%EB%B2%88/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        [알고리즘] 백준 10430번
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+
+<script>
+// http://docs.mathjax.org/en/latest/upgrading/v2.html
+MathJax = {
+  tex: {
+      tags: "ams"    // eq numbering options: none, ams, all
+  },
+  options: {
+    renderActions: {
+      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
+      find: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </body>
+
+</html>

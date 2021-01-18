@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-18T10:56:10+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[알고리즘] 백준 10430번</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-10430%EB%B2%88/" rel="alternate" type="text/html" title="[알고리즘] 백준 10430번" /><published>2021-01-18T00:00:00+00:00</published><updated>2021-01-18T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-%EB%B0%B1%EC%A4%80%2010430%EB%B2%88</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-10430%EB%B2%88/">&lt;p&gt;주어진 설명을 따라서 출력하면 된다&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-18T12:12:15+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[알고리즘] 백준 10430번</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-10430%EB%B2%88/" rel="alternate" type="text/html" title="[알고리즘] 백준 10430번" /><published>2021-01-18T00:00:00+00:00</published><updated>2021-01-18T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-%EB%B0%B1%EC%A4%80%2010430%EB%B2%88</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-10430%EB%B2%88/">&lt;p&gt;주어진 설명을 따라서 출력하면 된다&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
 
@@ -193,7 +193,114 @@
 
 &lt;p&gt;DFS를 그림으로 보면 다음과 같다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/dfs1.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks, 잔재미코딩</summary></entry><entry><title type="html">[알고리즘] Min num of x required for y</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/" rel="alternate" type="text/html" title="[알고리즘] Min num of x required for y" /><published>2021-01-16T00:00:00+00:00</published><updated>2021-01-16T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Min%20num%20of%20x%20required%20for%20y</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/dfs1.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks, 잔재미코딩</summary></entry><entry><title type="html">[알고리즘] Dynamic Programming</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dynamic-Programming/" rel="alternate" type="text/html" title="[알고리즘] Dynamic Programming" /><published>2021-01-17T00:00:00+00:00</published><updated>2021-01-17T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Dynamic%20Programming</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Dynamic-Programming/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/overlapping-subproblems-property-in-dynamic-programming-dp-1/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;다이나믹 프로그래밍에 대해 알아보자&lt;/p&gt;
+
+&lt;p&gt;다이나믹 프로그래밍이란 복잡한 문제를 더 작은 문제로 쪼개서 최적의 해를 구하는 방법이다. 작은 문제들의 답을 저장하여 재계산을 하지 않는 것이 중요하다.&lt;/p&gt;
+
+&lt;h4 id=&quot;그리디-알고리즘과-다이나믹-프로그래밍의-다른-점&quot;&gt;그리디 알고리즘과 다이나믹 프로그래밍의 다른 점?&lt;/h4&gt;
+&lt;p&gt;그리디 알고리즘은 &lt;em&gt;작은 문제&lt;/em&gt;에서 최적의 답안을 찾아서 &lt;em&gt;복잡한 문제&lt;/em&gt;를 다 풀 때까지 반복하는 것이다. 그래서 작은 문제에서 최적의 답을 찾았다면 다른 선택사항은 고려하지 않는다. 복잡한 문제를 전체적으로 봤을 때 최적의 답이 안 나올 수 있다.&lt;/p&gt;
+
+&lt;p&gt;반면 다이나믹 프로그래밍은 &lt;em&gt;작은 문제&lt;/em&gt;를 해결 할 때 이전에 풀었던 &lt;em&gt;작은 문제&lt;/em&gt;의 답을 불러올 수 있기 때문에 다른 선택사항들도 고려한다. 즉 다이나믹 프로그래밍으로 문제를 풀게 되면 &lt;em&gt;복잡한 문제&lt;/em&gt;를 전체적으로 보았을 때 가장 최적의 답안이 나온다.&lt;/p&gt;
+
+&lt;p&gt;예를 들면, A에서 B로가는 가장 최단 거리를 계산하는 문제라고 가정해보자.&lt;/p&gt;
+
+&lt;p&gt;그래프는 다음과 같은 형식이다&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# A --2- C ---
+# |           1
+# 1           |
+# |           v
+# D --- 5 --- B
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여기서 그리디 알고리즘을 사용하면, 현재 위치에서 가장 작은 거리 값을 반복해서 고르기 때문에 최단 거리는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A-&amp;gt;D (1) + D-&amp;gt;B (5) = 6&lt;/code&gt;이 된다.&lt;/p&gt;
+
+&lt;p&gt;하지만 다이나믹 프로그래밍을 사용하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A-&amp;gt;C (2) + C-&amp;gt;B (1) = 3&lt;/code&gt;이 되면서 원했던 최단 거리를 구할 수 있게 된다.&lt;/p&gt;
+
+&lt;h1 id=&quot;언제-다이나믹-프로그래밍을-쓸-수-있나&quot;&gt;언제 다이나믹 프로그래밍을 쓸 수 있나?&lt;/h1&gt;
+&lt;p&gt;주어진 문제에 아래의 3가지 특징이 있다면 다이나믹 프로그래밍으로 풀 수 있다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Overlapping sub-problems: 동일한 작은 문제를 지속적으로 풀어야 하는 상황이 있을 때&lt;/li&gt;
+  &lt;li&gt;Optimal substructure: 문제의 최적의 해결법에 작은 문제의 최적의 해결법이 포함이 될 때&lt;/li&gt;
+  &lt;li&gt;Simple sub problems: 주어진 복잡한 문제를 같은 형태의 더 작은 문제로 나눌 수 있어야 한다&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;memoization-과-tabulation&quot;&gt;Memoization 과 Tabulation&lt;/h1&gt;
+&lt;p&gt;Memoization을 사용하면 Top-down 방식으로 다이내믹 프로그래밍을 구현할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;방법은 다음과 같다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;작은 문제들의 해결안을 담을 lookup table을 만든다&lt;/li&gt;
+  &lt;li&gt;작은 문제들을 해결 할 때 마다,
+    &lt;ul&gt;
+      &lt;li&gt;현재 작은 문제가 lookup table에 없으면
+        &lt;ul&gt;
+          &lt;li&gt;작은 문제를 해결한 뒤 lookup table에 저장한다&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;있으면 해결 값을 불러와서 사용한다&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Fibonacci 수열을 Memoization을 활용해서 사용하면 다음과 같다&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# lookup table에 계산된 값이 없으면, 현재 문제를 
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# 계산해서 넣어 준다
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# lookup table 선언
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Tabulation 방식을 사용하면 Bottom-Up 방식으로 다이내믹 프로그래밍을 구현 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;Memoization과 다른 점은, Tabulation 방식은 답에 도달 할 때까지 계속해서 sub-problem을 구하는 것이다.
+답에 도달 했다면, table에 마지막 값이 답이 되는 것이다.&lt;/p&gt;
+
+&lt;p&gt;같은 Fibonacci 수열 문제를 Tabulation으로 구현하면 다음과 같다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# table 선언
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# 피보나치 수열의 base case 작성
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# 답에 도달 할 때까지 계속해서 문제를 푼다
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Memoization과 Tabulation중 어떤 것을 써야하나?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Memoization은 재귀적 호출을 기반으로 한다&lt;/li&gt;
+  &lt;li&gt;Tabulation은 Iterative하게 문제를 푼다&lt;/li&gt;
+  &lt;li&gt;Memoization은 굳이 모든 sub problem의 해결안을 구하지 않는다. 필요한 부분만 구하기 떄문이다&lt;/li&gt;
+  &lt;li&gt;Tabulation은 모든 sub problem의 해결안을 구한다&lt;/li&gt;
+  &lt;li&gt;Memoization의 재귀 호출은 컴퓨터가 실제로 스택내에 새로운 메모리 위치에 함수와 인자 값을 저장하기 때문에 같은 조건의 iterative 한 방식보다 더 느릴 수 있다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;알아서 상황에 맞게 쓰도록 하자.&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[알고리즘] Min num of x required for y</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/" rel="alternate" type="text/html" title="[알고리즘] Min num of x required for y" /><published>2021-01-16T00:00:00+00:00</published><updated>2021-01-16T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Min%20num%20of%20x%20required%20for%20y</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Min-num-of-x-required-for-y/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; 라는 변수가 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;라는 변수에 의존할 때, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;가 필요한 최소 개수를 구하는 알고리즘&lt;/li&gt;
@@ -325,6 +432,400 @@
         &lt;span class=&quot;n&quot;&gt;find_min_platform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arrival&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;departure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;# Min number of platform required and any given time is: 3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -10</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -10" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%2010</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3/&quot;&gt;Medium 클론 백엔드를 만들어보자 -3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4/&quot;&gt;Medium 클론 백엔드를 만들어보자 -4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8/&quot;&gt;Medium 클론 백엔드를 만들어보자 -8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-9/&quot;&gt;Medium 클론 백엔드를 만들어보자 -9&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -10&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS로 서버를 배포 해봄&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;배포 과정을 자동화 시도&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;docker-이미지-배포-방법&quot;&gt;Docker 이미지 배포 방법&lt;/h1&gt;
+&lt;p&gt;현재까지는 Docker Hub에 이미지를 자동배포를 했었다. 하지만 전 포스트에서 AWS ECR로 이미지를 배포하는 방법을 알았으니 CI/CD에서도 AWS ECR로 자동 배포를 하려고 한다.&lt;/p&gt;
+
+&lt;p&gt;아마존 &lt;a href=&quot;https://aws.amazon.com/ko/blogs/containers/create-a-ci-cd-pipeline-for-amazon-ecs-with-github-actions-and-aws-codebuild-tests/&quot;&gt;블로그&lt;/a&gt; 글을 참고를 하자. 이미 잘 설명이 돼있다.&lt;/p&gt;
+
+&lt;p&gt;AWS 개인 정보를 secrets에 저장 시킨 뒤 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt;에서 AWS ECR로 이미지를 배포하도록 수정을 했다.&lt;/p&gt;
+
+&lt;h1 id=&quot;aws-배포-자동화&quot;&gt;AWS 배포 자동화&lt;/h1&gt;
+
+&lt;p&gt;하루 정도의 시간을 투자한 결과, Github Actions로 AWS에 서버 배포 자동화를 성공 시켰다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/awssetup.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/awssetup2.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;간략하게 하루 동안 삽질했던 문제점들을 나열하자면:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Github Actions workflow에서 Docker 이미지내로 환경변수 전달하기&lt;/li&gt;
+  &lt;li&gt;AWS RDS와 AWS EC2 연결하기&lt;/li&gt;
+  &lt;li&gt;AWS RDS와 AWS EC2내에 Docker 컨테이너와 연결하기&lt;/li&gt;
+  &lt;li&gt;새로운 commit push/pr 시, ECS에 기존 인스턴스가 남아 있어서 자동 배포 되지 않는 문제&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;해결-방법&quot;&gt;해결 방법&lt;/h3&gt;
+&lt;h4 id=&quot;1-github-actions-workflow에서-docker-이미지내로-환경변수-전달하기&quot;&gt;1. Github Actions workflow에서 Docker 이미지내로 환경변수 전달하기&lt;/h4&gt;
+
+&lt;p&gt;자동화를 많이 해본 적은 없지만 현재까지 자동화를 하면서 가장 문제를 많이 일으켰던 부분은 환경변수를 설정하는 일이다.&lt;/p&gt;
+
+&lt;p&gt;현재 이 포스트를 작성하는 시점, 고 코드는 AWS RDS에 연결하는 기능까지 구현하고 난 직후다. 개발을하다가 보면 여러 환경변수를 사용해서 중요한 정보들을 관리한다. 동시에 Github에 push될 때 중요한 정보가 노출이 되지 않게 해야한다.&lt;/p&gt;
+
+&lt;p&gt;여기서 말하는 중요한 정보란, 외부에 노출이 되었을 때 서버에 막대한 피해를 끼칠 수 있는 정보를 뜻한다. 예를 들면 관리자 비밀번호, 개인정보, 기타등등 있겠다.&lt;/p&gt;
+
+&lt;p&gt;수정 전 중요한 정보를 취급하는 방식은 다음과 같았다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 파일에 중요한 정보를 저장한다&lt;/li&gt;
+  &lt;li&gt;고 서버 내에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper&lt;/code&gt;라는 패키지를 써서 저장된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;파일에서 환경변수를 읽는다&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;을 작성하여 Github에 중요한 정보가 노출되지 않게 한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이렇게 정보를 관리하게되면 기존에 만들어 놓았던 Github Actions의 Workflow가 실패한다. 정확히는 각 OS에서 서버를 실행 시킬 때 문제가 생긴다. 이유는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;이 Github에 없기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/testfail.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이 문제를 해결하려면 다음과 같은 방식들이 있다:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;파일을 Github에 올려서 Github Actions가 쓸 수 있게함&lt;/li&gt;
+  &lt;li&gt;코드를 수정해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 의존성을 없애고, 환경변수를 Github secret에 저장함&lt;/li&gt;
+  &lt;li&gt;Dockerfile이나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt; workflow 파일에서 환경 변수를 담은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 파일을 생성함&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Github Actions workflow &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt;파일에서 환경변수를 Github에 노출하지 않고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;에 전달 하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; 내에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENV&lt;/code&gt;를 쓰면 된다. 하지만 나는 혹시 몰라서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt;로 필요한 변수들을 직접 다 생성해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;에 전달했다.&lt;/p&gt;
+
+&lt;p&gt;여러가지 시행착오 끝에 현재 해결안을 살펴보면 다음과 같다 (2번 방식을 택함).&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper&lt;/code&gt; 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;godotenv&lt;/code&gt; 패키지를 활용해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 파일 의존성을 없앴다&lt;/li&gt;
+  &lt;li&gt;Github Secrets에 환경변수 저장&lt;/li&gt;
+  &lt;li&gt;workflow yaml 파일에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.XXX&lt;/code&gt;로 호출&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; 을 빌드 할 때 환경변수를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt;로 주는 방식&lt;/li&gt;
+  &lt;li&gt;유닛 테스트에 환경변수가 제대로 로드되는지 확인하는 테스트를 작성했다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;위 수정사항을 반영하는 시작점이 되는 &lt;a href=&quot;https://github.com/json9512/mediumclone-backendwithgo/commit/8d14e0c57f47937d2ea0fd5113e5cc899961eb69&quot;&gt;commit&lt;/a&gt;이다. 그리고 테스트 결과를 보면 Workflow가 다시 잘 작동하는 것을 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/testsuccess.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위 유닛테스트는 CI/CD 파이프라인에서 코드만 테스트하는 것이다. 실제로 Docker 이미지가 생성된 후 컨테이너에서의 테스트는 하지 않았다. &lt;del&gt;지금은 하는 방법을 모른다&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;예시:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Github Secrets에 환경변수 설정:
+&lt;img src=&quot;/blog/images/githubsecretsexample.png&quot; class=&quot;align-left&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Workflow yaml에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.XXX&lt;/code&gt;로 호출:
+&lt;img src=&quot;/blog/images/dockerargsexample.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Dockerfile &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENV&lt;/code&gt; 사용해서 환경변수 사용:
+&lt;img src=&quot;/blog/images/dockerfileexample.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;물론 이보다 효율적인 방법이 있을 것이다. 가령 Github Actions &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;job&lt;/code&gt; 환경에 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;global&lt;/code&gt;하게 변수를 선언 하는 방법있다.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-aws-rds와-aws-ec2-연결하기&quot;&gt;2. AWS RDS와 AWS EC2 연결하기&lt;/h4&gt;
+&lt;p&gt;AWS RDS와 AWS EC2간 연결이 자동으로 될 거라고 생각했지만 아니었다.&lt;/p&gt;
+
+&lt;p&gt;기본적으로 AWS RDS를 만들 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Public Access&lt;/code&gt;가 가능하게 만들어야 외부에서 접속이 가능하다. 이 기능을 꺼 놓으면 같은 네트워크 안에 있는 instance들만 연결 할 수 있다고 한다.&lt;/p&gt;
+
+&lt;p&gt;그리고 포트 설정도 유심히 봐줘야한다. Postgresql 포트의 기본 값인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 사용했다.&lt;/p&gt;
+
+&lt;p&gt;이후 AWS RDS 와 AWS EC2의 보안 그룹에서 인바운드, 아웃바운드 규칙에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 통과 할 수 있게 설정을 해야한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;3-aws-rds와-aws-ec2내에-docker-컨테이너와-연결하기&quot;&gt;3. AWS RDS와 AWS EC2내에 Docker 컨테이너와 연결하기&lt;/h4&gt;
+&lt;p&gt;예상했던 것처럼 AWS RDS와 EC2내 Docker간 통신이 가장 큰 문제였다.&lt;/p&gt;
+
+&lt;p&gt;AWS RDS와 컨테이너가 성공적으로 연결이 되는 것을 확인하려면 사실 ec2 내에서 터미널로 확인해야한다.&lt;/p&gt;
+
+&lt;p&gt;다른 방법으로는 배포된 컨테이너가 잘 작동하는지 브라우저나 AWS 콘솔을 통해 확인하는 방법이 있다.&lt;/p&gt;
+
+&lt;p&gt;나는 브라우저와 콘솔을 주로 사용하다가 도저히 디버깅이 안돼서 EC2에 SSH로 연결 후 터미널로 디버깅을 했다.&lt;/p&gt;
+
+&lt;p&gt;알고봤더니 Dockerfile에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 열어 놓지 않아서 컨테이너 내에 Go 서버가 죽어있던 것이었다. (코드가 DB connection이 안되면 로그를 내뱉으면서 죽는 방식이기 때문이다)&lt;/p&gt;
+
+&lt;p&gt;Dockerfile에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 열어주고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;host&lt;/code&gt; EC2의 포트 역시 개방해주니 바로 해결됐다.&lt;/p&gt;
+
+&lt;p&gt;이 문제를 해결하는데 가장 오래 걸렸다.&lt;/p&gt;
+
+&lt;h4 id=&quot;4-새로운-commit-pushpr-시-ecs에-기존-인스턴스가-남아-있어서-자동-배포-되지-않는-문제&quot;&gt;4. 새로운 commit push/pr 시, ECS에 기존 인스턴스가 남아 있어서 자동 배포 되지 않는 문제&lt;/h4&gt;
+&lt;p&gt;Github에 새로운 PR을 진행을 해봤는데 ECS에 있던 기존 인스턴스에 새로운 작업이 실행되지 않는 문제를 발견했다.&lt;/p&gt;
+
+&lt;p&gt;무슨 말이냐면, CI/CD 파이프라인이 제대로 구축이 됐다면 Github에 PR을 하는 순간 AWS ECR에 새로운 이미지가 배포되고 그 배포된 이미지를 사용해서 새로운 컨테이너가 EC2안에 구축이 돼야한다.&lt;/p&gt;
+
+&lt;p&gt;유저 입장에서는 Go 서버를 브라우저로 방문했을 때, 업데이트 된 서버가 응답을 해야하는 것이었다.&lt;/p&gt;
+
+&lt;p&gt;하지만 위 과정이 되지 않았다.&lt;/p&gt;
+
+&lt;p&gt;이 부분도 몇번의 구글링 끝에 ECS의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minimum healthy percent&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maximum percent&lt;/code&gt; 설정을 손보면 되는 것이었다. 내가 원하는 것은 ECS가 1개의 인스턴스를 구동하며, 새 이미지가 배포되면 기존 컨테이너를 없애고 새 컨테이너를 만드는 것이었다.&lt;/p&gt;
+
+&lt;p&gt;이 &lt;a href=&quot;https://stackoverflow.com/questions/40731143/what-is-the-minimum-healthy-percent-and-maximum-percent-in-amazon-ecs&quot;&gt;스택오버플로우&lt;/a&gt; 글을 참고해서 1개의 인스턴스로 롤링 배포를 원활하게 작동하게끔 구축했다.&lt;/p&gt;
+
+&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
+&lt;p&gt;정리를 하자면:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS ECR로 이미지 배포, AWS ECS로 EC2 구동 후 컨테이너 배포까지 Github Actions로 자동화 시켰다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;물론 지금 설정한 Workflow는 추후에 바뀔 가능성이 높다. 하지만 당분간은 개발에 집중해도 될 것 같다.&lt;/p&gt;
+
+&lt;p&gt;다음 포스트부터는 RESTful API를 만드는 과정에 대해 알아보자.&lt;/p&gt;
+
+&lt;p&gt;여담으로 개발자 친구에게 코드리뷰를 부탁했다. &lt;a href=&quot;https://github.com/dojinkimm&quot;&gt;dojinkimm&lt;/a&gt; 👍👍&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Search algorithms</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Search-algorithms/" rel="alternate" type="text/html" title="[알고리즘] Search algorithms" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Search%20algorithms</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Search-algorithms/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/fundamentals-of-algorithms/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;여러가지 Search 알고리즘에 대해 알아보자&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#linear-search&quot;&gt;Linear Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#binary-search&quot;&gt;Binary Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#jump-search&quot;&gt;Jump Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#interpolation-search&quot;&gt;Interpolation Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#exponential-search&quot;&gt;Exponential Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ternary-search&quot;&gt;Ternary Search&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;linear-search&quot;&gt;Linear Search&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;제일 쉬운 알고리즘&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt; 의 시간 복잡도를 가진다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 1
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;binary-search&quot;&gt;Binary Search&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;이분탐색&lt;/li&gt;
+  &lt;li&gt;각 iteration마다 탐색 해야 할 배열의 크기를 반으로 줄인다&lt;/li&gt;
+  &lt;li&gt;단, 탐색해야 하는 배열이 이미 정렬이 되어야한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log n)&lt;/code&gt;의 시간 복잡도를 가진다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;jump-search&quot;&gt;Jump Search&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Linear 탐색과 비슷하지만 block을 정해서 문제의 단위를 줄이는 방식&lt;/li&gt;
+  &lt;li&gt;배열은 정렬이 되어있어야 한다&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(√n)&lt;/code&gt;의 시간복잡도를 가진다&lt;/li&gt;
+  &lt;li&gt;선형탐색 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt;과 이분탐색 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log n)&lt;/code&gt;사이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;math&lt;/span&gt; 
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;jump_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# jump를 할 step을 지정해준다
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# jump와 jump사이가 하나의 block이 된다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# target이 있는 block을 찾아준다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# 찾은 block에 Linear 탐색을 시작
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;# block의 끝이나 배열의 끝에 도달 했으면 
+&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# target은 없는 것
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jump_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jump_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jump_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;interpolation-search&quot;&gt;Interpolation Search&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;배열이 정렬이 되어있어야 한다&lt;/li&gt;
+  &lt;li&gt;균일한 분포를 가질 때 사용가능하다&lt;/li&gt;
+  &lt;li&gt;찾아야할 타겟과 가까운 지점에서 탐색을 시작한다&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt;의 시간복잡도를 갖지만 균일분포된 배열에서의 탐색은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log log n)&lt;/code&gt;이다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;interpolation_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# low, high를 지정한다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# target은 low, high내에 있어야한다
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;high&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        
+        &lt;span class=&quot;c1&quot;&gt;# 균일분포도를 고려해서 탐색위치를 지정한다
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;ceil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;ceil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ceil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;interpolation_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;interpolation_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;interpolation_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;exponential-search&quot;&gt;Exponential Search&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jump 탐색처럼 탐색의 위치를 찾은 후, 그 block을 이분 탐색한다&lt;/li&gt;
+  &lt;li&gt;이분탐색을 사용하여 탐색의 크기를 재귀적으로 줄인다&lt;/li&gt;
+  &lt;li&gt;이분탐색보다 빠를 때도 있다
+    &lt;ul&gt;
+      &lt;li&gt;찾아야하는 위치가 배열의 앞쪽에 위치한다면 더 빠르게 탐색이 가능하다&lt;/li&gt;
+      &lt;li&gt;탐색의 위치를 선형적으로 찾기 때문이다&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log n)&lt;/code&gt;의 시간복잡도를 가진다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;exponential_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# 탐색할 위치를 찾는다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# 탐색의 시작과 끝 지점을 정한다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exponential_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exponential_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exponential_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;ternary-search&quot;&gt;Ternary Search&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;분할정복 알고리즘&lt;/li&gt;
+  &lt;li&gt;배열은 정렬이 되어있어야 한다&lt;/li&gt;
+  &lt;li&gt;이분탐색이 탐색 크기를 반으로 줄이는 것처럼, 삼분탐색은 3등분을 해서 찾는 알고리즘&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log n)&lt;/code&gt;의 시간 복잡도를 가진다&lt;/li&gt;
+  &lt;li&gt;이분탐색보다 느리다. 이유는 3등분으로 분할해서 탐색을 하다보니 비교 횟수가 높아지기 때문이다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[취준] 백준 문제집</title><link href="https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C%EC%A7%91/" rel="alternate" type="text/html" title="[취준] 백준 문제집" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%B7%A8%EC%A4%80%5D-%EB%B0%B1%EC%A4%80%20%EB%AC%B8%EC%A0%9C%EC%A7%91</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%B7%A8%EC%A4%80-%EB%B0%B1%EC%A4%80-%EB%AC%B8%EC%A0%9C%EC%A7%91/">&lt;p&gt;&lt;a href=&quot;https://code.plus/course/51&quot;&gt;2021 코딩테스트 준비 기초&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://code.plus/course/52&quot;&gt;2021 코딩테스트 준비 연습&lt;/a&gt;&lt;/p&gt;
@@ -2008,401 +2509,7 @@
       &lt;td style=&quot;text-align: center&quot;&gt;❌&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="취준" /><category term="백준" /><summary type="html">2021 코딩테스트 준비 기초</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -10</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -10" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%2010</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-10/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3/&quot;&gt;Medium 클론 백엔드를 만들어보자 -3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4/&quot;&gt;Medium 클론 백엔드를 만들어보자 -4&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8/&quot;&gt;Medium 클론 백엔드를 만들어보자 -8&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-9/&quot;&gt;Medium 클론 백엔드를 만들어보자 -9&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -10&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;AWS로 서버를 배포 해봄&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;배포 과정을 자동화 시도&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;docker-이미지-배포-방법&quot;&gt;Docker 이미지 배포 방법&lt;/h1&gt;
-&lt;p&gt;현재까지는 Docker Hub에 이미지를 자동배포를 했었다. 하지만 전 포스트에서 AWS ECR로 이미지를 배포하는 방법을 알았으니 CI/CD에서도 AWS ECR로 자동 배포를 하려고 한다.&lt;/p&gt;
-
-&lt;p&gt;아마존 &lt;a href=&quot;https://aws.amazon.com/ko/blogs/containers/create-a-ci-cd-pipeline-for-amazon-ecs-with-github-actions-and-aws-codebuild-tests/&quot;&gt;블로그&lt;/a&gt; 글을 참고를 하자. 이미 잘 설명이 돼있다.&lt;/p&gt;
-
-&lt;p&gt;AWS 개인 정보를 secrets에 저장 시킨 뒤 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt;에서 AWS ECR로 이미지를 배포하도록 수정을 했다.&lt;/p&gt;
-
-&lt;h1 id=&quot;aws-배포-자동화&quot;&gt;AWS 배포 자동화&lt;/h1&gt;
-
-&lt;p&gt;하루 정도의 시간을 투자한 결과, Github Actions로 AWS에 서버 배포 자동화를 성공 시켰다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/awssetup.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/awssetup2.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;간략하게 하루 동안 삽질했던 문제점들을 나열하자면:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Github Actions workflow에서 Docker 이미지내로 환경변수 전달하기&lt;/li&gt;
-  &lt;li&gt;AWS RDS와 AWS EC2 연결하기&lt;/li&gt;
-  &lt;li&gt;AWS RDS와 AWS EC2내에 Docker 컨테이너와 연결하기&lt;/li&gt;
-  &lt;li&gt;새로운 commit push/pr 시, ECS에 기존 인스턴스가 남아 있어서 자동 배포 되지 않는 문제&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;해결-방법&quot;&gt;해결 방법&lt;/h3&gt;
-&lt;h4 id=&quot;1-github-actions-workflow에서-docker-이미지내로-환경변수-전달하기&quot;&gt;1. Github Actions workflow에서 Docker 이미지내로 환경변수 전달하기&lt;/h4&gt;
-
-&lt;p&gt;자동화를 많이 해본 적은 없지만 현재까지 자동화를 하면서 가장 문제를 많이 일으켰던 부분은 환경변수를 설정하는 일이다.&lt;/p&gt;
-
-&lt;p&gt;현재 이 포스트를 작성하는 시점, 고 코드는 AWS RDS에 연결하는 기능까지 구현하고 난 직후다. 개발을하다가 보면 여러 환경변수를 사용해서 중요한 정보들을 관리한다. 동시에 Github에 push될 때 중요한 정보가 노출이 되지 않게 해야한다.&lt;/p&gt;
-
-&lt;p&gt;여기서 말하는 중요한 정보란, 외부에 노출이 되었을 때 서버에 막대한 피해를 끼칠 수 있는 정보를 뜻한다. 예를 들면 관리자 비밀번호, 개인정보, 기타등등 있겠다.&lt;/p&gt;
-
-&lt;p&gt;수정 전 중요한 정보를 취급하는 방식은 다음과 같았다.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 파일에 중요한 정보를 저장한다&lt;/li&gt;
-  &lt;li&gt;고 서버 내에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper&lt;/code&gt;라는 패키지를 써서 저장된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;파일에서 환경변수를 읽는다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;을 작성하여 Github에 중요한 정보가 노출되지 않게 한다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이렇게 정보를 관리하게되면 기존에 만들어 놓았던 Github Actions의 Workflow가 실패한다. 정확히는 각 OS에서 서버를 실행 시킬 때 문제가 생긴다. 이유는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;이 Github에 없기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/testfail.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이 문제를 해결하려면 다음과 같은 방식들이 있다:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt;파일을 Github에 올려서 Github Actions가 쓸 수 있게함&lt;/li&gt;
-  &lt;li&gt;코드를 수정해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 의존성을 없애고, 환경변수를 Github secret에 저장함&lt;/li&gt;
-  &lt;li&gt;Dockerfile이나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt; workflow 파일에서 환경 변수를 담은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 파일을 생성함&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Github Actions workflow &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci-docker-cd.yml&lt;/code&gt;파일에서 환경변수를 Github에 노출하지 않고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;에 전달 하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; 내에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENV&lt;/code&gt;를 쓰면 된다. 하지만 나는 혹시 몰라서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt;로 필요한 변수들을 직접 다 생성해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;에 전달했다.&lt;/p&gt;
-
-&lt;p&gt;여러가지 시행착오 끝에 현재 해결안을 살펴보면 다음과 같다 (2번 방식을 택함).&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper&lt;/code&gt; 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;godotenv&lt;/code&gt; 패키지를 활용해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viper.yml&lt;/code&gt; 파일 의존성을 없앴다&lt;/li&gt;
-  &lt;li&gt;Github Secrets에 환경변수 저장&lt;/li&gt;
-  &lt;li&gt;workflow yaml 파일에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.XXX&lt;/code&gt;로 호출&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; 을 빌드 할 때 환경변수를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt;로 주는 방식&lt;/li&gt;
-  &lt;li&gt;유닛 테스트에 환경변수가 제대로 로드되는지 확인하는 테스트를 작성했다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;위 수정사항을 반영하는 시작점이 되는 &lt;a href=&quot;https://github.com/json9512/mediumclone-backendwithgo/commit/8d14e0c57f47937d2ea0fd5113e5cc899961eb69&quot;&gt;commit&lt;/a&gt;이다. 그리고 테스트 결과를 보면 Workflow가 다시 잘 작동하는 것을 볼 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/testsuccess.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위 유닛테스트는 CI/CD 파이프라인에서 코드만 테스트하는 것이다. 실제로 Docker 이미지가 생성된 후 컨테이너에서의 테스트는 하지 않았다. &lt;del&gt;지금은 하는 방법을 모른다&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;예시:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Github Secrets에 환경변수 설정:
-&lt;img src=&quot;/blog/images/githubsecretsexample.png&quot; class=&quot;align-left&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Workflow yaml에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.XXX&lt;/code&gt;로 호출:
-&lt;img src=&quot;/blog/images/dockerargsexample.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Dockerfile &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARG&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENV&lt;/code&gt; 사용해서 환경변수 사용:
-&lt;img src=&quot;/blog/images/dockerfileexample.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;물론 이보다 효율적인 방법이 있을 것이다. 가령 Github Actions &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;job&lt;/code&gt; 환경에 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;global&lt;/code&gt;하게 변수를 선언 하는 방법있다.&lt;/p&gt;
-
-&lt;h4 id=&quot;2-aws-rds와-aws-ec2-연결하기&quot;&gt;2. AWS RDS와 AWS EC2 연결하기&lt;/h4&gt;
-&lt;p&gt;AWS RDS와 AWS EC2간 연결이 자동으로 될 거라고 생각했지만 아니었다.&lt;/p&gt;
-
-&lt;p&gt;기본적으로 AWS RDS를 만들 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Public Access&lt;/code&gt;가 가능하게 만들어야 외부에서 접속이 가능하다. 이 기능을 꺼 놓으면 같은 네트워크 안에 있는 instance들만 연결 할 수 있다고 한다.&lt;/p&gt;
-
-&lt;p&gt;그리고 포트 설정도 유심히 봐줘야한다. Postgresql 포트의 기본 값인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 사용했다.&lt;/p&gt;
-
-&lt;p&gt;이후 AWS RDS 와 AWS EC2의 보안 그룹에서 인바운드, 아웃바운드 규칙에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 통과 할 수 있게 설정을 해야한다.&lt;/p&gt;
-
-&lt;h4 id=&quot;3-aws-rds와-aws-ec2내에-docker-컨테이너와-연결하기&quot;&gt;3. AWS RDS와 AWS EC2내에 Docker 컨테이너와 연결하기&lt;/h4&gt;
-&lt;p&gt;예상했던 것처럼 AWS RDS와 EC2내 Docker간 통신이 가장 큰 문제였다.&lt;/p&gt;
-
-&lt;p&gt;AWS RDS와 컨테이너가 성공적으로 연결이 되는 것을 확인하려면 사실 ec2 내에서 터미널로 확인해야한다.&lt;/p&gt;
-
-&lt;p&gt;다른 방법으로는 배포된 컨테이너가 잘 작동하는지 브라우저나 AWS 콘솔을 통해 확인하는 방법이 있다.&lt;/p&gt;
-
-&lt;p&gt;나는 브라우저와 콘솔을 주로 사용하다가 도저히 디버깅이 안돼서 EC2에 SSH로 연결 후 터미널로 디버깅을 했다.&lt;/p&gt;
-
-&lt;p&gt;알고봤더니 Dockerfile에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 열어 놓지 않아서 컨테이너 내에 Go 서버가 죽어있던 것이었다. (코드가 DB connection이 안되면 로그를 내뱉으면서 죽는 방식이기 때문이다)&lt;/p&gt;
-
-&lt;p&gt;Dockerfile에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5432&lt;/code&gt; 포트를 열어주고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;host&lt;/code&gt; EC2의 포트 역시 개방해주니 바로 해결됐다.&lt;/p&gt;
-
-&lt;p&gt;이 문제를 해결하는데 가장 오래 걸렸다.&lt;/p&gt;
-
-&lt;h4 id=&quot;4-새로운-commit-pushpr-시-ecs에-기존-인스턴스가-남아-있어서-자동-배포-되지-않는-문제&quot;&gt;4. 새로운 commit push/pr 시, ECS에 기존 인스턴스가 남아 있어서 자동 배포 되지 않는 문제&lt;/h4&gt;
-&lt;p&gt;Github에 새로운 PR을 진행을 해봤는데 ECS에 있던 기존 인스턴스에 새로운 작업이 실행되지 않는 문제를 발견했다.&lt;/p&gt;
-
-&lt;p&gt;무슨 말이냐면, CI/CD 파이프라인이 제대로 구축이 됐다면 Github에 PR을 하는 순간 AWS ECR에 새로운 이미지가 배포되고 그 배포된 이미지를 사용해서 새로운 컨테이너가 EC2안에 구축이 돼야한다.&lt;/p&gt;
-
-&lt;p&gt;유저 입장에서는 Go 서버를 브라우저로 방문했을 때, 업데이트 된 서버가 응답을 해야하는 것이었다.&lt;/p&gt;
-
-&lt;p&gt;하지만 위 과정이 되지 않았다.&lt;/p&gt;
-
-&lt;p&gt;이 부분도 몇번의 구글링 끝에 ECS의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minimum healthy percent&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maximum percent&lt;/code&gt; 설정을 손보면 되는 것이었다. 내가 원하는 것은 ECS가 1개의 인스턴스를 구동하며, 새 이미지가 배포되면 기존 컨테이너를 없애고 새 컨테이너를 만드는 것이었다.&lt;/p&gt;
-
-&lt;p&gt;이 &lt;a href=&quot;https://stackoverflow.com/questions/40731143/what-is-the-minimum-healthy-percent-and-maximum-percent-in-amazon-ecs&quot;&gt;스택오버플로우&lt;/a&gt; 글을 참고해서 1개의 인스턴스로 롤링 배포를 원활하게 작동하게끔 구축했다.&lt;/p&gt;
-
-&lt;h1 id=&quot;마무리&quot;&gt;마무리&lt;/h1&gt;
-&lt;p&gt;정리를 하자면:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;AWS ECR로 이미지 배포, AWS ECS로 EC2 구동 후 컨테이너 배포까지 Github Actions로 자동화 시켰다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;물론 지금 설정한 Workflow는 추후에 바뀔 가능성이 높다. 하지만 당분간은 개발에 집중해도 될 것 같다.&lt;/p&gt;
-
-&lt;p&gt;다음 포스트부터는 RESTful API를 만드는 과정에 대해 알아보자.&lt;/p&gt;
-
-&lt;p&gt;여담으로 개발자 친구에게 코드리뷰를 부탁했다. &lt;a href=&quot;https://github.com/dojinkimm&quot;&gt;dojinkimm&lt;/a&gt; 👍👍&lt;/p&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry><entry><title type="html">[알고리즘] Search algorithms</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Search-algorithms/" rel="alternate" type="text/html" title="[알고리즘] Search algorithms" /><published>2021-01-14T00:00:00+00:00</published><updated>2021-01-14T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Search%20algorithms</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Search-algorithms/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/fundamentals-of-algorithms/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;여러가지 Search 알고리즘에 대해 알아보자&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;#linear-search&quot;&gt;Linear Search&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#binary-search&quot;&gt;Binary Search&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#jump-search&quot;&gt;Jump Search&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#interpolation-search&quot;&gt;Interpolation Search&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#exponential-search&quot;&gt;Exponential Search&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ternary-search&quot;&gt;Ternary Search&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;linear-search&quot;&gt;Linear Search&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;제일 쉬운 알고리즘&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt; 의 시간 복잡도를 가진다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 1
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;binary-search&quot;&gt;Binary Search&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;이분탐색&lt;/li&gt;
-  &lt;li&gt;각 iteration마다 탐색 해야 할 배열의 크기를 반으로 줄인다&lt;/li&gt;
-  &lt;li&gt;단, 탐색해야 하는 배열이 이미 정렬이 되어야한다.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log n)&lt;/code&gt;의 시간 복잡도를 가진다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;jump-search&quot;&gt;Jump Search&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Linear 탐색과 비슷하지만 block을 정해서 문제의 단위를 줄이는 방식&lt;/li&gt;
-  &lt;li&gt;배열은 정렬이 되어있어야 한다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(√n)&lt;/code&gt;의 시간복잡도를 가진다&lt;/li&gt;
-  &lt;li&gt;선형탐색 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt;과 이분탐색 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log n)&lt;/code&gt;사이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;math&lt;/span&gt; 
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;jump_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# jump를 할 step을 지정해준다
-&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# jump와 jump사이가 하나의 block이 된다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# target이 있는 block을 찾아준다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# 찾은 block에 Linear 탐색을 시작
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;# block의 끝이나 배열의 끝에 도달 했으면 
-&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# target은 없는 것
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jump_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jump_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jump_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;interpolation-search&quot;&gt;Interpolation Search&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;배열이 정렬이 되어있어야 한다&lt;/li&gt;
-  &lt;li&gt;균일한 분포를 가질 때 사용가능하다&lt;/li&gt;
-  &lt;li&gt;찾아야할 타겟과 가까운 지점에서 탐색을 시작한다&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt;의 시간복잡도를 갖지만 균일분포된 배열에서의 탐색은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log log n)&lt;/code&gt;이다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;interpolation_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# low, high를 지정한다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# target은 low, high내에 있어야한다
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;high&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        
-        &lt;span class=&quot;c1&quot;&gt;# 균일분포도를 고려해서 탐색위치를 지정한다
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;ceil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;ceil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ceil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;interpolation_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;interpolation_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;interpolation_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;exponential-search&quot;&gt;Exponential Search&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Jump 탐색처럼 탐색의 위치를 찾은 후, 그 block을 이분 탐색한다&lt;/li&gt;
-  &lt;li&gt;이분탐색을 사용하여 탐색의 크기를 재귀적으로 줄인다&lt;/li&gt;
-  &lt;li&gt;이분탐색보다 빠를 때도 있다
-    &lt;ul&gt;
-      &lt;li&gt;찾아야하는 위치가 배열의 앞쪽에 위치한다면 더 빠르게 탐색이 가능하다&lt;/li&gt;
-      &lt;li&gt;탐색의 위치를 선형적으로 찾기 때문이다&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log n)&lt;/code&gt;의 시간복잡도를 가진다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;exponential_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# 탐색할 위치를 찾는다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# 탐색의 시작과 끝 지점을 정한다
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;binary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exponential_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exponential_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exponential_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;ternary-search&quot;&gt;Ternary Search&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;분할정복 알고리즘&lt;/li&gt;
-  &lt;li&gt;배열은 정렬이 되어있어야 한다&lt;/li&gt;
-  &lt;li&gt;이분탐색이 탐색 크기를 반으로 줄이는 것처럼, 삼분탐색은 3등분을 해서 찾는 알고리즘&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log n)&lt;/code&gt;의 시간 복잡도를 가진다&lt;/li&gt;
-  &lt;li&gt;이분탐색보다 느리다. 이유는 3등분으로 분할해서 탐색을 하다보니 비교 횟수가 높아지기 때문이다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 4 because [1, 2, 3, 4, 5] -&amp;gt; a[4] = 5
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ternary_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# -1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksforGeeks</summary></entry><entry><title type="html">[알고리즘] Cycle Sort</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Cycle-Sort/" rel="alternate" type="text/html" title="[알고리즘] Cycle Sort" /><published>2021-01-12T00:00:00+00:00</published><updated>2021-01-12T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Cycle%20Sort</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Cycle-Sort/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/cycle-sort/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
+&lt;/table&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="취준" /><category term="백준" /><summary type="html">2021 코딩테스트 준비 기초</summary></entry><entry><title type="html">[알고리즘] Cycle Sort</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Cycle-Sort/" rel="alternate" type="text/html" title="[알고리즘] Cycle Sort" /><published>2021-01-12T00:00:00+00:00</published><updated>2021-01-12T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-Cycle%20Sort</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Cycle-Sort/">&lt;p&gt;출처: &lt;a href=&quot;https://www.geeksforgeeks.org/cycle-sort/&quot;&gt;GeeksforGeeks&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Cycle 정렬에 대해 알아보자&lt;/p&gt;
 
@@ -2514,142 +2621,4 @@
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;70&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min_num_coin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# [50, 20]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksForGeeks</summary></entry><entry><title type="html">[프로젝트] Medium 클론 백엔드를 만들어보자 -9</title><link href="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-9/" rel="alternate" type="text/html" title="[프로젝트] Medium 클론 백엔드를 만들어보자 -9" /><published>2021-01-11T00:00:00+00:00</published><updated>2021-01-11T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%5D-Medium%20%ED%81%B4%EB%A1%A0%20%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90%209</id><content type="html" xml:base="https://json9512.github.io/blog/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Medium-%ED%81%B4%EB%A1%A0-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90-9/">&lt;p&gt;&lt;strong&gt;목차&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-1/&quot;&gt;Medium 클론 백엔드를 만들어보자 -1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-2/&quot;&gt;Medium 클론 백엔드를 만들어보자 -2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-3/&quot;&gt;Medium 클론 백엔드를 만들어보자 -3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-4/&quot;&gt;Medium 클론 백엔드를 만들어보자 -4&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-5/&quot;&gt;Medium 클론 백엔드를 만들어보자 -5&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-6/&quot;&gt;Medium 클론 백엔드를 만들어보자 -6&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-7/&quot;&gt;Medium 클론 백엔드를 만들어보자 -7&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-8/&quot;&gt;Medium 클론 백엔드를 만들어보자 -8&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Medium 클론 백엔드를 만들어보자 -9&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-10/&quot;&gt;Medium 클론 백엔드를 만들어보자 -10&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;이전-포스트에서---&quot;&gt;이전 포스트에서 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;서버 배포 방법을 정함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;이-포스트는---&quot;&gt;이 포스트는 . . .&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;AWS로 서버 배포를 해보기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;aws로-서버-배포를-해보기&quot;&gt;AWS로 서버 배포를 해보기&lt;/h1&gt;
-&lt;p&gt;AWS에서 사용할 서비스는 다음과 같다.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;AWS RDS - Postgresql 배포&lt;/li&gt;
-  &lt;li&gt;AWS ECR - Docker Image를 배포&lt;/li&gt;
-  &lt;li&gt;AWS ECS - 컨테이너를 관리&lt;/li&gt;
-  &lt;li&gt;AWS EC2 - 컴퓨팅 엔진 (컨테이너가 돌아가는 컴퓨터)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;각 서비스의 요금표는 다음과 같다.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;AWS RDS - db.t2.micro 인스턴스 구동시 월 750시간 무료 (24/7 무료)&lt;/li&gt;
-  &lt;li&gt;AWS ECR - 월별 500MB 스토리지&lt;/li&gt;
-  &lt;li&gt;AWS ECS - 따로 청구되는 비용은 없음, EC2 요금&lt;/li&gt;
-  &lt;li&gt;AWS EC2 - t2.micro 인스턴스 구동시 월 750시간 무료 (24/7 무료)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;정리를 하면, 프리티어가 끝날때까지 24/7 구동 가능한 것은 EC2 하나와 RDS 하나다. 이번 프로젝트를 위해서는 충분하다.&lt;/p&gt;
-
-&lt;h1 id=&quot;aws-rds-with-postgresql&quot;&gt;AWS RDS with Postgresql&lt;/h1&gt;
-&lt;p&gt;데이터베이스부터 구동을 해보자.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/ko/rds/&quot;&gt;AWS RDS&lt;/a&gt; 에서 천천히 가이드를 따라서 생성을 해보자.&lt;/p&gt;
-
-&lt;p&gt;중요한건 프리티어를 적용하고 만들고나서 Master와 비밀번호를 메모하자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/awsrds.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;aws-ecr&quot;&gt;AWS ECR&lt;/h1&gt;
-&lt;p&gt;이번에는 이미지 레지스트리 헙을 구동 시켜보자.&lt;/p&gt;
-
-&lt;p&gt;레지스트리 이름을 정하고 기본 값으로 구동시켰다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html&quot;&gt;AWS CLI&lt;/a&gt;를 설치를 해주자.&lt;/p&gt;
-
-&lt;p&gt;이후 AWS CLI에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aws configure&lt;/code&gt;로 AWS 계정 정보를 입력한 뒤 ECR 푸시 명령에 따라서 푸시를 하면&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/awsecr.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;푸시가 잘 된걸 볼 수 있다.&lt;/p&gt;
-
-&lt;p&gt;문제는 용량이 월 500MB 제한인데, 지금 아무것도 없는 서버가 355MB정도 하니까 제대로 서버를 만들고 올리면 걍 용량 초과할 것 같다. 일단 나중에 생각하기로 하자.&lt;/p&gt;
-
-&lt;h1 id=&quot;aws-ecs&quot;&gt;AWS ECS&lt;/h1&gt;
-&lt;p&gt;이미지도 ECR에 성공적으로 올렸으니 ECS로 컨테이너를 구동해보자.&lt;/p&gt;
-
-&lt;p&gt;ECS에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cluster&lt;/code&gt;를 먼저 만들어야한다.&lt;/p&gt;
-
-&lt;p&gt;Linux + EC2로 t2.micro를 사용하여 클러스터를 생성하자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/ecs1.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/ecs2.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/ecs3.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/ecs4.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/ecs5.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위에 8000번 포트를 80옆에 같이 적어준다. 8000번 포트에다가 도커 컨테이너 포트 매핑을 할 것이기 때문이다. 나는 이걸 까먹어서 EC2를 열어서 인바운드 규칙을 더해줬다. 클러스터는 이렇게 만들면 된다.&lt;/p&gt;
-
-&lt;p&gt;이후 새 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;작업정의&lt;/code&gt;를 EC2로 만들자. 기본 설정을 쭉 따라가다가 보면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;컨테이너 추가&lt;/code&gt;란이 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/ecs6.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/ecs7.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;컨테이너 추가&lt;/code&gt;를 누른 뒤 튀어나오는 설정을 다 해주고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이미지&lt;/code&gt;란에 ECR 레퍼지토리에 있는 이미지의 URI를 복붙해주자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/ecs8.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/ecs9.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;포트 매핑도 해주자 8000번 포트 (EC2)에 8080번 포트(도커 컨테이너)를 매핑하자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/ecs10.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이제 아까 만든 클러스터로 돌아가서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;서비스&lt;/code&gt;를 만들어 보자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/ecs11.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;자동으로 방금 만든 작업이 기본값으로 설정돼있다. 작업 개수만 정하고 배포로 넘어가자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/ecs12.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;전 포스트에서 배포 방식을 블루/그린으로 한다고 했던 거 같은데, 블루/그린 방식으로 배포를 하려면
-IAM Role이 필요하다.&lt;/p&gt;
-
-&lt;p&gt;아직은 IAM Role에 대해서 잘 모르니까 일단 롤링 업데이트&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 형식으로 하자.&lt;/p&gt;
-
-&lt;p&gt;이후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Auto Scaling Group&lt;/code&gt; 설정이 나오지만 현재는 로드 밸런서가 필요가 없으니까 없음으로 하자.&lt;/p&gt;
-
-&lt;p&gt;로드 밸런싱 설정도 다 없음으로 하자.&lt;/p&gt;
-
-&lt;p&gt;이후 서비스를 생성하면 실행이 되는 것을 볼 수 있는데 도커 컨테이너가 담긴 EC2를 실행하기까지 시간이 좀 걸린다.&lt;/p&gt;
-
-&lt;p&gt;모든것을 다 정상적으로 처리를 하면 클러스터 서비스란에 다음과 같이 방금 만든 서비스가 RUNNING 상태로 변하는 것을 볼 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/ecs13.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이후 제공되는 DNS나 IPv4 주소로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/ping&lt;/code&gt; endpoint로 가보면:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/ecs14.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위와 같이 잘 작동하는 것을 볼 수 있다.&lt;/p&gt;
-
-&lt;h1 id=&quot;마무리---&quot;&gt;마무리 . . .&lt;/h1&gt;
-&lt;p&gt;정리를 하면:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;전 포스트에서 설계한 배포 방식으로 AWS로 배포하는 것을 해봤다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;/blog/프로젝트-Medium-클론-백엔드를-만들어보자-10/&quot;&gt;다음 포스트&lt;/a&gt;에서는 배포 자동화 방법에 대해 알아보자.&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;한 대씩 서버를 재시작 하는 방식이다. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="project" /><summary type="html">Medium 클론 백엔드를 설계부터 배포까지 기록하는 시리즈</summary></entry></feed>
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><summary type="html">출처: GeeksForGeeks</summary></entry></feed>

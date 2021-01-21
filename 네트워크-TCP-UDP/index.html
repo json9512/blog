@@ -126,7 +126,7 @@
             <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
           </li></ul>
 
-<span class="read-time">~1 min read</span>
+<span class="read-time">3 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-19T00:00:00+00:00"><a class="u-url" href="">January 19, 2021</a>
 </time>
@@ -169,6 +169,103 @@
   <li>위 특징들이 신뢰성을 더해준다</li>
   <li>위 특징들 때문에 상대적으로 느리다</li>
 </ul>
+
+<h4 id="네트워크-기능">네트워크 기능</h4>
+<ul>
+  <li>Transport layer는 application과 Internet protocol 간 통신을 이어준다. Application 레벨에서는 다른 host와 통신하는데 어떤 네트워크 기능들을 사용해야 하는지 알 필요가 없다. Transport layer에서 네트워크 통신에 필요한 것들을 abstract 해준다.</li>
+</ul>
+
+<p>이때 traffic load balancing, network congestion 등 여러가지 이유로 패킷이 유실, 중복, 늦게 도착 할 수 있는데 TCP는 이런 문제점들을 분별할 수 있고 패킷이 정상적으로 모두 도착하지 않으면 다시 전송 (retransmission)을 해달라고 요청한다. 또한 TCP는 무분별하게 들어온 패킷을 재정렬한다. 만약 끝까지 패킷을 다 받지 못하며, 보낸 host에게 전송 실패를 알려준다. 모든 패킷을 성공적으로 재정렬 시키면 application에게 보내준다.</p>
+
+<p>통상적으로 TCP는 Web, email, FTP 등에서 많이 쓰인다.</p>
+
+<p>TCP는 앞서 말한 패킷 재전송 요청을 기다리기 때문에 상대적으로 더 많은 소요시간이 필요하다. 하지만 TCP는 모든 패킷을 보냈던 순서대로 온전히 받아낼 수 있기 때문에 신뢰성이 더 높은 통신 방식이다.</p>
+
+<p>TCP는 positive acknowledgement with retransmission이라는 방식으로 모든 패킷을 받을 수 있다. 그 과정은 다음과 같다.</p>
+<ul>
+  <li>받는 쪽은 받았다는 acknowledgement 메세지를 보낸 쪽에 전달 해준다</li>
+  <li>보낸 쪽은 패킷을 보낼 때 보낸 패킷이 언제 전송이 되었는지 기록한다. 만약 정해진 시간 내에 acknowledgement 메세지를 받지 못하면, 패킷을 재차 전송한다. 이는 패킷 유실이나 패킷 손실 또한 방지할 수 있는 메커니즘이다</li>
+</ul>
+
+<p>IP layer가 실질적인 패킷 전송을 담당하지만 TCP는 segment 정보를 가지고 있게된다. segment란 보낼 데이터를 나눈 데이터 유닛을 말한다. 데이터를 더 작게 나누는 이유는 라우팅을 더 효과적으로 하기 위함이다.</p>
+
+<h4 id="tcp-segment-구조">TCP segment 구조</h4>
+<p>Transport layer에서 데이터를 받을 때, TCP는 받은 데이터를 나눈 후, 각 segment에 TCP header를 붙인다. 이후 이 TCP segment는 IP layer에서 IP header를 더한 후 패킷으로 전송이 되게 된다.</p>
+
+<p><img src="/blog/images/tcpsegment.png" class="align-center" alt="" /></p>
+
+<ul>
+  <li>Source port (16 bits): 보내는 host의 port</li>
+  <li>Destination port (16 bits): 받는 host의 port</li>
+  <li>Sequence number (32 bits):
+    <ul>
+      <li>두 가지 특성이 있다.
+        <ol>
+          <li>SYN flag가 켜져 있으면 (1 이면), 이 sequence number는 첫 번째 sequence number다.</li>
+          <li>SYN flag가 꺼져 있으면 (0 이면), 이 sequence number는 현재 세션의 누적 sequence number 데이터다</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Acknowledgement Number (32 bits):
+    <ul>
+      <li>만약 ACK flag가 켜져 있으면 이 값은 ACK를 보낸 쪽이 받아야할 sequence number다. 이는 곧 그 전의 데이터를 다 받았다는 의미를 가지고 있다.</li>
+    </ul>
+  </li>
+  <li>Data offset (4 bits):
+    <ul>
+      <li>TCP header의 크기를 32 bit <a href="https://en.wikipedia.org/wiki/Word_(computer_architecture)">words</a> 로 지정한다. 최소 값은 5 words고 최대 값은 15 words다.</li>
+    </ul>
+  </li>
+  <li>Reserved (3 bits): 추후에 사용하기 위해 비워뒀다. 3 bit 모두 0이어야 한다.</li>
+  <li>Flags (9 bits): 1이 켜져있음, 0 이 꺼져 있음
+    <ul>
+      <li>NS: ECN-nonce - concealment protection</li>
+      <li>CWR: CWR flag는 ECE flag가 설정된 TCP segment를 받았을 때, network congestion control에 대응했다고 보낸 쪽에 알리기 위해 켠다.</li>
+      <li>ECE: ECN-Echo는 SYN flag에 따라서 2가지 기능이 있다.
+        <ol>
+          <li>SYN이 1이면, TCP peer가 ECN을 사용할 수 있다를 뜻한다</li>
+          <li>SYN이 0이면, 데이터 통신 중 IP header에 Congestion experience flag (ECN=11)가 켜진 packet을 받게되면, 보낸 쪽에게 network congestion이 일어났거나 일어날 것임을 뜻한다</li>
+        </ol>
+      </li>
+      <li>URG: Urgent Pointer 필드가 중요함을 뜻한다</li>
+      <li>ACK: Acknowledgement 필드가 중요함을 뜻한다. 제일 첫 번째 sequence number를 가진 패킷 전송 이후에 통신되는 모든 패킷에 ACK 값이 켜져 있어야 한다</li>
+      <li>PSH: 받는 쪽 application으로 데이터 버퍼를 push 하라는 뜻이다</li>
+      <li>RST: 연결을 reset하라는 뜻이다</li>
+      <li>SYN: Synchronize sequence numbers. 통신에서 양쪽이 보내는 제일 첫번째 패킷에만 이 값이 켜져 있어야한다. 다른 flag들이 이 값에 영향을 받는다</li>
+      <li>FIN: 보내는 쪽이 이 패킷이 마지막임을 뜻할때 쓴다</li>
+    </ul>
+  </li>
+  <li>Window size (16 bits)
+    <ul>
+      <li>receive window의 크기. 보낸 사람이 받을 수 있는 window size unit을 뜻한다</li>
+    </ul>
+  </li>
+  <li>Checksum (16 bits):
+    <ul>
+      <li>TCP header, payload, IP pseudo-header의 error checking을 위해 쓰인다. pseudo-header에는 source IP address, destination IP address, protocol number (TCP=6), TCP header와 payload의 길이 정보가 있다</li>
+    </ul>
+  </li>
+  <li>Urgent Pointer (16 bits):
+    <ul>
+      <li>만약 URG flag가 켜져 있으면, 이 Urgent pointer는 sequence number에서의 offset이며 가장 종단에 있는 urgent data byte를 뜻한다</li>
+    </ul>
+  </li>
+  <li>Options (0-320 bits, in units of 32 bits):
+    <ul>
+      <li>Options의 길이은 data offset의 값에 따라 달라진다. 총 3가지 필드가 있다.
+        <ol>
+          <li>Option-Kind (1 byte): 필수</li>
+          <li>Option-Length (1 byte): 1번에 따라 선택적</li>
+          <li>Option-data (variable): 1번에 따라 선택적</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Padding: TCP header와 data간에 32 bit 단위로 경계를 구분하기 위해 0으로 이루어진 padding을 넣을 때도 있다.</li>
+</ul>
+
+<h4 id="프로토콜-시행방식">프로토콜 시행방식</h4>
 
 <h1 id="udp---user-datagram-protocol">UDP - User datagram protocol</h1>
 

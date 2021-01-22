@@ -126,7 +126,7 @@
             <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
           </li></ul>
 
-<span class="read-time">3 min read</span>
+<span class="read-time">5 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-19T00:00:00+00:00"><a class="u-url" href="">January 19, 2021</a>
 </time>
@@ -266,6 +266,93 @@
 </ul>
 
 <h4 id="프로토콜-시행방식">프로토콜 시행방식</h4>
+<p>TCP 프로토콜 시행 방식은 3 단계로 나뉘어진다.</p>
+<ol>
+  <li>Connection Establishment - 3 way handshake로 데이터를 전송하기전 서버, 클라이언트간 연결을 성립하는 단계</li>
+  <li>Data transfer - 연결 성립 후 데이터를 전송하는 단계</li>
+  <li>Connection Termination - 모든 데이터 전송이 끝난 후 연결을 종결시키는 단계</li>
+</ol>
+
+<p>TCP 연결은 Internet socket에 의해 관리되고 연결 동안에 여러 상태를 가지게 된다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">상태</th>
+      <th style="text-align: center">Endpoint</th>
+      <th style="text-align: left">설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">LISTEN</td>
+      <td style="text-align: center">Server</td>
+      <td style="text-align: left">아무 TCP endpoint로 부터의 연결 요청을 기다린다</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SYN-SENT</td>
+      <td style="text-align: center">Client</td>
+      <td style="text-align: left">연결 요청을 보낸 후 돌아오는 요청을 기다린다</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SYN-RECEIVED</td>
+      <td style="text-align: center">Server</td>
+      <td style="text-align: left">연결 요청을 받고 보내 쪽으로 연결 요청을 보낸 후 acknowledgement (승인)을 기다린다</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ESTABLISHED</td>
+      <td style="text-align: center">Server and Client</td>
+      <td style="text-align: left">연결 된 상태. 받은 데이터를 사용자에게 보내 줄 수 있다. 데이터 전송 단계의 기본 상태</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FIN-WAIT-1</td>
+      <td style="text-align: center">Server and Client</td>
+      <td style="text-align: left">Remote TCP로부터 연결 종결 요청이나 이미 보낸 연결 종결 승인을 기다리는 상태</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">FIN-WAIT-2</td>
+      <td style="text-align: center">Server and Client</td>
+      <td style="text-align: left">Remote TCP로부터 연결 종결 요청을 기다리는 상태</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CLOSE-WAIT</td>
+      <td style="text-align: center">Server and Client</td>
+      <td style="text-align: left">로컬 사용자로부터 연결 종결 요청을 기다리는 상태</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CLOSING</td>
+      <td style="text-align: center">Server and Client</td>
+      <td style="text-align: left">Remote TCP로부터 연결 종결 요청에 대한 acknowledgement (승인)을 기다리는 상태</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">LAST-ACK</td>
+      <td style="text-align: center">Server and Client</td>
+      <td style="text-align: left">Remote TCP로부터 연결 종결 승인을 기다리는 상태</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">TIME-WAIT</td>
+      <td style="text-align: center">Server or Client</td>
+      <td style="text-align: left">Remote TCP가 연결 종결 승인을 받을 때까지 어느정도의 시간을 기다리는 상태</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">CLOSED</td>
+      <td style="text-align: center">Server and Client</td>
+      <td style="text-align: left">아무 상태도 아님</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Connection Establishment 단계</strong></p>
+
+<p>연결을 하기 위해서 Server와 Client가 TCP 3 way handshake 과정을 거쳐야 한다. 먼저 Server는 특정 포트에 TCP 연결을 듣고 있어야한다 (Passive Open). Passive open이 성립이되면 Client에서 (Active Open) 3 way handshake를 요청 할 수 있다.</p>
+
+<ol>
+  <li>SYN - Client가 서버로 SYN flag가 1이고 아무 sequence number <code class="language-plaintext highlighter-rouge">A</code>를 가진 패킷을 보낸다</li>
+  <li>SYN-ACK - Server는 SYN과 ACK flag가 1이고 acknowledgement number가 받은 sequence number <code class="language-plaintext highlighter-rouge">A</code>에 1을 더한 숫자와 아무 sequence number <code class="language-plaintext highlighter-rouge">B</code>를 가진 패킷을 Client에게 보낸다</li>
+  <li>ACK - Client가 ACK flag가 1이고 받은 acknowledgement number <code class="language-plaintext highlighter-rouge">A + 1</code>를  sequence number로 사용하고 acknowledgement number 를 받은 sequence number <code class="language-plaintext highlighter-rouge">B</code>에 1을 더한 숫자를 사용해 마지막 패킷을 Server로 보낸다</li>
+</ol>
+
+<p>이 과정을 거치면 Client와 Server 모두 ACK (승인)을 받은 상태가 되고 양 방향 통신이 성립된다.</p>
 
 <h1 id="udp---user-datagram-protocol">UDP - User datagram protocol</h1>
 

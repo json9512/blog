@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-22T10:32:35+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[알고리즘] 백준 1929번</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1929%EB%B2%88/" rel="alternate" type="text/html" title="[알고리즘] 백준 1929번" /><published>2021-01-22T00:00:00+00:00</published><updated>2021-01-22T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-%EB%B0%B1%EC%A4%80%201929%EB%B2%88</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1929%EB%B2%88/">&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/python-program-for-sieve-of-eratosthenes/&quot;&gt;에스트라노스의 체&lt;/a&gt;를 사용하면 쉽게 풀 수 있다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-01-23T07:39:50+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">[알고리즘] 백준 6588번</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-6588%EB%B2%88/" rel="alternate" type="text/html" title="[알고리즘] 백준 6588번" /><published>2021-01-23T00:00:00+00:00</published><updated>2021-01-23T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-%EB%B0%B1%EC%A4%80%206588%EB%B2%88</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-6588%EB%B2%88/">&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/python-program-for-sieve-of-eratosthenes/&quot;&gt;에스트라노스의 체&lt;/a&gt;를 사용하면 풀 수 있다. 처음 접근 방식은 소수를 먼저 구한 후 모든 2자리 조합을 비교하며 가장 큰 difference 값을 가진 두 수를 추출하는 것이었다. 비교 함수까지 직접 만들어서 문제를 풀었지만 시간초과가 떠서 실패했다.&lt;/p&gt;
+
+&lt;p&gt;직접 비교함수를 구현하고 모든 조합을 찾는 과정이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n^2)&lt;/code&gt;까지 걸려서 그런 것 같다.&lt;/p&gt;
+
+&lt;p&gt;구글링 후 주어진 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;num&lt;/code&gt; 보다 작은 소수열에서 왼쪽과 오른쪽이 동시에 소수인 것을 찾으면 답이라는 것을 깨닫고 코드를 수정했는데 성공했다.&lt;/p&gt;
+
+&lt;p&gt;소수를 먼저 구해 놓는 것이 핵심이다.&lt;/p&gt;
+
+&lt;p&gt;참고한 &lt;a href=&quot;https://yoonsang-it.tistory.com/52&quot;&gt;블로그&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find_largest_combination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# 왼쪽과 오른쪽에서 소수인 것을 찾으면 답이다
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{} = {} + {}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;fin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Goldbach's conjecture is wrong.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# 에스트라노스의 체
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# 미리 모든 소수를 구한다
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+        
+        &lt;span class=&quot;n&quot;&gt;find_largest_combination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><category term="백준" /><summary type="html">에스트라노스의 체를 사용하면 풀 수 있다. 처음 접근 방식은 소수를 먼저 구한 후 모든 2자리 조합을 비교하며 가장 큰 difference 값을 가진 두 수를 추출하는 것이었다. 비교 함수까지 직접 만들어서 문제를 풀었지만 시간초과가 떠서 실패했다.</summary></entry><entry><title type="html">[알고리즘] 백준 10845번</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-10845%EB%B2%88/" rel="alternate" type="text/html" title="[알고리즘] 백준 10845번" /><published>2021-01-23T00:00:00+00:00</published><updated>2021-01-23T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-%EB%B0%B1%EC%A4%80%2010845%EB%B2%88</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-10845%EB%B2%88/">&lt;p&gt;처음에는 따로 클래스를 만들어서 큐를 구현했는데 시간 초과가 떴다. 그래서 그냥 리스트로 구현을 해봤는데 성공했다.&lt;/p&gt;
+
+&lt;p&gt;클래스를 만드는 오버헤드 조차 용납하지 않는 엄격한 백준이다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;tc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;front&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;back&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;size&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;empty&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;pop&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><category term="백준" /><summary type="html">처음에는 따로 클래스를 만들어서 큐를 구현했는데 시간 초과가 떴다. 그래서 그냥 리스트로 구현을 해봤는데 성공했다.</summary></entry><entry><title type="html">[알고리즘] 백준 1929번</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1929%EB%B2%88/" rel="alternate" type="text/html" title="[알고리즘] 백준 1929번" /><published>2021-01-22T00:00:00+00:00</published><updated>2021-01-22T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-%EB%B0%B1%EC%A4%80%201929%EB%B2%88</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1929%EB%B2%88/">&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/python-program-for-sieve-of-eratosthenes/&quot;&gt;에스트라노스의 체&lt;/a&gt;를 사용하면 쉽게 풀 수 있다.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
 
@@ -224,238 +310,4 @@
 
 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><category term="백준" /><summary type="html">일단 약수가 뭔지 몰랐다. 한국어로 수학 용어를 모르는게 문제를 더 어렵게 만든다.</summary></entry><entry><title type="html">[네트워크] TCP UDP</title><link href="https://json9512.github.io/blog/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-TCP-UDP/" rel="alternate" type="text/html" title="[네트워크] TCP UDP" /><published>2021-01-19T00:00:00+00:00</published><updated>2021-01-19T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%5D%20TCP%20UDP</id><content type="html" xml:base="https://json9512.github.io/blog/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-TCP-UDP/">&lt;p&gt;출처: &lt;a href=&quot;https://en.wikipedia.org/wiki/Transmission_Control_Protocol&quot;&gt;위키피디아&lt;/a&gt;, &lt;a href=&quot;https://www.guru99.com/tcp-vs-udp-understanding-the-difference.html#:~:text=TCP%20is%20a%20connection%2Doriented,speed%20of%20UDP%20is%20faster&amp;amp;text=TCP%20does%20error%20checking%20and,but%20it%20discards%20erroneous%20packets.&quot;&gt;guru99&lt;/a&gt;, &lt;a href=&quot;https://www.tutorialspoint.com/difference-between-tcp-and-udp#:~:text=TCP%20is%20a%20connection%20oriented,is%20a%20connection%20less%20protocol.&amp;amp;text=As%20TCP%20provides%20error%20checking,reliable%20as%20compared%20to%20UDP.&amp;amp;text=On%20other%20hand%20UDP%20is%20faster%20and%20more%20efficient%20than%20TCP.&quot;&gt;tutorialspoint&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;TCP UDP에 대해 알아보자.&lt;/p&gt;
-
-&lt;h1 id=&quot;tcp---transmission-control-protocol&quot;&gt;TCP - Transmission control protocol&lt;/h1&gt;
-&lt;p&gt;간략한 설명:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;connection oriented (연결지향) 프로토콜이다. 네트워크에서 프로토콜이란 정해진 통신 방식을 의미한다&lt;/li&gt;
-  &lt;li&gt;데이터가 전송되기전 client와 server간 연결이 됨&lt;/li&gt;
-  &lt;li&gt;server는 client의 request를 듣고 있어야 한다 (passive open)&lt;/li&gt;
-  &lt;li&gt;client는 3-way-handshake (active open)로 server와 연결을 한다&lt;/li&gt;
-  &lt;li&gt;연결된 client와 server는 서로 데이터를 주고 받을 수 있다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;특징:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;3 way handshake&lt;/li&gt;
-  &lt;li&gt;packet retransmission (패킷 재전송) mechanism&lt;/li&gt;
-  &lt;li&gt;error detection mechanism&lt;/li&gt;
-  &lt;li&gt;위 특징들이 신뢰성을 더해준다&lt;/li&gt;
-  &lt;li&gt;위 특징들 때문에 상대적으로 느리다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;네트워크-기능&quot;&gt;네트워크 기능&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Transport layer는 application과 Internet protocol 간 통신을 이어준다. Application 레벨에서는 다른 host와 통신하는데 어떤 네트워크 기능들을 사용해야 하는지 알 필요가 없다. Transport layer에서 네트워크 통신에 필요한 것들을 abstract 해준다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이때 traffic load balancing, network congestion 등 여러가지 이유로 패킷이 유실, 중복, 늦게 도착 할 수 있는데 TCP는 이런 문제점들을 분별할 수 있고 패킷이 정상적으로 모두 도착하지 않으면 다시 전송 (retransmission)을 해달라고 요청한다. 또한 TCP는 무분별하게 들어온 패킷을 재정렬한다. 만약 끝까지 패킷을 다 받지 못하며, 보낸 host에게 전송 실패를 알려준다. 모든 패킷을 성공적으로 재정렬 시키면 application에게 보내준다.&lt;/p&gt;
-
-&lt;p&gt;통상적으로 TCP는 Web, email, FTP 등에서 많이 쓰인다.&lt;/p&gt;
-
-&lt;p&gt;TCP는 앞서 말한 패킷 재전송 요청을 기다리기 때문에 상대적으로 더 많은 소요시간이 필요하다. 하지만 TCP는 모든 패킷을 보냈던 순서대로 온전히 받아낼 수 있기 때문에 신뢰성이 더 높은 통신 방식이다.&lt;/p&gt;
-
-&lt;p&gt;TCP는 positive acknowledgement with retransmission이라는 방식으로 모든 패킷을 받을 수 있다. 그 과정은 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;받는 쪽은 받았다는 acknowledgement 메세지를 보낸 쪽에 전달 해준다&lt;/li&gt;
-  &lt;li&gt;보낸 쪽은 패킷을 보낼 때 보낸 패킷이 언제 전송이 되었는지 기록한다. 만약 정해진 시간 내에 acknowledgement 메세지를 받지 못하면, 패킷을 재차 전송한다. 이는 패킷 유실이나 패킷 손실 또한 방지할 수 있는 메커니즘이다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;IP layer가 실질적인 패킷 전송을 담당하지만 TCP는 segment 정보를 가지고 있게된다. segment란 보낼 데이터를 나눈 데이터 유닛을 말한다. 데이터를 더 작게 나누는 이유는 라우팅을 더 효과적으로 하기 위함이다.&lt;/p&gt;
-
-&lt;h4 id=&quot;tcp-segment-구조&quot;&gt;TCP segment 구조&lt;/h4&gt;
-&lt;p&gt;Transport layer에서 데이터를 받을 때, TCP는 받은 데이터를 나눈 후, 각 segment에 TCP header를 붙인다. 이후 이 TCP segment는 IP layer에서 IP header를 더한 후 패킷으로 전송이 되게 된다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/tcpsegment.png&quot; class=&quot;align-center&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Source port (16 bits): 보내는 host의 port&lt;/li&gt;
-  &lt;li&gt;Destination port (16 bits): 받는 host의 port&lt;/li&gt;
-  &lt;li&gt;Sequence number (32 bits):
-    &lt;ul&gt;
-      &lt;li&gt;두 가지 특성이 있다.
-        &lt;ol&gt;
-          &lt;li&gt;SYN flag가 켜져 있으면 (1 이면), 이 sequence number는 첫 번째 sequence number다.&lt;/li&gt;
-          &lt;li&gt;SYN flag가 꺼져 있으면 (0 이면), 이 sequence number는 현재 세션의 누적 sequence number 데이터다&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Acknowledgement Number (32 bits):
-    &lt;ul&gt;
-      &lt;li&gt;만약 ACK flag가 켜져 있으면 이 값은 ACK를 보낸 쪽이 받아야할 sequence number다. 이는 곧 그 전의 데이터를 다 받았다는 의미를 가지고 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data offset (4 bits):
-    &lt;ul&gt;
-      &lt;li&gt;TCP header의 크기를 32 bit &lt;a href=&quot;https://en.wikipedia.org/wiki/Word_(computer_architecture)&quot;&gt;words&lt;/a&gt; 로 지정한다. 최소 값은 5 words고 최대 값은 15 words다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Reserved (3 bits): 추후에 사용하기 위해 비워뒀다. 3 bit 모두 0이어야 한다.&lt;/li&gt;
-  &lt;li&gt;Flags (9 bits): 1이 켜져있음, 0 이 꺼져 있음
-    &lt;ul&gt;
-      &lt;li&gt;NS: ECN-nonce - concealment protection&lt;/li&gt;
-      &lt;li&gt;CWR: CWR flag는 ECE flag가 설정된 TCP segment를 받았을 때, network congestion control에 대응했다고 보낸 쪽에 알리기 위해 켠다.&lt;/li&gt;
-      &lt;li&gt;ECE: ECN-Echo는 SYN flag에 따라서 2가지 기능이 있다.
-        &lt;ol&gt;
-          &lt;li&gt;SYN이 1이면, TCP peer가 ECN을 사용할 수 있다를 뜻한다&lt;/li&gt;
-          &lt;li&gt;SYN이 0이면, 데이터 통신 중 IP header에 Congestion experience flag (ECN=11)가 켜진 packet을 받게되면, 보낸 쪽에게 network congestion이 일어났거나 일어날 것임을 뜻한다&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;URG: Urgent Pointer 필드가 중요함을 뜻한다&lt;/li&gt;
-      &lt;li&gt;ACK: Acknowledgement 필드가 중요함을 뜻한다. 제일 첫 번째 sequence number를 가진 패킷 전송 이후에 통신되는 모든 패킷에 ACK 값이 켜져 있어야 한다&lt;/li&gt;
-      &lt;li&gt;PSH: 받는 쪽 application으로 데이터 버퍼를 push 하라는 뜻이다&lt;/li&gt;
-      &lt;li&gt;RST: 연결을 reset하라는 뜻이다&lt;/li&gt;
-      &lt;li&gt;SYN: Synchronize sequence numbers. 통신에서 양쪽이 보내는 제일 첫번째 패킷에만 이 값이 켜져 있어야한다. 다른 flag들이 이 값에 영향을 받는다&lt;/li&gt;
-      &lt;li&gt;FIN: 보내는 쪽이 이 패킷이 마지막임을 뜻할때 쓴다&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Window size (16 bits)
-    &lt;ul&gt;
-      &lt;li&gt;receive window의 크기. 보낸 사람이 받을 수 있는 window size unit을 뜻한다&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Checksum (16 bits):
-    &lt;ul&gt;
-      &lt;li&gt;TCP header, payload, IP pseudo-header의 error checking을 위해 쓰인다. pseudo-header에는 source IP address, destination IP address, protocol number (TCP=6), TCP header와 payload의 길이 정보가 있다&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Urgent Pointer (16 bits):
-    &lt;ul&gt;
-      &lt;li&gt;만약 URG flag가 켜져 있으면, 이 Urgent pointer는 sequence number에서의 offset이며 가장 종단에 있는 urgent data byte를 뜻한다&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Options (0-320 bits, in units of 32 bits):
-    &lt;ul&gt;
-      &lt;li&gt;Options의 길이은 data offset의 값에 따라 달라진다. 총 3가지 필드가 있다.
-        &lt;ol&gt;
-          &lt;li&gt;Option-Kind (1 byte): 필수&lt;/li&gt;
-          &lt;li&gt;Option-Length (1 byte): 1번에 따라 선택적&lt;/li&gt;
-          &lt;li&gt;Option-data (variable): 1번에 따라 선택적&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Padding: TCP header와 data간에 32 bit 단위로 경계를 구분하기 위해 0으로 이루어진 padding을 넣을 때도 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;프로토콜-시행방식&quot;&gt;프로토콜 시행방식&lt;/h4&gt;
-&lt;p&gt;TCP 프로토콜 시행 방식은 3 단계로 나뉘어진다.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Connection Establishment - 3 way handshake로 데이터를 전송하기전 서버, 클라이언트간 연결을 성립하는 단계&lt;/li&gt;
-  &lt;li&gt;Data transfer - 연결 성립 후 데이터를 전송하는 단계&lt;/li&gt;
-  &lt;li&gt;Connection Termination - 모든 데이터 전송이 끝난 후 연결을 종결시키는 단계&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;TCP 연결은 Internet socket에 의해 관리되고 연결 동안에 여러 상태를 가지게 된다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;상태&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Endpoint&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;LISTEN&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;아무 TCP endpoint로 부터의 연결 요청을 기다린다&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;SYN-SENT&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Client&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;연결 요청을 보낸 후 돌아오는 요청을 기다린다&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;SYN-RECEIVED&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;연결 요청을 받고 보내 쪽으로 연결 요청을 보낸 후 acknowledgement (승인)을 기다린다&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;ESTABLISHED&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server and Client&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;연결 된 상태. 받은 데이터를 사용자에게 보내 줄 수 있다. 데이터 전송 단계의 기본 상태&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;FIN-WAIT-1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server and Client&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Remote TCP로부터 연결 종결 요청이나 이미 보낸 연결 종결 승인을 기다리는 상태&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;FIN-WAIT-2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server and Client&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Remote TCP로부터 연결 종결 요청을 기다리는 상태&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CLOSE-WAIT&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server and Client&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;로컬 사용자로부터 연결 종결 요청을 기다리는 상태&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CLOSING&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server and Client&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Remote TCP로부터 연결 종결 요청에 대한 acknowledgement (승인)을 기다리는 상태&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;LAST-ACK&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server and Client&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Remote TCP로부터 연결 종결 승인을 기다리는 상태&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;TIME-WAIT&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server or Client&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Remote TCP가 연결 종결 승인을 받을 때까지 어느정도의 시간을 기다리는 상태&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CLOSED&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Server and Client&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;아무 상태도 아님&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;strong&gt;Connection Establishment 단계&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;연결을 하기 위해서 Server와 Client가 TCP 3 way handshake 과정을 거쳐야 한다. 먼저 Server는 특정 포트에 TCP 연결을 듣고 있어야한다 (Passive Open). Passive open이 성립이되면 Client에서 (Active Open) 3 way handshake를 요청 할 수 있다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;SYN - Client가 서버로 SYN flag가 1이고 아무 sequence number &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt;를 가진 패킷을 보낸다&lt;/li&gt;
-  &lt;li&gt;SYN-ACK - Server는 SYN과 ACK flag가 1이고 acknowledgement number가 받은 sequence number &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt;에 1을 더한 숫자와 아무 sequence number &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;를 가진 패킷을 Client에게 보낸다&lt;/li&gt;
-  &lt;li&gt;ACK - Client가 ACK flag가 1이고 받은 acknowledgement number &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A + 1&lt;/code&gt;를  sequence number로 사용하고 acknowledgement number 를 받은 sequence number &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;에 1을 더한 숫자를 사용해 마지막 패킷을 Server로 보낸다&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이 과정을 거치면 Client와 Server 모두 ACK (승인)을 받은 상태가 되고 양 방향 통신이 성립된다.&lt;/p&gt;
-
-&lt;h1 id=&quot;udp---user-datagram-protocol&quot;&gt;UDP - User datagram protocol&lt;/h1&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="Network" /><summary type="html">출처: 위키피디아, guru99, tutorialspoint</summary></entry><entry><title type="html">[알고리즘] 백준 17427번</title><link href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-17427%EB%B2%88/" rel="alternate" type="text/html" title="[알고리즘] 백준 17427번" /><published>2021-01-19T00:00:00+00:00</published><updated>2021-01-19T00:00:00+00:00</updated><id>https://json9512.github.io/blog/%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D-%EB%B0%B1%EC%A4%80%2017427%EB%B2%88</id><content type="html" xml:base="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-17427%EB%B2%88/">&lt;p&gt;수학 쪽 문제는 너무 어렵다. 일단 문제 정의를 따라서 1부터 주어지는 N까지 모든 수의 약수를 구하고 그 합을 더하는 알고리즘을 짰다.
-처음에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n^2)&lt;/code&gt; 이었다가 후에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n sqrt(n))&lt;/code&gt;으로 짰는데 계속 시간 초과가 떴다.&lt;/p&gt;
-
-&lt;p&gt;몇 분의 구글링 끝에 문제를 잘 설명해 놓으신 이 &lt;a href=&quot;https://m.blog.naver.com/PostView.nhn?blogId=jh05013&amp;amp;logNo=221637727327&amp;amp;categoryNo=107&amp;amp;proxyReferer=&amp;amp;proxyReferer=https:%2F%2Fwww.google.com%2F&quot;&gt;글&lt;/a&gt; 을 보고 풀었다.&lt;/p&gt;
-
-&lt;p&gt;수학이 중요하다.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;math&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;gx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# 약수(divisor)의 합을 구하는 것이 아닌
-&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# n 이하의 i의 배수(multiple)를 구해 i를 곱한 값을 누적한다
-&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# n 이하의 i의 배수는 floor(n/i) 다
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;gx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><category term="백준" /><summary type="html">수학 쪽 문제는 너무 어렵다. 일단 문제 정의를 따라서 1부터 주어지는 N까지 모든 수의 약수를 구하고 그 합을 더하는 알고리즘을 짰다. 처음에는 O(n^2) 이었다가 후에 O(n sqrt(n))으로 짰는데 계속 시간 초과가 떴다.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>json9512</name><email>json9512@gmail.com</email></author><category term="algorithm" /><category term="백준" /><summary type="html">일단 약수가 뭔지 몰랐다. 한국어로 수학 용어를 모르는게 문제를 더 어렵게 만든다.</summary></entry></feed>

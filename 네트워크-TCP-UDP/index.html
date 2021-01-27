@@ -122,11 +122,9 @@
             <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
           </li><li class="author-link">
             <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
-          </li><li class="author-link">
-            <a class="u-url" rel="me" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
           </li></ul>
 
-<span class="read-time">5 min read</span>
+<span class="read-time">7 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-19T00:00:00+00:00"><a class="u-url" href="">January 19, 2021</a>
 </time>
@@ -368,6 +366,29 @@
 
 <p><img src="/blog/images/tcpterminate.png" class="align-center" alt="" /></p>
 
+<h4 id="리소스-사용">리소스 사용</h4>
+<p>대부분 특정 TCP 세션을 프로세스에 매핑한 테이블을 구현한다. TCP 패킷에는 session identifier가 없기 때문에 양 끝단 (클라이언트와 서버)은 클라이언트의 주소와 포트로 세션을 분별한다. TCP 패킷이 들어올 때마다 session: process 매핑 된 테이블에서 session을 찾아서 process에 정보를 전달하는 방식이다. 이 테이블에 들어있는 하나의 entry는 Transmission Control Block (TCB)이다. TCB에는 양 끝단의 IP와 포트, 연결 상태, 교환되는 데이터 정보, 보내고 받는 데이터 버퍼가 하나의 정보로 저장되어있다.</p>
+
+<p>서버 쪽에서 세션을 유지 할 수 있는 최대치는 서버가 허용하는 메모리 용량만큼이다. 하지만 클라이언트는 TCP 연결을 하려면 특정 포트에서 연결을 3 way handshake로 열고 연결이 종결 될 때까지 해당 포트에서 모든 것을 관리한다. 이는 곧 클라이언트 컴퓨터에서 TCP 연결 개수를 관리할 수 있게 해준다. 만약 특정 앱이 TCP 연결을 제대로 종결하지 못하면, 이후 다른 앱에서 TCP 연결이 불가능 할수도 있다. (포트가 없기 때문에)</p>
+
+<p>또한 양끝단은 식별되지 않은 패킷과 받았지만 읽지 않은 패킷을 위한 공간도 확보해야한다.</p>
+
+<h4 id="데이터-전송방식-특징">데이터 전송방식 특징</h4>
+<ul>
+  <li>데이터 정렬: 받는 쪽이 받은 segment들을 sequence number에 맞게 정렬을 시켜서 보냈을 때의 데이터 순서를 맞춘다</li>
+  <li>손실 패킷 재전송: 받았다는 승인이 돌아오지 않는 패킷은 재전송을 한다</li>
+  <li>error-free 전송</li>
+  <li>flow 컨트롤: 안전한 데이터 전송을 위해 보내는 쪽의 전송 속도/양을 제한하는 방식. 받는 쪽에서 보내는 쪽에게 패킷을 얼마나 더 받을 수 있는지 알려준다. 만약 받은 쪽의 버퍼가 가득 차면, 다음 acknowledgement 값은 0이며 데이터 전송을 잠시 멈추라는 신호이기도 하다. 이후 버퍼에 있는 데이터를 다 처리한 후에 다시 데이터를 받는 방식이다.</li>
+  <li>congestion control (혼잡제어)</li>
+</ul>
+
+<h4 id="tcp-취약점">TCP 취약점</h4>
+<ul>
+  <li>Denial of Service (DOS): 서버의 자원을 쓰게 하는 방식의 공격. 임의의 IP에서 SYN과 ACK 패킷을 지속적으로 통신하는 방식. SYN Flood 공격이라고도 한다.</li>
+  <li>Connection Hijacking: TCP session에 eavesdrop 및 패킷을 redirect 할 수 있는 공격자가 sequence number를 알아내서 malformed 패킷을 보내주는 방식. 이때 패킷을 승인하게 되면 기존에 연결 요청 했던 호스트가 아닌 공격자와 연결을 이어간다</li>
+  <li>TCP veto: TCP session에서 패킷의 sequence number와 다음 패킷 사이즈를 알 수 있다면 공격자가 malformed 패킷을 보낼 수 있다. 공격자는 sequence number를 보고 다음에 호스트에 와야할 패킷을 미리 보낼 수 있다. 이때 패킷의 payload에는 악성 코드를 집어 넣을 수 있다. 호스트는 이 패킷을 문제 없이 받게 되고 이후 보내는 호스트가 제대로 된 패킷을 보내도 받는 호스트에서 같은 sequence number를 가진 패킷이 있기 때문에 제대로 된 패킷을 드랍한다. Connection Hijacking과 다른 점은, Host간 통신이 끊기지 않는다는 것이다. 공격자는 TCP 통신에 대한 권한은 제한되지만 malformed 패킷이 잘 들키지 않고 공격 대상에게 들어간다는 것이 중요하다. 또한 보내는 Host는 이 공격을 절대 알 수가 없다.</li>
+</ul>
+
 <h1 id="udp---user-datagram-protocol">UDP - User datagram protocol</h1>
 
         </div>
@@ -437,7 +458,7 @@
   <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="https://www.instagram.com/sonj1219/"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
     
       <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
     

@@ -101,10 +101,6 @@ author:
       url: https://www.linkedin.com/in/junghyun-son/
       icon: fab fa-linkedin
 
-    - title: Instagram
-      url: https://www.instagram.com/sonj1219/
-      icon: fab fa-instagram
- 
 # Footer Links
 footer_links:
   - title: Github
@@ -114,10 +110,6 @@ footer_links:
   - title: LinkedIn
     url: https://www.linkedin.com/in/junghyun-son/
     icon: fab fa-linkedin
-
-  - title: Instagram
-    url: https://www.instagram.com/sonj1219/
-    icon: fab fa-instagram
 
   - title: Gmail
     url: mailto:json9512@gmail.com

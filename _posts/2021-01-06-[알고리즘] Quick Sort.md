@@ -21,7 +21,8 @@ Time Complexity:
 - Best: `O(n log n)`
 
 Auxiliary Space Complexity: 
-- `O(1)`
+- `O(log n)` (Best)
+- `O(n)` (Worst)
 
 # Quick sort visualization
 <!-- 16:9 aspect ratio -->

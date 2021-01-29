@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>[CS 기초] Process 와 Thread | json9512’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="[CS 기초] Process 와 Thread" />
+<meta name="author" content="json9512" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="출처: 프로세스 - 위키피디아, 스레드 - 위키피디아" />
+<meta property="og:description" content="출처: 프로세스 - 위키피디아, 스레드 - 위키피디아" />
+<link rel="canonical" href="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-Process-%EC%99%80-Thread/" />
+<meta property="og:url" content="https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-Process-%EC%99%80-Thread/" />
+<meta property="og:site_name" content="json9512’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[CS 기초] Process 와 Thread" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[CS 기초] Process 와 Thread","dateModified":"2021-01-29T00:00:00+00:00","datePublished":"2021-01-29T00:00:00+00:00","description":"출처: 프로세스 - 위키피디아, 스레드 - 위키피디아","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-Process-%EC%99%80-Thread/"},"url":"https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-Process-%EC%99%80-Thread/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="stylesheet" href="/blog/assets/css/skins/dark.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="json9512&#39;s Blog" href="/blog/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://json9512.github.io/blog/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://json9512.github.io/blog/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://json9512.github.io/blog/images/favicon-16x16.png">
+<link rel="manifest" href="https://json9512.github.io/blog/images/site.webmanifest">
+<link rel="shortcut icon" href="https://json9512.github.io/blog/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://json9512.github.io/blog/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  cs-기초-process-와-thread">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/blog/about/">About</a></li><li><a href="/blog/posts/">Posts</a></li><li><a href="/blog/tags/">Tags</a></li><li><a href="/blog/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/blog/" class="site-logo" rel="home" title="json9512's Blog">
+        <img src="/blog/images/logo.png" class="site-logo-img animated fadeInDown" alt="json9512's Blog">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/blog/">json9512's Blog</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description"></p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">[CS 기초] Process 와 Thread
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4" class="author-avatar u-photo" alt="json9512"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">json9512</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">2 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-01-29T00:00:00+00:00"><a class="u-url" href="">January 29, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/blog/tags/#cs" title="Pages tagged CS" rel="tag">CS</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>출처: <a href="https://en.wikipedia.org/wiki/Process_(computing)">프로세스 - 위키피디아</a>, <a href="https://en.wikipedia.org/wiki/Thread_(computing)">스레드 - 위키피디아</a></p>
+
+<p>프로세스와 스레드에 대해 알아보기 전에 프로그램이 어떻게 실행되는지를 알아보자.</p>
+
+<p>컴퓨터에서 크롬을 실행시킨다고 생각해보자.</p>
+
+<p>크롬은 프로그램이고 프로그램이란 특정 task를 수행하기 위한 컴퓨터 명령어들의 집합체다.</p>
+
+<p>프로그램은 프로그래밍 언어로 쓰여지고 Disk나 비휘발성 메모리에 저장된다. 크롬은 C++을 기반으로 쓰여졌다.</p>
+
+<p>이후 이 명령어들의 집합체를 0과1로 컴퓨터가 이해 할 수 있도록 저장시켜놓는 방식 (compiled)이 있고 프로그램이 실행 될 때 0과1로 변환시키는 방식(interpreted)이 있다.</p>
+
+<p>아무튼, 크롬을 클릭하면 컴퓨터는 크롬이란 프로그램의 명령어들을 이진수의 형태로 컴퓨터의 메모리에 저장하게된다.</p>
+
+<h1 id="프로세스">프로세스</h1>
+
+<p>메모리에 저장된 이진수 코드를 실행 시키기위해 OS는 프로세스라는 것을 만든다. 프로그램을 실행 시키기 위해 복수의 프로세스가 필요할 수도 있다.</p>
+
+<p>OS는 프로세스에게 프로세스 정보, 레지스터, 카운터, 스택, 힙, 실행될 코드를 배분해준다. 이를 PCB (Process control block)라고도 한다.</p>
+
+<ul>
+  <li>프로세스 정보:
+    <ol>
+      <li>프로세스 아이디</li>
+      <li>프로세스 상태</li>
+    </ol>
+  </li>
+  <li>
+    <p>레지스터: CPU와 관련된 정보를 담고있다. Instruction, storage address 등 프로세스와 관련된 정보를 가장 빠르게 읽어 볼 수 있는 위치에 저장한다.</p>
+  </li>
+  <li>
+    <p>카운터: 포인터라고도 한다. 현재 프로그램이 어디쯤 실행됐는지 혹은 다음 실행 구간이 어딘지를 가르킨다.</p>
+  </li>
+  <li>
+    <p>스택: 함수, 함수 인자, 리턴 값, 로컬 변수 등 빠르게 읽고 쓰여야 할 정보를 저장한다.</p>
+  </li>
+  <li>
+    <p>힙: dynamic allocated 메모리다.</p>
+  </li>
+  <li>실행될 코드: 프로세스가 실행해야할 프로그램의 코드 일부분이다.</li>
+</ul>
+
+<p>이 외에도 I/O 상태 정보나 스케쥴링 정보 등 더 있다. <a href="https://en.wikipedia.org/wiki/Process_control_block">위키피디아</a>를 참고하자.</p>
+
+<p>각 프로세스는 다른 프로세스와 분리되어 있다.</p>
+
+<p>프로세스간 스위칭을 하게 될 때, 프로세스의 상태, 자원 등을 저장하고 로딩해야 되기 때문에 일정 시간이 소요된다.</p>
+
+<p>프로세스는 경우에 따라 Concurrent 또는 Parallel하게 실행 될 수 있다.</p>
+
+<blockquote>
+  <h3 id="concurrency-병행성-과-parallel-병렬">Concurrency (병행성) 과 Parallel (병렬)</h3>
+  <p>Concurrency는 논리적 (코드로 인해)으로 하나의 코어/스레드에서 Context switching을 하면서 일렬의 명령어를 실행하는 것. <br /><br />
+Eg. 한 명의 고수 체스 플레이어가 20명의 상대를 상대한다고 생각해보자. 20개의 테이블에 고수가 직접 돌아다니면서 20개의 게임을 5초씩 처리하는 것이라고 보면 된다.<br /><br />
+Parallel 처리는 물리적으로 복수의 코어/스레드가 <em>동시에</em>  Task를 수행하는 것이다.<br />
+Eg. 20명의 고수가 20명의 선수를 각 각 상대하는 것.</p>
+</blockquote>
+
+<p>다시 크롬을 생각해보자. 이제 크롬 창이 열렸다고 생각하고 새로운 탭을 켜면, 새로운 프로세스가 시작되는 것이다.</p>
+
+<p>프로세스간 분리되어 있어야하는 이유는 특정 프로세스가 먹통이 되면 전체 프로그램을 먹통으로 만들게 될 수 있기 때문이다.</p>
+
+<p>만약 크롬 탭 중에 하나가 응답이 없다고 나머지 탭들도 응답을 하지 않는다면 상당히 짜증날 것이다. (IE 7까지만 해도 흔한 상황이었다.)</p>
+
+<h1 id="스레드">스레드</h1>
+<p>크롬에서 구글을 사용한다고 가정해보자. 크롬 창에 보여지는 탭과 옵션, 북마크, 크롬 익스텐션, 네트워크 통신 기능 등 크롬이란 프로그램에는 여러가지 기능들이 있다.</p>
+
+<p>이 프로그램에는 여러개의 프로세스가 돌아가고 있다. 그리고 각 프로세스는 스레드라는 것이 있다.</p>
+
+<p>프로세스 내에 스레드의 개수는 최소 하나다.</p>
+
+<p>스레드는 프로세스의 자원을 공유한다. 각 스레드는 자기만의 레지스터와 스택을 가지게 되고 힙 메모리와 프로세스에 할당 된 실행코드를 나눠쓰게 된다.</p>
+
+<p>스레드는 힙 메모리를 공유하고 있기 때문에 하나의 스레드에서 실행되는 코드가 다른 스레드의 코드에 영향을 줄 수 있다. 이는 장점이 되기도하고 단점이 되기도 한다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Process</th>
+      <th style="text-align: center">Thread</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">실행까지 소요시간이 상대적으로 길다</td>
+      <td style="text-align: center">실행까지 소요시간이 상대적으로 짧다</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">프로세스는 자기만의 메모리 공간을 가진다</td>
+      <td style="text-align: center">스레드는 프로세스가 사용하는 메모리 공간을 사용한다</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">프로세스간 통신은 상대적으로 느리다</td>
+      <td style="text-align: center">스레드간 통신은 상대적으로 빠르다. 메모리를 공유하기 있기 때문</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Context Switching시 더 많은 시간과 자원이 필요하다</td>
+      <td style="text-align: center">Context Switching시 더 적은 시간과 자원이 필요하다</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">프로세스간 메모리를 공유하지 않는다</td>
+      <td style="text-align: center">같은 프로세스에 있는 스레드간 메모리를 공유한다</td>
+    </tr>
+  </tbody>
+</table>
+
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2FCS-%25EA%25B8%25B0%25EC%25B4%2588-Process-%25EC%2599%2580-Thread%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BCS+%EA%B8%B0%EC%B4%88%5D+Process+%EC%99%80+Thread%20https%3A%2F%2Fjson9512.github.io%2Fblog%2FCS-%25EA%25B8%25B0%25EC%25B4%2588-Process-%25EC%2599%2580-Thread%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2FCS-%25EA%25B8%25B0%25EC%25B4%2588-Process-%25EC%2599%2580-Thread%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%5BCS+%EA%B8%B0%EC%B4%88%5D+Process+%EC%99%80+Thread&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2FCS-%25EA%25B8%25B0%25EC%25B4%2588-Process-%25EC%2599%2580-Thread%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+  <div class="page-comments">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-Process-%EC%99%80-Thread/';
+        this.page.identifier = 'https://json9512.github.io/blog/CS-%EA%B8%B0%EC%B4%88-Process-%EC%99%80-Thread/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://json9512-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-6064%EB%B2%88/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> [알고리즘] 백준 6064번
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-15651%EB%B2%88/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        [알고리즘] 백준 15651번
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+
+<script>
+// http://docs.mathjax.org/en/latest/upgrading/v2.html
+MathJax = {
+  tex: {
+      tags: "ams"    // eq numbering options: none, ams, all
+  },
+  options: {
+    renderActions: {
+      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
+      find: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </body>
+
+</html>

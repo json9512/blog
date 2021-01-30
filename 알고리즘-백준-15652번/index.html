@@ -16,22 +16,22 @@
   
     
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>[알고리즘] 백준 1748번 | json9512’s Blog</title>
+<title>[알고리즘] 백준 15652번 | json9512’s Blog</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="[알고리즘] 백준 1748번" />
+<meta property="og:title" content="[알고리즘] 백준 15652번" />
 <meta name="author" content="json9512" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="처음엔 &quot;&quot;.join[str(i) for i in range(1, num+1)] 으로 도전했지만 역시나 메모리 초과가 떴다. 이후 자릿수를 기준으로 더해지는 수를 구하는 방식으로도 풀었지만 시간초과가 떴다." />
-<meta property="og:description" content="처음엔 &quot;&quot;.join[str(i) for i in range(1, num+1)] 으로 도전했지만 역시나 메모리 초과가 떴다. 이후 자릿수를 기준으로 더해지는 수를 구하는 방식으로도 풀었지만 시간초과가 떴다." />
-<link rel="canonical" href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1748%EB%B2%88/" />
-<meta property="og:url" content="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1748%EB%B2%88/" />
+<meta name="description" content="A1 ≤ A2 ≤ ... ≤ AK-1 ≤ AK를 확인하는 함수를 만들고 itertools.product를 사용해서 풀었는데 시간 초과가 떴다. 찾아보니 itertools.product는 주어진 arr에대한 모든 조합을 결과 값으로 준다. 예를 들면: ```python 인풋: “[1, 2, 3] 3”" />
+<meta property="og:description" content="A1 ≤ A2 ≤ ... ≤ AK-1 ≤ AK를 확인하는 함수를 만들고 itertools.product를 사용해서 풀었는데 시간 초과가 떴다. 찾아보니 itertools.product는 주어진 arr에대한 모든 조합을 결과 값으로 준다. 예를 들면: ```python 인풋: “[1, 2, 3] 3”" />
+<link rel="canonical" href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-15652%EB%B2%88/" />
+<meta property="og:url" content="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-15652%EB%B2%88/" />
 <meta property="og:site_name" content="json9512’s Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-01-29T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-01-30T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="[알고리즘] 백준 1748번" />
+<meta property="twitter:title" content="[알고리즘] 백준 15652번" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[알고리즘] 백준 1748번","dateModified":"2021-01-29T00:00:00+00:00","datePublished":"2021-01-29T00:00:00+00:00","description":"처음엔 &quot;&quot;.join[str(i) for i in range(1, num+1)] 으로 도전했지만 역시나 메모리 초과가 떴다. 이후 자릿수를 기준으로 더해지는 수를 구하는 방식으로도 풀었지만 시간초과가 떴다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1748%EB%B2%88/"},"url":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1748%EB%B2%88/","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[알고리즘] 백준 15652번","dateModified":"2021-01-30T00:00:00+00:00","datePublished":"2021-01-30T00:00:00+00:00","description":"A1 ≤ A2 ≤ ... ≤ AK-1 ≤ AK를 확인하는 함수를 만들고 itertools.product를 사용해서 풀었는데 시간 초과가 떴다. 찾아보니 itertools.product는 주어진 arr에대한 모든 조합을 결과 값으로 준다. 예를 들면: ```python 인풋: “[1, 2, 3] 3”","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-15652%EB%B2%88/"},"url":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-15652%EB%B2%88/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -65,7 +65,7 @@
 </head>
 
 
-  <body class="layout--post  알고리즘-백준-1748번">
+  <body class="layout--post  알고리즘-백준-15652번">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -110,7 +110,7 @@
       <header class="page-header">
         
         
-          <h1 id="page-title" class="page-title p-name">[알고리즘] 백준 1748번
+          <h1 id="page-title" class="page-title p-name">[알고리즘] 백준 15652번
 </h1>
         
       </header>
@@ -124,9 +124,9 @@
             <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
           </li></ul>
 
-<span class="read-time">~1 min read</span>
+<span class="read-time">1 min read</span>
 
-    <time class="page-date dt-published" datetime="2021-01-29T00:00:00+00:00"><a class="u-url" href="">January 29, 2021</a>
+    <time class="page-date dt-published" datetime="2021-01-30T00:00:00+00:00"><a class="u-url" href="">January 30, 2021</a>
 </time>
 
   </div>
@@ -145,21 +145,68 @@
 
       <div class="page-content">
         <div class="e-content">
-          <p>처음엔 <code class="language-plaintext highlighter-rouge">"".join[str(i) for i in range(1, num+1)]</code> 으로 도전했지만 역시나 메모리 초과가 떴다. 이후 자릿수를 기준으로 더해지는 수를 구하는 방식으로도 풀었지만 시간초과가 떴다.</p>
+          <p><code class="language-plaintext highlighter-rouge">A1 ≤ A2 ≤ ... ≤ AK-1 ≤ AK</code>를 확인하는 함수를 만들고 <code class="language-plaintext highlighter-rouge">itertools.product</code>를 사용해서 풀었는데 시간 초과가 떴다. 찾아보니 <code class="language-plaintext highlighter-rouge">itertools.product</code>는 주어진 arr에대한 모든 조합을 결과 값으로 준다. 예를 들면:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">인풋</span><span class="p">:</span> <span class="s">"[1, 2, 3] 3"</span>
 
-<p>결국 정해놓은 시간에 못 풀어서 구글의 도움을 받았다.</p>
+<span class="n">결과값</span><span class="p">:</span> <span class="s">"""
+1 1 1
+1 1 2
+1 1 3
+1 2 1
+1 2 2
+1 2 3
+1 3 1
+1 3 2
+1 3 3
+2 1 1
+2 1 2
+2 1 3
+2 2 1
+2 2 2
+2 2 3
+2 3 1
+2 3 2
+2 3 3
+3 1 1
+3 1 2
+3 1 3
+3 2 1
+3 2 2
+3 2 3
+3 3 1
+3 3 2
+3 3 3
+"""</span>
+</code></pre></div></div>
+
+<p>문제를 살펴봤을 때 불필요한 연산이 많아서 <code class="language-plaintext highlighter-rouge">itertools</code> 라이브러리를 찾아보다가 <code class="language-plaintext highlighter-rouge">itertool.combinations_with_replacement</code> 함수로 시도하니까 풀렸다. <code class="language-plaintext highlighter-rouge">itertool.combinations_with_replacement</code>의 예시:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">인풋</span><span class="p">:</span> <span class="s">"[1, 2, 3] 3"</span>
+<span class="n">결과값</span><span class="p">:</span> <span class="s">"""
+1 1 1
+1 1 2
+1 1 3
+1 2 2
+1 2 3
+1 3 3
+2 2 2
+2 2 3
+2 3 3
+3 3 3
+"""</span>
+</code></pre></div></div>
+<p>답안:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
-
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations_with_replacement</span>
 
 <span class="k">def</span> <span class="nf">solution</span><span class="p">():</span>
-    <span class="n">num</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">strip</span><span class="p">()</span>
-    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num</span><span class="p">)):</span>
-        <span class="n">ans</span> <span class="o">+=</span> <span class="mi">9</span> <span class="o">*</span> <span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">ans</span> <span class="o">+=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="nb">len</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+    <span class="n">num</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
 
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">combinations_with_replacement</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">comb</span> <span class="ow">in</span> <span class="n">ans</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="n">comb</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
     <span class="n">solution</span><span class="p">()</span>
@@ -170,10 +217,10 @@
 
         
           <div class="page-share">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-1748%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
-  <a href="https://twitter.com/intent/tweet?text=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+%EB%B0%B1%EC%A4%80+1748%EB%B2%88%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-1748%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-1748%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
-  <a href="https://reddit.com/submit?title=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+%EB%B0%B1%EC%A4%80+1748%EB%B2%88&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-1748%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-15652%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+%EB%B0%B1%EC%A4%80+15652%EB%B2%88%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-15652%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-15652%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+%EB%B0%B1%EC%A4%80+15652%EB%B2%88&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-15652%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
 </div>
 
         
@@ -184,8 +231,8 @@
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
-        this.page.url = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1748%EB%B2%88/';
-        this.page.identifier = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1748%EB%B2%88/';
+        this.page.url = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-15652%EB%B2%88/';
+        this.page.identifier = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-15652%EB%B2%88/';
       };
 
       (function() {
@@ -203,20 +250,20 @@
 
         <nav class="page-pagination" role="navigation">
   
-    <a class="page-previous" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-15651%EB%B2%88/">
+    <a class="page-previous" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1748%EB%B2%88/">
       <h4 class="page-pagination-label">Previous</h4>
       <span class="page-pagination-title">
-        <i class="fas fa-arrow-left"></i> [알고리즘] 백준 15651번
+        <i class="fas fa-arrow-left"></i> [알고리즘] 백준 1748번
 
       </span>
     </a>
   
 
   
-    <a class="page-next" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-15652%EB%B2%88/">
+    <a class="page-next" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-9095%EB%B2%88/">
       <h4 class="page-pagination-label">Next</h4>
       <span class="page-pagination-title">
-        [알고리즘] 백준 15652번
+        [알고리즘] 백준 9095번
  <i class="fas fa-arrow-right"></i>
       </span>
     </a>

@@ -160,6 +160,7 @@
 <p><strong>목차</strong></p>
 
 <ol>
+  <li><strong><a href="#garbage-collector">Garbage Collector</a></strong></li>
   <li><strong><a href="#memory-management">Memory Management</a></strong></li>
   <li><strong><a href="#global-interpreter-lock">Global Interpreter Lock</a></strong></li>
   <li><strong><a href="#all-is-one-one-is-all">All is One, One is all</a></strong></li>
@@ -169,15 +170,42 @@
 
 <hr />
 
-<h1 id="memory-management">Memory Management</h1>
+<h1 id="garbage-collector">Garbage Collector</h1>
 
-<p>출처: <a href="https://realpython.com/python-memory-management/">Real Python</a>, <a href="https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.">Stackify</a></p>
+<p>출처: <a href="https://realpython.com/python-memory-management/">Real Python</a>, <a href="https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.">Stackify</a>, <a href="https://rushter.com/blog/python-garbage-collector/">rushter</a></p>
 
-<p>컴퓨터에서 프로그램이 실행될 때, OS에서 프로그램을 위해 할당하는 메모리는 fixed하다. 프로그램은 정해진 메모리 관리 알고리즘에 따라 주어진 메모리를 관리한다.</p>
+<p>Garbage Collector란?</p>
 
-<p><strong>CPython</strong></p>
+<p>메모리를 효율적으로 관리하기 위한 메커니즘이다. 장점은 메모리를 효율적으로 활용할 수 있는 것과 잔버그를 없앨수 있는 것.</p>
 
-<p>파이썬은 CPython이 베이스이다. CPython은 C로 만들어졌다.</p>
+<p>단점은 GC를 구동하기위한 overhead가 생긴다.</p>
+
+<p><em>파이썬의 GC는?</em></p>
+
+<p>파이썬은 기존의 GC 방식과 다른 방식으로 GC를 구현했다고 한다. <a href="http://arctrix.com/nas/python/gc/">참고</a></p>
+
+<p>기존의 방식은 <code class="language-plaintext highlighter-rouge">사용 가능한</code> objects를 찾는 방식이다:</p>
+<ol>
+  <li>root objects와 스택에 있는 objects를 찾고</li>
+  <li>이 objects에 연결되는 다른 objects를 찾으면, 찾은 objects들은 alive 한 것이다</li>
+  <li>나머지 objects를 free 해주면 된다</li>
+</ol>
+
+<p>하지만 파이썬에서는 위와 같은 방식이 불가능하다고 말한다. 이유는 파이썬 extension module의 작동 방식 상 root objects를 찾는 것이 어렵다는 것이다.</p>
+
+<p>파이썬의 GC는 다음과 같다.</p>
+<ol>
+  <li>모든 것을 Object로 관리하고 reference counting을 한다</li>
+  <li>generational gc도 같이 사용한다</li>
+</ol>
+
+<p>위의 2가지를 활용해서 파이썬의 GC는 <code class="language-plaintext highlighter-rouge">사용 불가능 한</code> objects를 찾는 방식이다.</p>
+
+<p><strong>Reference Counting</strong></p>
+
+<p><em>CPython</em></p>
+
+<p>파이썬은 CPython이 베이스다. CPython은 C로 만들어졌다.</p>
 
 <p>CPython 외에도 다른 interpreter/compiler는 다음과 같다:</p>
 <ul>
@@ -192,13 +220,13 @@
   <li>.pyc (컴파일 된 코드)를 파이썬 가상 환경에서 실행한다</li>
 </ol>
 
-<p><strong>파이썬의 object (int, list, etc)는 어떻게 관리가 될까?</strong></p>
+<p><em>파이썬의 object (int, list, etc)는 어떻게 관리가 될까?</em></p>
 
 <p>파이썬에서는 모든 object가 <code class="language-plaintext highlighter-rouge">PyObject</code>로 표현된다.</p>
 
 <p><code class="language-plaintext highlighter-rouge">PyObject</code>는 C struct 이고:</p>
 <ul>
-  <li>ob_refcnt: 이 object를 가르키고 있는 변수 갯수</li>
+  <li>ob_refcnt: 이 object를 가르키고 있는 변수 개수</li>
   <li>ob_type: 이 object의 type (int, list, etc)</li>
 </ul>
 
@@ -226,21 +254,22 @@
 
 <p>파이썬에서는 이것을 해결하고자 Generation garbage collection 도 같이 사용한다.</p>
 
-<p><strong>Generation Garbage Collection</strong></p>
+<p><strong>Generation Garbage Collection</strong>
+Generation garbage collection은 ref count 처럼 항상 돌아가는 것이 아니다. Cycle이 발생할 수 있는 컨테이너 형식 데이터 타입 (list, dictionaries, instances, classes, tuples)들만 확인한다.</p>
 
 <p>2 가지 특징이 있다:</p>
 <ol>
-  <li>가비지 콜렉터가 메모리 내에 모든 <code class="language-plaintext highlighter-rouge">object</code>를 track 한다. 이후 collection process에서 살아남은 <code class="language-plaintext highlighter-rouge">object</code>들은 다음 generation으로 넘어간다. 파이썬의 garbage collection process의 generation은 총 3번이다.</li>
-  <li>각 generation 마다 threshold 가 있다. 이 threshold는 가비지 콜렉터가 track하는 <code class="language-plaintext highlighter-rouge">object</code>의 최대 갯수이다. 만약이 threshold를 넘어서게 되면, collection process가 시작되고 살아남은 <code class="language-plaintext highlighter-rouge">object</code>만 다음 세대로 넘어간다. 이 threshold는 개발자가 직접 바꿀 수 있다. <em>Instagram은 실제로 이 기능을 해제하여 서버를 10%가량 더 효율적으로 만들었다.</em></li>
+  <li>가비지 콜렉터가 메모리 내에 모든 <code class="language-plaintext highlighter-rouge">object</code>를 track 한다. collection process에서 살아남은 <code class="language-plaintext highlighter-rouge">object</code>들은 다음 generation으로 넘어간다. 파이썬의 garbage collection process의 generation은 총 3 개다.</li>
+  <li>각 generation 마다 threshold 가 있다. 이 threshold는 가비지 콜렉터가 track하는 <code class="language-plaintext highlighter-rouge">object</code>의 최대 개수이다. 만약 threshold를 넘어서게 되면, collection process가 시작되고 살아남은 <code class="language-plaintext highlighter-rouge">object</code>만 다음 세대로 넘어간다. 이 threshold는 개발자가 직접 바꿀 수 있다. <em>Instagram은 실제로 이 기능을 해제하여 서버를 10%가량 더 효율적으로 만들었다.</em></li>
 </ol>
 
-<p><strong>Global Interpreter Lock (GIL)</strong></p>
+<p>Generational GC가 reference cycle을 어떻게 감지하는지 알고 싶다면 이 <a href="http://arctrix.com/nas/python/gc/">글</a>과 이 <a href="https://legacy.python.org/dev/peps/pep-0442/#description">PEP-442</a>을 읽도록 하자.</p>
 
-<p>메모리는 공유제이다. 메모리를 보호하는 알고리즘이 없다면 여러 프로세스가 같은 메모리 값을 읽고, 쓰고, 지우고 할 수 있다. 즉, race condition과 같은 문제점들이 발현한다.</p>
+<p>PEP-442는 원글에서 말한 finalizers관련 문제를 해결한 방법을 서술하고 있다.</p>
 
-<p>이를 해결하는 방법은 여러가지인데 파이썬은 Global Interpreter Lock (GIL) 을 사용함으로써 메모리의 데이터를 보호한다.</p>
+<h1 id="memory-management">Memory Management</h1>
 
-<p>파이썬의 GIL은 단일 Thread에게만 메모리 권한을 준다.</p>
+<p>컴퓨터에서 프로그램이 실행될 때, OS에서 프로그램을 위해 할당하는 메모리는 fixed하다. 프로그램은 정해진 메모리 관리 알고리즘에 따라 주어진 메모리를 관리한다.</p>
 
 <p><strong>CPython Memory Management</strong></p>
 

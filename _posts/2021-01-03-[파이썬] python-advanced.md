@@ -18,23 +18,47 @@ comments: true
 
 **목차**
 
-1. **[Memory Management](#memory-management)**
-2. **[Global Interpreter Lock](#global-interpreter-lock)**
-3. **[All is One, One is all](#all-is-one-one-is-all)**
-4. **[Decorators](#decorators)**
-5. **[Decorators 2](#decorators-2)**
+1. **[Garbage Collector](#garbage-collector)**
+2. **[Memory Management](#memory-management)**
+3. **[Global Interpreter Lock](#global-interpreter-lock)**
+4. **[All is One, One is all](#all-is-one-one-is-all)**
+5. **[Decorators](#decorators)**
+6. **[Decorators 2](#decorators-2)**
 
 ****
 
-# Memory Management
+# Garbage Collector
 
-출처: [Real Python](https://realpython.com/python-memory-management/), [Stackify](https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.)
+출처: [Real Python](https://realpython.com/python-memory-management/), [Stackify](https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.), [rushter](https://rushter.com/blog/python-garbage-collector/)
 
-컴퓨터에서 프로그램이 실행될 때, OS에서 프로그램을 위해 할당하는 메모리는 fixed하다. 프로그램은 정해진 메모리 관리 알고리즘에 따라 주어진 메모리를 관리한다.
+Garbage Collector란? 
 
-**CPython**
+메모리를 효율적으로 관리하기 위한 메커니즘이다. 장점은 메모리를 효율적으로 활용할 수 있는 것과 잔버그를 없앨수 있는 것. 
 
-파이썬은 CPython이 베이스이다. CPython은 C로 만들어졌다.
+단점은 GC를 구동하기위한 overhead가 생긴다.
+
+*파이썬의 GC는?*
+
+파이썬은 기존의 GC 방식과 다른 방식으로 GC를 구현했다고 한다. [참고](http://arctrix.com/nas/python/gc/)
+
+기존의 방식은 `사용 가능한` objects를 찾는 방식이다:
+1. root objects와 스택에 있는 objects를 찾고
+2. 이 objects에 연결되는 다른 objects를 찾으면, 찾은 objects들은 alive 한 것이다
+3. 나머지 objects를 free 해주면 된다
+
+하지만 파이썬에서는 위와 같은 방식이 불가능하다고 말한다. 이유는 파이썬 extension module의 작동 방식 상 root objects를 찾는 것이 어렵다는 것이다.
+
+파이썬의 GC는 다음과 같다.
+1. 모든 것을 Object로 관리하고 reference counting을 한다
+2. generational gc도 같이 사용한다
+
+위의 2가지를 활용해서 파이썬의 GC는 `사용 불가능 한` objects를 찾는 방식이다.
+
+**Reference Counting**
+
+*CPython*
+
+파이썬은 CPython이 베이스다. CPython은 C로 만들어졌다.
 
 CPython 외에도 다른 interpreter/compiler는 다음과 같다:
 - IronPython - .NET
@@ -45,12 +69,12 @@ CPython 외에도 다른 interpreter/compiler는 다음과 같다:
 1. .py에 적힌 코드를 bytecode로 compile 한다
 2. .pyc (컴파일 된 코드)를 파이썬 가상 환경에서 실행한다
 
-**파이썬의 object (int, list, etc)는 어떻게 관리가 될까?**
+*파이썬의 object (int, list, etc)는 어떻게 관리가 될까?*
 
 파이썬에서는 모든 object가 `PyObject`로 표현된다. 
 
 `PyObject`는 C struct 이고:
-- ob_refcnt: 이 object를 가르키고 있는 변수 갯수
+- ob_refcnt: 이 object를 가르키고 있는 변수 개수
 - ob_type: 이 object의 type (int, list, etc)
 
 와 같은 특성을 가지고 있다
@@ -79,18 +103,19 @@ del a # ob_refcnt of Foo = 1
 파이썬에서는 이것을 해결하고자 Generation garbage collection 도 같이 사용한다.
 
 **Generation Garbage Collection**
+Generation garbage collection은 ref count 처럼 항상 돌아가는 것이 아니다. Cycle이 발생할 수 있는 컨테이너 형식 데이터 타입 (list, dictionaries, instances, classes, tuples)들만 확인한다.
 
 2 가지 특징이 있다:
-1. 가비지 콜렉터가 메모리 내에 모든 `object`를 track 한다. 이후 collection process에서 살아남은 `object`들은 다음 generation으로 넘어간다. 파이썬의 garbage collection process의 generation은 총 3번이다.
-2. 각 generation 마다 threshold 가 있다. 이 threshold는 가비지 콜렉터가 track하는 `object`의 최대 갯수이다. 만약이 threshold를 넘어서게 되면, collection process가 시작되고 살아남은 `object`만 다음 세대로 넘어간다. 이 threshold는 개발자가 직접 바꿀 수 있다. *Instagram은 실제로 이 기능을 해제하여 서버를 10%가량 더 효율적으로 만들었다.*
+1. 가비지 콜렉터가 메모리 내에 모든 `object`를 track 한다. collection process에서 살아남은 `object`들은 다음 generation으로 넘어간다. 파이썬의 garbage collection process의 generation은 총 3 개다.
+2. 각 generation 마다 threshold 가 있다. 이 threshold는 가비지 콜렉터가 track하는 `object`의 최대 개수이다. 만약 threshold를 넘어서게 되면, collection process가 시작되고 살아남은 `object`만 다음 세대로 넘어간다. 이 threshold는 개발자가 직접 바꿀 수 있다. *Instagram은 실제로 이 기능을 해제하여 서버를 10%가량 더 효율적으로 만들었다.*
 
-**Global Interpreter Lock (GIL)**
+Generational GC가 reference cycle을 어떻게 감지하는지 알고 싶다면 이 [글](http://arctrix.com/nas/python/gc/)과 이 [PEP-442](https://legacy.python.org/dev/peps/pep-0442/#description)을 읽도록 하자.
 
-메모리는 공유제이다. 메모리를 보호하는 알고리즘이 없다면 여러 프로세스가 같은 메모리 값을 읽고, 쓰고, 지우고 할 수 있다. 즉, race condition과 같은 문제점들이 발현한다. 
+PEP-442는 원글에서 말한 finalizers관련 문제를 해결한 방법을 서술하고 있다.
 
-이를 해결하는 방법은 여러가지인데 파이썬은 Global Interpreter Lock (GIL) 을 사용함으로써 메모리의 데이터를 보호한다.
+# Memory Management
 
-파이썬의 GIL은 단일 Thread에게만 메모리 권한을 준다.
+컴퓨터에서 프로그램이 실행될 때, OS에서 프로그램을 위해 할당하는 메모리는 fixed하다. 프로그램은 정해진 메모리 관리 알고리즘에 따라 주어진 메모리를 관리한다.
 
 **CPython Memory Management**
 

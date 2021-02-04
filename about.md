@@ -8,8 +8,12 @@ permalink: /about/
 
 # Junghyun Son
 
+[Resume Eng](https://drive.google.com/file/d/17cc3m66kqiFHqxQPk_8vHqgpC4-iyH1m/view?usp=sharing) 
+| [Resume Kor](https://drive.google.com/file/d/13UavMT-79DV6muMkXyrWYoMUPvX8ev_7/view?usp=sharing)
+
 👋 Hi ! 
 
 I'm a junior developer ready to 🚀 my career !
 
 See you around 😄
+

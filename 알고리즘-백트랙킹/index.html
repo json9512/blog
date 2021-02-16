@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>[알고리즘] 백 트랙킹 | json9512’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="[알고리즘] 백 트랙킹" />
+<meta name="author" content="json9512" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="백 트랙킹 알고리즘이란 특정 조건에 부합하는 모든 조합의 수를 살펴보는 알고리즘이다. 특정 조건에 부합하지 않는 조합은 연산을 하지 않고 넘어가는 방식으로 코드를 짜는 것이다." />
+<meta property="og:description" content="백 트랙킹 알고리즘이란 특정 조건에 부합하는 모든 조합의 수를 살펴보는 알고리즘이다. 특정 조건에 부합하지 않는 조합은 연산을 하지 않고 넘어가는 방식으로 코드를 짜는 것이다." />
+<link rel="canonical" href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%ED%8A%B8%EB%9E%99%ED%82%B9/" />
+<meta property="og:url" content="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%ED%8A%B8%EB%9E%99%ED%82%B9/" />
+<meta property="og:site_name" content="json9512’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[알고리즘] 백 트랙킹" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"[알고리즘] 백 트랙킹","dateModified":"2021-02-16T00:00:00+00:00","datePublished":"2021-02-16T00:00:00+00:00","description":"백 트랙킹 알고리즘이란 특정 조건에 부합하는 모든 조합의 수를 살펴보는 알고리즘이다. 특정 조건에 부합하지 않는 조합은 연산을 하지 않고 넘어가는 방식으로 코드를 짜는 것이다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%ED%8A%B8%EB%9E%99%ED%82%B9/"},"url":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%ED%8A%B8%EB%9E%99%ED%82%B9/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="stylesheet" href="/blog/assets/css/skins/dark.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="json9512&#39;s Blog" href="/blog/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://json9512.github.io/blog/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://json9512.github.io/blog/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://json9512.github.io/blog/images/favicon-16x16.png">
+<link rel="manifest" href="https://json9512.github.io/blog/images/site.webmanifest">
+<link rel="shortcut icon" href="https://json9512.github.io/blog/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://json9512.github.io/blog/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  알고리즘-백-트랙킹">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/blog/about/">About</a></li><li><a href="/blog/posts/">Posts</a></li><li><a href="/blog/tags/">Tags</a></li><li><a href="/blog/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/blog/" class="site-logo" rel="home" title="json9512's Blog">
+        <img src="/blog/images/logo.png" class="site-logo-img animated fadeInDown" alt="json9512's Blog">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/blog/">json9512's Blog</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description"></p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">[알고리즘] 백 트랙킹
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="https://avatars3.githubusercontent.com/u/52622949?s=460&u=c44028732ef6df70300cae4bdd94bdaae4ef25b5&v=4" class="author-avatar u-photo" alt="json9512"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">json9512</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/json9512"><i class="fab fa-github-square fa-lg" title="Github"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">2 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-02-16T00:00:00+00:00"><a class="u-url" href="">February 16, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/blog/tags/#algorithm" title="Pages tagged algorithm" rel="tag">algorithm</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>백 트랙킹 알고리즘이란 특정 조건에 부합하는 모든 조합의 수를 살펴보는 알고리즘이다. 특정 조건에 부합하지 않는 조합은 연산을 하지 않고 넘어가는 방식으로 코드를 짜는 것이다.</p>
+
+<p>대표적인 문제로 N-Queens 문제가 있다. <a href="https://www.freecodecamp.org/news/lets-backtrack-and-save-some-queens-1f9ef6af5415/">참고</a></p>
+
+<blockquote>
+  <p>N*N 체스판에 최대한 많은 Queen을 놓아야한다. 단, 서로 공격이 불가능한 자리에 놓고 싶다.</p>
+</blockquote>
+
+<p>위의 문제를 브루트포스로 풀 수는 있겠지만 비효율적이다. 가령 <code class="language-plaintext highlighter-rouge">N = 8</code> 이라고 가정을 해보자. <code class="language-plaintext highlighter-rouge">8x8</code> 체스판에 퀸을 놓을 수 있는 자리는 총 64개다. 즉 <code class="language-plaintext highlighter-rouge">C(64, 8)</code> 이라고 볼 수 있다. 이를 조합의 수를 구하는 공식 <code class="language-plaintext highlighter-rouge">C(n, r) = n! / (r! (n-r)!)</code> 에 넣어서 계산을 해보면 대략 45억개의 조합이 나온다.</p>
+
+<p>45억개의 조합을 브루트포스로 연산을 하려하면 대부분의 코테에서 시간초과가 뜰 것이다.</p>
+
+<p>보다 효율적인 방법이 바로 백 트랙킹 알고리즘이다.</p>
+
+<p>위의 문제를 백트랙킹 기법으로 풀고자 하면 퀸을 특정 칸에 놓을 때 마다 조건에 부합한지 판단을 하기 때문에 45억개의 조합을 연산하는 것보다 훨어어어얼씬 더 적은 연산을 하게 된다.</p>
+
+<p>접근 방식은 다음과 같다</p>
+<ol>
+  <li>왼쪽 열에서 시작한다</li>
+  <li>모든 퀸이 보드에 배치됐으면 True를 반환한다</li>
+  <li>현재 열의 모든 행 칸에 다음을 시도한다
+    <ul>
+      <li>현재 칸에 퀸을 배치할 수 있으면, 현재 칸 [row, column]을 답안에 저장하고 재귀적으로 모든 퀸이 배치가 됐는지 확인한다</li>
+      <li>현재 칸에 퀸을 배치했을 때 모든 퀸이 배치가 된 것이면 True 를 반환한다</li>
+      <li>현재 칸에 퀸을 배치할 수 없으면 현재 [row, column]을 표시하지 않고 다음 row (행)으로 넘어가서 3. 을 반복한다</li>
+    </ul>
+  </li>
+  <li>모든 행을 시도했는데 퀸을 배치할 수 없다면, False를 반환해서 백 트랙킹을 한다</li>
+</ol>
+
+<h1 id="파이썬-구현">파이썬 구현</h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="k">def</span> <span class="nf">can_place</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    <span class="s">"""
+        퀸을 주어진 위치에 놓을 수 있는지 확인한다.
+        이 함수는 퀸이 배치된 후에 호출이 되기 때문에
+        왼쪽에 다른 퀸이 있는지만 확인하면 된다
+    """</span>
+    <span class="c1"># 왼쪽을 확인한다
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="c1"># 왼쪽 대각선 위를 확인한다
+</span>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    
+    <span class="c1"># 왼쪽 대각선 아래를 확인한다
+</span>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    
+    <span class="k">return</span> <span class="bp">True</span>
+
+
+<span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    <span class="c1"># 조건부 확인
+</span>    <span class="c1"># 모든 퀸이 배치가 됐으면, True를 반환한다
+</span>    <span class="k">if</span> <span class="n">col</span> <span class="o">&gt;=</span> <span class="n">N</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    
+    <span class="c1"># 현재 열에서 모든 행에 퀸을 놓을 수 있는지 확인한다
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">can_place</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+            <span class="c1"># 보드[i][j]에 퀸을 배치한다
+</span>            <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+            <span class="c1"># 나머지 퀸을 배치하기 위해 재귀 호출을 한다
+</span>            <span class="k">if</span> <span class="n">backtrack</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">col</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+            
+            <span class="c1"># 만약 현재 위치에 퀸을 배치하는 것이 답을 도출해 낼 수 없으면
+</span>            <span class="c1"># 현재 배치한 퀸을 지운다
+</span>            <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># 만약 모든 퀸을 배치 할 수 없으면 False를 반환한다
+</span>    <span class="k">return</span> <span class="bp">False</span>
+
+
+<span class="k">def</span> <span class="nf">solution</span><span class="p">():</span>
+    <span class="c1"># 입력값 읽기
+</span>    <span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="c1"># N * N 크기의 보드를 초기화 한다.
+</span>    <span class="n">board</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">backtrack</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Solution does not exist"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">solution</span><span class="p">()</span>
+
+<span class="c1"># 입력 값: 8
+# 결과 값: [
+#    [1, 0, 0, 0, 0, 0, 0, 0], 
+#    [0, 0, 0, 0, 0, 0, 1, 0], 
+#    [0, 0, 0, 0, 1, 0, 0, 0], 
+#    [0, 0, 0, 0, 0, 0, 0, 1], 
+#    [0, 1, 0, 0, 0, 0, 0, 0], 
+#    [0, 0, 0, 1, 0, 0, 0, 0], 
+#    [0, 0, 0, 0, 0, 1, 0, 0], 
+#    [0, 0, 1, 0, 0, 0, 0, 0]
+#    ]
+</span></code></pre></div></div>
+<hr />
+
+<p>개인적으로 재귀 함수를 활용한 알고리즘이 나오면 어렵다.</p>
+
+<p>어찌보면 백 트랙킹과 DP는 유사한 점이 많다. 어떤 알고리즘을 사용해야 할지 판단하는 것은 역시 문제를 많이 풀어보는 방법 밖에 없다.</p>
+
+<p>백트랙킹을 활용한 문제는 다음과 같다.</p>
+<ul>
+  <li>The Knights tour</li>
+  <li>Rat in a Maze</li>
+  <li>N Queen</li>
+  <li>Subset sum</li>
+  <li>m coloring</li>
+  <li>Hamiltonian cycle</li>
+  <li>sudoku</li>
+  <li>Cryptarithmetic Puzzle</li>
+  <li>Magnet Puzzle</li>
+</ul>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25ED%258A%25B8%25EB%259E%2599%25ED%2582%25B9%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+%EB%B0%B1+%ED%8A%B8%EB%9E%99%ED%82%B9%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25ED%258A%25B8%25EB%259E%2599%25ED%2582%25B9%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25ED%258A%25B8%25EB%259E%2599%25ED%2582%25B9%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%5B%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5D+%EB%B0%B1+%ED%8A%B8%EB%9E%99%ED%82%B9&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25ED%258A%25B8%25EB%259E%2599%25ED%2582%25B9%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+  <div class="page-comments">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%ED%8A%B8%EB%9E%99%ED%82%B9/';
+        this.page.identifier = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%ED%8A%B8%EB%9E%99%ED%82%B9/';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://json9512-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B7%B8%EB%A6%AC%EB%94%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> [알고리즘] 그리디 알고리즘
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B3%B5%EB%B6%80%EB%B2%95/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        [알고리즘] 알고리즘 공부법
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://github.com/json9512"><i class="fab fa-github-square fa-2x" title="Github"></i></a><a class="social-icon" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a><a class="social-icon" href="mailto:json9512@gmail.com"><i class="fab fa-google fa-2x" title="Gmail"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 json9512's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+
+<script>
+// http://docs.mathjax.org/en/latest/upgrading/v2.html
+MathJax = {
+  tex: {
+      tags: "ams"    // eq numbering options: none, ams, all
+  },
+  options: {
+    renderActions: {
+      // for mathjax 3, handle <script "math/tex"> blocks inserted by kramdown
+      find: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+}
+</script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  </body>
+
+</html>

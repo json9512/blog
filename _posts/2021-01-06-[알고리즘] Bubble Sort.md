@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Bubble Sort"
+title:  "Bubble Sort"
 tags: algorithm
 comments: true
 ---

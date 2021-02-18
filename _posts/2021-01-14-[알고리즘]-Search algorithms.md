@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Search algorithms"
+title:  "Search algorithms"
 tags: algorithm
 comments: true
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Selection Sort"
+title:  "Selection Sort"
 tags: algorithm
 comments: true
 ---

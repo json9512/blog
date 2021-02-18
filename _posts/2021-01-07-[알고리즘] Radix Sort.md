@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Radix Sort"
+title:  "Radix Sort"
 tags: algorithm
 comments: true
 ---

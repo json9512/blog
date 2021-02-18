@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Shell Sort"
+title:  "Shell Sort"
 tags: algorithm
 comments: true
 ---

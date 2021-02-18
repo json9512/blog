@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Dynamic Programming"
+title:  "Dynamic Programming"
 tags: algorithm
 comments: true
 ---

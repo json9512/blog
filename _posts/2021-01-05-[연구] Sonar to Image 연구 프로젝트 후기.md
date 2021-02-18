@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[연구] Sonar to Image 연구 프로젝트 후기"
-tags: 호주 GAN 연구
+title:  "Sonar to Image 연구 프로젝트 후기"
+tags: 호주
 comments: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Minimum number of coins algorithm"
+title:  "Minimum number of coins algorithm"
 tags: algorithm
 comments: true
 ---

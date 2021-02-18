@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[파이썬] Python Code style"
+title:  "Python Code style"
 date: 2021-01-03 14:53:17 +0900
 tags: python
 comments: true

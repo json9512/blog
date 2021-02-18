@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Bucket Sort"
+title:  "Bucket Sort"
 tags: algorithm
 comments: true
 ---

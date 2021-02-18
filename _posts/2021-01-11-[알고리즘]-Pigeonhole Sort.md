@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Pigeonhole Sort"
+title:  "Pigeonhole Sort"
 tags: algorithm
 comments: true
 ---

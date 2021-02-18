@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Dijkstra's Shortest Path"
+title:  "Dijkstra's Shortest Path"
 tags: algorithm
 comments: true
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Activity Selection"
+title:  "Activity Selection"
 tags: algorithm
 comments: true
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Min num of x required for y"
+title:  "Min num of x required for y"
 tags: algorithm
 comments: true
 ---

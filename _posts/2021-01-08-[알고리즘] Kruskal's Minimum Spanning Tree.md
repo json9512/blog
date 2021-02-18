@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Kruskal's Minimum Spanning Tree"
+title:  "Kruskal's Minimum Spanning Tree"
 tags: algorithm
 comments: true
 ---

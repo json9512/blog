@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Job sequencing algorithm"
+title:  "Job sequencing algorithm"
 tags: algorithm
 comments: true
 ---

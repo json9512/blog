@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[CS 기초] Process 와 Thread"
+title:  "Process 와 Thread"
 tags: CS
 comments: true
 ---

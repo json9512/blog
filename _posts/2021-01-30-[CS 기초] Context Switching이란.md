@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[CS 기초] Context Switching 이란"
+title:  "Context Switching 이란"
 tags: CS
 comments: true
 ---

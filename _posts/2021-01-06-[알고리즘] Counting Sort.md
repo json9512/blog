@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Counting Sort"
+title:  "Counting Sort"
 tags: algorithm
 comments: true
 ---

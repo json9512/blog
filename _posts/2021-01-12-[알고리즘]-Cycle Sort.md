@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Cycle Sort"
+title:  "Cycle Sort"
 tags: algorithm
 comments: true
 ---

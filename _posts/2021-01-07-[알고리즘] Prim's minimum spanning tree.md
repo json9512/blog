@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Prim's Minimum Spanning Tree"
+title:  "Prim's Minimum Spanning Tree"
 tags: algorithm
 comments: true
 ---

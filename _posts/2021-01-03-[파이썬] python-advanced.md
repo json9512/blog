@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[파이썬] 고오급 정보 모음"
+title:  "파이썬 고오급 정보 모음"
 date: 2021-01-03 14:59:17 +0900
 tags: python
 comments: true

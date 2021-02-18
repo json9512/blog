@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] Quick Sort"
+title:  "Quick Sort"
 tags: algorithm
 comments: true
 ---

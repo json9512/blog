@@ -124,7 +124,7 @@
             <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
           </li></ul>
 
-<span class="read-time">7 min read</span>
+<span class="read-time">8 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-19T00:00:00+00:00"><a class="u-url" href="">January 19, 2021</a>
 </time>
@@ -157,6 +157,8 @@
   <li>server는 client의 request를 듣고 있어야 한다 (passive open)</li>
   <li>client는 3-way-handshake (active open)로 server와 연결을 한다</li>
   <li>연결된 client와 server는 서로 데이터를 주고 받을 수 있다</li>
+  <li>연속성보다 신뢰성이 중요할 때 사용한다. ex. 파일 전송</li>
+  <li>패킷 하나의 최대 사이즈는 64KB (65535 bytes)지만 여러개의 패킷이 연관될 수 있기 때문에 데이터의 총량은 무제한이다.</li>
 </ul>
 
 <p>특징:</p>
@@ -390,6 +392,32 @@
 </ul>
 
 <h1 id="udp---user-datagram-protocol">UDP - User datagram protocol</h1>
+<p>간략한 설명:</p>
+<ul>
+  <li>통신 채널을 위해 사전에 호스트간 통신이 필요없다. (핸드쉐이크)</li>
+  <li>비연결형 프로토콜</li>
+  <li><em>데이터그램</em> 이라는 유닛을 사용한다</li>
+  <li>checksum을 활용해 최소한의 data integrity 만 보장한다</li>
+  <li>전송, 정렬을 보장하지 한고 중복방지 매커니즘도 없다</li>
+  <li>하나의 UDP 패킷은 다른 UDP 패킷과 연관성이 없다</li>
+  <li>하나의 패킷이 독립적이기 때문에 최대 데이터크기는 64KB (65535 bytes)다</li>
+  <li>TCP 보다 신뢰성은 떨어진다</li>
+  <li>TCP 보다 빠르다</li>
+  <li>신뢰성 보다 연속성이 중요할 때 사용된다. ex. VOIP, video stream</li>
+</ul>
+
+<h4 id="특징--사용처">특징 / 사용처</h4>
+<ul>
+  <li>Transaction-oriented이라서 query-response protocol에 적합하다 ex. Domain Name System 이나 Network Time Protocol</li>
+  <li>datagram을 사용해서 다른 프로토콜을 모델링 할때 쓰인다. ex. IP tunneling, remote procedure call, 이나 network file system</li>
+  <li>간단해서 bootstraping이나 완전한 프로토콜이 존재하지 않는 다른 작업에 쓰인다. ex. DHCP 혹은 Trivial File Transfer Protocol</li>
+  <li>stateless해서 다수의 client와 통신하는데 적합하다. ex streaming media in IPTV</li>
+  <li>재전송 딜레이가 없기에 real time 앱에 적합하다. ex. VOIP, online game, Real Time Streaming Protocol</li>
+  <li>multicast가 가능하기에 네트워크내에 통신 가능한 디바이스를 찾거나 정보를 공유하는 프로토콜에 적합하다. ex. Precision Time Protocol, Routing Information Protocol</li>
+</ul>
+
+<h4 id="udp-datagram-structure">UDP Datagram Structure</h4>
+
 
         </div>
 

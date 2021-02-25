@@ -124,7 +124,7 @@
             <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
           </li></ul>
 
-<span class="read-time">8 min read</span>
+<span class="read-time">9 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-19T00:00:00+00:00"><a class="u-url" href="">January 19, 2021</a>
 </time>
@@ -417,6 +417,87 @@
 </ul>
 
 <h4 id="udp-datagram-structure">UDP Datagram Structure</h4>
+<p><img src="/blog/images/udp.png" class="align-center" alt="" /></p>
+
+<p>UDP 데이터그램은 header 부분과 data 부분으로 구성된다. header는 4개의 필드로 구성되고 각 필드의 길이는 2 bytes다 (16 bits). 헤더 다음에는 data section이 위치한다.</p>
+
+<p><strong>source port number</strong> - 패킷을 보내는 기기의 port다. 만약 패킷을 받은 기기가 응답을 보내야 한다면 이 포트로 가게된다. 사용되지 않을 시에는 0이어야 하고 클라이언트가 사용하면 임의 포트일 가능성이 높다. 서버가 사용한다면 이미 잘 알려진 UDP port 숫자를 사용할 것이다.</p>
+
+<p><strong>destination port number</strong> - 받는 기기의 port다.</p>
+
+<p><strong>length</strong> - udp header + data section의 길이를 명시한다. 최소 길이는 헤더만 존재하는 값이기 때문에 8 bytes다. 이론적으로 최대 크기는 65535 bytes (헤더 8 bytes + data 65527 bytes)로 data section에 65227 bytes를 쓸 수 있을 것 같지만 IPv4 protocol에 의한 실제 data section의 최대 크기는 65507 bytes(65535 - 헤더 8 bytes - IPv4 header 20 bytes)다.</p>
+
+<p><strong>checksum</strong> - header 와 data section에 데이터의 에러 확인용으로 사용된다. IPv4에서는 선택적이고 IPv6에서는 필수적이다. 사용되지 않으면 16 bit 모두 0의 값을 가진다</p>
+
+<h1 id="tcp-udp-차이점">TCP UDP 차이점</h1>
+<p>TCP:</p>
+<ul>
+  <li>연결 지향 방식</li>
+  <li>end-to-end 통신 성립 이전에 handshake가 필요하다 (3-way-handshake 참고)</li>
+  <li>통신이 성립되면 <em>양방향</em>으로 데이터 전송이 가능하다</li>
+  <li>신뢰성:
+    <ul>
+      <li>메세지 재전송</li>
+      <li>메세지 acknowledgement</li>
+      <li>시간초과 기능</li>
+    </ul>
+  </li>
+  <li>정렬:
+    <ul>
+      <li>보낸 데이터 순서 그대로 받을 수 있다</li>
+      <li>각 패킷에 순서를 표시하는 데이터가 있다</li>
+      <li>순서가 섞이면 다시 정렬하는 메커니즘이 있다</li>
+    </ul>
+  </li>
+  <li>overweight:
+    <ul>
+      <li>통신을 성립하기전에 적어도 3개의 패킷을 먼저 보내야 한다</li>
+      <li>신뢰성과 congestion control(혼잡제어)을 할 수 있다</li>
+    </ul>
+  </li>
+  <li>streaming:
+    <ul>
+      <li>데이터는 bytes 스트림으로 읽히고 데이터 사이에 경계가 없다</li>
+    </ul>
+  </li>
+</ul>
+
+<p>UDP:</p>
+<ul>
+  <li>비연결 지향 방식</li>
+  <li>상대방이 받을 준비가 되어 있지 않아도 패킷을 전송할 수 있다</li>
+  <li>신뢰성이 떨어진다:
+    <ul>
+      <li>패킷이 잘 도착했는지 검증하는 메커니즘이 없다</li>
+    </ul>
+  </li>
+  <li>정렬 없음:
+    <ul>
+      <li>보낸 순서대로 패킷이 도착하지 않을 수 있다</li>
+    </ul>
+  </li>
+  <li>Lightweight:
+    <ul>
+      <li>메세지 순서를 정렬하거나 손실된 패킷을 재전송하는 메커니즘이 없어서 더 가볍다</li>
+    </ul>
+  </li>
+  <li>Datagrams:
+    <ul>
+      <li>각 패킷은 독립적이고 도착시 checksum을 활용한 최소한의 검증만 거친다. 각 패킷은 구분이 확실하다</li>
+    </ul>
+  </li>
+  <li>혼잡 제어 없음</li>
+  <li>Broadcast:
+    <ul>
+      <li>같은 네트워크내 모든 기기에 broadcast 할 수 있다</li>
+    </ul>
+  </li>
+  <li>multicast:
+    <ul>
+      <li>하나의 데이터그램 패킷이 구독된 모든 기기에 multicast돼서 전송 될 수 있다</li>
+    </ul>
+  </li>
+</ul>
 
 
         </div>

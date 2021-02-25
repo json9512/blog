@@ -16,22 +16,22 @@
   
     
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>백준 1463번 | json9512’s Blog</title>
+<title>백준 11727번 | json9512’s Blog</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="백준 1463번" />
+<meta property="og:title" content="백준 11727번" />
 <meta name="author" content="json9512" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="아직 DP 점화식을 찾는 것이 익숙하지 않다. 참고한 블로그" />
-<meta property="og:description" content="아직 DP 점화식을 찾는 것이 익숙하지 않다. 참고한 블로그" />
-<link rel="canonical" href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1463%EB%B2%88/" />
-<meta property="og:url" content="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1463%EB%B2%88/" />
+<meta name="description" content="일전에 풀었던 피보나치 수열 문제 와 비슷한 것 같아서 N 사이의 연관식을 중점으로 접근했다." />
+<meta property="og:description" content="일전에 풀었던 피보나치 수열 문제 와 비슷한 것 같아서 N 사이의 연관식을 중점으로 접근했다." />
+<link rel="canonical" href="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-11727%EB%B2%88/" />
+<meta property="og:url" content="https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-11727%EB%B2%88/" />
 <meta property="og:site_name" content="json9512’s Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-02-23T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-02-25T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="백준 1463번" />
+<meta property="twitter:title" content="백준 11727번" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"백준 1463번","dateModified":"2021-02-23T00:00:00+00:00","datePublished":"2021-02-23T00:00:00+00:00","description":"아직 DP 점화식을 찾는 것이 익숙하지 않다. 참고한 블로그","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1463%EB%B2%88/"},"url":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1463%EB%B2%88/","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","author":{"@type":"Person","name":"json9512"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://json9512.github.io/blog/images/logo.png"},"name":"json9512"},"headline":"백준 11727번","dateModified":"2021-02-25T00:00:00+00:00","datePublished":"2021-02-25T00:00:00+00:00","description":"일전에 풀었던 피보나치 수열 문제 와 비슷한 것 같아서 N 사이의 연관식을 중점으로 접근했다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-11727%EB%B2%88/"},"url":"https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-11727%EB%B2%88/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -65,7 +65,7 @@
 </head>
 
 
-  <body class="layout--post  백준-1463번">
+  <body class="layout--post  백준-11727번">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -110,7 +110,7 @@
       <header class="page-header">
         
         
-          <h1 id="page-title" class="page-title p-name">백준 1463번
+          <h1 id="page-title" class="page-title p-name">백준 11727번
 </h1>
         
       </header>
@@ -126,7 +126,7 @@
 
 <span class="read-time">~1 min read</span>
 
-    <time class="page-date dt-published" datetime="2021-02-23T00:00:00+00:00"><a class="u-url" href="">February 23, 2021</a>
+    <time class="page-date dt-published" datetime="2021-02-25T00:00:00+00:00"><a class="u-url" href="">February 25, 2021</a>
 </time>
 
   </div>
@@ -145,24 +145,28 @@
 
       <div class="page-content">
         <div class="e-content">
-          <p>아직 DP 점화식을 찾는 것이 익숙하지 않다. 참고한 <a href="https://infinitt.tistory.com/247">블로그</a></p>
+          <p>일전에 풀었던 피보나치 수열 <a href="/blog/알고리즘-백준-11726번/">문제</a> 와 비슷한 것 같아서 <code class="language-plaintext highlighter-rouge">N</code> 사이의 연관식을 중점으로 접근했다.</p>
+
+<p>찾다보니 <a href="https://mathworld.wolfram.com/JacobsthalNumber.html">Jacobsthal Number</a>라는 것이 존재했는데 여기서 나오는 공식 <code class="language-plaintext highlighter-rouge">N = N-1 + (2*N-2)</code>를 DP에 대입하면 풀리는 문제였다.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="k">def</span> <span class="nf">solution</span><span class="p">():</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">())</span>
-    <span class="n">dp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">def</span> <span class="nf">solution</span><span class="p">():</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span>
         
-        <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span>
-            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
-        
-        <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">//</span><span class="mi">3</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span>
-            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">//</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">dp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">dp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
     
-    <span class="k">print</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">N</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">%</span> <span class="mi">10007</span><span class="p">)</span>
 
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
@@ -173,10 +177,10 @@
 
         
           <div class="page-share">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-1463%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
-  <a href="https://twitter.com/intent/tweet?text=%EB%B0%B1%EC%A4%80+1463%EB%B2%88%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-1463%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-1463%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
-  <a href="https://reddit.com/submit?title=%EB%B0%B1%EC%A4%80+1463%EB%B2%88&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-1463%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-11727%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%EB%B0%B1%EC%A4%80+11727%EB%B2%88%20https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-11727%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-11727%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%EB%B0%B1%EC%A4%80+11727%EB%B2%88&url=https%3A%2F%2Fjson9512.github.io%2Fblog%2F%25EC%2595%258C%25EA%25B3%25A0%25EB%25A6%25AC%25EC%25A6%2598-%25EB%25B0%25B1%25EC%25A4%2580-11727%25EB%25B2%2588%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
 </div>
 
         
@@ -187,8 +191,8 @@
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
-        this.page.url = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1463%EB%B2%88/';
-        this.page.identifier = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1463%EB%B2%88/';
+        this.page.url = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-11727%EB%B2%88/';
+        this.page.identifier = 'https://json9512.github.io/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-11727%EB%B2%88/';
       };
 
       (function() {
@@ -206,20 +210,20 @@
 
         <nav class="page-pagination" role="navigation">
   
-    <a class="page-previous" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-10866%EB%B2%88/">
+    <a class="page-previous" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-2529%EB%B2%88/">
       <h4 class="page-pagination-label">Previous</h4>
       <span class="page-pagination-title">
-        <i class="fas fa-arrow-left"></i> 백준 10866번
+        <i class="fas fa-arrow-left"></i> 백준 2529번
 
       </span>
     </a>
   
 
   
-    <a class="page-next" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-11726%EB%B2%88/">
+    <a class="page-next" href="/blog/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-1248%EB%B2%88/">
       <h4 class="page-pagination-label">Next</h4>
       <span class="page-pagination-title">
-        백준 11726번
+        백준 1248번
  <i class="fas fa-arrow-right"></i>
       </span>
     </a>

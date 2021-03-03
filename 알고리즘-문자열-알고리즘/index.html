@@ -366,96 +366,99 @@ We continue this way...
 <p>Bad Character Heuristic 이란 패턴과 텍스트를 비교할때 특정 글자가 일치하지 않는 경우 패턴을 어떻게 움직일지 결정하는 것을 뜻한다. Bad Character Heuristic에서 2가지 경우가 있다.</p>
 
 <ol>
-  <li>불일치한 글자를 일치하도록 패턴을 움직인다 (패턴 내에 특정 글자가 있어야 한다)
-```
-Text =      GCAATGCCTATGTGACC
-pattern =   TATGTG</li>
+  <li>불일치한 글자를 일치하도록 패턴을 움직인다 (패턴 내에 특정 글자가 있어야 한다)</li>
 </ol>
 
-<p>패턴의 끝에서부터 글자를 비교했을 때, 3번째 글자가 불일치 한다
-GCAaTGCCTATGTGACC
-TATgTG</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text =      GCAATGCCTATGTGACC
+pattern =   TATGTG
 
-<p>이때 패턴 내에 있는 “A”를 찾아서 패턴을 움직여 준다
+패턴의 끝에서부터 글자를 비교했을 때, 3번째 글자가 불일치 한다
 GCAaTGCCTATGTGACC
-  TaTGTG</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2. 불일치한 글자 다음에 패턴이 위치하도록 움직인다 (패턴 내에 특정 글자가 없을 경우)
+TATgTG
+
+이때 패턴 내에 있는 "A"를 찾아서 패턴을 움직여 준다
+GCAaTGCCTATGTGACC
+  TaTGTG
 </code></pre></div></div>
-<p>GCAATGCcTATGTGACC
-  TATGTg</p>
+<ol>
+  <li>불일치한 글자 다음에 패턴이 위치하도록 움직인다 (패턴 내에 특정 글자가 없을 경우)</li>
+</ol>
 
-<p>패턴의 끝에서 비교를 했을 때 “g” 와 “c” 가 불일치한다. 이때 “c” 가 패턴에 없으니
-패턴을 “c” 다음에 오도록 움직인다
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GCAATGCcTATGTGACC
+  TATGTg
+
+패턴의 끝에서 비교를 했을 때 "g" 와 "c" 가 불일치한다. 이때 "c" 가 패턴에 없으니
+패턴을 "c" 다음에 오도록 움직인다
 GCAATGCcTATGTGACC
-        TATGTG</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#### 파이썬 구현 (Bad character heuristic)
+        TATGTG 
+</code></pre></div></div>
+<h4 id="파이썬-구현-bad-character-heuristic">파이썬 구현 (Bad character heuristic)</h4>
 
-###### 출처: [geeksforgeeks](https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/)
+<h6 id="출처-geeksforgeeks-1">출처: <a href="https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/">geeksforgeeks</a></h6>
 
-```python
-import sys
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
 
 
-def create_bad_character_heuristic(pattern, M):
-    # 모든 글자 값을 -1로 초기화 한다
-    badChar = [-1] * 256 # 256은 최대 글자 값
-
-    # 값을 채운다
-    for i in range(M):
-        badChar[ord(pattern[i])] = i
+<span class="k">def</span> <span class="nf">create_bad_character_heuristic</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">M</span><span class="p">):</span>
+    <span class="c1"># 모든 글자 값을 -1로 초기화 한다
+</span>    <span class="n">badChar</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">256</span> <span class="c1"># 256은 최대 글자 값
+</span>
+    <span class="c1"># 값을 채운다
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+        <span class="n">badChar</span><span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">pattern</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span> <span class="o">=</span> <span class="n">i</span>
     
-    return badChar
+    <span class="k">return</span> <span class="n">badChar</span>
 
 
-def boyer_moore_search(pattern, text):
-    M = len(pattern)
-    N = len(text)
+<span class="k">def</span> <span class="nf">boyer_moore_search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 
-    # Bad Character Heuristic 생성
-    badChar = create_bad_character_heuristic(pattern, M)
+    <span class="c1"># Bad Character Heuristic 생성
+</span>    <span class="n">badChar</span> <span class="o">=</span> <span class="n">create_bad_character_heuristic</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
 
-    # Text를 기준으로 Pattern을 움직일 변수 s
-    s = 0
-    while s &lt;= N-M:
-        j = M - 1
+    <span class="c1"># Text를 기준으로 Pattern을 움직일 변수 s
+</span>    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="o">-</span><span class="n">M</span><span class="p">:</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">M</span> <span class="o">-</span> <span class="mi">1</span>
 
-        # Text와 Pattern이 계속 일치하면
-        # j 를 감소시킨다
-        while j&gt;=0 and pattern[j] == text[s+j]:
-            j -= 1
+        <span class="c1"># Text와 Pattern이 계속 일치하면
+</span>        <span class="c1"># j 를 감소시킨다
+</span>        <span class="k">while</span> <span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">pattern</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">text</span><span class="p">[</span><span class="n">s</span><span class="o">+</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
         
-        # 만약 현재 위치에 패턴이 존재하면
-        # 위의 while 반복문 후 j의 값은 -1이다
-        if j &lt; 0:
-            print("Pattern occur at index: ", s)
+        <span class="c1"># 만약 현재 위치에 패턴이 존재하면
+</span>        <span class="c1"># 위의 while 반복문 후 j의 값은 -1이다
+</span>        <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Pattern occur at index: "</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
 
-            # 다음 연산을 하기 위해 현재 찾은 위치 다음으로
-            # 패턴을 움직인다 (2번째 케이스)
-            # s+M &lt; N 은 패턴이 텍스트에 끝에서 발견 됐을때를 위한 조건이다
-            s += (M-badChar[ord(text[s+M])] if s+M &lt; N else 1)
-        else:
-            # 불일치한 글자를 패턴 내에 글자와 일치하도록 
-            # 패턴을 움직인다 (1번째 케이스)
-            s += max(1, j-badChar[ord(text[s+j])])
-
-
-def solution():
-    # 입력값 읽기
-    text = sys.stdin.readline().strip()
-    pattern = sys.stdin.readline().strip()
-
-    boyer_moore_search(pattern, text)
+            <span class="c1"># 다음 연산을 하기 위해 현재 찾은 위치 다음으로
+</span>            <span class="c1"># 패턴을 움직인다 (2번째 케이스)
+</span>            <span class="c1"># s+M &lt; N 은 패턴이 텍스트에 끝에서 발견 됐을때를 위한 조건이다
+</span>            <span class="n">s</span> <span class="o">+=</span> <span class="p">(</span><span class="n">M</span><span class="o">-</span><span class="n">badChar</span><span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">s</span><span class="o">+</span><span class="n">M</span><span class="p">])]</span> <span class="k">if</span> <span class="n">s</span><span class="o">+</span><span class="n">M</span> <span class="o">&lt;</span> <span class="n">N</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># 불일치한 글자를 패턴 내에 글자와 일치하도록 
+</span>            <span class="c1"># 패턴을 움직인다 (1번째 케이스)
+</span>            <span class="n">s</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">badChar</span><span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">s</span><span class="o">+</span><span class="n">j</span><span class="p">])])</span>
 
 
-if __name__ == "__main__":
-    solution()
+<span class="k">def</span> <span class="nf">solution</span><span class="p">():</span>
+    <span class="c1"># 입력값 읽기
+</span>    <span class="n">text</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">strip</span><span class="p">()</span>
 
-# 입력 값:
+    <span class="n">boyer_moore_search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">solution</span><span class="p">()</span>
+
+<span class="c1"># 입력 값:
 # ABAAABCD
 # ABC
 # 출력 값:
 # Pattern occur at index:  4
-</code></pre></div></div>
+</span></code></pre></div></div>
 
         </div>
 

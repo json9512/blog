@@ -124,7 +124,7 @@
             <a class="u-url" rel="me" href="https://www.linkedin.com/in/junghyun-son/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
           </li></ul>
 
-<span class="read-time">10 min read</span>
+<span class="read-time">11 min read</span>
 
     <time class="page-date dt-published" datetime="2021-01-03T05:59:17+00:00"><a class="u-url" href="">January 3, 2021</a>
 </time>
@@ -155,6 +155,7 @@
   <li><a href="https://docs.python.org/3.9/faq/design.html">Official Doc</a></li>
   <li><a href="https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.">Stackify</a></li>
   <li><a href="https://www.programiz.com/python-programming/closure">Programiz</a></li>
+  <li><a href="https://www.python-course.eu/index.php">Python Course</a></li>
 </ul>
 
 <p><strong>목차</strong></p>
@@ -166,6 +167,7 @@
   <li><strong><a href="#all-is-one-one-is-all">All is One, One is all</a></strong></li>
   <li><strong><a href="#decorators">Decorators</a></strong></li>
   <li><strong><a href="#decorators-2">Decorators 2</a></strong></li>
+  <li><strong><a href="#decorators-3">Decorators 3</a></strong></li>
 </ol>
 
 <hr />
@@ -815,6 +817,36 @@ Generation garbage collection은 ref count 처럼 항상 돌아가는 것이 아
 <p>일반적으로 Decorator를 많이 볼 일이 없을수도 있다. 하지만 개발자라면 언어가 제공하는 개발 방법을 잘 알고 있고 그 방법들을 적재적소에 활용하는 것이 중요하다고 생각해서 포스트를 남겨 보았다.</p>
 
 <hr />
+
+<h1 id="decorators-3">Decorators 3</h1>
+
+<p>최근 <a href="https://dextto.tistory.com/220">블로그</a>를 읽다가 Decorator에 대해 새로운 사실을 알았다.</p>
+
+<p>Decorator안에 inner 둘러싸는 코드는 <code class="language-plaintext highlighter-rouge">@decorator_name</code> 선언할 때 실행이 된다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">some_dec_func</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"hey"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
+        <span class="n">func</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">inner</span>
+
+<span class="o">@</span><span class="n">some_dec_func</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"hello"</span><span class="p">)</span>
+
+<span class="c1"># Note: 함수를 선언하기만 하고 사용하지는 않는다.
+</span>
+<span class="c1"># 이 상태로 코드를 실행하면 다음과 같이 출력된다:
+# hey
+</span>
+<span class="c1"># 왜 일까?
+</span></code></pre></div></div>
+<p>이유는 Python에서 Decorator를 사용하는 것은 <code class="language-plaintext highlighter-rouge">some_dec_func(hello)</code>를 실행하는 것이다.</p>
+
+<p>즉, 이 파일을 compile하게 되면 interpreter가 <code class="language-plaintext highlighter-rouge">@some_dec_func</code> 라인과 밑에 있는 함수를 읽고 <code class="language-plaintext highlighter-rouge">some_dec_func(hello)</code> 를 실행하게 되면서 <code class="language-plaintext highlighter-rouge">some_dec_function</code>의 <code class="language-plaintext highlighter-rouge">print("hey")</code>가 실행이 된다.</p>
+
+<p>그러면 Decorator 함수를 선언을 하게 되면, 어디에 있든 <code class="language-plaintext highlighter-rouge">inner</code> 앞 뒤의 코드는 자동적으로 실행되는 것인가? 그렇다.</p>
 
 
         </div>

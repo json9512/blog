@@ -14,6 +14,7 @@ comments: true
 - [Official Doc](https://docs.python.org/3.9/faq/design.html)
 - [Stackify](https://stackify.com/python-garbage-collection/#:~:text=The%20Python%20garbage%20collector%20has,a%20threshold%20number%20of%20objects.)
 - [Programiz](https://www.programiz.com/python-programming/closure)
+- [Python Course](https://www.python-course.eu/index.php)
 
 
 **목차**
@@ -24,6 +25,7 @@ comments: true
 4. **[All is One, One is all](#all-is-one-one-is-all)**
 5. **[Decorators](#decorators)**
 6. **[Decorators 2](#decorators-2)**
+7. **[Decorators 3](#decorators-3)**
 
 ****
 
@@ -636,4 +638,35 @@ Bar = Foo(Bar)
 일반적으로 Decorator를 많이 볼 일이 없을수도 있다. 하지만 개발자라면 언어가 제공하는 개발 방법을 잘 알고 있고 그 방법들을 적재적소에 활용하는 것이 중요하다고 생각해서 포스트를 남겨 보았다. 
 
 ****
+
+# Decorators 3
+
+최근 [블로그](https://dextto.tistory.com/220)를 읽다가 Decorator에 대해 새로운 사실을 알았다.
+
+Decorator안에 inner 둘러싸는 코드는 `@decorator_name` 선언할 때 실행이 된다.
+```python
+def some_dec_func(func):
+    print("hey")
+
+    def inner():
+        func()
+    
+    return inner
+
+@some_dec_func
+def hello():
+    print("hello")
+
+# Note: 함수를 선언하기만 하고 사용하지는 않는다.
+
+# 이 상태로 코드를 실행하면 다음과 같이 출력된다:
+# hey
+
+# 왜 일까?
+```
+이유는 Python에서 Decorator를 사용하는 것은 `some_dec_func(hello)`를 실행하는 것이다. 
+
+즉, 이 파일을 compile하게 되면 interpreter가 `@some_dec_func` 라인과 밑에 있는 함수를 읽고 `some_dec_func(hello)` 를 실행하게 되면서 `some_dec_function`의 `print("hey")`가 실행이 된다. 
+
+그러면 Decorator 함수를 선언을 하게 되면, 어디에 있든 `inner` 앞 뒤의 코드는 자동적으로 실행되는 것인가? 그렇다.
 

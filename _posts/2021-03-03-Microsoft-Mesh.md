@@ -23,7 +23,7 @@ Microsoft Mesh는 개발자들을 위한 툴이다. Mixed reality 앱을 만들 
   <iframe class="responsive-embed-item" src="https://www.youtube-nocookie.com/embed/Jd2GK0qDtRg"></iframe>
 </div>
 
-나는 개발자니까 조금 더 테크니컬 한 것을 알고 싶어서 관련 기사를 찾다가 마소 테크 블로그에 잘 정리된 글을 봤다. [참고](https://techcommunity.microsoft.com/t5/mixed-reality-blog/microsoft-mesh-a-technical-overview/ba-p/2176004). 이 포스트의 나머지는 이 포스트를 의역한 것에 불과하다.
+나는 개발자니까 조금 더 테크니컬 한 것을 알고 싶어서 관련 기사를 찾다가 마소 테크 블로그에 잘 정리된 글을 봤다. [참고](https://techcommunity.microsoft.com/t5/mixed-reality-blog/microsoft-mesh-a-technical-overview/ba-p/2176004). 이 포스트의 나머지는 이 테크 블로그를 의역한 것에 불과하다.
 
 기사를 간단히 요약하자면, 마소는 MR의 도약을 주의깊게 봤고 투자할 가치가 있다고 판단을 했다. 이후 MR의 기술적 한계를 보고 이를 극복하기 위해 Mesh를 개발했다는 것을 알 수 있다. 
 

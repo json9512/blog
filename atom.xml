@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-03-03T13:23:55+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">Microsoft Mesh</title><link href="https://json9512.github.io/blog/Microsoft-Mesh/" rel="alternate" type="text/html" title="Microsoft Mesh" /><published>2021-03-03T00:00:00+00:00</published><updated>2021-03-03T00:00:00+00:00</updated><id>https://json9512.github.io/blog/Microsoft-Mesh</id><content type="html" xml:base="https://json9512.github.io/blog/Microsoft-Mesh/">&lt;p&gt;어릴적 스타워즈를 통해 Sci-Fi 에 입문을 했다. 광선검, 포스, R2D2, 홀로그램, 우주 탐험 등 너무 흥미로운 요소들이 많아서 맨날 비디오를 돌려봤던 기억이있다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://json9512.github.io/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="https://json9512.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-03-03T13:25:56+00:00</updated><id>https://json9512.github.io/blog/atom.xml</id><title type="html">json9512’s Blog</title><subtitle></subtitle><author><name>json9512</name><email>json9512@gmail.com</email></author><entry><title type="html">Microsoft Mesh</title><link href="https://json9512.github.io/blog/Microsoft-Mesh/" rel="alternate" type="text/html" title="Microsoft Mesh" /><published>2021-03-03T00:00:00+00:00</published><updated>2021-03-03T00:00:00+00:00</updated><id>https://json9512.github.io/blog/Microsoft-Mesh</id><content type="html" xml:base="https://json9512.github.io/blog/Microsoft-Mesh/">&lt;p&gt;어릴적 스타워즈를 통해 Sci-Fi 에 입문을 했다. 광선검, 포스, R2D2, 홀로그램, 우주 탐험 등 너무 흥미로운 요소들이 많아서 맨날 비디오를 돌려봤던 기억이있다.&lt;/p&gt;
 
 &lt;p&gt;이후 15년 정도가 흘러서 스티븐 스필버그 아저씨의 Ready Player One을 보고 스타워즈를 돌려보던 7살 무렵의 기억이 떠올랐다. 그리고 궁금해졌다. AR/VR 기술이 나온지는 10년도 넘었는데 아이언맨의 자비스, 스타워즈의 홀로그램, Ready Player One 속 가상 세계는 어디까지 개발이 됐을까.&lt;/p&gt;
 
@@ -55,15 +55,23 @@
 &lt;p&gt;이 같은 코어 인프라 외에도 앞서 말한 멀티 유저 환경에서 MR의 문제점을 해결하기 위한 기능들도 있다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Immersive presence: &lt;br /&gt;멀티 유저 시나리오에서 가장 중요한 기능인 “사람을 어떻게 표현하는가?” 를 담당한다고 볼 수 있다. 기본적으로 3D 아바타가 있고 사용하는 기기에 따라서 photorealistic holoportation을 사용할 수도 있다. &lt;br /&gt;
-Photorealistic holoportation은 외부 센서를 사용해서 구현이 되며 MR 공간에 사용자를 홀로그램 형식으로 표현할 수 있다.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Spatial maps: &lt;br /&gt; Mesh 이전에 공유된 MR 공간에 특정 홀로그램 물체를 표현하려면 연결된 각 기기의 로컬 MR 환경에 맞게 구현이 됐어야 했다. 그리고 구현된 물체는 사용하는 기기와 주변 환경에 따라 일정하지 않을 때가 많았다. &lt;br /&gt; 하지만 Mesh를 사용하면 각 기기의 로컬 환경을 읽고 캐시해서 모든 기기가 같은 MR 공간을 사용하도록 한다고 한다. 장점은 홀로그램 물체를 좀 더 명확하게 위치 시킬 수 있고 모두가 똑같은 MR 환경에 있기 때문에 각 기기에서 표현되는 차이가 없다고 봐도 되는 것 같다. &lt;del&gt;천…천재들이네&lt;/del&gt; &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Holographic rendering: &lt;br /&gt;
+  &lt;li&gt;
+    &lt;p&gt;Immersive presence: &lt;br /&gt;멀티 유저 시나리오에서 가장 중요한 기능인 “사람을 어떻게 표현하는가?” 를 담당한다고 볼 수 있다. 기본적으로 3D 아바타가 있고 사용하는 기기에 따라서 photorealistic holoportation을 사용할 수도 있다. &lt;br /&gt;
+Photorealistic holoportation은 외부 센서를 사용해서 구현이 되며 MR 공간에 사용자를 홀로그램 형식으로 표현할 수 있다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Spatial maps: &lt;br /&gt; Mesh 이전에 공유된 MR 공간에 특정 홀로그램 물체를 표현하려면 연결된 각 기기의 로컬 MR 환경에 맞게 구현이 됐어야 했다. 그리고 구현된 물체는 사용하는 기기와 주변 환경에 따라 일정하지 않을 때가 많았다. &lt;br /&gt; 하지만 Mesh를 사용하면 각 기기의 로컬 환경을 읽고 캐시해서 모든 기기가 같은 MR 공간을 사용하도록 한다고 한다. 장점은 홀로그램 물체를 좀 더 명확하게 위치 시킬 수 있고 모두가 똑같은 MR 환경에 있기 때문에 각 기기에서 표현되는 차이가 없다고 봐도 되는 것 같다. &lt;del&gt;천…천재들이네&lt;/del&gt; &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Holographic rendering: &lt;br /&gt;
 Mesh의 가장 큰 장점 중 하나는 렌더링 시 로컬 stand-alone을 할지 아니면 마소의 클라우드 인프라를 사용할지 정할 수 있다는 것이다. &lt;br /&gt;
 이는 개발자에게 Latency (속도) vs Fidelity (퀄리티)의 자유를 준다. (MR 개발자가 아니라 정확히는 모르지만 로컬 stand-alone 렌더링 기법은 Mesh 앱을 구동하는 기기의 컴퓨팅 파워를 사용해서 렌더하는 것 같다)&lt;br /&gt;
-또한 이미 사용되고 있는 대부분의 3D 파일 포맷을 지원한다고 한다. 즉, 현재 개발자들이 가지고 있는 3D 데이터를 Mesh의 MR 환경에 홀로그램으로 구현이 가능하다.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Multi user sync: &lt;br /&gt;
-MR의 핵심은 물리적으로 떨어져 있어도 같은 시공간에 있다는 경험을 하는 것이다. Mesh는 Multi user sync를 통해 유저가 세계 어느 곳에 있든 &amp;lt;= 100ms 의 latency를 자랑한다고 한다.&lt;/li&gt;
+또한 이미 사용되고 있는 대부분의 3D 파일 포맷을 지원한다고 한다. 즉, 현재 개발자들이 가지고 있는 3D 데이터를 Mesh의 MR 환경에 홀로그램으로 구현이 가능하다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Multi user sync: &lt;br /&gt;
+MR의 핵심은 물리적으로 떨어져 있어도 같은 시공간에 있다는 경험을 하는 것이다. Mesh는 Multi user sync를 통해 유저가 세계 어느 곳에 있든 &amp;lt;= 100ms 의 latency를 자랑한다고 한다.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;또한 Mesh는 cross-platform SDK를 지원한다. 현재는 Unity와 C++, C#을 지원하고 추후에 Unreal, Babylon, React Native도 지원할 것이라고 한다.&lt;/p&gt;

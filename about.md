@@ -8,8 +8,7 @@ permalink: /about/
 
 # Junghyun Son
 
-[Resume Eng](https://drive.google.com/file/d/1-5GCZXloUVjNwaJXNiX_-rh7l7Y7jJ_Q/view?usp=sharing) 
-| [Resume Kor](https://drive.google.com/file/d/1mMHBYREYn61QcIEUlqts8pMfPuZ4xvkE/view?usp=sharing)
+[Resume](https://www.notion.so/c3b7b239bedb45c5a8aec05c2ee8d455)
 
 👋 Hi ! 
 
